@@ -11,6 +11,8 @@ The program is also able to convert HELM1 to HELM2. To use this additional funct
 
 ##Example
 > java -jar helm2parser.jar -inputHELM PEPTIDE1{A.G.D.A'55'}$$$$V.2.0 -output JSON
+
+
     {
     "annotation" : {
     "annotation" : ""
