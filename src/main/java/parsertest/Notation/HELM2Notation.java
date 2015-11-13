@@ -23,7 +23,11 @@
  */
 package parsertest.Notation;
 
+import java.io.IOException;
 import java.util.ArrayList;
+
+import org.helm.notation.MonomerException;
+import org.helm.notation.MonomerFactory;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
@@ -47,6 +51,15 @@ public class HELM2Notation {
   ArrayList<GroupingNotation> grouping = new ArrayList<GroupingNotation>();
   
   AnnotationNotation annotationSection = new AnnotationNotation();
+
+  org.helm.notation.MonomerStore monomerStore;
+
+  private void loadMonomerStore() throws MonomerException, IOException,
+      org.jdom2.JDOMException {
+    MonomerFactory monomerFactory = MonomerFactory.getInstance();
+
+    monomerStore = monomerFactory.getMonomerStore();
+  }
 
   /**
    * method to add the notation of a simple polymer type

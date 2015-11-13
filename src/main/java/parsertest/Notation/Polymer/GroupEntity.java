@@ -38,7 +38,9 @@ public class GroupEntity extends Entity {
    */
   public GroupEntity(String str) {
     super(str);
+    type = "G";
   }
+
 
 
 }

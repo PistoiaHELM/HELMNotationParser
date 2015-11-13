@@ -23,23 +23,25 @@
  */
 package parsertest.SimplePolymersSectionTest;
 
-import org.testng.annotations.Test;
+import java.io.IOException;
 
-import parsertest.InlineAnnotationsParser;
-import parsertest.StateMachineParser;
-import parsertest.ExceptionParser.ExceptionState;
-import parsertest.ExceptionParser.SimplePolymerSectionException;
-import parsertest.SimplePolymersSection.BetweenParser;
-import parsertest.SimplePolymersSection.RepeatingMonomerParser;
-import parsertest.SimplePolymersSection.SimplePolymersNotationParser;
-import parsertest.SimplePolymersSection.SimplePolymersParser;
+import org.helm.notation2.parser.InlineAnnotationsParser;
+import org.helm.notation2.parser.StateMachineParser;
+import org.helm.notation2.parser.ExceptionParser.ExceptionState;
+import org.helm.notation2.parser.ExceptionParser.SimplePolymerSectionException;
+import org.helm.notation2.parser.SimplePolymersSection.BetweenParser;
+import org.helm.notation2.parser.SimplePolymersSection.RepeatingMonomerParser;
+import org.helm.notation2.parser.SimplePolymersSection.SimplePolymersNotationParser;
+import org.helm.notation2.parser.SimplePolymersSection.SimplePolymersParser;
+import org.jdom.JDOMException;
+import org.testng.annotations.Test;
 
 public class SimplePolymersNotationParserTest {
 
 StateMachineParser parser;
 	
 	@Test 
-  	public void keepThisStateTest() throws ExceptionState {
+  public void keepThisStateTest() throws ExceptionState, IOException, JDOMException {
 		parser = new StateMachineParser();
     parser.setState(new SimplePolymersNotationParser(parser));
 		parser.doAction('P');
@@ -50,10 +52,10 @@ StateMachineParser parser;
   }
   
 	@Test 
-  	public void initalizeThisStateTest() throws ExceptionState {
+  public void initalizeThisStateTest() throws ExceptionState, IOException, JDOMException {
 		parser = new StateMachineParser();
 		parser.setState(new SimplePolymersParser(parser));
-		String test = "PEPTIDE1{test.";
+    String test = "PEPTIDE1{P.";
 		for (int i = 0; i < test.length(); i ++){
 			parser.doAction(test.charAt(i));
 		}
@@ -64,7 +66,7 @@ StateMachineParser parser;
   }
 	
 	@Test(expectedExceptions = SimplePolymerSectionException.class)
-  	public void initalizeThisStateTestWithException() throws ExceptionState {
+  public void initalizeThisStateTestWithException() throws ExceptionState, IOException, JDOMException {
 		parser = new StateMachineParser();
     parser.setState(new SimplePolymersNotationParser(parser));
 
@@ -73,7 +75,7 @@ StateMachineParser parser;
   }
 	
 	@Test
-	public void goToBetweenParser() throws ExceptionState {
+  public void goToBetweenParser() throws ExceptionState, IOException, JDOMException {
 		parser = new StateMachineParser();
     parser.setState(new SimplePolymersParser(parser));
     String test = "PEPTIDE1{G.R}";
@@ -87,7 +89,7 @@ StateMachineParser parser;
 	
 	/*Description can also be empty*/
 	//@Test(expectedExceptions = SimplePolymerSectionException.class)
-	public void goToBetweenParserWithException() throws ExceptionState {
+  public void goToBetweenParserWithException() throws ExceptionState, IOException, JDOMException {
 		parser = new StateMachineParser();
     parser.setState(new SimplePolymersNotationParser(parser));
     String test = "}";
@@ -102,7 +104,7 @@ StateMachineParser parser;
 	}
 	
   // @Test(expectedExceptions = SimplePolymerSectionException.class)
-	public void Reading$WithException() throws ExceptionState {
+  public void Reading$WithException() throws ExceptionState, IOException, JDOMException {
 		parser = new StateMachineParser();
     parser.setState(new SimplePolymersNotationParser(parser));
 		parser.doAction('$');
@@ -111,7 +113,7 @@ StateMachineParser parser;
 	}
   
     @Test
-	public void goToInlineAnnotaitonsParser() throws ExceptionState {
+  public void goToInlineAnnotaitonsParser() throws ExceptionState, IOException, JDOMException {
 		parser = new StateMachineParser();
     String test = "PEPTIDE1{A.P\"mutation";
 		for (int i = 0; i < test.length(); i ++){
@@ -123,7 +125,7 @@ StateMachineParser parser;
 	}
     
     @Test(expectedExceptions = SimplePolymerSectionException.class)
-  	public void goToInlineAnnotaitonsParserWithException() throws ExceptionState {
+  public void goToInlineAnnotaitonsParserWithException() throws ExceptionState, IOException, JDOMException {
   		parser = new StateMachineParser();
     String test = "PEPTIDE{test\"";
       for (int i = 0; i < test.length(); i ++){
@@ -136,10 +138,10 @@ StateMachineParser parser;
       
     
     @Test
-	public void goToRepeatingMonomerParser() throws ExceptionState {
+  public void goToRepeatingMonomerParser() throws ExceptionState, IOException, JDOMException {
 		parser = new StateMachineParser();
 		parser.setState(new SimplePolymersParser(parser));
-		String test = "PEPTIDE1{test'";
+    String test = "PEPTIDE1{P'";
 		for (int i = 0; i < test.length(); i ++){
 			parser.doAction(test.charAt(i));
 		}
@@ -150,7 +152,7 @@ StateMachineParser parser;
 	}
     
     @Test(expectedExceptions = SimplePolymerSectionException.class)
-	public void goToRepeatingMonomerParserWithException() throws ExceptionState {
+  public void goToRepeatingMonomerParserWithException() throws ExceptionState, IOException, JDOMException {
 		parser = new StateMachineParser();
     parser.setState(new SimplePolymersNotationParser(parser));
 		parser.doAction('\'');
@@ -158,7 +160,7 @@ StateMachineParser parser;
 	}
     
     @Test
-   	public void testSMILESFunction() throws ExceptionState {
+  public void testSMILESFunction() throws ExceptionState, IOException, JDOMException {
    		parser = new StateMachineParser();
     parser.setState(new SimplePolymersNotationParser(parser));
    		String test = "[[($$$...\"\"\")]]";
@@ -172,7 +174,7 @@ StateMachineParser parser;
    	}
     
     @Test(expectedExceptions = SimplePolymerSectionException.class)
-   	public void testSMILESFunctionWithException() throws ExceptionState {
+  public void testSMILESFunctionWithException() throws ExceptionState, IOException, JDOMException {
    		parser = new StateMachineParser();
     parser.setState(new SimplePolymersNotationParser(parser));
    		String test = "[[($$$...\"\"\")]'";

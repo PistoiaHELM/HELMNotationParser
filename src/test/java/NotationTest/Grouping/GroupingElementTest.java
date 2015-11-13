@@ -23,12 +23,11 @@
  */
 package NotationTest.Grouping;
 
+import org.helm.notation2.parser.ExceptionParser.NotationException;
+import org.helm.notation2.parser.Notation.Grouping.GroupingElement;
+import org.helm.notation2.parser.Notation.Polymer.PeptideEntity;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
-import parsertest.ExceptionParser.NotationException;
-import parsertest.Notation.Grouping.GroupingElement;
-import parsertest.Notation.Polymer.PeptideEntity;
 
 public class GroupingElementTest {
   @Test

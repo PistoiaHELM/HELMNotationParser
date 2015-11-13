@@ -24,9 +24,13 @@
 package parsertest;
 
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.helm.notation.MonomerException;
+import org.helm.notation.NotationException;
+import org.jdom.JDOMException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -79,9 +83,16 @@ public class StateMachineParser implements State {
 
   /**
    * {@inheritDoc}
+   * 
+   * @throws JDOMException
+   * @throws IOException
+   * @throws MonomerException
+   * @throws org.jdom2.JDOMException
+   * @throws NotationException
    */
   @Override
-  public void doAction(Character car) throws ExceptionState {
+  public void doAction(Character car) throws ExceptionState, MonomerException,
+      IOException, JDOMException, org.jdom2.JDOMException, NotationException {
     this.state.doAction(car);
 
   }

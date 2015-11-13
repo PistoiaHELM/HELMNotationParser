@@ -23,20 +23,26 @@
  */
 package NotationTest.Polymer;
 
+import java.io.IOException;
+
+
+import org.helm.notation2.parser.ExceptionParser.NotationException;
+import org.helm.notation2.parser.ExceptionParser.SimplePolymerSectionException;
+import org.helm.notation2.parser.Notation.Polymer.MonomerNotationUnit;
+import org.helm.notation2.parser.Notation.Polymer.PeptideEntity;
+import org.helm.notation2.parser.Notation.Polymer.PolymerListElements;
+import org.helm.notation2.parser.Notation.Polymer.PolymerSingleElements;
+import org.helm.notation2.parser.Notation.Polymer.RNAEntity;
+import org.jdom.JDOMException;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import parsertest.ExceptionParser.SimplePolymerSectionException;
-import parsertest.Notation.Polymer.MonomerNotationUnit;
-import parsertest.Notation.Polymer.PolymerListElements;
-import parsertest.Notation.Polymer.PolymerSingleElements;
-
 public class PolymerElementsTest {
   @Test
-  public void testConstructorList() {
-    PolymerListElements item = new PolymerListElements();
-    MonomerNotationUnit not = new MonomerNotationUnit("U");
-    item.addMonomer("K");
+  public void testConstructorList() throws IOException, NotationException, JDOMException {
+    PolymerListElements item = new PolymerListElements(new RNAEntity("RNA1"));
+    MonomerNotationUnit not = new MonomerNotationUnit("U", "RNA");
+    item.addMonomer("U");
     item.addMonomer("A");
     Assert.assertTrue(item.getListOfElements().size() == 2);
     Assert.assertEquals(item.getCurrentMonomer().getID(), "A");
@@ -45,8 +51,10 @@ public class PolymerElementsTest {
   }
 
   @Test(expectedExceptions = SimplePolymerSectionException.class)
-  public void testConstructorSingle() throws SimplePolymerSectionException {
-    PolymerSingleElements item = new PolymerSingleElements();
+  public void testConstructorSingle() throws SimplePolymerSectionException,
+      NotationException, IOException, JDOMException {
+    PolymerSingleElements item = new PolymerSingleElements(new PeptideEntity(
+        "PEPTIDE1"));
     item.addMonomer("K");
     item.addMonomer("A");
 

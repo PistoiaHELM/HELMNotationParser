@@ -24,10 +24,12 @@
 package NotationTest;
 
 
-import org.testng.annotations.Test;
+import java.io.IOException;
 
-import parsertest.StateMachineParser;
-import parsertest.ExceptionParser.ExceptionState;
+import org.helm.notation2.parser.StateMachineParser;
+import org.helm.notation2.parser.ExceptionParser.ExceptionState;
+import org.jdom.JDOMException;
+import org.testng.annotations.Test;
 
 /**
  * PolymerNotationTest
@@ -42,7 +44,7 @@ public class PolymerNotationTest {
    * method to test unchanged input in the simple polymer section
    */
   @Test
-  public void testSimpleInput() throws ExceptionState {
+  public void testSimpleInput() throws ExceptionState, IOException, JDOMException {
     parser = new StateMachineParser();
     String test =
         "PEPTIDE1{A'3'.A.A.A.A.A.A\"mutation\".A.A.A.A.A.A.A.A.A.A.A.A.A.C.D.D.D.D.D.D.D.D.D.D.D.D.D.D.D.D.D.D.D.D.E.E.E.E.E.E.E.E.E.E.E.E.E.E.E.E.E.E.E.E.E.E.E}|PEPTIDE2{G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.C.S.S.S.S.S.S.S.S.S.P.P.P.P.P.P.P.P.P.K.K.K.K.K.K.K.K.K.K.K.K.K}$$$$";
@@ -59,7 +61,7 @@ public class PolymerNotationTest {
    * method to test unchanged input in the simple polymer section
    */
   @Test
-  public void testInputGroupOr() throws ExceptionState {
+  public void testInputGroupOr() throws ExceptionState, IOException, JDOMException {
     parser = new StateMachineParser();
     String test = "PEPTIDE1{A.X.(C:1,B:1)\"Test\"}$$$$";
     parser = new StateMachineParser();
@@ -75,7 +77,7 @@ public class PolymerNotationTest {
    * method to test unchanged input in the simple polymer section
    */
   @Test
-  public void testInputGroupMixture() throws ExceptionState {
+  public void testInputGroupMixture() throws ExceptionState, IOException, JDOMException {
     parser = new StateMachineParser();
     String test = "PEPTIDE3{A'3-6'.X\"Test\".(C:1+B:2.2-2.3)\"Test\"}\"Hallo\"$$$$";
     parser = new StateMachineParser();
@@ -92,7 +94,7 @@ public class PolymerNotationTest {
    * method to test unchanged input in the simple polymer section
    */
   @Test
-  public void testInputCount() throws ExceptionState {
+  public void testInputCount() throws ExceptionState, IOException, JDOMException {
     parser = new StateMachineParser();
     String test = "PEPTIDE3{?._.X\"Test\".(C:1+B:2.2-2.3)\"Test\"}\"Hallo\"$$$$";
     parser = new StateMachineParser();
@@ -108,9 +110,9 @@ public class PolymerNotationTest {
    * method to test more complicated monomer units
    */
   @Test
-  public void testGroupRepeating() throws ExceptionState {
+  public void testGroupRepeating() throws ExceptionState, IOException, JDOMException {
     parser = new StateMachineParser();
-    String test = "PEPTIDE3{(R(U)P)'12'\"Test\".G}$$$$";
+    String test = "PEPTIDE3{(H'12'\"Test\".G}$$$$";
     parser = new StateMachineParser();
     for (int i = 0; i < test.length(); ++i) {
       parser.doAction(test.charAt(i));

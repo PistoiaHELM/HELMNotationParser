@@ -23,22 +23,24 @@
  */
 package parsertest.SimplePolymersSectionTest;
 
-import org.testng.annotations.Test;
+import java.io.IOException;
 
-import parsertest.InlineAnnotationsParser;
-import parsertest.StateMachineParser;
-import parsertest.ConnectionSection.ConnectionsParser;
-import parsertest.ExceptionParser.ExceptionState;
-import parsertest.ExceptionParser.SimplePolymerSectionException;
-import parsertest.SimplePolymersSection.BetweenParser;
-import parsertest.SimplePolymersSection.SimplePolymersParser;
+import org.helm.notation2.parser.InlineAnnotationsParser;
+import org.helm.notation2.parser.StateMachineParser;
+import org.helm.notation2.parser.ConnectionSection.ConnectionsParser;
+import org.helm.notation2.parser.ExceptionParser.ExceptionState;
+import org.helm.notation2.parser.ExceptionParser.SimplePolymerSectionException;
+import org.helm.notation2.parser.SimplePolymersSection.BetweenParser;
+import org.helm.notation2.parser.SimplePolymersSection.SimplePolymersParser;
+import org.jdom.JDOMException;
+import org.testng.annotations.Test;
 
 public class BetweenParserTest {
 
 StateMachineParser parser;
 	
 	@Test 
-  	public void goToInlineAnnotationsParser() throws ExceptionState {
+  public void goToInlineAnnotationsParser() throws ExceptionState, IOException, JDOMException {
 		parser = new StateMachineParser();
 		parser.setState(new BetweenParser(parser));
 		parser.doAction('"');
@@ -49,7 +51,7 @@ StateMachineParser parser;
   }
 	
 	@Test 
-  	public void goToSimplePolymersParser() throws ExceptionState {
+  public void goToSimplePolymersParser() throws ExceptionState, IOException, JDOMException {
 		parser = new StateMachineParser();
 		parser.setState(new BetweenParser(parser));
 		parser.doAction('|');
@@ -60,7 +62,7 @@ StateMachineParser parser;
 	}
 		
 	@Test 
-	public void goToConnectionsParser() throws ExceptionState {
+  public void goToConnectionsParser() throws ExceptionState, IOException, JDOMException {
 			parser = new StateMachineParser();
 			parser.setState(new BetweenParser(parser));
 			parser.doAction('$');
@@ -72,7 +74,7 @@ StateMachineParser parser;
 	
 	
 	@Test(expectedExceptions = SimplePolymerSectionException.class)
-	public void Reading$WithException()throws ExceptionState {
+  public void Reading$WithException() throws ExceptionState, IOException, JDOMException {
 			parser = new StateMachineParser();
 			parser.setState(new BetweenParser(parser));
 			parser.doAction('h');

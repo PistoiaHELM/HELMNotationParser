@@ -23,20 +23,23 @@
  */
 package parsertest.GroupingSectionTest;
 
+import java.io.IOException;
+
+import org.helm.notation2.parser.StateMachineParser;
+import org.helm.notation2.parser.AnnotationSection.AnnotationsParser;
+import org.helm.notation2.parser.ExceptionParser.ConnectionSectionException;
+import org.helm.notation2.parser.ExceptionParser.ExceptionState;
+import org.helm.notation2.parser.ExceptionParser.GroupingSectionException;
+import org.helm.notation2.parser.GroupingSection.GroupingDetailedInformationParser;
+import org.helm.notation2.parser.GroupingSection.GroupingParser;
+import org.jdom.JDOMException;
 import org.testng.annotations.Test;
-import parsertest.StateMachineParser;
-import parsertest.AnnotationSection.AnnotationsParser;
-import parsertest.ExceptionParser.ConnectionSectionException;
-import parsertest.ExceptionParser.ExceptionState;
-import parsertest.ExceptionParser.GroupingSectionException;
-import parsertest.GroupingSection.GroupingDetailedInformationParser;
-import parsertest.GroupingSection.GroupingParser;
 
 public class GroupingParserTest {
 
 	StateMachineParser parser;
 	@Test 
-  	public void keepThisState() throws ExceptionState {
+  public void keepThisState() throws ExceptionState, IOException, JDOMException {
 		parser = new StateMachineParser();
 		parser.setState(new GroupingParser(parser));
 		parser.doAction('H');
@@ -47,7 +50,7 @@ public class GroupingParserTest {
 	}
 	
 	@Test 
-  	public void goToGroupingDetailedInformationParser() throws ExceptionState {
+  public void goToGroupingDetailedInformationParser() throws ExceptionState, IOException, JDOMException {
 		parser = new StateMachineParser();
 		parser.setState(new GroupingParser(parser));
 		String test = "G1(";
@@ -61,7 +64,8 @@ public class GroupingParserTest {
 	}
 	
 	@Test(expectedExceptions = GroupingSectionException.class)
-	public void goToGroupingDetailedInformationWithException() throws ExceptionState {
+  public void goToGroupingDetailedInformationWithException()
+      throws ExceptionState, IOException, JDOMException {
 		parser = new StateMachineParser();
 		parser.setState(new GroupingParser(parser));
 		String test = "hallo$";
@@ -71,7 +75,7 @@ public class GroupingParserTest {
 	}
 	
 	@Test 
-  	public void goToAnnotationsParser() throws ExceptionState {
+  public void goToAnnotationsParser() throws ExceptionState, IOException, JDOMException {
 		parser = new StateMachineParser();
 		parser.setState(new GroupingParser(parser));
 		String test = "$";
@@ -85,7 +89,7 @@ public class GroupingParserTest {
 	}
 	
 	@Test(expectedExceptions = GroupingSectionException.class)
-	public void goToAnnotaitonsParserWithException() throws ExceptionState {
+  public void goToAnnotaitonsParserWithException() throws ExceptionState, IOException, JDOMException {
 		parser = new StateMachineParser();
 		parser.setState(new GroupingParser(parser));
 		String test = "hallo$";

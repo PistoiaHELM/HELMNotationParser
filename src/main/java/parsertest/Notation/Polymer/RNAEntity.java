@@ -38,6 +38,7 @@ public final class RNAEntity extends PolymerEntity {
    */
   public RNAEntity(String str) {
     super(str);
+    type = "RNA";
   }
 
 

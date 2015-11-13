@@ -23,10 +23,9 @@
  */
 package NotationTest.Annotation;
 
+import org.helm.notation2.parser.Notation.Annotation.AnnotationNotation;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
-import parsertest.Notation.Annotation.AnnotationNotation;
 
 public class AnnotationNotationTest {
   @Test

@@ -23,7 +23,13 @@
  */
 package parsertest.Notation.Polymer;
 
+import java.io.IOException;
 import java.text.DecimalFormat;
+
+import org.helm.notation.MonomerException;
+import org.jdom.JDOMException;
+
+import parsertest.ExceptionParser.NotationException;
 
 /**
  * MonomerNotationGroupOr class to represent an or group
@@ -36,17 +42,26 @@ public class MonomerNotationGroupOr extends MonomerNotationGroup {
    * Constructs with the given String an Or group
    * 
    * @param str details about the group
+   * @param type type of the current polymer
+   * @throws JDOMException
+   * @throws IOException
+   * @throws MonomerException
+   * @throws NotationException
+   * @throws org.jdom2.JDOMException
+   * @throws org.helm.notation.NotationException
    */
-  public MonomerNotationGroupOr(String str) {
-    super(str);
+  public MonomerNotationGroupOr(String str, String type)
+      throws NotationException, MonomerException, IOException, JDOMException,
+      org.jdom2.JDOMException, org.helm.notation.NotationException {
+    super(str, type);
     /* Or elements are separated by , */
     String[] parts = str.split(",");
     boolean interval = false;
     for (int i = 0; i < parts.length; ++i) {
       /* Ratio can be defined -> default is 1 */
       String[] item = parts[i].split(":");
-      double probability = 100 / parts.length;
-      double probability2 = 100 / parts.length;
+      double probability = 1;
+      double probability2 = 1;
       boolean isDefault = true;
       interval = false;
       if (item.length > 1) {
@@ -71,7 +86,7 @@ public class MonomerNotationGroupOr extends MonomerNotationGroup {
       }
 
       /* Add element to the list */
-      addElement(item[0], probability, probability2, interval, isDefault);
+      addElement(item[0], type, probability, probability2, interval, isDefault);
     }
   }
 

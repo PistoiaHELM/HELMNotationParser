@@ -39,6 +39,7 @@ public final class PeptideEntity extends PolymerEntity {
    */
   public PeptideEntity(String str) {
     super(str);
+    type = "PEPTIDE";
   }
 
 

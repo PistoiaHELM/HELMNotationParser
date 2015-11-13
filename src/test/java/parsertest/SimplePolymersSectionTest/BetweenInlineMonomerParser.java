@@ -23,14 +23,16 @@
  */
 package parsertest.SimplePolymersSectionTest;
 
-import org.testng.annotations.Test;
+import java.io.IOException;
 
-import parsertest.StateMachineParser;
-import parsertest.ExceptionParser.ExceptionState;
-import parsertest.ExceptionParser.SimplePolymerSectionException;
-import parsertest.SimplePolymersSection.BetweenMonomerParser;
-import parsertest.SimplePolymersSection.BetweenParser;
-import parsertest.SimplePolymersSection.SimplePolymersNotationParser;
+import org.helm.notation2.parser.StateMachineParser;
+import org.helm.notation2.parser.ExceptionParser.ExceptionState;
+import org.helm.notation2.parser.ExceptionParser.SimplePolymerSectionException;
+import org.helm.notation2.parser.SimplePolymersSection.BetweenMonomerParser;
+import org.helm.notation2.parser.SimplePolymersSection.BetweenParser;
+import org.helm.notation2.parser.SimplePolymersSection.SimplePolymersNotationParser;
+import org.jdom.JDOMException;
+import org.testng.annotations.Test;
 
 /**
  * BetweenInlineMonomerParser
@@ -42,7 +44,7 @@ public class BetweenInlineMonomerParser {
   StateMachineParser parser;
 
   @Test
-  public void goToSimplePolymerNotationParser() throws ExceptionState {
+  public void goToSimplePolymerNotationParser() throws ExceptionState, IOException, JDOMException {
     parser = new StateMachineParser();
     parser.setState(new BetweenMonomerParser(parser));
     parser.doAction('.');
@@ -53,7 +55,7 @@ public class BetweenInlineMonomerParser {
   }
 
   @Test
-  public void goToConnection() throws ExceptionState {
+  public void goToConnection() throws ExceptionState, IOException, JDOMException {
     parser = new StateMachineParser();
     parser.setState(new BetweenMonomerParser(parser));
     parser.doAction('}');
@@ -64,7 +66,7 @@ public class BetweenInlineMonomerParser {
   }
 
   @Test(expectedExceptions = SimplePolymerSectionException.class)
-  public void goToWithException() throws ExceptionState {
+  public void goToWithException() throws ExceptionState, IOException, JDOMException {
     parser = new StateMachineParser();
     parser.setState(new BetweenMonomerParser(parser));
     parser.doAction('h');

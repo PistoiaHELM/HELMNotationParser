@@ -23,10 +23,12 @@
  */
 package NotationTest.Polymer;
 
+import java.io.IOException;
+
+import org.helm.notation2.parser.ExceptionParser.NotationException;
+import org.helm.notation2.parser.Notation.Polymer.MonomerNotationUnit;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
-import parsertest.Notation.Polymer.MonomerNotationUnit;
 
 /**
  * MonomerNotationTest
@@ -37,75 +39,97 @@ public class MonomerNotationTest {
 
   /**
    * method to test the constructor of the MonomerNotation class
+   * 
+   * @throws IOException
+   * @throws NotationException
    */
   @Test
-  public void testMonomerNotationID() {
+  public void testMonomerNotationID() throws IOException, NotationException {
     String test = "A";
-    MonomerNotationUnit unit = new MonomerNotationUnit(test);
+    MonomerNotationUnit unit = new MonomerNotationUnit(test, "PEPTIDE");
     Assert.assertEquals(unit.getID(), test);
   }
 
   /**
    * method to test the constructor of the MonomerNotation class
+   * 
+   * @throws IOException
+   * @throws NotationException
    */
   @Test
-  public void testMonomerNotationID_() {
+  public void testMonomerNotationID_() throws IOException, NotationException {
     String test = "_";
-    MonomerNotationUnit unit = new MonomerNotationUnit(test);
+    MonomerNotationUnit unit = new MonomerNotationUnit(test, "PEPTIDE");
     Assert.assertEquals(unit.getCount(), "0");
   }
 
   /**
    * method to test the constructor of the MonomerNotation class
+   * 
+   * @throws IOException
+   * @throws NotationException
    */
   @Test
-  public void testMonomerNotationIDValue() {
+  public void testMonomerNotationIDValue() throws IOException, NotationException {
     String test = "?";
-    MonomerNotationUnit unit = new MonomerNotationUnit(test);
+    MonomerNotationUnit unit = new MonomerNotationUnit(test, "PEPTIDE");
     Assert.assertEquals(unit.getCount(), "0..n");
   }
 
   /**
    * method to test the default count of the MonomerNotation class
+   * 
+   * @throws IOException
+   * @throws NotationException
    */
   @Test
-  public void testMonomerNotationDefaultCount() {
+  public void testMonomerNotationDefaultCount() throws IOException, NotationException {
     String test = "A";
-    MonomerNotationUnit unit = new MonomerNotationUnit(test);
+    MonomerNotationUnit unit = new MonomerNotationUnit(test, "PEPTIDE");
     Assert.assertEquals(unit.getCount(), "1");
   }
 
   /**
    * method to test setting a new count
+   * 
+   * @throws IOException
+   * @throws NotationException
    */
   @Test
-  public void testMonomerNotationCount() {
+  public void testMonomerNotationCount() throws IOException, NotationException {
     String id = "A";
     String test = "5";
-    MonomerNotationUnit unit = new MonomerNotationUnit(id);
+    MonomerNotationUnit unit = new MonomerNotationUnit(id, "PEPTIDE");
     unit.setCount(test);
     Assert.assertEquals(unit.getCount(), test);
   }
 
   /**
-   * method to test the default annotation the annotation should be null and the boolean false
+   * method to test the default annotation the annotation should be null and the
+   * boolean false
+   * 
+   * @throws IOException
+   * @throws NotationException
    */
   @Test
-  public void testMonomerNotationDefaultAnnotation() {
+  public void testMonomerNotationDefaultAnnotation() throws IOException, NotationException {
     String id = "A";
-    MonomerNotationUnit unit = new MonomerNotationUnit(id);
+    MonomerNotationUnit unit = new MonomerNotationUnit(id, "PEPTIDE");
     Assert.assertEquals(unit.getAnnotation(), null);
     Assert.assertFalse(unit.isAnnotationTrue());
   }
 
   /**
    * method to test setting a new annotation
+   * 
+   * @throws IOException
+   * @throws NotationException
    */
   @Test
-  public void testMonomerNotationAnnotation() {
+  public void testMonomerNotationAnnotation() throws IOException, NotationException {
     String id = "A";
     String test = "5";
-    MonomerNotationUnit unit = new MonomerNotationUnit(id);
+    MonomerNotationUnit unit = new MonomerNotationUnit(id, "PEPTIDE");
     unit.setAnnotation(test);
     Assert.assertEquals(unit.getAnnotation(), test);
     Assert.assertTrue(unit.isAnnotationTrue());

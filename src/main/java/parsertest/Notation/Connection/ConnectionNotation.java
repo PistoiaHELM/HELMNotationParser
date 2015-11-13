@@ -23,6 +23,11 @@
  */
 package parsertest.Notation.Connection;
 
+import java.io.IOException;
+
+import org.helm.notation.MonomerException;
+import org.jdom.JDOMException;
+
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import parsertest.ExceptionParser.NotationException;
@@ -40,9 +45,9 @@ public final class ConnectionNotation {
 
   private Entity targetId;
 
-  private MonomerNotation sourceUnit;
+  private String sourceUnit;
 
-  private MonomerNotation targetUnit;
+  private String targetUnit;
 
   private String rGroupSource;
 
@@ -76,13 +81,22 @@ public final class ConnectionNotation {
   }
 
   /**
-   * Constructs with the two given Entities, Source ID and Target ID, and the given details about the connection
+   * Constructs with the two given Entities, Source ID and Target ID, and the
+   * given details about the connection
    * 
    * @param firstID Entity of the Source ID
    * @param secondID Entity of the Target ID
    * @param details connection details
+   * @throws JDOMException
+   * @throws IOException
+   * @throws MonomerException
+   * @throws NotationException
+   * @throws org.jdom2.JDOMException
+   * @throws org.helm.notation.NotationException
    */
-  public ConnectionNotation(Entity firstID, Entity secondID, String details) {
+  public ConnectionNotation(Entity firstID, Entity secondID, String details)
+      throws NotationException, MonomerException, IOException, JDOMException,
+      org.jdom2.JDOMException, org.helm.notation.NotationException {
     this.sourceId = firstID;
     this.targetId = secondID;
     addDetails(details);
@@ -99,7 +113,8 @@ public final class ConnectionNotation {
    * @param rGroupTarget RGroup of the Target
    * @param annotation new annotation
    */
-  public ConnectionNotation(Entity firstID, Entity secondID, MonomerNotation sourceUnit, MonomerNotation targetUnit,
+  public ConnectionNotation(Entity firstID, Entity secondID, String sourceUnit,
+      String targetUnit,
       String rGroupSource, String rGroupTarget, String annotation) {
     this.sourceId = firstID;
     this.targetId = secondID;
@@ -115,13 +130,21 @@ public final class ConnectionNotation {
    * method to set the details of the current connection
    * 
    * @param method to add connection details
+   * @throws JDOMException
+   * @throws IOException
+   * @throws MonomerException
+   * @throws NotationException
+   * @throws org.jdom2.JDOMException
+   * @throws org.helm.notation.NotationException
    */
-  private void addDetails(String str) {
+  private void addDetails(String str) throws NotationException,
+      MonomerException, IOException, JDOMException, org.jdom2.JDOMException,
+      org.helm.notation.NotationException {
     String[] parts = str.split("-");
 
     /* MonomerUnit */
-    sourceUnit = new ValidationMethod().decideWhichMonomerNotation(parts[0].split(":")[0]);
-    targetUnit = new ValidationMethod().decideWhichMonomerNotation(parts[1].split(":")[0]);
+    sourceUnit = parts[0].split(":")[0];
+    targetUnit = parts[1].split(":")[0];
     
     
     /*R-group*/
@@ -184,7 +207,7 @@ public final class ConnectionNotation {
    * 
    * @return source unit
    */
-  public MonomerNotation getSourceUnit() {
+  public String getSourceUnit() {
     return sourceUnit;
   }
 
@@ -193,7 +216,7 @@ public final class ConnectionNotation {
    * 
    * @return target unit
    */
-  public MonomerNotation getTargetUnit() {
+  public String getTargetUnit() {
     return targetUnit;
   }
 
@@ -241,11 +264,11 @@ public final class ConnectionNotation {
    */
   public String toHELM2() {
     if (isAnnotationTrue()) {
-      return sourceId.getID() + "," + targetId.getID() + "," + sourceUnit.toHELM2() + ":"
-          + rGroupSource + "-" + targetUnit.toHELM2() + ":" + rGroupTarget + "\"" + annotation + "\"";
+      return sourceId.getID() + "," + targetId.getID() + "," + sourceUnit + ":"
+          + rGroupSource + "-" + targetUnit + ":" + rGroupTarget + "\"" + annotation + "\"";
     } else {
-      return sourceId.getID() + "," + targetId.getID() + "," + sourceUnit.toHELM2() + ":"
-          + rGroupSource + "-" + targetUnit.toHELM2() + ":" + rGroupTarget;
+      return sourceId.getID() + "," + targetId.getID() + "," + sourceUnit + ":"
+          + rGroupSource + "-" + targetUnit + ":" + rGroupTarget;
     }
   }
 

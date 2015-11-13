@@ -23,20 +23,32 @@
  */
 package parsertest;
 
+import java.io.IOException;
+
+import org.helm.notation.MonomerException;
+import org.helm.notation.NotationException;
+import org.jdom.JDOMException;
+
 import parsertest.ExceptionParser.ExceptionState;
 
 /**
- * State interface to represent a single state
  * 
  * hecht
  */
 public interface State {
 
   /**
-   * method to change the state of the state machine parser according to the given character
+   * method to change the state of the state machine parser according to the
+   * given character
    * 
    * @param cha
    * @throws ExceptionState
+   * @throws JDOMException
+   * @throws IOException
+   * @throws MonomerException
+   * @throws org.jdom2.JDOMException
+   * @throws NotationException
    */
-  public void doAction(Character cha) throws ExceptionState;
+  public void doAction(Character cha) throws ExceptionState, MonomerException,
+      IOException, JDOMException, org.jdom2.JDOMException, NotationException;
 }

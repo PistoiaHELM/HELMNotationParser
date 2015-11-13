@@ -23,10 +23,15 @@
  */
 package parsertest.Notation.Polymer;
 
+import java.io.IOException;
 import java.util.ArrayList;
+
+import org.helm.notation.MonomerException;
+import org.jdom.JDOMException;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
+import parsertest.ExceptionParser.NotationException;
 import parsertest.Notation.ValidationMethod;
 
 /**
@@ -44,21 +49,31 @@ public abstract class MonomerNotationGroup extends MonomerNotation {
    * 
    * @param str Monomer
    */
-  public MonomerNotationGroup(String str) {
-    super(str);
+  public MonomerNotationGroup(String str, String type) {
+    super(str, type);
   }
 
   /**
    * method to add a single element to the group
    * 
    * @param str Monomer
+   * @param type type of current polymer
    * @param one value of the monomer
    * @param two value of the monomer
    * @param interval is the value on interval
+   * @throws JDOMException
+   * @throws IOException
+   * @throws MonomerException
+   * @throws NotationException
+   * @throws org.jdom2.JDOMException
+   * @throws org.helm.notation.NotationException
    */
-  public void addElement(String str, double one, double two, boolean interval, boolean isDefault) {
+  public void addElement(String str, String type, double one, double two,
+      boolean interval, boolean isDefault) throws NotationException,
+          MonomerException, IOException, JDOMException,
+          org.jdom2.JDOMException, org.helm.notation.NotationException {
 
-    elements.add(new ValidationMethod().decideWhichMonomerNotationInGroup(str, one, two, interval, isDefault));
+    elements.add(new ValidationMethod().decideWhichMonomerNotationInGroup(str, type, one, two, interval, isDefault));
 
   }
 

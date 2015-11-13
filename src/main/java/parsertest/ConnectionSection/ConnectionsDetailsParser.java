@@ -23,6 +23,10 @@
  */
 package parsertest.ConnectionSection;
 
+import java.io.IOException;
+
+import org.helm.notation.MonomerException;
+import org.jdom.JDOMException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -30,6 +34,7 @@ import parsertest.InlineAnnotationsParser;
 import parsertest.State;
 import parsertest.StateMachineParser;
 import parsertest.ExceptionParser.ConnectionSectionException;
+import parsertest.ExceptionParser.NotationException;
 import parsertest.GroupingSection.GroupingParser;
 import parsertest.Notation.Connection.ConnectionNotation;
 
@@ -56,20 +61,36 @@ public class ConnectionsDetailsParser implements State {
 
   /**
    * {@inheritDoc}
+   * 
+   * @throws NotationException
+   * @throws JDOMException
+   * @throws IOException
+   * @throws MonomerException
+   * @throws org.jdom2.JDOMException
+   * @throws org.helm.notation.NotationException
    */
   @Override
-  public void doAction(Character cha) throws ConnectionSectionException {
+  public void doAction(Character cha) throws ConnectionSectionException,
+      NotationException, MonomerException, IOException, JDOMException,
+      org.jdom2.JDOMException, org.helm.notation.NotationException {
     /* a new connection is starting */
     if (cha == '|') {
-      if (_parser.check_detailsconnections(details)) {
-        logger.info("A new connection is starting:");
-        ConnectionNotation current = _parser.notationContainer.getCurrentConnection();
-        _parser.notationContainer.changeConnectionNotation(new ConnectionNotation(current.getSourceId(),
-            current.getTargetId(), details));
-        ;
-        _parser.setState(new ConnectionsParser(_parser));
-      }
-
+      if (_parser.check_detailsconnections(details))
+        try {
+          {
+            logger.info("A new connection is starting:");
+            ConnectionNotation current =
+                _parser.notationContainer.getCurrentConnection();
+            _parser.notationContainer.changeConnectionNotation(new ConnectionNotation(
+                current.getSourceId(),
+                current.getTargetId(), details));
+            ;
+            _parser.setState(new ConnectionsParser(_parser));
+          }
+        } catch (Exception e) {
+          // TODO Auto-generated catch block
+          e.printStackTrace();
+        }
       else {
         logger.error("Details about the connection are not corret: " + details);
         throw new ConnectionSectionException("Details about the connection are not correct: " + details);
@@ -79,16 +100,23 @@ public class ConnectionsDetailsParser implements State {
 
     /* connection section is finished */
     else if (cha == '$') {
-      if (_parser.check_detailsconnections(details)) {
-        logger.info("Connection section is finished:");
-        ConnectionNotation current = _parser.notationContainer.getCurrentConnection();
-        _parser.notationContainer.changeConnectionNotation(new ConnectionNotation(current.getSourceId(),
-            current.getTargetId(), details));
-        ;
-        logger.info("Transition to group section");
-        _parser.setState(new GroupingParser(_parser));
-      }
-
+      if (_parser.check_detailsconnections(details))
+        try {
+          {
+            logger.info("Connection section is finished:");
+            ConnectionNotation current =
+                _parser.notationContainer.getCurrentConnection();
+            _parser.notationContainer.changeConnectionNotation(new ConnectionNotation(
+                current.getSourceId(),
+                current.getTargetId(), details));
+            ;
+            logger.info("Transition to group section");
+            _parser.setState(new GroupingParser(_parser));
+          }
+        } catch (Exception e) {
+          // TODO Auto-generated catch block
+          e.printStackTrace();
+        }
       else {
         throw new ConnectionSectionException("Details about the connection are not correct: " + details);
       }
@@ -96,15 +124,22 @@ public class ConnectionsDetailsParser implements State {
 
     /* start of an annotation */
     else if (cha == '\"') {
-      if (_parser.check_detailsconnections(details)) {
-        logger.info("Add annotation to connection:");
-        ConnectionNotation current = _parser.notationContainer.getCurrentConnection();
-        _parser.notationContainer.changeConnectionNotation(new ConnectionNotation(current.getSourceId(),
-            current.getTargetId(), details));
-        ;
-        _parser.setState(new InlineAnnotationsParser(_parser, 2));
-      }
-
+      if (_parser.check_detailsconnections(details))
+        try {
+          {
+            logger.info("Add annotation to connection:");
+            ConnectionNotation current =
+                _parser.notationContainer.getCurrentConnection();
+            _parser.notationContainer.changeConnectionNotation(new ConnectionNotation(
+                current.getSourceId(),
+                current.getTargetId(), details));
+            ;
+            _parser.setState(new InlineAnnotationsParser(_parser, 2));
+          }
+        } catch (Exception e) {
+          // TODO Auto-generated catch block
+          e.printStackTrace();
+        }
       else {
         logger.error("Details about the connection are not corret: " + details);
         throw new ConnectionSectionException("Details about the connection are not correct: " + details);

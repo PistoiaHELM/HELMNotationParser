@@ -56,8 +56,8 @@ public class GroupingOr extends GroupingAmbiguity {
     for (int i = 0; i < parts.length; ++i) {
       /* Possibility can be defined -> default is 100/number of elements */
       String[] item = parts[i].split(":");
-      double probability = 100 / parts.length;
-      double probability2 = 100 / parts.length;
+      double probability = 1;
+      double probability2 = 1;
       interval = false;
       boolean isDefault = true;
       if (item.length > 1) {

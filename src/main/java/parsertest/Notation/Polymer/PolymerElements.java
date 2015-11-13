@@ -23,8 +23,13 @@
  */
 package parsertest.Notation.Polymer;
 
+import java.io.IOException;
 import java.util.ArrayList;
 
+import org.helm.notation.MonomerException;
+import org.jdom.JDOMException;
+
+import parsertest.ExceptionParser.NotationException;
 import parsertest.ExceptionParser.SimplePolymerSectionException;
 
 /**
@@ -36,6 +41,11 @@ public abstract class PolymerElements {
 
   ArrayList<MonomerNotation> elements;
 
+  Entity entity;
+
+  public PolymerElements(Entity entity) {
+    this.entity = entity;
+  }
 
   /**
    * method to get a list of all elements
@@ -49,8 +59,17 @@ public abstract class PolymerElements {
    * 
    * @param str Monomer
    * @throws SimplePolymerSectionException
+   * @throws JDOMException
+   * @throws IOException
+   * @throws MonomerException
+   * @throws NotationException
+   * @throws org.jdom2.JDOMException
+   * @throws org.helm.notation.NotationException
    */
-  public abstract void addMonomer(String str) throws SimplePolymerSectionException;
+  public abstract void addMonomer(String str)
+      throws SimplePolymerSectionException, NotationException, MonomerException,
+      IOException, JDOMException, org.jdom2.JDOMException,
+      org.helm.notation.NotationException;
 
   /**
    * method to get the current monomer

@@ -23,8 +23,13 @@
  */
 package parsertest.Notation.Polymer;
 
+import java.io.IOException;
 import java.util.ArrayList;
 
+import org.helm.notation.MonomerException;
+import org.jdom.JDOMException;
+
+import parsertest.ExceptionParser.NotationException;
 import parsertest.ExceptionParser.SimplePolymerSectionException;
 import parsertest.Notation.ValidationMethod;
 
@@ -39,7 +44,8 @@ public class PolymerSingleElements extends PolymerElements {
   /**
    * Constructor
    */
-  public PolymerSingleElements() {
+  public PolymerSingleElements(Entity entity) {
+    super(entity);
     elements = new ArrayList<MonomerNotation>();
   }
 
@@ -55,11 +61,19 @@ public class PolymerSingleElements extends PolymerElements {
    * {@inheritDoc}
    * 
    * @throws SimplePolymerSectionException
+   * @throws IOException
+   * @throws MonomerException
+   * @throws NotationException
+   * @throws org.jdom2.JDOMException
+   * @throws JDOMException
+   * @throws org.helm.notation.NotationException
    */
   @Override
-  public void addMonomer(String str) throws SimplePolymerSectionException {
+  public void addMonomer(String str) throws SimplePolymerSectionException,
+      NotationException, MonomerException, IOException, JDOMException,
+      org.jdom2.JDOMException, org.helm.notation.NotationException {
     if (elements.size() < 1) {
-      elements.add(new ValidationMethod().decideWhichMonomerNotation(str));
+      elements.add(new ValidationMethod().decideWhichMonomerNotation(str, entity.getType()));
     } else {
       throw new SimplePolymerSectionException("Only one Monomer unit is allowed for CHEM and BLOB");
     }

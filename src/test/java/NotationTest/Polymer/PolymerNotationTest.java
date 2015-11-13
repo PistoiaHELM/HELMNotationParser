@@ -23,15 +23,14 @@
  */
 package NotationTest.Polymer;
 
+import org.helm.notation2.parser.ExceptionParser.NotationException;
+import org.helm.notation2.parser.Notation.Polymer.BlobEntity;
+import org.helm.notation2.parser.Notation.Polymer.ChemEntity;
+import org.helm.notation2.parser.Notation.Polymer.PeptideEntity;
+import org.helm.notation2.parser.Notation.Polymer.PolymerNotation;
+import org.helm.notation2.parser.Notation.Polymer.RNAEntity;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
-import parsertest.ExceptionParser.NotationException;
-import parsertest.Notation.Polymer.BlobEntity;
-import parsertest.Notation.Polymer.ChemEntity;
-import parsertest.Notation.Polymer.PeptideEntity;
-import parsertest.Notation.Polymer.PolymerNotation;
-import parsertest.Notation.Polymer.RNAEntity;
 
 /**
  * PolymerNotationTest

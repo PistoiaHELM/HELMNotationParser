@@ -28,10 +28,10 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 
+import org.helm.notation2.parser.ParserHELM2;
+import org.helm.notation2.parser.ExceptionParser.ExceptionState;
+import org.jdom.JDOMException;
 import org.testng.annotations.Test;
-
-import parsertest.ParserHELM2;
-import parsertest.ExceptionParser.ExceptionState;
 
 /**
  * code NotationTest
@@ -46,7 +46,7 @@ public class NotationTest {
    * method to test the positive excel-sheet input
    */
   @Test
-  public void testPositiveInput() throws ExceptionState {
+  public void testPositiveInput() throws ExceptionState, JDOMException {
     BufferedReader br = null;
     String test;
     int count = 0;
@@ -80,7 +80,7 @@ public class NotationTest {
    */
   @SuppressWarnings("resource")
   @Test(expectedExceptions = ExceptionState.class)
-  public void testNegativeInput() throws ExceptionState {
+  public void testNegativeInput() throws ExceptionState, JDOMException {
     BufferedReader br = null;
     String test;
     int count = 0;
@@ -95,16 +95,17 @@ public class NotationTest {
           test = sCurrentLine + "V2.0";
           try {
             parser = new ParserHELM2();
+            System.out.println(test);
             parser.parse(test);
-            // System.out.println(parser.getHELM2Notation().getListOfConnections().size());
+            System.out.println(test);
           } catch (ExceptionState e) {
             count_error += 1;
           }
         }
         count += 1;
         
-        /* one negative testcase has to be handled in the MonomerDatabase */
         if (count_error == 8) {
+          /* monomer validation is in the HELMNotationToolKit */
           throw new ExceptionState("");
         }
       }

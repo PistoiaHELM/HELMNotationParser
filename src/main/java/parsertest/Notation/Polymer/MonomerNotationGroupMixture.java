@@ -23,7 +23,13 @@
  */
 package parsertest.Notation.Polymer;
 
+import java.io.IOException;
 import java.text.DecimalFormat;
+
+import org.helm.notation.MonomerException;
+import org.jdom.JDOMException;
+
+import parsertest.ExceptionParser.NotationException;
 
 /**
  * MonomerNotationGroupMixture class to represent a mixture group
@@ -37,9 +43,18 @@ public class MonomerNotationGroupMixture extends MonomerNotationGroup {
    * Constructs with the given String a mixture group
    * 
    * @param str details about the mixture group
+   * @param type Type of the current polymer type
+   * @throws JDOMException
+   * @throws IOException
+   * @throws MonomerException
+   * @throws NotationException
+   * @throws org.jdom2.JDOMException
+   * @throws org.helm.notation.NotationException
    */
-  public MonomerNotationGroupMixture(String str) {
-    super(str);
+  public MonomerNotationGroupMixture(String str, String type)
+      throws NotationException, MonomerException, IOException, JDOMException,
+      org.jdom2.JDOMException, org.helm.notation.NotationException {
+    super(str, type);
     /* Mixture elements are separated by + */
     String[] parts = str.split("\\+");
     for (int i = 0; i < parts.length; ++i) {
@@ -71,7 +86,7 @@ public class MonomerNotationGroupMixture extends MonomerNotationGroup {
       }
       
       /*Add element to the list*/
-      addElement(item[0], ratio, ratio2, interval, isDefault);
+      addElement(item[0], type, ratio, ratio2, interval, isDefault);
   }
 
   }

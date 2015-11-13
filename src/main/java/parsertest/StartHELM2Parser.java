@@ -23,11 +23,16 @@
  */
 package parsertest;
 
+import java.io.IOException;
+
 import org.apache.commons.cli.CommandLine;
 import org.apache.commons.cli.CommandLineParser;
 import org.apache.commons.cli.DefaultParser;
 import org.apache.commons.cli.Options;
 import org.apache.commons.cli.ParseException;
+import org.helm.notation.MonomerException;
+import org.helm.notation.NotationException;
+import org.jdom.JDOMException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -50,8 +55,15 @@ public class StartHELM2Parser {
    * @param args command line arguments
    * @throws ParseException
    * @throws ExceptionState
+   * @throws JDOMException
+   * @throws IOException
+   * @throws MonomerException
+   * @throws org.jdom2.JDOMException
+   * @throws NotationException
    */
-  public static void main(String[] args) throws ParseException, ExceptionState {
+  public static void main(String[] args) throws ParseException, ExceptionState,
+      MonomerException, IOException, JDOMException, org.jdom2.JDOMException,
+      NotationException {
     /* options for the program */
     Options options = new Options();
     /* add helm string */

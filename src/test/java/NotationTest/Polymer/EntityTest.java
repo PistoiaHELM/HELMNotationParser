@@ -23,10 +23,9 @@
  */
 package NotationTest.Polymer;
 
+import org.helm.notation2.parser.Notation.Polymer.RNAEntity;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
-import parsertest.Notation.Polymer.RNAEntity;
 
 /**
  * EntityTest

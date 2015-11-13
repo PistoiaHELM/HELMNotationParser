@@ -23,10 +23,15 @@
  */
 package parsertest.Notation.Polymer;
 
+import java.io.IOException;
 import java.util.ArrayList;
+
+import org.helm.notation.MonomerException;
+import org.jdom.JDOMException;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
+import parsertest.ExceptionParser.NotationException;
 import parsertest.Notation.ValidationMethod;
 
 /**
@@ -40,7 +45,8 @@ public class PolymerListElements extends PolymerElements {
   /**
    * Constructor
    */
-  public PolymerListElements() {
+  public PolymerListElements(Entity entity) {
+    super(entity);
     elements = new ArrayList<MonomerNotation>();
   }
 
@@ -55,10 +61,19 @@ public class PolymerListElements extends PolymerElements {
 
   /**
    * {@inheritDoc}
+   * 
+   * @throws JDOMException
+   * @throws IOException
+   * @throws MonomerException
+   * @throws NotationException
+   * @throws org.jdom2.JDOMException
+   * @throws org.helm.notation.NotationException
    */
   @Override
-  public void addMonomer(String str) {
-    elements.add(new ValidationMethod().decideWhichMonomerNotation(str));
+  public void addMonomer(String str) throws NotationException, MonomerException,
+      IOException, JDOMException, org.jdom2.JDOMException,
+      org.helm.notation.NotationException {
+    elements.add(new ValidationMethod().decideWhichMonomerNotation(str, entity.getType()));
   }
 
 

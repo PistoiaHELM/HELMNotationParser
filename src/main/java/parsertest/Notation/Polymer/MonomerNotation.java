@@ -45,12 +45,15 @@ public abstract class MonomerNotation {
   @JsonIgnore
   public boolean isAnnotationHere = false;
 
+  protected String type;
+
   /**
    * Constructs with the given string
    * 
    * @param str Monomer
+   * @param type Type of polymer
    */
-  public MonomerNotation(String str) {
+  public MonomerNotation(String str, String type) {
     this.unit = str;
     if (str.equals("?")) {
       setCount("0..n");
@@ -60,7 +63,10 @@ public abstract class MonomerNotation {
       setCount("0");
       isDefault = true;
     }
+
+    this.type = type;
   }
+
 
   /**
    * method to get the ID of the Monomer
@@ -145,6 +151,14 @@ public abstract class MonomerNotation {
   public abstract String toHELM2();
 
 
+  /**
+   * method to get the Type of Polymer
+   * 
+   * @return
+   */
+  public String getType() {
+    return this.type;
+  }
 
 
 

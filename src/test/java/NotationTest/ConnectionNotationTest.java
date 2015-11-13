@@ -23,21 +23,20 @@
  */
 package NotationTest;
 
+import java.io.IOException;
 import java.util.ArrayList;
 
+import org.helm.notation2.parser.StateMachineParser;
+import org.helm.notation2.parser.ExceptionParser.ExceptionState;
+import org.helm.notation2.parser.Notation.Connection.ConnectionNotation;
+import org.jdom.JDOMException;
 import org.testng.annotations.Test;
-
-import parsertest.StateMachineParser;
-import parsertest.ExceptionParser.ExceptionState;
-import parsertest.Notation.Connection.ConnectionNotation;
 
 public class ConnectionNotationTest {
   StateMachineParser parser;
 
   @Test
-  public void testConnectionNotation() throws ExceptionState
-
-  {
+  public void testConnectionNotation() throws ExceptionState, IOException, JDOMException {
     parser = new StateMachineParser();
 
     String test =
@@ -52,9 +51,7 @@ public class ConnectionNotationTest {
 }
 
   @Test
-  public void testConnectionNotationTwo() throws ExceptionState
-
-  {
+  public void testConnectionNotationTwo() throws ExceptionState, IOException, JDOMException {
     parser = new StateMachineParser();
 
     String test =
@@ -69,9 +66,7 @@ public class ConnectionNotationTest {
   }
 
   @Test
-  public void testConnectionGrouping() throws ExceptionState
-
-  {
+  public void testConnectionGrouping() throws ExceptionState, IOException, JDOMException {
     parser = new StateMachineParser();
 
     String test =

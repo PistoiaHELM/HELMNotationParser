@@ -23,22 +23,48 @@
  */
 package parsertest.Notation.Polymer;
 
+import java.io.IOException;
+
+import org.helm.notation.MonomerException;
+import org.helm.notation.MonomerFactory;
+import org.helm.notation.MonomerStore;
+import org.jdom2.JDOMException;
+
+import parsertest.ExceptionParser.NotationException;
+import parsertest.Notation.ValidationMethod;
 
 /**
  * MonomerNotationUnit
  * 
  * @author hecht
  */
-public final class MonomerNotationUnit extends MonomerNotation {
+public class MonomerNotationUnit extends MonomerNotation {
 
   /**
    * Constructs with the given String
    * 
    * @param str Monomer
+   * @throws JDOMException
+   * @throws IOException
+   * @throws MonomerException
+   * @throws NotationException
+   * @throws org.helm.notation.NotationException
    */
-  public MonomerNotationUnit(String str) {
-    super(str);
+  public MonomerNotationUnit(String str, String type) throws MonomerException,
+      IOException, JDOMException, NotationException,
+      org.helm.notation.NotationException {
+    super(str, type);
+
+    /* Validation of Monomer */
+    if (new ValidationMethod().isMonomerValid(str, type)) {
+
+    } else {
+      throw new NotationException("Monomer was not valid: " + str);
+    }
+
   }
+
+
 
   /**
    * {@inheritDoc}

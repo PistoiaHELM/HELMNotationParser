@@ -23,15 +23,19 @@
  */
 package parsertest.SimplePolymersSection;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.helm.notation.MonomerException;
+import org.jdom.JDOMException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import parsertest.InlineAnnotationsParser;
 import parsertest.State;
 import parsertest.StateMachineParser;
+import parsertest.ExceptionParser.NotationException;
 import parsertest.ExceptionParser.SimplePolymerSectionException;
 
 
@@ -71,9 +75,18 @@ public class SimplePolymersNotationParser implements State {
 
   /**
    * {@inheritDoc}
+   * 
+   * @throws JDOMException
+   * @throws IOException
+   * @throws MonomerException
+   * @throws NotationException
+   * @throws org.jdom2.JDOMException
+   * @throws org.helm.notation.NotationException
    */
   @Override
-  public void doAction(Character cha) throws SimplePolymerSectionException {
+  public void doAction(Character cha) throws SimplePolymerSectionException,
+      NotationException, MonomerException, IOException, JDOMException,
+      org.jdom2.JDOMException, org.helm.notation.NotationException {
     /* simple polymer notation is finished; can also be empty */
     if (cha == '}' && checkBracketsParenthesis()) {
       // initialize object - normal monomer type

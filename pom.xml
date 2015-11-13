@@ -24,7 +24,7 @@
 				<configuration>
 					<archive>
 						<manifest>
-							<mainClass>parsertest.StartHELM2Parser</mainClass>
+							<mainClass>org.helm.notation2.parser.StartHELM2Parser</mainClass>
 							<addClasspath>true</addClasspath>
 						</manifest>
 					</archive>
@@ -46,7 +46,7 @@
 					</descriptorRefs>
 					<archive>
             <manifest>
-              <mainClass>parsertest.StartHELM2Parser</mainClass>
+              <mainClass>org.helm.notation2.parser.StartHELM2Parser</mainClass>
               <addClasspath>true</addClasspath>
             </manifest>
           </archive>
@@ -86,6 +86,11 @@
 			<artifactId>jackson-databind</artifactId>
 			<version>2.6.3</version>
 		</dependency>
+		    <dependency>
+  <groupId>org.jdom</groupId>
+  <artifactId>jdom</artifactId>
+  <version>1.1</version>
+</dependency>
 	</dependencies>
 	<organization>
 		<name>quattro research GmbH</name>

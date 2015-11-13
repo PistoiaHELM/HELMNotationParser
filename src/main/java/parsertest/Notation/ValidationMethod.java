@@ -24,7 +24,17 @@
 package parsertest.Notation;
 
 
+import java.io.IOException;
 import java.util.regex.Pattern;
+
+import org.helm.notation.MonomerException;
+import org.helm.notation.MonomerFactory;
+import org.helm.notation.MonomerStore;
+import org.helm.notation.tools.SimpleNotationParser;
+import org.helm.notation.tools.StructureParser;
+import org.jdom.JDOMException;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import parsertest.ExceptionParser.NotationException;
 import parsertest.Notation.Polymer.BlobEntity;
@@ -35,6 +45,7 @@ import parsertest.Notation.Polymer.MonomerNotation;
 import parsertest.Notation.Polymer.MonomerNotationGroupElement;
 import parsertest.Notation.Polymer.MonomerNotationGroupMixture;
 import parsertest.Notation.Polymer.MonomerNotationGroupOr;
+import parsertest.Notation.Polymer.MonomerNotationList;
 import parsertest.Notation.Polymer.MonomerNotationUnit;
 import parsertest.Notation.Polymer.PeptideEntity;
 import parsertest.Notation.Polymer.RNAEntity;
@@ -47,14 +58,27 @@ import parsertest.Notation.Polymer.RNAEntity;
  */
 public class ValidationMethod {
 
+
+  private static final Logger logger =
+      LoggerFactory.getLogger(ValidationMethod.class);
+
   /**
    * method to decide which of the MonomerNotation classes should be initialized
    * 
    * @param str monomer
    * @return MonomerNotation
+   * @throws NotationException
+   * @throws IOException
+   * @throws MonomerException
+   * @throws JDOMException
+   * @throws org.jdom2.JDOMException
+   * @throws org.helm.notation.NotationException
    */
-  public MonomerNotation decideWhichMonomerNotation(String str) {
+  public MonomerNotation decideWhichMonomerNotation(String str, String type)
+      throws NotationException, MonomerException, IOException, JDOMException,
+      org.jdom2.JDOMException, org.helm.notation.NotationException {
     MonomerNotation mon;
+
       /* group ? */
     if (str.startsWith("(")) {
 
@@ -63,26 +87,34 @@ public class ValidationMethod {
       Pattern patternOR = Pattern.compile(",");
       /* Mixture of elements */
       if (patternAND.matcher(str).find()) {
-        mon = new MonomerNotationGroupMixture(str2);
+        mon = new MonomerNotationGroupMixture(str2, type);
       }
       /* or - groups */
       else if (patternOR.matcher(str).find()) {
-        mon = new MonomerNotationGroupOr(str2);
+        mon = new MonomerNotationGroupOr(str2, type);
       }
  else {
-        mon = new MonomerNotationUnit(str2);
+        if (str.contains(".")) {
+          mon = new MonomerNotationList(str2, type);
+        }
+ else {
+        mon = new MonomerNotationUnit(str2, type);
+        }
+
       }
     }
       /* monomer unit is just in brackets */
     else {
-      mon = new MonomerNotationUnit(str);
+
+      mon = new MonomerNotationUnit(str, type);
 
     }
     return mon;
   }
 
   /**
-   * method to decide which of the two Constructors of MonomerNotaitonGroupElement should be called
+   * method to decide which of the two Constructors of
+   * MonomerNotaitonGroupElement should be called
    * 
    * @param str Monomer
    * @param one count of Monomer
@@ -90,13 +122,22 @@ public class ValidationMethod {
    * @param interval Has the monomer instead of one count an interval
    * @param isDefault Is the count of the monomer default = 1
    * @return MonomerNotationGroupElement
+   * @throws NotationException
+   * @throws JDOMException
+   * @throws IOException
+   * @throws MonomerException
+   * @throws org.jdom2.JDOMException
+   * @throws org.helm.notation.NotationException
    */
-  public MonomerNotationGroupElement decideWhichMonomerNotationInGroup(String str, double one, double two,
-      boolean interval, boolean isDefault) {
+  public MonomerNotationGroupElement decideWhichMonomerNotationInGroup(
+      String str, String type, double one, double two,
+      boolean interval, boolean isDefault) throws NotationException,
+          MonomerException, IOException, JDOMException,
+          org.jdom2.JDOMException, org.helm.notation.NotationException {
     MonomerNotation element;
 
 
-    element = decideWhichMonomerNotation(str);
+    element = decideWhichMonomerNotation(str,type);
 
     if (interval) {
       return new MonomerNotationGroupElement(element, one, two);
@@ -139,4 +180,70 @@ public class ValidationMethod {
     return item;
 
   }
+  
+
+  public boolean isMonomerValid(String str, String type)
+      throws MonomerException, IOException, org.jdom2.JDOMException,
+      org.helm.notation.NotationException, NotationException {
+    MonomerFactory monomerFactory = MonomerFactory.getInstance();
+    /* Search in Database */
+    MonomerStore monomerStore = monomerFactory.getMonomerStore();
+    if (monomerStore.hasMonomer(type, str)) {
+      logger.info("Monomer is locate in the database: " + str);
+      return true;
+    }
+    
+     else if (str.charAt(0) == '[' && str.charAt(str.length() - 1) == ']' &&
+     monomerStore.hasMonomer(type, str.substring(1, str.length() - 1))) {
+     logger.info("Monomer is locate in the database: " + str); return true; }
+
+
+    /* polymer type is Blob: accept all */
+    else if (type.equals("BLOB")) {
+      logger.info("Blob's Monomer Type: " + str);
+      return true;
+    }
+
+    /* new unknown monomer for peptide */
+    else if (type.equals("PEPTIDE") && str.equals("X")) {
+      logger.info("Unknown monomer type for peptide: " + str);
+      return true;
+    }
+
+    /* new unknown monomer for peptide */
+    else if (type.equals("RNA") && str.equals("N")) {
+      logger.info("Unknown monomer type for rna: " + str);
+      return true;
+    }
+
+ 
+
+    /* new unknown types */
+    else if (str.equals("?") || str.equals("_")) {
+      logger.info("Unknown types: " + str);
+      return true;
+    }
+
+    /* nucleotide */
+    else if (type.equals("RNA")) {
+        SimpleNotationParser.getMonomerIDList(str, type, monomerStore);
+        logger.info("Nucleotide type for RNA: " + str);
+        return true;
+    }
+
+    else{
+      
+      /* SMILES Check */
+      if (str.charAt(0) == '[' && str.charAt(str.length() - 1) == ']') {
+        str = str.substring(1, str.length() - 1);
+      }
+
+      return StructureParser.validateSmiles(str);
+      
+
+    }
+  }
+
+
+
 }

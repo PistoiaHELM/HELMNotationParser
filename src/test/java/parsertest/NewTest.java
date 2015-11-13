@@ -25,12 +25,16 @@ package parsertest;
 
 
 
-import parsertest.ExceptionParser.ExceptionState;
+import java.io.IOException;
+
+import org.helm.notation2.parser.ParserHELM2;
+import org.helm.notation2.parser.ExceptionParser.ExceptionState;
+import org.jdom.JDOMException;
 
 public class NewTest {
 
  // @Test
-  public void f() throws ExceptionState {
+  public void f() throws ExceptionState, IOException, JDOMException {
 	  ParserHELM2 parser = new ParserHELM2();
 	  String test = "";
 	 

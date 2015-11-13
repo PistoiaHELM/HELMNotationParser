@@ -23,18 +23,18 @@
  */
 package NotationTest;
 
-import org.testng.annotations.Test;
+import java.io.IOException;
 
-import parsertest.StateMachineParser;
-import parsertest.ExceptionParser.ExceptionState;
+import org.helm.notation2.parser.StateMachineParser;
+import org.helm.notation2.parser.ExceptionParser.ExceptionState;
+import org.jdom.JDOMException;
+import org.testng.annotations.Test;
 
 public class JSONTest {
   StateMachineParser parser;
 
   @Test
-  public void testAnnotationNotation() throws ExceptionState
-
-  {
+  public void testJSONTest() throws ExceptionState, IOException, JDOMException {
     parser = new StateMachineParser();
 
     String test =
@@ -48,4 +48,5 @@ public class JSONTest {
     System.out.println(parser.toJSON());
 
   }
+
 }

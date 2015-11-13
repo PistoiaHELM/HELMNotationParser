@@ -23,14 +23,13 @@
  */
 package NotationTest.Grouping;
 
+import org.helm.notation2.parser.ExceptionParser.NotationException;
+import org.helm.notation2.parser.Notation.Grouping.GroupingMixture;
+import org.helm.notation2.parser.Notation.Grouping.GroupingNotation;
+import org.helm.notation2.parser.Notation.Grouping.GroupingOr;
+import org.helm.notation2.parser.Notation.Polymer.GroupEntity;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
-import parsertest.ExceptionParser.NotationException;
-import parsertest.Notation.Grouping.GroupingMixture;
-import parsertest.Notation.Grouping.GroupingNotation;
-import parsertest.Notation.Grouping.GroupingOr;
-import parsertest.Notation.Polymer.GroupEntity;
 
 public class GroupingNotationTest {
 

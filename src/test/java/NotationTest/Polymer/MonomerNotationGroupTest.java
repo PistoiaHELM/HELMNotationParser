@@ -23,25 +23,29 @@
  */
 package NotationTest.Polymer;
 
+import java.io.IOException;
+
+import org.helm.notation2.parser.ExceptionParser.NotationException;
+import org.helm.notation2.parser.Notation.Polymer.MonomerNotationGroupMixture;
+import org.helm.notation2.parser.Notation.Polymer.MonomerNotationGroupOr;
+import org.jdom.JDOMException;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
-import parsertest.Notation.Polymer.MonomerNotationGroupMixture;
-import parsertest.Notation.Polymer.MonomerNotationGroupOr;
 
 public class MonomerNotationGroupTest {
 
   @Test
-  public void MonomerNotationGroupTestOr() {
-    MonomerNotationGroupOr group = new MonomerNotationGroupOr("K,R");
+  public void MonomerNotationGroupTestOr() throws NotationException, IOException, JDOMException {
+    MonomerNotationGroupOr group = new MonomerNotationGroupOr("K,R", "PEPTIDE");
     Assert.assertTrue(group.getListOfElements().size() == 2);
     Assert.assertEquals(group.getListOfElements().get(0).getMonomer().getID(), "K");
-    Assert.assertEquals(group.getListOfElements().get(0).getValue().get(0), 50.0);
+    Assert.assertEquals(group.getListOfElements().get(0).getValue().get(0), 1.0);
   }
 
   @Test
-  public void MonomerNotationGroupTestAND() {
-    MonomerNotationGroupMixture group = new MonomerNotationGroupMixture("K+R");
+  public void MonomerNotationGroupTestAND() throws NotationException, IOException, JDOMException {
+    MonomerNotationGroupMixture group = new MonomerNotationGroupMixture("K+R",
+        "PEPTIDE");
     Assert.assertTrue(group.getListOfElements().size() == 2);
     Assert.assertEquals(group.getListOfElements().get(0).getMonomer().getID(), "K");
     Assert.assertEquals(group.getListOfElements().get(0).getValue().get(0), 1.0);

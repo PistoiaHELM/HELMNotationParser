@@ -23,14 +23,16 @@
  */
 package parsertest.ConnectionSectionTest;
 
-import org.testng.annotations.Test;
+import java.io.IOException;
 
-import parsertest.StateMachineParser;
-import parsertest.ConnectionSection.BetweenInlineConnectionParser;
-import parsertest.ConnectionSection.ConnectionsParser;
-import parsertest.ExceptionParser.ConnectionSectionException;
-import parsertest.ExceptionParser.ExceptionState;
-import parsertest.GroupingSection.GroupingParser;
+import org.helm.notation2.parser.StateMachineParser;
+import org.helm.notation2.parser.ConnectionSection.BetweenInlineConnectionParser;
+import org.helm.notation2.parser.ConnectionSection.ConnectionsParser;
+import org.helm.notation2.parser.ExceptionParser.ConnectionSectionException;
+import org.helm.notation2.parser.ExceptionParser.ExceptionState;
+import org.helm.notation2.parser.GroupingSection.GroupingParser;
+import org.jdom.JDOMException;
+import org.testng.annotations.Test;
 
 public class BetweenInlineConnectionParserTest {
  
@@ -38,7 +40,7 @@ public class BetweenInlineConnectionParserTest {
 	
 	
 	@Test 
-  	public void goToConnectionsParser() throws ExceptionState {
+  public void goToConnectionsParser() throws ExceptionState, IOException, JDOMException {
 		parser = new StateMachineParser();
 		parser.setState(new BetweenInlineConnectionParser(parser));
 		parser.doAction('|');
@@ -49,7 +51,7 @@ public class BetweenInlineConnectionParserTest {
   }
 	
 	@Test 
-  	public void goToGroupingSection() throws ExceptionState {
+  public void goToGroupingSection() throws ExceptionState, IOException, JDOMException {
 		parser = new StateMachineParser();
 		parser.setState(new BetweenInlineConnectionParser(parser));
 		parser.doAction('$');
@@ -61,7 +63,7 @@ public class BetweenInlineConnectionParserTest {
 		
 	
 	@Test(expectedExceptions = ConnectionSectionException.class)
-	public void Reading$WithException()throws ExceptionState {
+  public void Reading$WithException() throws ExceptionState, IOException, JDOMException {
 			parser = new StateMachineParser();
 			parser.setState(new BetweenInlineConnectionParser(parser));
 			parser.doAction('h');

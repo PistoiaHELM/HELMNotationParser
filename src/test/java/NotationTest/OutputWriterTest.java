@@ -23,19 +23,19 @@
  */
 package NotationTest;
 
+import java.io.IOException;
+
+import org.helm.notation2.parser.StateMachineParser;
+import org.helm.notation2.parser.ExceptionParser.ExceptionState;
+import org.jdom.JDOMException;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
-import parsertest.StateMachineParser;
-import parsertest.ExceptionParser.ExceptionState;
 
 public class OutputWriterTest {
   StateMachineParser parser;
 
   @Test
-  public void testHELM2Output() throws ExceptionState
-
-  {
+  public void testHELM2Output() throws ExceptionState, IOException, JDOMException {
     parser = new StateMachineParser();
 
     String test =
@@ -49,9 +49,7 @@ public class OutputWriterTest {
   }
 
   @Test
-  public void testHELM2OutputExtended() throws ExceptionState
-
-  {
+  public void testHELM2OutputExtended() throws ExceptionState, IOException, JDOMException {
     parser = new StateMachineParser();
 
     String test =

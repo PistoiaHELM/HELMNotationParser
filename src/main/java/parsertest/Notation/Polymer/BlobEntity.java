@@ -38,6 +38,7 @@ public final class BlobEntity extends PolymerEntity {
    */
   public BlobEntity(String str) {
     super(str);
+    type = "BLOB";
   }
 
 

@@ -32,6 +32,8 @@ package parsertest.Notation.Polymer;
 public abstract class Entity {
   String id;
 
+  String type;
+
   /**
    * Constructs an Entity
    * 
@@ -55,5 +57,14 @@ public abstract class Entity {
    */
   public String getID() {
     return id;
+  }
+
+  /**
+   * method to get the Type of the Entity
+   * 
+   * @return type
+   */
+  public String getType(){
+    return type;
   }
 }

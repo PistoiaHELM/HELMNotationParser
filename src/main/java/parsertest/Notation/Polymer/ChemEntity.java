@@ -38,6 +38,7 @@ public class ChemEntity extends PolymerEntity {
    */
   public ChemEntity(String str) {
     super(str);
+    type = "CHEM";
   }
 
 }

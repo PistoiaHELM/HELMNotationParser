@@ -38,7 +38,6 @@ public abstract class PolymerEntity extends Entity {
    */
   public PolymerEntity(String str) {
     super(str);
-
   }
 
 

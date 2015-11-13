@@ -24,17 +24,21 @@
 package NotationTest.Polymer;
 
 
+
+import java.io.IOException;
+
+import org.helm.notation2.parser.ExceptionParser.NotationException;
+import org.helm.notation2.parser.Notation.Polymer.MonomerNotationGroupElement;
+import org.helm.notation2.parser.Notation.Polymer.MonomerNotationUnit;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import parsertest.Notation.Polymer.MonomerNotationGroupElement;
-import parsertest.Notation.Polymer.MonomerNotationUnit;
 
 public class MonomerNotationGroupGroupElementTest {
 
   @Test
-  public void testConstructor() {
-    MonomerNotationUnit unit = new MonomerNotationUnit("R");
+  public void testConstructor() throws IOException, NotationException {
+    MonomerNotationUnit unit = new MonomerNotationUnit("R", "RNA");
     MonomerNotationGroupElement element = new MonomerNotationGroupElement(unit, 1, true);
     Assert.assertEquals(element.getValue().get(0), 1.0);
     Assert.assertTrue(element.getValue().size() == 1);
@@ -43,8 +47,8 @@ public class MonomerNotationGroupGroupElementTest {
   }
 
   @Test
-  public void testConstructorRange() {
-    MonomerNotationUnit unit = new MonomerNotationUnit("R");
+  public void testConstructorRange() throws IOException, NotationException {
+    MonomerNotationUnit unit = new MonomerNotationUnit("R", "RNA");
     MonomerNotationGroupElement element = new MonomerNotationGroupElement(unit, 1, 3);
 
     Assert.assertEquals(element.getValue().get(1), 3.0);

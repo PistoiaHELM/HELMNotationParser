@@ -75,9 +75,9 @@ public final class PolymerNotation {
    */
   private void decideWhichPolymerElements() {
     if (polymerID instanceof RNAEntity || polymerID instanceof PeptideEntity) {
-      this.elements = new PolymerListElements();
+      this.elements = new PolymerListElements(polymerID);
     } else {
-      this.elements = new PolymerSingleElements();
+      this.elements = new PolymerSingleElements(polymerID);
     }
 
   }

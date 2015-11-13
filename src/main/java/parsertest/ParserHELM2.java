@@ -23,6 +23,11 @@
  */
 package parsertest;
 
+import java.io.IOException;
+
+import org.helm.notation.MonomerException;
+import org.helm.notation.NotationException;
+import org.jdom.JDOMException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -44,12 +49,19 @@ public class ParserHELM2 {
   private static final Logger logger = LoggerFactory.getLogger(ParserHELM2.class);
 
   /**
-   * method to parse the given HELM2 string in the case of an invalid HELM2 notation exception is thrown
+   * method to parse the given HELM2 string in the case of an invalid HELM2
+   * notation exception is thrown
    * 
    * @param test HELM2 Notation
    * @throws ExceptionState
+   * @throws JDOMException
+   * @throws IOException
+   * @throws MonomerException
+   * @throws org.jdom2.JDOMException
+   * @throws NotationException
    */
-  public void parse(String test) throws ExceptionState {
+  public void parse(String test) throws ExceptionState, MonomerException,
+      IOException, JDOMException, org.jdom2.JDOMException, NotationException {
 
     parser = new StateMachineParser();
     if (test.substring(test.length() - 4).matches("V2\\.0")) {
