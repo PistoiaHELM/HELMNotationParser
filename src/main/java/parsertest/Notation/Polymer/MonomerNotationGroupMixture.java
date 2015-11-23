@@ -31,8 +31,7 @@ import java.text.DecimalFormat;
  * @author hecht
  */
 public class MonomerNotationGroupMixture extends MonomerNotationGroup {
-  MonomerNotation element;
-  
+
   /**
    * Constructs with the given String a mixture group
    * 
