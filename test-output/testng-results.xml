@@ -1,361 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="145" passed="145">
+<testng-results skipped="0" failed="0" total="58" passed="58">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="1144" started-at="2015-11-04T14:52:24Z" finished-at="2015-11-04T14:52:25Z">
+  <suite name="Default suite" duration-ms="988" started-at="2015-12-04T09:28:08Z" finished-at="2015-12-04T09:28:09Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="1144" started-at="2015-11-04T14:52:24Z" finished-at="2015-11-04T14:52:25Z">
-      <class name="parsertest.SimplePolymersSectionTest.BetweenParserTest">
-        <test-method status="PASS" signature="Reading$WithException()[pri:0, instance:parsertest.SimplePolymersSectionTest.BetweenParserTest@15ea0f2c]" name="Reading$WithException" duration-ms="0" started-at="2015-11-04T15:52:24Z" finished-at="2015-11-04T15:52:24Z">
-          <exception class="parsertest.ExceptionParser.SimplePolymerSectionException">
-            <message>
-              <![CDATA[Invalid syntax in simple polymer section: h]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[parsertest.ExceptionParser.SimplePolymerSectionException: Invalid syntax in simple polymer section: h
-	at parsertest.SimplePolymersSection.BetweenParser.doAction(BetweenParser.java:85)
-	at parsertest.StateMachineParser.doAction(StateMachineParser.java:85)
-	at parsertest.SimplePolymersSectionTest.BetweenParserTest.Reading$WithException(BetweenParserTest.java:78)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
-	at org.testng.TestRunner.privateRun(TestRunner.java:774)
-	at org.testng.TestRunner.run(TestRunner.java:624)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1191)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)
-	at org.testng.TestNG.run(TestNG.java:1024)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:112)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:205)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:176)
-]]>
-            </full-stacktrace>
-          </exception> <!-- parsertest.ExceptionParser.SimplePolymerSectionException -->
+    <test name="Default test" duration-ms="988" started-at="2015-12-04T09:28:08Z" finished-at="2015-12-04T09:28:09Z">
+      <class name="org.helm.notation2.parser.grouping.GroupingElementTest">
+        <test-method status="PASS" signature="testConstructor()[pri:0, instance:org.helm.notation2.parser.grouping.GroupingElementTest@71862303]" name="testConstructor" duration-ms="0" started-at="2015-12-04T10:28:09Z" finished-at="2015-12-04T10:28:09Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Reading$WithException -->
-        <test-method status="PASS" signature="goToConnectionsParser()[pri:0, instance:parsertest.SimplePolymersSectionTest.BetweenParserTest@15ea0f2c]" name="goToConnectionsParser" duration-ms="0" started-at="2015-11-04T15:52:24Z" finished-at="2015-11-04T15:52:24Z">
+        </test-method> <!-- testConstructor -->
+        <test-method status="PASS" signature="testConstructorTwo()[pri:0, instance:org.helm.notation2.parser.grouping.GroupingElementTest@71862303]" name="testConstructorTwo" duration-ms="0" started-at="2015-12-04T10:28:09Z" finished-at="2015-12-04T10:28:09Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- goToConnectionsParser -->
-        <test-method status="PASS" signature="goToInlineAnnotationsParser()[pri:0, instance:parsertest.SimplePolymersSectionTest.BetweenParserTest@15ea0f2c]" name="goToInlineAnnotationsParser" duration-ms="1" started-at="2015-11-04T15:52:24Z" finished-at="2015-11-04T15:52:24Z">
+        </test-method> <!-- testConstructorTwo -->
+      </class> <!-- org.helm.notation2.parser.grouping.GroupingElementTest -->
+      <class name="org.helm.notation2.parser.polymer.PolymerElementsTest">
+        <test-method status="PASS" signature="testConstructorList()[pri:0, instance:org.helm.notation2.parser.polymer.PolymerElementsTest@a22c86e]" name="testConstructorList" duration-ms="1" started-at="2015-12-04T10:28:08Z" finished-at="2015-12-04T10:28:08Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- goToInlineAnnotationsParser -->
-        <test-method status="PASS" signature="goToSimplePolymersParser()[pri:0, instance:parsertest.SimplePolymersSectionTest.BetweenParserTest@15ea0f2c]" name="goToSimplePolymersParser" duration-ms="0" started-at="2015-11-04T15:52:24Z" finished-at="2015-11-04T15:52:24Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- goToSimplePolymersParser -->
-      </class> <!-- parsertest.SimplePolymersSectionTest.BetweenParserTest -->
-      <class name="parsertest.ConnectionSectionTest.BetweenInlineConnectionParserTest">
-        <test-method status="PASS" signature="Reading$WithException()[pri:0, instance:parsertest.ConnectionSectionTest.BetweenInlineConnectionParserTest@6786a44]" name="Reading$WithException" duration-ms="0" started-at="2015-11-04T15:52:24Z" finished-at="2015-11-04T15:52:24Z">
-          <exception class="parsertest.ExceptionParser.ConnectionSectionException">
-            <message>
-              <![CDATA[Invalid character after inline annotation in connection section: h]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[parsertest.ExceptionParser.ConnectionSectionException: Invalid character after inline annotation in connection section: h
-	at parsertest.ConnectionSection.BetweenInlineConnectionParser.doAction(BetweenInlineConnectionParser.java:76)
-	at parsertest.StateMachineParser.doAction(StateMachineParser.java:85)
-	at parsertest.ConnectionSectionTest.BetweenInlineConnectionParserTest.Reading$WithException(BetweenInlineConnectionParserTest.java:67)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
-	at org.testng.TestRunner.privateRun(TestRunner.java:774)
-	at org.testng.TestRunner.run(TestRunner.java:624)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1191)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)
-	at org.testng.TestNG.run(TestNG.java:1024)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:112)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:205)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:176)
-]]>
-            </full-stacktrace>
-          </exception> <!-- parsertest.ExceptionParser.ConnectionSectionException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Reading$WithException -->
-        <test-method status="PASS" signature="goToConnectionsParser()[pri:0, instance:parsertest.ConnectionSectionTest.BetweenInlineConnectionParserTest@6786a44]" name="goToConnectionsParser" duration-ms="0" started-at="2015-11-04T15:52:24Z" finished-at="2015-11-04T15:52:24Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- goToConnectionsParser -->
-        <test-method status="PASS" signature="goToGroupingSection()[pri:0, instance:parsertest.ConnectionSectionTest.BetweenInlineConnectionParserTest@6786a44]" name="goToGroupingSection" duration-ms="0" started-at="2015-11-04T15:52:24Z" finished-at="2015-11-04T15:52:24Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- goToGroupingSection -->
-      </class> <!-- parsertest.ConnectionSectionTest.BetweenInlineConnectionParserTest -->
-      <class name="NotationTest.OutputWriterTest">
-        <test-method status="PASS" signature="testHELM2Output()[pri:0, instance:NotationTest.OutputWriterTest@1e1f4011]" name="testHELM2Output" duration-ms="18" started-at="2015-11-04T15:52:24Z" finished-at="2015-11-04T15:52:24Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testHELM2Output -->
-        <test-method status="PASS" signature="testHELM2OutputExtended()[pri:0, instance:NotationTest.OutputWriterTest@1e1f4011]" name="testHELM2OutputExtended" duration-ms="12" started-at="2015-11-04T15:52:24Z" finished-at="2015-11-04T15:52:24Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testHELM2OutputExtended -->
-      </class> <!-- NotationTest.OutputWriterTest -->
-      <class name="parsertest.SimplePolymersSectionTest.SimplePolymersParserTest">
-        <test-method status="PASS" signature="goToConnectionSectionTest()[pri:0, instance:parsertest.SimplePolymersSectionTest.SimplePolymersParserTest@4b8899ad]" name="goToConnectionSectionTest" duration-ms="0" started-at="2015-11-04T15:52:24Z" finished-at="2015-11-04T15:52:24Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- goToConnectionSectionTest -->
-        <test-method status="PASS" signature="goToSimplePolymersNotationParserTest()[pri:0, instance:parsertest.SimplePolymersSectionTest.SimplePolymersParserTest@4b8899ad]" name="goToSimplePolymersNotationParserTest" duration-ms="0" started-at="2015-11-04T15:52:24Z" finished-at="2015-11-04T15:52:24Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- goToSimplePolymersNotationParserTest -->
-        <test-method status="PASS" signature="goToSimplePolymersNotationParserTestWithException()[pri:0, instance:parsertest.SimplePolymersSectionTest.SimplePolymersParserTest@4b8899ad]" name="goToSimplePolymersNotationParserTestWithException" duration-ms="0" started-at="2015-11-04T15:52:24Z" finished-at="2015-11-04T15:52:24Z">
-          <exception class="parsertest.ExceptionParser.SimplePolymerSectionException">
-            <message>
-              <![CDATA[Polymer ID is not correct: ]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[parsertest.ExceptionParser.SimplePolymerSectionException: Polymer ID is not correct: 
-	at parsertest.SimplePolymersSection.SimplePolymersParser.doAction(SimplePolymersParser.java:99)
-	at parsertest.StateMachineParser.doAction(StateMachineParser.java:85)
-	at parsertest.SimplePolymersSectionTest.SimplePolymersParserTest.goToSimplePolymersNotationParserTestWithException(SimplePolymersParserTest.java:75)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
-	at org.testng.TestRunner.privateRun(TestRunner.java:774)
-	at org.testng.TestRunner.run(TestRunner.java:624)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1191)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)
-	at org.testng.TestNG.run(TestNG.java:1024)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:112)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:205)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:176)
-]]>
-            </full-stacktrace>
-          </exception> <!-- parsertest.ExceptionParser.SimplePolymerSectionException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- goToSimplePolymersNotationParserTestWithException -->
-        <test-method status="PASS" signature="keepThisStateTest()[pri:0, instance:parsertest.SimplePolymersSectionTest.SimplePolymersParserTest@4b8899ad]" name="keepThisStateTest" duration-ms="0" started-at="2015-11-04T15:52:24Z" finished-at="2015-11-04T15:52:24Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- keepThisStateTest -->
-      </class> <!-- parsertest.SimplePolymersSectionTest.SimplePolymersParserTest -->
-      <class name="NotationTest.GroupingNotationTest">
-        <test-method status="PASS" signature="testGroupingAndOr()[pri:0, instance:NotationTest.GroupingNotationTest@5ef75c3b]" name="testGroupingAndOr" duration-ms="15" started-at="2015-11-04T15:52:24Z" finished-at="2015-11-04T15:52:24Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testGroupingAndOr -->
-        <test-method status="PASS" signature="testGroupingNotationMixture()[pri:0, instance:NotationTest.GroupingNotationTest@5ef75c3b]" name="testGroupingNotationMixture" duration-ms="14" started-at="2015-11-04T15:52:24Z" finished-at="2015-11-04T15:52:24Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testGroupingNotationMixture -->
-        <test-method status="PASS" signature="testGroupingNotationMixtureRange()[pri:0, instance:NotationTest.GroupingNotationTest@5ef75c3b]" name="testGroupingNotationMixtureRange" duration-ms="14" started-at="2015-11-04T15:52:24Z" finished-at="2015-11-04T15:52:24Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testGroupingNotationMixtureRange -->
-        <test-method status="PASS" signature="testGroupingNotationMixtureValue()[pri:0, instance:NotationTest.GroupingNotationTest@5ef75c3b]" name="testGroupingNotationMixtureValue" duration-ms="14" started-at="2015-11-04T15:52:24Z" finished-at="2015-11-04T15:52:24Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testGroupingNotationMixtureValue -->
-        <test-method status="PASS" signature="testGroupingNotationOR()[pri:0, instance:NotationTest.GroupingNotationTest@5ef75c3b]" name="testGroupingNotationOR" duration-ms="14" started-at="2015-11-04T15:52:24Z" finished-at="2015-11-04T15:52:24Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testGroupingNotationOR -->
-        <test-method status="PASS" signature="testGroupingNotationOrDefaultValue()[pri:0, instance:NotationTest.GroupingNotationTest@5ef75c3b]" name="testGroupingNotationOrDefaultValue" duration-ms="14" started-at="2015-11-04T15:52:24Z" finished-at="2015-11-04T15:52:24Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testGroupingNotationOrDefaultValue -->
-      </class> <!-- NotationTest.GroupingNotationTest -->
-      <class name="NotationTest.JSONTest">
-        <test-method status="PASS" signature="testAnnotationNotation()[pri:0, instance:NotationTest.JSONTest@7f6fa3f]" name="testAnnotationNotation" duration-ms="162" started-at="2015-11-04T15:52:24Z" finished-at="2015-11-04T15:52:24Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testAnnotationNotation -->
-      </class> <!-- NotationTest.JSONTest -->
-      <class name="parsertest.ConnectionSectionTest.ConnectionsReadSecondIDParserTest">
-        <test-method status="PASS" signature="goToConnectionsDetailsParser()[pri:0, instance:parsertest.ConnectionSectionTest.ConnectionsReadSecondIDParserTest@7eeab576]" name="goToConnectionsDetailsParser" duration-ms="0" started-at="2015-11-04T15:52:25Z" finished-at="2015-11-04T15:52:25Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- goToConnectionsDetailsParser -->
-        <test-method status="PASS" signature="goToConnectionsDetailsParserWithException()[pri:0, instance:parsertest.ConnectionSectionTest.ConnectionsReadSecondIDParserTest@7eeab576]" name="goToConnectionsDetailsParserWithException" duration-ms="1" started-at="2015-11-04T15:52:25Z" finished-at="2015-11-04T15:52:25Z">
-          <exception class="parsertest.ExceptionParser.ConnectionSectionException">
-            <message>
-              <![CDATA[Target polymer ID is not correct in the connection section: P]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[parsertest.ExceptionParser.ConnectionSectionException: Target polymer ID is not correct in the connection section: P
-	at parsertest.ConnectionSection.ConnectionsReadSecondIDParser.doAction(ConnectionsReadSecondIDParser.java:74)
-	at parsertest.StateMachineParser.doAction(StateMachineParser.java:85)
-	at parsertest.ConnectionSectionTest.ConnectionsReadSecondIDParserTest.goToConnectionsDetailsParserWithException(ConnectionsReadSecondIDParserTest.java:58)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
-	at org.testng.TestRunner.privateRun(TestRunner.java:774)
-	at org.testng.TestRunner.run(TestRunner.java:624)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1191)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)
-	at org.testng.TestNG.run(TestNG.java:1024)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:112)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:205)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:176)
-]]>
-            </full-stacktrace>
-          </exception> <!-- parsertest.ExceptionParser.ConnectionSectionException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- goToConnectionsDetailsParserWithException -->
-      </class> <!-- parsertest.ConnectionSectionTest.ConnectionsReadSecondIDParserTest -->
-      <class name="parsertest.ConnectionSectionTest.ConnectionsParserTest">
-        <test-method status="PASS" signature="goToConnectionsReadSecondIDParser()[pri:0, instance:parsertest.ConnectionSectionTest.ConnectionsParserTest@4a7263d0]" name="goToConnectionsReadSecondIDParser" duration-ms="1" started-at="2015-11-04T15:52:24Z" finished-at="2015-11-04T15:52:24Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- goToConnectionsReadSecondIDParser -->
-        <test-method status="PASS" signature="goToConnectionsReadSecondIDParserWithException()[pri:0, instance:parsertest.ConnectionSectionTest.ConnectionsParserTest@4a7263d0]" name="goToConnectionsReadSecondIDParserWithException" duration-ms="1" started-at="2015-11-04T15:52:24Z" finished-at="2015-11-04T15:52:24Z">
-          <exception class="parsertest.ExceptionParser.ConnectionSectionException">
-            <message>
-              <![CDATA[Source polymer id is not correct in the connection section: PEPTID]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[parsertest.ExceptionParser.ConnectionSectionException: Source polymer id is not correct in the connection section: PEPTID
-	at parsertest.ConnectionSection.ConnectionsParser.doAction(ConnectionsParser.java:89)
-	at parsertest.StateMachineParser.doAction(StateMachineParser.java:85)
-	at parsertest.ConnectionSectionTest.ConnectionsParserTest.goToConnectionsReadSecondIDParserWithException(ConnectionsParserTest.java:93)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
-	at org.testng.TestRunner.privateRun(TestRunner.java:774)
-	at org.testng.TestRunner.run(TestRunner.java:624)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1191)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)
-	at org.testng.TestNG.run(TestNG.java:1024)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:112)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:205)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:176)
-]]>
-            </full-stacktrace>
-          </exception> <!-- parsertest.ExceptionParser.ConnectionSectionException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- goToConnectionsReadSecondIDParserWithException -->
-        <test-method status="PASS" signature="goToGroupingParser()[pri:0, instance:parsertest.ConnectionSectionTest.ConnectionsParserTest@4a7263d0]" name="goToGroupingParser" duration-ms="1" started-at="2015-11-04T15:52:24Z" finished-at="2015-11-04T15:52:24Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- goToGroupingParser -->
-        <test-method status="PASS" signature="goToGroupingParserWithException()[pri:0, instance:parsertest.ConnectionSectionTest.ConnectionsParserTest@4a7263d0]" name="goToGroupingParserWithException" duration-ms="0" started-at="2015-11-04T15:52:24Z" finished-at="2015-11-04T15:52:24Z">
-          <exception class="parsertest.ExceptionParser.ConnectionSectionException">
-            <message>
-              <![CDATA[Missing target polymer id: ]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[parsertest.ExceptionParser.ConnectionSectionException: Missing target polymer id: 
-	at parsertest.ConnectionSection.ConnectionsParser.doAction(ConnectionsParser.java:78)
-	at parsertest.StateMachineParser.doAction(StateMachineParser.java:85)
-	at parsertest.ConnectionSectionTest.ConnectionsParserTest.goToGroupingParserWithException(ConnectionsParserTest.java:68)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
-	at org.testng.TestRunner.privateRun(TestRunner.java:774)
-	at org.testng.TestRunner.run(TestRunner.java:624)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1191)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)
-	at org.testng.TestNG.run(TestNG.java:1024)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:112)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:205)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:176)
-]]>
-            </full-stacktrace>
-          </exception> <!-- parsertest.ExceptionParser.ConnectionSectionException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- goToGroupingParserWithException -->
-        <test-method status="PASS" signature="keepThisState()[pri:0, instance:parsertest.ConnectionSectionTest.ConnectionsParserTest@4a7263d0]" name="keepThisState" duration-ms="0" started-at="2015-11-04T15:52:24Z" finished-at="2015-11-04T15:52:24Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- keepThisState -->
-      </class> <!-- parsertest.ConnectionSectionTest.ConnectionsParserTest -->
-      <class name="NotationTest.Polymer.PolymerElementsTest">
-        <test-method status="PASS" signature="testConstructorSingle()[pri:0, instance:NotationTest.Polymer.PolymerElementsTest@75215398]" name="testConstructorSingle" duration-ms="0" started-at="2015-11-04T15:52:24Z" finished-at="2015-11-04T15:52:24Z">
-          <exception class="parsertest.ExceptionParser.SimplePolymerSectionException">
+        </test-method> <!-- testConstructorList -->
+        <test-method status="PASS" signature="testConstructorSingle()[pri:0, instance:org.helm.notation2.parser.polymer.PolymerElementsTest@a22c86e]" name="testConstructorSingle" duration-ms="0" started-at="2015-12-04T10:28:08Z" finished-at="2015-12-04T10:28:08Z">
+          <exception class="org.helm.notation2.parser.exceptionparser.SimplePolymerSectionException">
             <message>
               <![CDATA[Only one Monomer unit is allowed for CHEM and BLOB]]>
             </message>
             <full-stacktrace>
-              <![CDATA[parsertest.ExceptionParser.SimplePolymerSectionException: Only one Monomer unit is allowed for CHEM and BLOB
-	at parsertest.Notation.Polymer.PolymerSingleElements.addMonomer(PolymerSingleElements.java:64)
-	at NotationTest.Polymer.PolymerElementsTest.testConstructorSingle(PolymerElementsTest.java:51)
+              <![CDATA[org.helm.notation2.parser.exceptionparser.SimplePolymerSectionException: Only one Monomer unit is allowed for CHEM and BLOB
+	at org.helm.notation2.parser.notation.polymer.PolymerSingleElements.addMonomerNotation(PolymerSingleElements.java:72)
+	at org.helm.notation2.parser.polymer.PolymerElementsTest.testConstructorSingle(PolymerElementsTest.java:58)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -382,516 +56,108 @@
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:176)
 ]]>
             </full-stacktrace>
-          </exception> <!-- parsertest.ExceptionParser.SimplePolymerSectionException -->
+          </exception> <!-- org.helm.notation2.parser.exceptionparser.SimplePolymerSectionException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testConstructorSingle -->
-        <test-method status="PASS" signature="testConstructorList()[pri:0, instance:NotationTest.Polymer.PolymerElementsTest@75215398]" name="testConstructorList" duration-ms="0" started-at="2015-11-04T15:52:24Z" finished-at="2015-11-04T15:52:24Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testConstructorList -->
-      </class> <!-- NotationTest.Polymer.PolymerElementsTest -->
-      <class name="NotationTest.Polymer.MonomerNotationGroupGroupElementTest">
-        <test-method status="PASS" signature="testConstructor()[pri:0, instance:NotationTest.Polymer.MonomerNotationGroupGroupElementTest@788a0198]" name="testConstructor" duration-ms="0" started-at="2015-11-04T15:52:24Z" finished-at="2015-11-04T15:52:24Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testConstructor -->
-        <test-method status="PASS" signature="testConstructorRange()[pri:0, instance:NotationTest.Polymer.MonomerNotationGroupGroupElementTest@788a0198]" name="testConstructorRange" duration-ms="0" started-at="2015-11-04T15:52:24Z" finished-at="2015-11-04T15:52:24Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testConstructorRange -->
-      </class> <!-- NotationTest.Polymer.MonomerNotationGroupGroupElementTest -->
-      <class name="parsertest.GroupingSectionTest.GroupingDetailedInformationParserTest">
-        <test-method status="PASS" signature="goToBetweenGroupingParser()[pri:0, instance:parsertest.GroupingSectionTest.GroupingDetailedInformationParserTest@1a722fba]" name="goToBetweenGroupingParser" duration-ms="1" started-at="2015-11-04T15:52:24Z" finished-at="2015-11-04T15:52:24Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- goToBetweenGroupingParser -->
-        <test-method status="PASS" signature="goToBetweenGroupingParserWithException()[pri:0, instance:parsertest.GroupingSectionTest.GroupingDetailedInformationParserTest@1a722fba]" name="goToBetweenGroupingParserWithException" duration-ms="0" started-at="2015-11-04T15:52:24Z" finished-at="2015-11-04T15:52:24Z">
-          <exception class="parsertest.ExceptionParser.GroupingSectionException">
-            <message>
-              <![CDATA[Group information is wrong: h]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[parsertest.ExceptionParser.GroupingSectionException: Group information is wrong: h
-	at parsertest.GroupingSection.GroupingDetailedInformationParser.doAction(GroupingDetailedInformationParser.java:73)
-	at parsertest.StateMachineParser.doAction(StateMachineParser.java:85)
-	at parsertest.GroupingSectionTest.GroupingDetailedInformationParserTest.goToBetweenGroupingParserWithException(GroupingDetailedInformationParserTest.java:71)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
-	at org.testng.TestRunner.privateRun(TestRunner.java:774)
-	at org.testng.TestRunner.run(TestRunner.java:624)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1191)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)
-	at org.testng.TestNG.run(TestNG.java:1024)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:112)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:205)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:176)
-]]>
-            </full-stacktrace>
-          </exception> <!-- parsertest.ExceptionParser.GroupingSectionException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- goToBetweenGroupingParserWithException -->
-        <test-method status="PASS" signature="keepThisState()[pri:0, instance:parsertest.GroupingSectionTest.GroupingDetailedInformationParserTest@1a722fba]" name="keepThisState" duration-ms="0" started-at="2015-11-04T15:52:24Z" finished-at="2015-11-04T15:52:24Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- keepThisState -->
-      </class> <!-- parsertest.GroupingSectionTest.GroupingDetailedInformationParserTest -->
-      <class name="NotationTest.Grouping.GroupingAmbiguityTest">
-        <test-method status="PASS" signature="testGrouping()[pri:0, instance:NotationTest.Grouping.GroupingAmbiguityTest@62b19476]" name="testGrouping" duration-ms="1" started-at="2015-11-04T15:52:24Z" finished-at="2015-11-04T15:52:24Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testGrouping -->
-      </class> <!-- NotationTest.Grouping.GroupingAmbiguityTest -->
-      <class name="NotationTest.Polymer.MonomerNotationTest">
-        <test-method status="PASS" signature="testMonomerNotationAnnotation()[pri:0, instance:NotationTest.Polymer.MonomerNotationTest@15a72b8a]" name="testMonomerNotationAnnotation" duration-ms="1" started-at="2015-11-04T15:52:24Z" finished-at="2015-11-04T15:52:24Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testMonomerNotationAnnotation -->
-        <test-method status="PASS" signature="testMonomerNotationCount()[pri:0, instance:NotationTest.Polymer.MonomerNotationTest@15a72b8a]" name="testMonomerNotationCount" duration-ms="0" started-at="2015-11-04T15:52:24Z" finished-at="2015-11-04T15:52:24Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testMonomerNotationCount -->
-        <test-method status="PASS" signature="testMonomerNotationDefaultCount()[pri:0, instance:NotationTest.Polymer.MonomerNotationTest@15a72b8a]" name="testMonomerNotationDefaultCount" duration-ms="1" started-at="2015-11-04T15:52:24Z" finished-at="2015-11-04T15:52:24Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testMonomerNotationDefaultCount -->
-        <test-method status="PASS" signature="testMonomerNotationDefaultAnnotation()[pri:0, instance:NotationTest.Polymer.MonomerNotationTest@15a72b8a]" name="testMonomerNotationDefaultAnnotation" duration-ms="0" started-at="2015-11-04T15:52:24Z" finished-at="2015-11-04T15:52:24Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testMonomerNotationDefaultAnnotation -->
-        <test-method status="PASS" signature="testMonomerNotationID()[pri:0, instance:NotationTest.Polymer.MonomerNotationTest@15a72b8a]" name="testMonomerNotationID" duration-ms="0" started-at="2015-11-04T15:52:24Z" finished-at="2015-11-04T15:52:24Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testMonomerNotationID -->
-        <test-method status="PASS" signature="testMonomerNotationIDValue()[pri:0, instance:NotationTest.Polymer.MonomerNotationTest@15a72b8a]" name="testMonomerNotationIDValue" duration-ms="1" started-at="2015-11-04T15:52:24Z" finished-at="2015-11-04T15:52:24Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testMonomerNotationIDValue -->
-        <test-method status="PASS" signature="testMonomerNotationID_()[pri:0, instance:NotationTest.Polymer.MonomerNotationTest@15a72b8a]" name="testMonomerNotationID_" duration-ms="0" started-at="2015-11-04T15:52:24Z" finished-at="2015-11-04T15:52:24Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testMonomerNotationID_ -->
-      </class> <!-- NotationTest.Polymer.MonomerNotationTest -->
-      <class name="parsertest.AnnotationSectionTest.TestInputAnnotationSection">
-        <test-method status="PASS" signature="testSimpleInput()[pri:0, instance:parsertest.AnnotationSectionTest.TestInputAnnotationSection@126e4ecd]" name="testSimpleInput" duration-ms="5" started-at="2015-11-04T15:52:25Z" finished-at="2015-11-04T15:52:25Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testSimpleInput -->
-      </class> <!-- parsertest.AnnotationSectionTest.TestInputAnnotationSection -->
-      <class name="parsertest.SimplePolymersSectionTest.BetweenInlineMonomerParser">
-        <test-method status="PASS" signature="goToSimplePolymerNotationParser()[pri:0, instance:parsertest.SimplePolymersSectionTest.BetweenInlineMonomerParser@398a1cf1]" name="goToSimplePolymerNotationParser" duration-ms="1" started-at="2015-11-04T15:52:24Z" finished-at="2015-11-04T15:52:24Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- goToSimplePolymerNotationParser -->
-        <test-method status="PASS" signature="goToConnection()[pri:0, instance:parsertest.SimplePolymersSectionTest.BetweenInlineMonomerParser@398a1cf1]" name="goToConnection" duration-ms="0" started-at="2015-11-04T15:52:24Z" finished-at="2015-11-04T15:52:24Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- goToConnection -->
-        <test-method status="PASS" signature="goToWithException()[pri:0, instance:parsertest.SimplePolymersSectionTest.BetweenInlineMonomerParser@398a1cf1]" name="goToWithException" duration-ms="0" started-at="2015-11-04T15:52:24Z" finished-at="2015-11-04T15:52:24Z">
-          <exception class="parsertest.ExceptionParser.SimplePolymerSectionException">
-            <message>
-              <![CDATA[Error in the simple polymers notation section:]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[parsertest.ExceptionParser.SimplePolymerSectionException: Error in the simple polymers notation section:
-	at parsertest.SimplePolymersSection.BetweenMonomerParser.doAction(BetweenMonomerParser.java:78)
-	at parsertest.StateMachineParser.doAction(StateMachineParser.java:85)
-	at parsertest.SimplePolymersSectionTest.BetweenInlineMonomerParser.goToWithException(BetweenInlineMonomerParser.java:70)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
-	at org.testng.TestRunner.privateRun(TestRunner.java:774)
-	at org.testng.TestRunner.run(TestRunner.java:624)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1191)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)
-	at org.testng.TestNG.run(TestNG.java:1024)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:112)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:205)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:176)
-]]>
-            </full-stacktrace>
-          </exception> <!-- parsertest.ExceptionParser.SimplePolymerSectionException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- goToWithException -->
-      </class> <!-- parsertest.SimplePolymersSectionTest.BetweenInlineMonomerParser -->
-      <class name="NotationTest.PolymerNotationTest">
-        <test-method status="PASS" signature="testGroupRepeating()[pri:0, instance:NotationTest.PolymerNotationTest@420d3967]" name="testGroupRepeating" duration-ms="19" started-at="2015-11-04T15:52:24Z" finished-at="2015-11-04T15:52:24Z">
+      </class> <!-- org.helm.notation2.parser.polymer.PolymerElementsTest -->
+      <class name="org.helm.notation2.parser.PolymerNotationTest">
+        <test-method status="PASS" signature="testGroupRepeating()[pri:0, instance:org.helm.notation2.parser.PolymerNotationTest@76ff6c19]" name="testGroupRepeating" duration-ms="1" started-at="2015-12-04T10:28:09Z" finished-at="2015-12-04T10:28:09Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testGroupRepeating -->
-        <test-method status="PASS" signature="testInputCount()[pri:0, instance:NotationTest.PolymerNotationTest@420d3967]" name="testInputCount" duration-ms="2" started-at="2015-11-04T15:52:24Z" finished-at="2015-11-04T15:52:24Z">
+        <test-method status="PASS" signature="testInputCount()[pri:0, instance:org.helm.notation2.parser.PolymerNotationTest@76ff6c19]" name="testInputCount" duration-ms="1" started-at="2015-12-04T10:28:09Z" finished-at="2015-12-04T10:28:09Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testInputCount -->
-        <test-method status="PASS" signature="testInputGroupMixture()[pri:0, instance:NotationTest.PolymerNotationTest@420d3967]" name="testInputGroupMixture" duration-ms="2" started-at="2015-11-04T15:52:24Z" finished-at="2015-11-04T15:52:24Z">
+        <test-method status="PASS" signature="testInputGroupMixture()[pri:0, instance:org.helm.notation2.parser.PolymerNotationTest@76ff6c19]" name="testInputGroupMixture" duration-ms="1" started-at="2015-12-04T10:28:09Z" finished-at="2015-12-04T10:28:09Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testInputGroupMixture -->
-        <test-method status="PASS" signature="testInputGroupOr()[pri:0, instance:NotationTest.PolymerNotationTest@420d3967]" name="testInputGroupOr" duration-ms="2" started-at="2015-11-04T15:52:24Z" finished-at="2015-11-04T15:52:24Z">
+        <test-method status="PASS" signature="testInputGroupOr()[pri:0, instance:org.helm.notation2.parser.PolymerNotationTest@76ff6c19]" name="testInputGroupOr" duration-ms="1" started-at="2015-12-04T10:28:09Z" finished-at="2015-12-04T10:28:09Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testInputGroupOr -->
-        <test-method status="PASS" signature="testSimpleInput()[pri:0, instance:NotationTest.PolymerNotationTest@420d3967]" name="testSimpleInput" duration-ms="22" started-at="2015-11-04T15:52:24Z" finished-at="2015-11-04T15:52:24Z">
+        <test-method status="PASS" signature="testSimpleInput()[pri:0, instance:org.helm.notation2.parser.PolymerNotationTest@76ff6c19]" name="testSimpleInput" duration-ms="10" started-at="2015-12-04T10:28:09Z" finished-at="2015-12-04T10:28:09Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testSimpleInput -->
-      </class> <!-- NotationTest.PolymerNotationTest -->
-      <class name="NotationTest.AnnotationNotationTest">
-        <test-method status="PASS" signature="testAnnotationNotation()[pri:0, instance:NotationTest.AnnotationNotationTest@6200124e]" name="testAnnotationNotation" duration-ms="2" started-at="2015-11-04T15:52:25Z" finished-at="2015-11-04T15:52:25Z">
+      </class> <!-- org.helm.notation2.parser.PolymerNotationTest -->
+      <class name="org.helm.notation2.parser.GroupingNotationTest">
+        <test-method status="PASS" signature="testGroupingAndOr()[pri:0, instance:org.helm.notation2.parser.GroupingNotationTest@4706efb]" name="testGroupingAndOr" duration-ms="13" started-at="2015-12-04T10:28:09Z" finished-at="2015-12-04T10:28:09Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testAnnotationNotation -->
-      </class> <!-- NotationTest.AnnotationNotationTest -->
-      <class name="NotationTest.Grouping.GroupingNotationTest">
-        <test-method status="PASS" signature="testConstructor()[pri:0, instance:NotationTest.Grouping.GroupingNotationTest@7f77e2f]" name="testConstructor" duration-ms="0" started-at="2015-11-04T15:52:25Z" finished-at="2015-11-04T15:52:25Z">
+        </test-method> <!-- testGroupingAndOr -->
+        <test-method status="PASS" signature="testGroupingNotationMixture()[pri:0, instance:org.helm.notation2.parser.GroupingNotationTest@4706efb]" name="testGroupingNotationMixture" duration-ms="14" started-at="2015-12-04T10:28:09Z" finished-at="2015-12-04T10:28:09Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testConstructor -->
-        <test-method status="PASS" signature="testConstructorAmbiguityOR()[pri:0, instance:NotationTest.Grouping.GroupingNotationTest@7f77e2f]" name="testConstructorAmbiguityOR" duration-ms="0" started-at="2015-11-04T15:52:25Z" finished-at="2015-11-04T15:52:25Z">
+        </test-method> <!-- testGroupingNotationMixture -->
+        <test-method status="PASS" signature="testGroupingNotationMixtureRange()[pri:0, instance:org.helm.notation2.parser.GroupingNotationTest@4706efb]" name="testGroupingNotationMixtureRange" duration-ms="12" started-at="2015-12-04T10:28:09Z" finished-at="2015-12-04T10:28:09Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testConstructorAmbiguityOR -->
-        <test-method status="PASS" signature="testConstructorAmbiguityAND()[pri:0, instance:NotationTest.Grouping.GroupingNotationTest@7f77e2f]" name="testConstructorAmbiguityAND" duration-ms="0" started-at="2015-11-04T15:52:25Z" finished-at="2015-11-04T15:52:25Z">
+        </test-method> <!-- testGroupingNotationMixtureRange -->
+        <test-method status="PASS" signature="testGroupingNotationMixtureValue()[pri:0, instance:org.helm.notation2.parser.GroupingNotationTest@4706efb]" name="testGroupingNotationMixtureValue" duration-ms="12" started-at="2015-12-04T10:28:09Z" finished-at="2015-12-04T10:28:09Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testConstructorAmbiguityAND -->
-        <test-method status="PASS" signature="testConstructorWithException()[pri:0, instance:NotationTest.Grouping.GroupingNotationTest@7f77e2f]" name="testConstructorWithException" duration-ms="0" started-at="2015-11-04T15:52:25Z" finished-at="2015-11-04T15:52:25Z">
-          <exception class="parsertest.ExceptionParser.NotationException">
-            <message>
-              <![CDATA[Group Id is not correct: 1]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[parsertest.ExceptionParser.NotationException: Group Id is not correct: 1
-	at parsertest.Notation.Grouping.GroupingNotation.<init>(GroupingNotation.java:53)
-	at NotationTest.Grouping.GroupingNotationTest.testConstructorWithException(GroupingNotationTest.java:45)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
-	at org.testng.TestRunner.privateRun(TestRunner.java:774)
-	at org.testng.TestRunner.run(TestRunner.java:624)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1191)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)
-	at org.testng.TestNG.run(TestNG.java:1024)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:112)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:205)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:176)
-]]>
-            </full-stacktrace>
-          </exception> <!-- parsertest.ExceptionParser.NotationException -->
+        </test-method> <!-- testGroupingNotationMixtureValue -->
+        <test-method status="PASS" signature="testGroupingNotationOR()[pri:0, instance:org.helm.notation2.parser.GroupingNotationTest@4706efb]" name="testGroupingNotationOR" duration-ms="17" started-at="2015-12-04T10:28:09Z" finished-at="2015-12-04T10:28:09Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testConstructorWithException -->
-      </class> <!-- NotationTest.Grouping.GroupingNotationTest -->
-      <class name="NotationTest.ConnectionNotationTest">
-        <test-method status="PASS" signature="testConnectionGrouping()[pri:0, instance:NotationTest.ConnectionNotationTest@2332ee87]" name="testConnectionGrouping" duration-ms="23" started-at="2015-11-04T15:52:24Z" finished-at="2015-11-04T15:52:24Z">
+        </test-method> <!-- testGroupingNotationOR -->
+        <test-method status="PASS" signature="testGroupingNotationOrDefaultValue()[pri:0, instance:org.helm.notation2.parser.GroupingNotationTest@4706efb]" name="testGroupingNotationOrDefaultValue" duration-ms="10" started-at="2015-12-04T10:28:09Z" finished-at="2015-12-04T10:28:09Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testConnectionGrouping -->
-        <test-method status="PASS" signature="testConnectionNotation()[pri:0, instance:NotationTest.ConnectionNotationTest@2332ee87]" name="testConnectionNotation" duration-ms="18" started-at="2015-11-04T15:52:24Z" finished-at="2015-11-04T15:52:24Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testConnectionNotation -->
-        <test-method status="PASS" signature="testConnectionNotationTwo()[pri:0, instance:NotationTest.ConnectionNotationTest@2332ee87]" name="testConnectionNotationTwo" duration-ms="19" started-at="2015-11-04T15:52:24Z" finished-at="2015-11-04T15:52:24Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testConnectionNotationTwo -->
-      </class> <!-- NotationTest.ConnectionNotationTest -->
-      <class name="parsertest.ConnectionSectionTest.TestInputConnectionSection">
-        <test-method status="PASS" signature="testConnectionMonomer()[pri:0, instance:parsertest.ConnectionSectionTest.TestInputConnectionSection@67a7422e]" name="testConnectionMonomer" duration-ms="20" started-at="2015-11-04T15:52:24Z" finished-at="2015-11-04T15:52:24Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testConnectionMonomer -->
-        <test-method status="PASS" signature="testConnectionMonomerAmbiguity()[pri:0, instance:parsertest.ConnectionSectionTest.TestInputConnectionSection@67a7422e]" name="testConnectionMonomerAmbiguity" duration-ms="16" started-at="2015-11-04T15:52:24Z" finished-at="2015-11-04T15:52:24Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testConnectionMonomerAmbiguity -->
-        <test-method status="PASS" signature="testConnectionMonomerAmbiguityNoInformation()[pri:0, instance:parsertest.ConnectionSectionTest.TestInputConnectionSection@67a7422e]" name="testConnectionMonomerAmbiguityNoInformation" duration-ms="16" started-at="2015-11-04T15:52:24Z" finished-at="2015-11-04T15:52:24Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testConnectionMonomerAmbiguityNoInformation -->
-        <test-method status="PASS" signature="testConnectionMonomerAmbiguityPartlyInformation()[pri:0, instance:parsertest.ConnectionSectionTest.TestInputConnectionSection@67a7422e]" name="testConnectionMonomerAmbiguityPartlyInformation" duration-ms="15" started-at="2015-11-04T15:52:24Z" finished-at="2015-11-04T15:52:24Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testConnectionMonomerAmbiguityPartlyInformation -->
-        <test-method status="PASS" signature="testConnectionStatisticalBinding()[pri:0, instance:parsertest.ConnectionSectionTest.TestInputConnectionSection@67a7422e]" name="testConnectionStatisticalBinding" duration-ms="5" started-at="2015-11-04T15:52:24Z" finished-at="2015-11-04T15:52:24Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testConnectionStatisticalBinding -->
-        <test-method status="PASS" signature="testConnectionUnknownBinding()[pri:0, instance:parsertest.ConnectionSectionTest.TestInputConnectionSection@67a7422e]" name="testConnectionUnknownBinding" duration-ms="6" started-at="2015-11-04T15:52:24Z" finished-at="2015-11-04T15:52:24Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testConnectionUnknownBinding -->
-        <test-method status="PASS" signature="testHydrogenBondInConnectionSection()[pri:0, instance:parsertest.ConnectionSectionTest.TestInputConnectionSection@67a7422e]" name="testHydrogenBondInConnectionSection" duration-ms="4" started-at="2015-11-04T15:52:24Z" finished-at="2015-11-04T15:52:24Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testHydrogenBondInConnectionSection -->
-        <test-method status="PASS" signature="testInlineAnnotationsConnection()[pri:0, instance:parsertest.ConnectionSectionTest.TestInputConnectionSection@67a7422e]" name="testInlineAnnotationsConnection" duration-ms="15" started-at="2015-11-04T15:52:24Z" finished-at="2015-11-04T15:52:24Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testInlineAnnotationsConnection -->
-        <test-method status="PASS" signature="testInlineAnnotationsConnectionWithException()[pri:0, instance:parsertest.ConnectionSectionTest.TestInputConnectionSection@67a7422e]" name="testInlineAnnotationsConnectionWithException" duration-ms="20" started-at="2015-11-04T15:52:24Z" finished-at="2015-11-04T15:52:24Z">
-          <exception class="parsertest.ExceptionParser.ConnectionSectionException">
-            <message>
-              <![CDATA[Details about the connection are not correct: C:R3-1:R1,]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[parsertest.ExceptionParser.ConnectionSectionException: Details about the connection are not correct: C:R3-1:R1,
-	at parsertest.ConnectionSection.ConnectionsDetailsParser.doAction(ConnectionsDetailsParser.java:110)
-	at parsertest.StateMachineParser.doAction(StateMachineParser.java:85)
-	at parsertest.ParserHELM2.parse(ParserHELM2.java:58)
-	at parsertest.ConnectionSectionTest.TestInputConnectionSection.testInlineAnnotationsConnectionWithException(TestInputConnectionSection.java:77)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
-	at org.testng.TestRunner.privateRun(TestRunner.java:774)
-	at org.testng.TestRunner.run(TestRunner.java:624)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1191)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)
-	at org.testng.TestNG.run(TestNG.java:1024)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:112)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:205)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:176)
-]]>
-            </full-stacktrace>
-          </exception> <!-- parsertest.ExceptionParser.ConnectionSectionException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testInlineAnnotationsConnectionWithException -->
-      </class> <!-- parsertest.ConnectionSectionTest.TestInputConnectionSection -->
-      <class name="NotationTest.Polymer.MonomerNotationGroupTest">
-        <test-method status="PASS" signature="MonomerNotationGroupTestOr()[pri:0, instance:NotationTest.Polymer.MonomerNotationGroupTest@7939d13]" name="MonomerNotationGroupTestOr" duration-ms="0" started-at="2015-11-04T15:52:24Z" finished-at="2015-11-04T15:52:24Z">
+        </test-method> <!-- testGroupingNotationOrDefaultValue -->
+      </class> <!-- org.helm.notation2.parser.GroupingNotationTest -->
+      <class name="org.helm.notation2.parser.polymer.MonomerNotationGroupTest">
+        <test-method status="PASS" signature="MonomerNotationGroupTestOr()[pri:0, instance:org.helm.notation2.parser.polymer.MonomerNotationGroupTest@4d39f593]" name="MonomerNotationGroupTestOr" duration-ms="0" started-at="2015-12-04T10:28:09Z" finished-at="2015-12-04T10:28:09Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- MonomerNotationGroupTestOr -->
-        <test-method status="PASS" signature="MonomerNotationGroupTestAND()[pri:0, instance:NotationTest.Polymer.MonomerNotationGroupTest@7939d13]" name="MonomerNotationGroupTestAND" duration-ms="0" started-at="2015-11-04T15:52:24Z" finished-at="2015-11-04T15:52:24Z">
+        <test-method status="PASS" signature="MonomerNotationGroupTestAND()[pri:0, instance:org.helm.notation2.parser.polymer.MonomerNotationGroupTest@4d39f593]" name="MonomerNotationGroupTestAND" duration-ms="0" started-at="2015-12-04T10:28:09Z" finished-at="2015-12-04T10:28:09Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- MonomerNotationGroupTestAND -->
-      </class> <!-- NotationTest.Polymer.MonomerNotationGroupTest -->
-      <class name="parsertest.SimplePolymersSectionTest.RepeatingMonomerParserTest">
-        <test-method status="PASS" signature="goToBetweenParser()[pri:0, instance:parsertest.SimplePolymersSectionTest.RepeatingMonomerParserTest@2c6edffb]" name="goToBetweenParser" duration-ms="1" started-at="2015-11-04T15:52:24Z" finished-at="2015-11-04T15:52:24Z">
+      </class> <!-- org.helm.notation2.parser.polymer.MonomerNotationGroupTest -->
+      <class name="org.helm.notation2.parser.grouping.GroupingAmbiguityTest">
+        <test-method status="PASS" signature="testGrouping()[pri:0, instance:org.helm.notation2.parser.grouping.GroupingAmbiguityTest@7aecc021]" name="testGrouping" duration-ms="0" started-at="2015-12-04T10:28:09Z" finished-at="2015-12-04T10:28:09Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- goToBetweenParser -->
-        <test-method status="PASS" signature="goToBetweenParserRange()[pri:0, instance:parsertest.SimplePolymersSectionTest.RepeatingMonomerParserTest@2c6edffb]" name="goToBetweenParserRange" duration-ms="1" started-at="2015-11-04T15:52:24Z" finished-at="2015-11-04T15:52:24Z">
+        </test-method> <!-- testGrouping -->
+      </class> <!-- org.helm.notation2.parser.grouping.GroupingAmbiguityTest -->
+      <class name="org.helm.notation2.parser.ConnectionNotationTest">
+        <test-method status="PASS" signature="testConnectionGrouping()[pri:0, instance:org.helm.notation2.parser.ConnectionNotationTest@4533473a]" name="testConnectionGrouping" duration-ms="16" started-at="2015-12-04T10:28:09Z" finished-at="2015-12-04T10:28:09Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- goToBetweenParserRange -->
-        <test-method status="PASS" signature="goToBetweenParserRangeWithException()[pri:0, instance:parsertest.SimplePolymersSectionTest.RepeatingMonomerParserTest@2c6edffb]" name="goToBetweenParserRangeWithException" duration-ms="1" started-at="2015-11-04T15:52:24Z" finished-at="2015-11-04T15:52:24Z">
-          <exception class="parsertest.ExceptionParser.SimplePolymerSectionException">
-            <message>
-              <![CDATA[Information about repeating is wrong: 3-d]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[parsertest.ExceptionParser.SimplePolymerSectionException: Information about repeating is wrong: 3-d
-	at parsertest.SimplePolymersSection.RepeatingMonomerParser.doAction(RepeatingMonomerParser.java:88)
-	at parsertest.StateMachineParser.doAction(StateMachineParser.java:85)
-	at parsertest.SimplePolymersSectionTest.RepeatingMonomerParserTest.goToBetweenParserRangeWithException(RepeatingMonomerParserTest.java:90)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
-	at org.testng.TestRunner.privateRun(TestRunner.java:774)
-	at org.testng.TestRunner.run(TestRunner.java:624)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1191)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)
-	at org.testng.TestNG.run(TestNG.java:1024)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:112)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:205)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:176)
-]]>
-            </full-stacktrace>
-          </exception> <!-- parsertest.ExceptionParser.SimplePolymerSectionException -->
+        </test-method> <!-- testConnectionGrouping -->
+        <test-method status="PASS" signature="testConnectionNotation()[pri:0, instance:org.helm.notation2.parser.ConnectionNotationTest@4533473a]" name="testConnectionNotation" duration-ms="15" started-at="2015-12-04T10:28:09Z" finished-at="2015-12-04T10:28:09Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- goToBetweenParserRangeWithException -->
-        <test-method status="PASS" signature="goToBetweenParserWithException()[pri:0, instance:parsertest.SimplePolymersSectionTest.RepeatingMonomerParserTest@2c6edffb]" name="goToBetweenParserWithException" duration-ms="0" started-at="2015-11-04T15:52:24Z" finished-at="2015-11-04T15:52:24Z">
-          <exception class="parsertest.ExceptionParser.SimplePolymerSectionException">
-            <message>
-              <![CDATA[Information about repeating is wrong: PEPTIDE1{A]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[parsertest.ExceptionParser.SimplePolymerSectionException: Information about repeating is wrong: PEPTIDE1{A
-	at parsertest.SimplePolymersSection.RepeatingMonomerParser.doAction(RepeatingMonomerParser.java:88)
-	at parsertest.StateMachineParser.doAction(StateMachineParser.java:85)
-	at parsertest.SimplePolymersSectionTest.RepeatingMonomerParserTest.goToBetweenParserWithException(RepeatingMonomerParserTest.java:67)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
-	at org.testng.TestRunner.privateRun(TestRunner.java:774)
-	at org.testng.TestRunner.run(TestRunner.java:624)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1191)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)
-	at org.testng.TestNG.run(TestNG.java:1024)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:112)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:205)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:176)
-]]>
-            </full-stacktrace>
-          </exception> <!-- parsertest.ExceptionParser.SimplePolymerSectionException -->
+        </test-method> <!-- testConnectionNotation -->
+        <test-method status="PASS" signature="testConnectionNotationTwo()[pri:0, instance:org.helm.notation2.parser.ConnectionNotationTest@4533473a]" name="testConnectionNotationTwo" duration-ms="12" started-at="2015-12-04T10:28:09Z" finished-at="2015-12-04T10:28:09Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- goToBetweenParserWithException -->
-        <test-method status="PASS" signature="keepThisStateTest()[pri:0, instance:parsertest.SimplePolymersSectionTest.RepeatingMonomerParserTest@2c6edffb]" name="keepThisStateTest" duration-ms="0" started-at="2015-11-04T15:52:24Z" finished-at="2015-11-04T15:52:24Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- keepThisStateTest -->
-      </class> <!-- parsertest.SimplePolymersSectionTest.RepeatingMonomerParserTest -->
-      <class name="NotationTest.Polymer.EntityTest">
-        <test-method status="PASS" signature="testEntity()[pri:0, instance:NotationTest.Polymer.EntityTest@4967519d]" name="testEntity" duration-ms="0" started-at="2015-11-04T15:52:25Z" finished-at="2015-11-04T15:52:25Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testEntity -->
-      </class> <!-- NotationTest.Polymer.EntityTest -->
-      <class name="parsertest.AnnotationSectionTest.AnnotationParserTest">
-        <test-method status="PASS" signature="goToFinalState()[pri:0, instance:parsertest.AnnotationSectionTest.AnnotationParserTest@4f39e80c]" name="goToFinalState" duration-ms="1" started-at="2015-11-04T15:52:24Z" finished-at="2015-11-04T15:52:24Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- goToFinalState -->
-        <test-method status="PASS" signature="keepThisState()[pri:0, instance:parsertest.AnnotationSectionTest.AnnotationParserTest@4f39e80c]" name="keepThisState" duration-ms="0" started-at="2015-11-04T15:52:24Z" finished-at="2015-11-04T15:52:24Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- keepThisState -->
-        <test-method status="PASS" signature="keepToFinalStateWithException()[pri:0, instance:parsertest.AnnotationSectionTest.AnnotationParserTest@4f39e80c]" name="keepToFinalStateWithException" duration-ms="0" started-at="2015-11-04T15:52:24Z" finished-at="2015-11-04T15:52:24Z">
-          <exception class="parsertest.ExceptionParser.AnnotationSectionException">
-            <message>
-              <![CDATA[Annotation section is not valid: H(]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[parsertest.ExceptionParser.AnnotationSectionException: Annotation section is not valid: H(
-	at parsertest.AnnotationSection.AnnotationsParser.doAction(AnnotationsParser.java:87)
-	at parsertest.StateMachineParser.doAction(StateMachineParser.java:85)
-	at parsertest.AnnotationSectionTest.AnnotationParserTest.keepToFinalStateWithException(AnnotationParserTest.java:56)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
-	at org.testng.TestRunner.privateRun(TestRunner.java:774)
-	at org.testng.TestRunner.run(TestRunner.java:624)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1191)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)
-	at org.testng.TestNG.run(TestNG.java:1024)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:112)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:205)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:176)
-]]>
-            </full-stacktrace>
-          </exception> <!-- parsertest.ExceptionParser.AnnotationSectionException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- keepToFinalStateWithException -->
-      </class> <!-- parsertest.AnnotationSectionTest.AnnotationParserTest -->
-      <class name="NotationTest.Polymer.PolymerNotationTest">
-        <test-method status="PASS" signature="testPolymerNotationIDBLOB()[pri:0, instance:NotationTest.Polymer.PolymerNotationTest@26cb216f]" name="testPolymerNotationIDBLOB" duration-ms="0" started-at="2015-11-04T15:52:25Z" finished-at="2015-11-04T15:52:25Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testPolymerNotationIDBLOB -->
-        <test-method status="PASS" signature="testPolymerNotationAnnotation()[pri:0, instance:NotationTest.Polymer.PolymerNotationTest@26cb216f]" name="testPolymerNotationAnnotation" duration-ms="0" started-at="2015-11-04T15:52:25Z" finished-at="2015-11-04T15:52:25Z">
+        </test-method> <!-- testConnectionNotationTwo -->
+      </class> <!-- org.helm.notation2.parser.ConnectionNotationTest -->
+      <class name="org.helm.notation2.parser.polymer.PolymerNotationTest">
+        <test-method status="PASS" signature="testPolymerNotationAnnotation()[pri:0, instance:org.helm.notation2.parser.polymer.PolymerNotationTest@46a668bc]" name="testPolymerNotationAnnotation" duration-ms="0" started-at="2015-12-04T10:28:08Z" finished-at="2015-12-04T10:28:08Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testPolymerNotationAnnotation -->
-        <test-method status="PASS" signature="testPolymerNotationIDBLOBWithException()[pri:0, instance:NotationTest.Polymer.PolymerNotationTest@26cb216f]" name="testPolymerNotationIDBLOBWithException" duration-ms="1" started-at="2015-11-04T15:52:25Z" finished-at="2015-11-04T15:52:25Z">
-          <exception class="parsertest.ExceptionParser.NotationException">
+        <test-method status="PASS" signature="testPolymerNotationIDCHEM()[pri:0, instance:org.helm.notation2.parser.polymer.PolymerNotationTest@46a668bc]" name="testPolymerNotationIDCHEM" duration-ms="1" started-at="2015-12-04T10:28:08Z" finished-at="2015-12-04T10:28:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPolymerNotationIDCHEM -->
+        <test-method status="PASS" signature="testPolymerNotationIDBLOBWithException()[pri:0, instance:org.helm.notation2.parser.polymer.PolymerNotationTest@46a668bc]" name="testPolymerNotationIDBLOBWithException" duration-ms="0" started-at="2015-12-04T10:28:08Z" finished-at="2015-12-04T10:28:08Z">
+          <exception class="org.helm.notation2.parser.exceptionparser.NotationException">
             <message>
               <![CDATA[ID is wrong: BLO1]]>
             </message>
             <full-stacktrace>
-              <![CDATA[parsertest.ExceptionParser.NotationException: ID is wrong: BLO1
-	at parsertest.Notation.ValidationMethod.decideWhichEntity(ValidationMethod.java:136)
-	at parsertest.Notation.Polymer.PolymerNotation.<init>(PolymerNotation.java:54)
-	at NotationTest.Polymer.PolymerNotationTest.testPolymerNotationIDBLOBWithException(PolymerNotationTest.java:77)
+              <![CDATA[org.helm.notation2.parser.exceptionparser.NotationException: ID is wrong: BLO1
+	at org.helm.notation2.parser.notation.ValidationMethod.decideWhichEntity(ValidationMethod.java:175)
+	at org.helm.notation2.parser.notation.polymer.PolymerNotation.<init>(PolymerNotation.java:65)
+	at org.helm.notation2.parser.polymer.PolymerNotationTest.testPolymerNotationIDBLOBWithException(PolymerNotationTest.java:77)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -918,453 +184,51 @@
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:176)
 ]]>
             </full-stacktrace>
-          </exception> <!-- parsertest.ExceptionParser.NotationException -->
+          </exception> <!-- org.helm.notation2.parser.exceptionparser.NotationException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testPolymerNotationIDBLOBWithException -->
-        <test-method status="PASS" signature="testPolymerNotationIDPEPTIDE()[pri:0, instance:NotationTest.Polymer.PolymerNotationTest@26cb216f]" name="testPolymerNotationIDPEPTIDE" duration-ms="1" started-at="2015-11-04T15:52:25Z" finished-at="2015-11-04T15:52:25Z">
+        <test-method status="PASS" signature="testPolymerNotationIDBLOB()[pri:0, instance:org.helm.notation2.parser.polymer.PolymerNotationTest@46a668bc]" name="testPolymerNotationIDBLOB" duration-ms="0" started-at="2015-12-04T10:28:08Z" finished-at="2015-12-04T10:28:08Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testPolymerNotationIDPEPTIDE -->
-        <test-method status="PASS" signature="testPolymerNotationIDCHEM()[pri:0, instance:NotationTest.Polymer.PolymerNotationTest@26cb216f]" name="testPolymerNotationIDCHEM" duration-ms="0" started-at="2015-11-04T15:52:25Z" finished-at="2015-11-04T15:52:25Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testPolymerNotationIDCHEM -->
-        <test-method status="PASS" signature="testPolymerNotationIDRNA()[pri:0, instance:NotationTest.Polymer.PolymerNotationTest@26cb216f]" name="testPolymerNotationIDRNA" duration-ms="0" started-at="2015-11-04T15:52:25Z" finished-at="2015-11-04T15:52:25Z">
+        </test-method> <!-- testPolymerNotationIDBLOB -->
+        <test-method status="PASS" signature="testPolymerNotationIDRNA()[pri:0, instance:org.helm.notation2.parser.polymer.PolymerNotationTest@46a668bc]" name="testPolymerNotationIDRNA" duration-ms="0" started-at="2015-12-04T10:28:08Z" finished-at="2015-12-04T10:28:08Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testPolymerNotationIDRNA -->
-      </class> <!-- NotationTest.Polymer.PolymerNotationTest -->
-      <class name="parsertest.ConverterHELM1ToHELM2Test">
-        <test-method status="PASS" signature="SMILESTest()[pri:0, instance:parsertest.ConverterHELM1ToHELM2Test@4d459b26]" name="SMILESTest" duration-ms="14" started-at="2015-11-04T15:52:24Z" finished-at="2015-11-04T15:52:24Z">
+        <test-method status="PASS" signature="testPolymerNotationIDPEPTIDE()[pri:0, instance:org.helm.notation2.parser.polymer.PolymerNotationTest@46a668bc]" name="testPolymerNotationIDPEPTIDE" duration-ms="0" started-at="2015-12-04T10:28:08Z" finished-at="2015-12-04T10:28:08Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- SMILESTest -->
-        <test-method status="PASS" signature="simpleHELM1StringTest()[pri:0, instance:parsertest.ConverterHELM1ToHELM2Test@4d459b26]" name="simpleHELM1StringTest" duration-ms="3" started-at="2015-11-04T15:52:24Z" finished-at="2015-11-04T15:52:24Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- simpleHELM1StringTest -->
-      </class> <!-- parsertest.ConverterHELM1ToHELM2Test -->
-      <class name="NotationTest.Annotation.AnnotationNotationTest">
-        <test-method status="PASS" signature="testAnnotationConstructor()[pri:0, instance:NotationTest.Annotation.AnnotationNotationTest@3e9b69e6]" name="testAnnotationConstructor" duration-ms="1" started-at="2015-11-04T15:52:24Z" finished-at="2015-11-04T15:52:24Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testAnnotationConstructor -->
-      </class> <!-- NotationTest.Annotation.AnnotationNotationTest -->
-      <class name="parsertest.SimplePolymersSectionTest.SimplePolymersNotationParserTest">
-        <test-method status="PASS" signature="goToBetweenParser()[pri:0, instance:parsertest.SimplePolymersSectionTest.SimplePolymersNotationParserTest@41c85632]" name="goToBetweenParser" duration-ms="1" started-at="2015-11-04T15:52:24Z" finished-at="2015-11-04T15:52:24Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- goToBetweenParser -->
-        <test-method status="PASS" signature="goToInlineAnnotaitonsParser()[pri:0, instance:parsertest.SimplePolymersSectionTest.SimplePolymersNotationParserTest@41c85632]" name="goToInlineAnnotaitonsParser" duration-ms="1" started-at="2015-11-04T15:52:24Z" finished-at="2015-11-04T15:52:24Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- goToInlineAnnotaitonsParser -->
-        <test-method status="PASS" signature="goToInlineAnnotaitonsParserWithException()[pri:0, instance:parsertest.SimplePolymersSectionTest.SimplePolymersNotationParserTest@41c85632]" name="goToInlineAnnotaitonsParserWithException" duration-ms="0" started-at="2015-11-04T15:52:24Z" finished-at="2015-11-04T15:52:24Z">
-          <exception class="parsertest.ExceptionParser.SimplePolymerSectionException">
-            <message>
-              <![CDATA[Polymer ID is not correct: PEPTIDE]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[parsertest.ExceptionParser.SimplePolymerSectionException: Polymer ID is not correct: PEPTIDE
-	at parsertest.SimplePolymersSection.SimplePolymersParser.doAction(SimplePolymersParser.java:99)
-	at parsertest.StateMachineParser.doAction(StateMachineParser.java:85)
-	at parsertest.SimplePolymersSectionTest.SimplePolymersNotationParserTest.goToInlineAnnotaitonsParserWithException(SimplePolymersNotationParserTest.java:130)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
-	at org.testng.TestRunner.privateRun(TestRunner.java:774)
-	at org.testng.TestRunner.run(TestRunner.java:624)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1191)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)
-	at org.testng.TestNG.run(TestNG.java:1024)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:112)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:205)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:176)
-]]>
-            </full-stacktrace>
-          </exception> <!-- parsertest.ExceptionParser.SimplePolymerSectionException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- goToInlineAnnotaitonsParserWithException -->
-        <test-method status="PASS" signature="goToRepeatingMonomerParser()[pri:0, instance:parsertest.SimplePolymersSectionTest.SimplePolymersNotationParserTest@41c85632]" name="goToRepeatingMonomerParser" duration-ms="0" started-at="2015-11-04T15:52:24Z" finished-at="2015-11-04T15:52:24Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- goToRepeatingMonomerParser -->
-        <test-method status="PASS" signature="goToRepeatingMonomerParserWithException()[pri:0, instance:parsertest.SimplePolymersSectionTest.SimplePolymersNotationParserTest@41c85632]" name="goToRepeatingMonomerParserWithException" duration-ms="0" started-at="2015-11-04T15:52:24Z" finished-at="2015-11-04T15:52:24Z">
-          <exception class="parsertest.ExceptionParser.SimplePolymerSectionException">
-            <message>
-              <![CDATA[Monomer unit is missing]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[parsertest.ExceptionParser.SimplePolymerSectionException: Monomer unit is missing
-	at parsertest.SimplePolymersSection.SimplePolymersNotationParser.doAction(SimplePolymersNotationParser.java:138)
-	at parsertest.StateMachineParser.doAction(StateMachineParser.java:85)
-	at parsertest.SimplePolymersSectionTest.SimplePolymersNotationParserTest.goToRepeatingMonomerParserWithException(SimplePolymersNotationParserTest.java:156)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
-	at org.testng.TestRunner.privateRun(TestRunner.java:774)
-	at org.testng.TestRunner.run(TestRunner.java:624)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1191)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)
-	at org.testng.TestNG.run(TestNG.java:1024)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:112)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:205)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:176)
-]]>
-            </full-stacktrace>
-          </exception> <!-- parsertest.ExceptionParser.SimplePolymerSectionException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- goToRepeatingMonomerParserWithException -->
-        <test-method status="PASS" signature="initalizeThisStateTestWithException()[pri:0, instance:parsertest.SimplePolymersSectionTest.SimplePolymersNotationParserTest@41c85632]" name="initalizeThisStateTestWithException" duration-ms="1" started-at="2015-11-04T15:52:24Z" finished-at="2015-11-04T15:52:24Z">
-          <exception class="parsertest.ExceptionParser.SimplePolymerSectionException">
-            <message>
-              <![CDATA[Monomer unit is missing: ]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[parsertest.ExceptionParser.SimplePolymerSectionException: Monomer unit is missing: 
-	at parsertest.SimplePolymersSection.SimplePolymersNotationParser.doAction(SimplePolymersNotationParser.java:104)
-	at parsertest.StateMachineParser.doAction(StateMachineParser.java:85)
-	at parsertest.SimplePolymersSectionTest.SimplePolymersNotationParserTest.initalizeThisStateTestWithException(SimplePolymersNotationParserTest.java:71)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
-	at org.testng.TestRunner.privateRun(TestRunner.java:774)
-	at org.testng.TestRunner.run(TestRunner.java:624)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1191)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)
-	at org.testng.TestNG.run(TestNG.java:1024)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:112)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:205)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:176)
-]]>
-            </full-stacktrace>
-          </exception> <!-- parsertest.ExceptionParser.SimplePolymerSectionException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initalizeThisStateTestWithException -->
-        <test-method status="PASS" signature="initalizeThisStateTest()[pri:0, instance:parsertest.SimplePolymersSectionTest.SimplePolymersNotationParserTest@41c85632]" name="initalizeThisStateTest" duration-ms="0" started-at="2015-11-04T15:52:24Z" finished-at="2015-11-04T15:52:24Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initalizeThisStateTest -->
-        <test-method status="PASS" signature="keepThisStateTest()[pri:0, instance:parsertest.SimplePolymersSectionTest.SimplePolymersNotationParserTest@41c85632]" name="keepThisStateTest" duration-ms="0" started-at="2015-11-04T15:52:24Z" finished-at="2015-11-04T15:52:24Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- keepThisStateTest -->
-        <test-method status="PASS" signature="testSMILESFunction()[pri:0, instance:parsertest.SimplePolymersSectionTest.SimplePolymersNotationParserTest@41c85632]" name="testSMILESFunction" duration-ms="1" started-at="2015-11-04T15:52:24Z" finished-at="2015-11-04T15:52:24Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testSMILESFunction -->
-        <test-method status="PASS" signature="testSMILESFunctionWithException()[pri:0, instance:parsertest.SimplePolymersSectionTest.SimplePolymersNotationParserTest@41c85632]" name="testSMILESFunctionWithException" duration-ms="0" started-at="2015-11-04T15:52:24Z" finished-at="2015-11-04T15:52:24Z">
-          <exception class="parsertest.ExceptionParser.SimplePolymerSectionException">
-            <full-stacktrace>
-              <![CDATA[parsertest.ExceptionParser.SimplePolymerSectionException: 
-	at parsertest.SimplePolymersSectionTest.SimplePolymersNotationParserTest.testSMILESFunctionWithException(SimplePolymersNotationParserTest.java:184)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
-	at org.testng.TestRunner.privateRun(TestRunner.java:774)
-	at org.testng.TestRunner.run(TestRunner.java:624)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1191)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)
-	at org.testng.TestNG.run(TestNG.java:1024)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:112)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:205)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:176)
-]]>
-            </full-stacktrace>
-          </exception> <!-- parsertest.ExceptionParser.SimplePolymerSectionException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testSMILESFunctionWithException -->
-      </class> <!-- parsertest.SimplePolymersSectionTest.SimplePolymersNotationParserTest -->
-      <class name="parsertest.GroupingSectionTest.TestInputGroupingSection">
-        <test-method status="PASS" signature="testGroupingAmbiguityAnd()[pri:0, instance:parsertest.GroupingSectionTest.TestInputGroupingSection@632f9712]" name="testGroupingAmbiguityAnd" duration-ms="9" started-at="2015-11-04T15:52:25Z" finished-at="2015-11-04T15:52:25Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testGroupingAmbiguityAnd -->
-        <test-method status="PASS" signature="testGroupingAmbiguityAndRatio()[pri:0, instance:parsertest.GroupingSectionTest.TestInputGroupingSection@632f9712]" name="testGroupingAmbiguityAndRatio" duration-ms="11" started-at="2015-11-04T15:52:25Z" finished-at="2015-11-04T15:52:25Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testGroupingAmbiguityAndRatio -->
-        <test-method status="PASS" signature="testGroupingAmbiguityAndRatioAndRange()[pri:0, instance:parsertest.GroupingSectionTest.TestInputGroupingSection@632f9712]" name="testGroupingAmbiguityAndRatioAndRange" duration-ms="1" started-at="2015-11-04T15:52:25Z" finished-at="2015-11-04T15:52:25Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testGroupingAmbiguityAndRatioAndRange -->
-        <test-method status="PASS" signature="testGroupingAmbiguityOr()[pri:0, instance:parsertest.GroupingSectionTest.TestInputGroupingSection@632f9712]" name="testGroupingAmbiguityOr" duration-ms="8" started-at="2015-11-04T15:52:25Z" finished-at="2015-11-04T15:52:25Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testGroupingAmbiguityOr -->
-        <test-method status="PASS" signature="testGroupingUnknownRatio()[pri:0, instance:parsertest.GroupingSectionTest.TestInputGroupingSection@632f9712]" name="testGroupingUnknownRatio" duration-ms="1" started-at="2015-11-04T15:52:25Z" finished-at="2015-11-04T15:52:25Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testGroupingUnknownRatio -->
-      </class> <!-- parsertest.GroupingSectionTest.TestInputGroupingSection -->
-      <class name="parsertest.GroupingSectionTest.GroupingParserTest">
-        <test-method status="PASS" signature="goToAnnotaitonsParserWithException()[pri:0, instance:parsertest.GroupingSectionTest.GroupingParserTest@1f9bb21f]" name="goToAnnotaitonsParserWithException" duration-ms="1" started-at="2015-11-04T15:52:25Z" finished-at="2015-11-04T15:52:25Z">
-          <exception class="parsertest.ExceptionParser.GroupingSectionException">
-            <message>
-              <![CDATA[Missing details about the group: hallo]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[parsertest.ExceptionParser.GroupingSectionException: Missing details about the group: hallo
-	at parsertest.GroupingSection.GroupingParser.doAction(GroupingParser.java:72)
-	at parsertest.StateMachineParser.doAction(StateMachineParser.java:85)
-	at parsertest.GroupingSectionTest.GroupingParserTest.goToAnnotaitonsParserWithException(GroupingParserTest.java:93)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
-	at org.testng.TestRunner.privateRun(TestRunner.java:774)
-	at org.testng.TestRunner.run(TestRunner.java:624)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1191)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)
-	at org.testng.TestNG.run(TestNG.java:1024)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:112)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:205)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:176)
-]]>
-            </full-stacktrace>
-          </exception> <!-- parsertest.ExceptionParser.GroupingSectionException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- goToAnnotaitonsParserWithException -->
-        <test-method status="PASS" signature="goToAnnotationsParser()[pri:0, instance:parsertest.GroupingSectionTest.GroupingParserTest@1f9bb21f]" name="goToAnnotationsParser" duration-ms="0" started-at="2015-11-04T15:52:25Z" finished-at="2015-11-04T15:52:25Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- goToAnnotationsParser -->
-        <test-method status="PASS" signature="goToGroupingDetailedInformationParser()[pri:0, instance:parsertest.GroupingSectionTest.GroupingParserTest@1f9bb21f]" name="goToGroupingDetailedInformationParser" duration-ms="0" started-at="2015-11-04T15:52:25Z" finished-at="2015-11-04T15:52:25Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- goToGroupingDetailedInformationParser -->
-        <test-method status="PASS" signature="goToGroupingDetailedInformationWithException()[pri:0, instance:parsertest.GroupingSectionTest.GroupingParserTest@1f9bb21f]" name="goToGroupingDetailedInformationWithException" duration-ms="0" started-at="2015-11-04T15:52:25Z" finished-at="2015-11-04T15:52:25Z">
-          <exception class="parsertest.ExceptionParser.GroupingSectionException">
-            <message>
-              <![CDATA[Missing details about the group: hallo]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[parsertest.ExceptionParser.GroupingSectionException: Missing details about the group: hallo
-	at parsertest.GroupingSection.GroupingParser.doAction(GroupingParser.java:72)
-	at parsertest.StateMachineParser.doAction(StateMachineParser.java:85)
-	at parsertest.GroupingSectionTest.GroupingParserTest.goToGroupingDetailedInformationWithException(GroupingParserTest.java:69)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
-	at org.testng.TestRunner.privateRun(TestRunner.java:774)
-	at org.testng.TestRunner.run(TestRunner.java:624)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1191)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)
-	at org.testng.TestNG.run(TestNG.java:1024)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:112)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:205)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:176)
-]]>
-            </full-stacktrace>
-          </exception> <!-- parsertest.ExceptionParser.GroupingSectionException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- goToGroupingDetailedInformationWithException -->
-        <test-method status="PASS" signature="keepThisState()[pri:0, instance:parsertest.GroupingSectionTest.GroupingParserTest@1f9bb21f]" name="keepThisState" duration-ms="0" started-at="2015-11-04T15:52:25Z" finished-at="2015-11-04T15:52:25Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- keepThisState -->
-      </class> <!-- parsertest.GroupingSectionTest.GroupingParserTest -->
-      <class name="parsertest.FinalStateTest">
-        <test-method status="PASS" signature="goToFinalStateWithException()[pri:0, instance:parsertest.FinalStateTest@1bf712df]" name="goToFinalStateWithException" duration-ms="1" started-at="2015-11-04T15:52:24Z" finished-at="2015-11-04T15:52:24Z">
-          <exception class="parsertest.ExceptionParser.FinalStateException">
-            <message>
-              <![CDATA[Additional characters after the final $]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[parsertest.ExceptionParser.FinalStateException: Additional characters after the final $
-	at parsertest.FinalState.doAction(FinalState.java:58)
-	at parsertest.StateMachineParser.doAction(StateMachineParser.java:85)
-	at parsertest.FinalStateTest.goToFinalStateWithException(FinalStateTest.java:47)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
-	at org.testng.TestRunner.privateRun(TestRunner.java:774)
-	at org.testng.TestRunner.run(TestRunner.java:624)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1191)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)
-	at org.testng.TestNG.run(TestNG.java:1024)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:112)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:205)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:176)
-]]>
-            </full-stacktrace>
-          </exception> <!-- parsertest.ExceptionParser.FinalStateException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- goToFinalStateWithException -->
-      </class> <!-- parsertest.FinalStateTest -->
-      <class name="parsertest.SimplePolymersSectionTest.BetweenMonomerParserTest">
-        <test-method status="PASS" signature="goToBetweenParser()[pri:0, instance:parsertest.SimplePolymersSectionTest.BetweenMonomerParserTest@14cd036c]" name="goToBetweenParser" duration-ms="1" started-at="2015-11-04T15:52:24Z" finished-at="2015-11-04T15:52:24Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- goToBetweenParser -->
-        <test-method status="PASS" signature="goToSimplePolymerNotationParser()[pri:0, instance:parsertest.SimplePolymersSectionTest.BetweenMonomerParserTest@14cd036c]" name="goToSimplePolymerNotationParser" duration-ms="1" started-at="2015-11-04T15:52:24Z" finished-at="2015-11-04T15:52:24Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- goToSimplePolymerNotationParser -->
-        <test-method status="PASS" signature="goToInlineAnnotationParser()[pri:0, instance:parsertest.SimplePolymersSectionTest.BetweenMonomerParserTest@14cd036c]" name="goToInlineAnnotationParser" duration-ms="0" started-at="2015-11-04T15:52:24Z" finished-at="2015-11-04T15:52:24Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- goToInlineAnnotationParser -->
-        <test-method status="PASS" signature="goToWithException()[pri:0, instance:parsertest.SimplePolymersSectionTest.BetweenMonomerParserTest@14cd036c]" name="goToWithException" duration-ms="0" started-at="2015-11-04T15:52:24Z" finished-at="2015-11-04T15:52:24Z">
-          <exception class="parsertest.ExceptionParser.SimplePolymerSectionException">
-            <message>
-              <![CDATA[Error in the simple polymers notation section:]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[parsertest.ExceptionParser.SimplePolymerSectionException: Error in the simple polymers notation section:
-	at parsertest.SimplePolymersSection.BetweenMonomerParser.doAction(BetweenMonomerParser.java:78)
-	at parsertest.StateMachineParser.doAction(StateMachineParser.java:85)
-	at parsertest.SimplePolymersSectionTest.BetweenMonomerParserTest.goToWithException(BetweenMonomerParserTest.java:76)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
-	at org.testng.TestRunner.privateRun(TestRunner.java:774)
-	at org.testng.TestRunner.run(TestRunner.java:624)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1191)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)
-	at org.testng.TestNG.run(TestNG.java:1024)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:112)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:205)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:176)
-]]>
-            </full-stacktrace>
-          </exception> <!-- parsertest.ExceptionParser.SimplePolymerSectionException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- goToWithException -->
-      </class> <!-- parsertest.SimplePolymersSectionTest.BetweenMonomerParserTest -->
-      <class name="NotationTest.Grouping.GroupingElementTest">
-        <test-method status="PASS" signature="testConstructor()[pri:0, instance:NotationTest.Grouping.GroupingElementTest@47930e5b]" name="testConstructor" duration-ms="0" started-at="2015-11-04T15:52:24Z" finished-at="2015-11-04T15:52:24Z">
+        </test-method> <!-- testPolymerNotationIDPEPTIDE -->
+      </class> <!-- org.helm.notation2.parser.polymer.PolymerNotationTest -->
+      <class name="org.helm.notation2.parser.polymer.MonomerNotationGroupGroupElementTest">
+        <test-method status="PASS" signature="testConstructor()[pri:0, instance:org.helm.notation2.parser.polymer.MonomerNotationGroupGroupElementTest@56c86535]" name="testConstructor" duration-ms="10" started-at="2015-12-04T10:28:08Z" finished-at="2015-12-04T10:28:08Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testConstructor -->
-        <test-method status="PASS" signature="testConstructorTwo()[pri:0, instance:NotationTest.Grouping.GroupingElementTest@47930e5b]" name="testConstructorTwo" duration-ms="1" started-at="2015-11-04T15:52:24Z" finished-at="2015-11-04T15:52:24Z">
+        <test-method status="PASS" signature="testConstructorRange()[pri:0, instance:org.helm.notation2.parser.polymer.MonomerNotationGroupGroupElementTest@56c86535]" name="testConstructorRange" duration-ms="0" started-at="2015-12-04T10:28:08Z" finished-at="2015-12-04T10:28:08Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testConstructorTwo -->
-      </class> <!-- NotationTest.Grouping.GroupingElementTest -->
-      <class name="parsertest.GroupingSectionTest.BetweenGroupingParserTest">
-        <test-method status="PASS" signature="ReadingWithException()[pri:0, instance:parsertest.GroupingSectionTest.BetweenGroupingParserTest@121b7c21]" name="ReadingWithException" duration-ms="1" started-at="2015-11-04T15:52:24Z" finished-at="2015-11-04T15:52:24Z">
-          <exception class="parsertest.ExceptionParser.GroupingSectionException">
-            <message>
-              <![CDATA[Group section is not valid: a]]>
-            </message>
+        </test-method> <!-- testConstructorRange -->
+      </class> <!-- org.helm.notation2.parser.polymer.MonomerNotationGroupGroupElementTest -->
+      <class name="org.helm.notation2.parser.annotation.AnnotationNotationTest">
+        <test-method status="PASS" signature="testAnnotationConstructor()[pri:0, instance:org.helm.notation2.parser.annotation.AnnotationNotationTest@572632e0]" name="testAnnotationConstructor" duration-ms="0" started-at="2015-12-04T10:28:08Z" finished-at="2015-12-04T10:28:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAnnotationConstructor -->
+      </class> <!-- org.helm.notation2.parser.annotation.AnnotationNotationTest -->
+      <class name="org.helm.notation2.parser.AnnotationNotationTest">
+        <test-method status="PASS" signature="testAnnotationNotation()[pri:0, instance:org.helm.notation2.parser.AnnotationNotationTest@62f03cb9]" name="testAnnotationNotation" duration-ms="66" started-at="2015-12-04T10:28:08Z" finished-at="2015-12-04T10:28:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAnnotationNotation -->
+      </class> <!-- org.helm.notation2.parser.AnnotationNotationTest -->
+      <class name="org.helm.notation2.parser.NotationTest">
+        <test-method status="PASS" signature="testNegativeInput()[pri:0, instance:org.helm.notation2.parser.NotationTest@1d64d42f]" name="testNegativeInput" duration-ms="44" started-at="2015-12-04T10:28:08Z" finished-at="2015-12-04T10:28:08Z">
+          <exception class="org.helm.notation2.parser.exceptionparser.ExceptionState">
             <full-stacktrace>
-              <![CDATA[parsertest.ExceptionParser.GroupingSectionException: Group section is not valid: a
-	at parsertest.GroupingSection.BetweenGroupingParser.doAction(BetweenGroupingParser.java:75)
-	at parsertest.StateMachineParser.doAction(StateMachineParser.java:85)
-	at parsertest.GroupingSectionTest.BetweenGroupingParserTest.ReadingWithException(BetweenGroupingParserTest.java:67)
+              <![CDATA[org.helm.notation2.parser.exceptionparser.ExceptionState: 
+	at org.helm.notation2.parser.NotationTest.testNegativeInput(NotationTest.java:109)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -1391,174 +255,37 @@
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:176)
 ]]>
             </full-stacktrace>
-          </exception> <!-- parsertest.ExceptionParser.GroupingSectionException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ReadingWithException -->
-        <test-method status="PASS" signature="goToAnnotationsParser()[pri:0, instance:parsertest.GroupingSectionTest.BetweenGroupingParserTest@121b7c21]" name="goToAnnotationsParser" duration-ms="0" started-at="2015-11-04T15:52:24Z" finished-at="2015-11-04T15:52:24Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- goToAnnotationsParser -->
-        <test-method status="PASS" signature="goToGroupingParser()[pri:0, instance:parsertest.GroupingSectionTest.BetweenGroupingParserTest@121b7c21]" name="goToGroupingParser" duration-ms="0" started-at="2015-11-04T15:52:24Z" finished-at="2015-11-04T15:52:24Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- goToGroupingParser -->
-      </class> <!-- parsertest.GroupingSectionTest.BetweenGroupingParserTest -->
-      <class name="parsertest.ConnectionSectionTest.ConnectionsDetailsParserTest">
-        <test-method status="PASS" signature="goToGroupingParser()[pri:0, instance:parsertest.ConnectionSectionTest.ConnectionsDetailsParserTest@64c9f31e]" name="goToGroupingParser" duration-ms="1" started-at="2015-11-04T15:52:24Z" finished-at="2015-11-04T15:52:24Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- goToGroupingParser -->
-        <test-method status="PASS" signature="goToGroupingParserWithException()[pri:0, instance:parsertest.ConnectionSectionTest.ConnectionsDetailsParserTest@64c9f31e]" name="goToGroupingParserWithException" duration-ms="1" started-at="2015-11-04T15:52:24Z" finished-at="2015-11-04T15:52:24Z">
-          <exception class="parsertest.ExceptionParser.ConnectionSectionException">
-            <message>
-              <![CDATA[Details about the connection are not correct: hallo]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[parsertest.ExceptionParser.ConnectionSectionException: Details about the connection are not correct: hallo
-	at parsertest.ConnectionSection.ConnectionsDetailsParser.doAction(ConnectionsDetailsParser.java:93)
-	at parsertest.StateMachineParser.doAction(StateMachineParser.java:85)
-	at parsertest.ConnectionSectionTest.ConnectionsDetailsParserTest.goToGroupingParserWithException(ConnectionsDetailsParserTest.java:69)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
-	at org.testng.TestRunner.privateRun(TestRunner.java:774)
-	at org.testng.TestRunner.run(TestRunner.java:624)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1191)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)
-	at org.testng.TestNG.run(TestNG.java:1024)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:112)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:205)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:176)
-]]>
-            </full-stacktrace>
-          </exception> <!-- parsertest.ExceptionParser.ConnectionSectionException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- goToGroupingParserWithException -->
-        <test-method status="PASS" signature="goToInlineAnnotationsParser()[pri:0, instance:parsertest.ConnectionSectionTest.ConnectionsDetailsParserTest@64c9f31e]" name="goToInlineAnnotationsParser" duration-ms="1" started-at="2015-11-04T15:52:24Z" finished-at="2015-11-04T15:52:24Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- goToInlineAnnotationsParser -->
-        <test-method status="PASS" signature="goToInlineAnnotationsParserWithException()[pri:0, instance:parsertest.ConnectionSectionTest.ConnectionsDetailsParserTest@64c9f31e]" name="goToInlineAnnotationsParserWithException" duration-ms="1" started-at="2015-11-04T15:52:24Z" finished-at="2015-11-04T15:52:24Z">
-          <exception class="parsertest.ExceptionParser.ConnectionSectionException">
-            <message>
-              <![CDATA[Details about the connection are not correct: hallo]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[parsertest.ExceptionParser.ConnectionSectionException: Details about the connection are not correct: hallo
-	at parsertest.ConnectionSection.ConnectionsDetailsParser.doAction(ConnectionsDetailsParser.java:110)
-	at parsertest.StateMachineParser.doAction(StateMachineParser.java:85)
-	at parsertest.ConnectionSectionTest.ConnectionsDetailsParserTest.goToInlineAnnotationsParserWithException(ConnectionsDetailsParserTest.java:93)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
-	at org.testng.TestRunner.privateRun(TestRunner.java:774)
-	at org.testng.TestRunner.run(TestRunner.java:624)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1191)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)
-	at org.testng.TestNG.run(TestNG.java:1024)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:112)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:205)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:176)
-]]>
-            </full-stacktrace>
-          </exception> <!-- parsertest.ExceptionParser.ConnectionSectionException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- goToInlineAnnotationsParserWithException -->
-        <test-method status="PASS" signature="keepThisState()[pri:0, instance:parsertest.ConnectionSectionTest.ConnectionsDetailsParserTest@64c9f31e]" name="keepThisState" duration-ms="1" started-at="2015-11-04T15:52:24Z" finished-at="2015-11-04T15:52:24Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- keepThisState -->
-      </class> <!-- parsertest.ConnectionSectionTest.ConnectionsDetailsParserTest -->
-      <class name="NotationTest.NotationTest">
-        <test-method status="PASS" signature="testNegativeInput()[pri:0, instance:NotationTest.NotationTest@6c2d4e47]" name="testNegativeInput" duration-ms="26" started-at="2015-11-04T15:52:24Z" finished-at="2015-11-04T15:52:24Z">
-          <exception class="parsertest.ExceptionParser.ExceptionState">
-            <full-stacktrace>
-              <![CDATA[parsertest.ExceptionParser.ExceptionState: 
-	at NotationTest.NotationTest.testNegativeInput(NotationTest.java:108)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
-	at org.testng.TestRunner.privateRun(TestRunner.java:774)
-	at org.testng.TestRunner.run(TestRunner.java:624)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1191)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)
-	at org.testng.TestNG.run(TestNG.java:1024)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:112)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:205)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:176)
-]]>
-            </full-stacktrace>
-          </exception> <!-- parsertest.ExceptionParser.ExceptionState -->
+          </exception> <!-- org.helm.notation2.parser.exceptionparser.ExceptionState -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testNegativeInput -->
-        <test-method status="PASS" signature="testPositiveInput()[pri:0, instance:NotationTest.NotationTest@6c2d4e47]" name="testPositiveInput" duration-ms="376" started-at="2015-11-04T15:52:24Z" finished-at="2015-11-04T15:52:25Z">
+        <test-method status="PASS" signature="testPositiveInput()[pri:0, instance:org.helm.notation2.parser.NotationTest@1d64d42f]" name="testPositiveInput" duration-ms="483" started-at="2015-12-04T10:28:08Z" finished-at="2015-12-04T10:28:08Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testPositiveInput -->
-      </class> <!-- NotationTest.NotationTest -->
-      <class name="parsertest.SimplePolymersSectionTest.TestInputSimplePolymerSection">
-        <test-method status="PASS" signature="testGlycosylation()[pri:0, instance:parsertest.SimplePolymersSectionTest.TestInputSimplePolymerSection@97d43bf]" name="testGlycosylation" duration-ms="36" started-at="2015-11-04T15:52:25Z" finished-at="2015-11-04T15:52:25Z">
+      </class> <!-- org.helm.notation2.parser.NotationTest -->
+      <class name="org.helm.notation2.parser.grouping.GroupingNotationTest">
+        <test-method status="PASS" signature="testConstructor()[pri:0, instance:org.helm.notation2.parser.grouping.GroupingNotationTest@7194b2f4]" name="testConstructor" duration-ms="0" started-at="2015-12-04T10:28:08Z" finished-at="2015-12-04T10:28:08Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testGlycosylation -->
-        <test-method status="PASS" signature="testInlineAnnoationsInBrackets()[pri:0, instance:parsertest.SimplePolymersSectionTest.TestInputSimplePolymerSection@97d43bf]" name="testInlineAnnoationsInBrackets" duration-ms="1" started-at="2015-11-04T15:52:25Z" finished-at="2015-11-04T15:52:25Z">
+        </test-method> <!-- testConstructor -->
+        <test-method status="PASS" signature="testConstructorAmbiguityAND()[pri:0, instance:org.helm.notation2.parser.grouping.GroupingNotationTest@7194b2f4]" name="testConstructorAmbiguityAND" duration-ms="0" started-at="2015-12-04T10:28:08Z" finished-at="2015-12-04T10:28:08Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testInlineAnnoationsInBrackets -->
-        <test-method status="PASS" signature="testInlineAnnoationsWithException()[pri:0, instance:parsertest.SimplePolymersSectionTest.TestInputSimplePolymerSection@97d43bf]" name="testInlineAnnoationsWithException" duration-ms="0" started-at="2015-11-04T15:52:25Z" finished-at="2015-11-04T15:52:25Z">
-          <exception class="parsertest.ExceptionParser.SimplePolymerSectionException">
+        </test-method> <!-- testConstructorAmbiguityAND -->
+        <test-method status="PASS" signature="testConstructorAmbiguityOR()[pri:0, instance:org.helm.notation2.parser.grouping.GroupingNotationTest@7194b2f4]" name="testConstructorAmbiguityOR" duration-ms="0" started-at="2015-12-04T10:28:08Z" finished-at="2015-12-04T10:28:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testConstructorAmbiguityOR -->
+        <test-method status="PASS" signature="testConstructorWithException()[pri:0, instance:org.helm.notation2.parser.grouping.GroupingNotationTest@7194b2f4]" name="testConstructorWithException" duration-ms="0" started-at="2015-12-04T10:28:08Z" finished-at="2015-12-04T10:28:08Z">
+          <exception class="org.helm.notation2.parser.exceptionparser.NotationException">
             <message>
-              <![CDATA[Error in the simple polymers notation section]]>
+              <![CDATA[Group Id is not correct: 1]]>
             </message>
             <full-stacktrace>
-              <![CDATA[parsertest.ExceptionParser.SimplePolymerSectionException: Error in the simple polymers notation section
-	at parsertest.SimplePolymersSection.BetweenInlineMonomerParser.doAction(BetweenInlineMonomerParser.java:72)
-	at parsertest.StateMachineParser.doAction(StateMachineParser.java:85)
-	at parsertest.ParserHELM2.parse(ParserHELM2.java:58)
-	at parsertest.SimplePolymersSectionTest.TestInputSimplePolymerSection.testInlineAnnoationsWithException(TestInputSimplePolymerSection.java:87)
+              <![CDATA[org.helm.notation2.parser.exceptionparser.NotationException: Group Id is not correct: 1
+	at org.helm.notation2.parser.notation.grouping.GroupingNotation.<init>(GroupingNotation.java:53)
+	at org.helm.notation2.parser.grouping.GroupingNotationTest.testConstructorWithException(GroupingNotationTest.java:45)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -1585,192 +312,105 @@
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:176)
 ]]>
             </full-stacktrace>
-          </exception> <!-- parsertest.ExceptionParser.SimplePolymerSectionException -->
+          </exception> <!-- org.helm.notation2.parser.exceptionparser.NotationException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testInlineAnnoationsWithException -->
-        <test-method status="PASS" signature="testInlineAnnotations()[pri:0, instance:parsertest.SimplePolymersSectionTest.TestInputSimplePolymerSection@97d43bf]" name="testInlineAnnotations" duration-ms="4" started-at="2015-11-04T15:52:25Z" finished-at="2015-11-04T15:52:25Z">
+        </test-method> <!-- testConstructorWithException -->
+      </class> <!-- org.helm.notation2.parser.grouping.GroupingNotationTest -->
+      <class name="org.helm.notation2.parser.polymer.MonomerNotationTest">
+        <test-method status="PASS" signature="testMonomerNotationCount()[pri:0, instance:org.helm.notation2.parser.polymer.MonomerNotationTest@cd63cd3]" name="testMonomerNotationCount" duration-ms="0" started-at="2015-12-04T10:28:09Z" finished-at="2015-12-04T10:28:09Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testInlineAnnotations -->
-        <test-method status="PASS" signature="testInlineAnnotationsPolymer()[pri:0, instance:parsertest.SimplePolymersSectionTest.TestInputSimplePolymerSection@97d43bf]" name="testInlineAnnotationsPolymer" duration-ms="8" started-at="2015-11-04T15:52:25Z" finished-at="2015-11-04T15:52:25Z">
+        </test-method> <!-- testMonomerNotationCount -->
+        <test-method status="PASS" signature="testMonomerNotationAnnotation()[pri:0, instance:org.helm.notation2.parser.polymer.MonomerNotationTest@cd63cd3]" name="testMonomerNotationAnnotation" duration-ms="0" started-at="2015-12-04T10:28:09Z" finished-at="2015-12-04T10:28:09Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testInlineAnnotationsPolymer -->
-        <test-method status="PASS" signature="testInlineAnnotationsPolymerWithException()[pri:0, instance:parsertest.SimplePolymersSectionTest.TestInputSimplePolymerSection@97d43bf]" name="testInlineAnnotationsPolymerWithException" duration-ms="5" started-at="2015-11-04T15:52:25Z" finished-at="2015-11-04T15:52:25Z">
-          <exception class="parsertest.ExceptionParser.SimplePolymerSectionException">
-            <message>
-              <![CDATA[Invalid syntax in simple polymer section: P]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[parsertest.ExceptionParser.SimplePolymerSectionException: Invalid syntax in simple polymer section: P
-	at parsertest.SimplePolymersSection.BetweenParser.doAction(BetweenParser.java:85)
-	at parsertest.StateMachineParser.doAction(StateMachineParser.java:85)
-	at parsertest.ParserHELM2.parse(ParserHELM2.java:58)
-	at parsertest.SimplePolymersSectionTest.TestInputSimplePolymerSection.testInlineAnnotationsPolymerWithException(TestInputSimplePolymerSection.java:149)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
-	at org.testng.TestRunner.privateRun(TestRunner.java:774)
-	at org.testng.TestRunner.run(TestRunner.java:624)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1191)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)
-	at org.testng.TestNG.run(TestNG.java:1024)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:112)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:205)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:176)
-]]>
-            </full-stacktrace>
-          </exception> <!-- parsertest.ExceptionParser.SimplePolymerSectionException -->
+        </test-method> <!-- testMonomerNotationAnnotation -->
+        <test-method status="PASS" signature="testMonomerNotationDefaultAnnotation()[pri:0, instance:org.helm.notation2.parser.polymer.MonomerNotationTest@cd63cd3]" name="testMonomerNotationDefaultAnnotation" duration-ms="1" started-at="2015-12-04T10:28:09Z" finished-at="2015-12-04T10:28:09Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testInlineAnnotationsPolymerWithException -->
-        <test-method status="PASS" signature="testInlineAnnotationsPolymerUnknown()[pri:0, instance:parsertest.SimplePolymersSectionTest.TestInputSimplePolymerSection@97d43bf]" name="testInlineAnnotationsPolymerUnknown" duration-ms="0" started-at="2015-11-04T15:52:25Z" finished-at="2015-11-04T15:52:25Z">
+        </test-method> <!-- testMonomerNotationDefaultAnnotation -->
+        <test-method status="PASS" signature="testMonomerNotationID()[pri:0, instance:org.helm.notation2.parser.polymer.MonomerNotationTest@cd63cd3]" name="testMonomerNotationID" duration-ms="0" started-at="2015-12-04T10:28:09Z" finished-at="2015-12-04T10:28:09Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testInlineAnnotationsPolymerUnknown -->
-        <test-method status="PASS" signature="testLysineThereOrNot()[pri:0, instance:parsertest.SimplePolymersSectionTest.TestInputSimplePolymerSection@97d43bf]" name="testLysineThereOrNot" duration-ms="8" started-at="2015-11-04T15:52:25Z" finished-at="2015-11-04T15:52:25Z">
+        </test-method> <!-- testMonomerNotationID -->
+        <test-method status="PASS" signature="testMonomerNotationDefaultCount()[pri:0, instance:org.helm.notation2.parser.polymer.MonomerNotationTest@cd63cd3]" name="testMonomerNotationDefaultCount" duration-ms="0" started-at="2015-12-04T10:28:09Z" finished-at="2015-12-04T10:28:09Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testLysineThereOrNot -->
-        <test-method status="PASS" signature="testMonomerRepeating()[pri:0, instance:parsertest.SimplePolymersSectionTest.TestInputSimplePolymerSection@97d43bf]" name="testMonomerRepeating" duration-ms="0" started-at="2015-11-04T15:52:25Z" finished-at="2015-11-04T15:52:25Z">
+        </test-method> <!-- testMonomerNotationDefaultCount -->
+        <test-method status="PASS" signature="testMonomerNotationIDValue()[pri:0, instance:org.helm.notation2.parser.polymer.MonomerNotationTest@cd63cd3]" name="testMonomerNotationIDValue" duration-ms="1" started-at="2015-12-04T10:28:09Z" finished-at="2015-12-04T10:28:09Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testMonomerRepeating -->
-        <test-method status="PASS" signature="testMonomerRepeatingRange()[pri:0, instance:parsertest.SimplePolymersSectionTest.TestInputSimplePolymerSection@97d43bf]" name="testMonomerRepeatingRange" duration-ms="0" started-at="2015-11-04T15:52:25Z" finished-at="2015-11-04T15:52:25Z">
+        </test-method> <!-- testMonomerNotationIDValue -->
+        <test-method status="PASS" signature="testMonomerNotationID_()[pri:0, instance:org.helm.notation2.parser.polymer.MonomerNotationTest@cd63cd3]" name="testMonomerNotationID_" duration-ms="0" started-at="2015-12-04T10:28:09Z" finished-at="2015-12-04T10:28:09Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testMonomerRepeatingRange -->
-        <test-method status="PASS" signature="testMonomerRepeatingUnits()[pri:0, instance:parsertest.SimplePolymersSectionTest.TestInputSimplePolymerSection@97d43bf]" name="testMonomerRepeatingUnits" duration-ms="2" started-at="2015-11-04T15:52:25Z" finished-at="2015-11-04T15:52:25Z">
+        </test-method> <!-- testMonomerNotationID_ -->
+      </class> <!-- org.helm.notation2.parser.polymer.MonomerNotationTest -->
+      <class name="org.helm.notation2.parser.JSONTest">
+        <test-method status="PASS" signature="testJSONTest()[pri:0, instance:org.helm.notation2.parser.JSONTest@29895454]" name="testJSONTest" duration-ms="166" started-at="2015-12-04T10:28:08Z" finished-at="2015-12-04T10:28:09Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testMonomerRepeatingUnits -->
-        <test-method status="PASS" signature="testMonomerRepeatingUnitsWithException()[pri:0, instance:parsertest.SimplePolymersSectionTest.TestInputSimplePolymerSection@97d43bf]" name="testMonomerRepeatingUnitsWithException" duration-ms="0" started-at="2015-11-04T15:52:25Z" finished-at="2015-11-04T15:52:25Z">
-          <exception class="parsertest.ExceptionParser.SimplePolymerSectionException">
-            <message>
-              <![CDATA[Monomer unit is missing]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[parsertest.ExceptionParser.SimplePolymerSectionException: Monomer unit is missing
-	at parsertest.SimplePolymersSection.SimplePolymersNotationParser.doAction(SimplePolymersNotationParser.java:138)
-	at parsertest.StateMachineParser.doAction(StateMachineParser.java:85)
-	at parsertest.ParserHELM2.parse(ParserHELM2.java:58)
-	at parsertest.SimplePolymersSectionTest.TestInputSimplePolymerSection.testMonomerRepeatingUnitsWithException(TestInputSimplePolymerSection.java:77)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
-	at org.testng.TestRunner.privateRun(TestRunner.java:774)
-	at org.testng.TestRunner.run(TestRunner.java:624)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1191)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)
-	at org.testng.TestNG.run(TestNG.java:1024)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:112)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:205)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:176)
-]]>
-            </full-stacktrace>
-          </exception> <!-- parsertest.ExceptionParser.SimplePolymerSectionException -->
+        </test-method> <!-- testJSONTest -->
+        <test-method status="PASS" signature="testJSONTest2()[pri:0, instance:org.helm.notation2.parser.JSONTest@29895454]" name="testJSONTest2" duration-ms="6" started-at="2015-12-04T10:28:09Z" finished-at="2015-12-04T10:28:09Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testMonomerRepeatingUnitsWithException -->
-        <test-method status="PASS" signature="testNewSimplePolymerType()[pri:0, instance:parsertest.SimplePolymersSectionTest.TestInputSimplePolymerSection@97d43bf]" name="testNewSimplePolymerType" duration-ms="2" started-at="2015-11-04T15:52:25Z" finished-at="2015-11-04T15:52:25Z">
+        </test-method> <!-- testJSONTest2 -->
+      </class> <!-- org.helm.notation2.parser.JSONTest -->
+      <class name="org.helm.notation2.parser.polymer.EntityTest">
+        <test-method status="PASS" signature="testEntity()[pri:0, instance:org.helm.notation2.parser.polymer.EntityTest@617f84e0]" name="testEntity" duration-ms="0" started-at="2015-12-04T10:28:09Z" finished-at="2015-12-04T10:28:09Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testNewSimplePolymerType -->
-        <test-method status="PASS" signature="testRepeatedFragments()[pri:0, instance:parsertest.SimplePolymersSectionTest.TestInputSimplePolymerSection@97d43bf]" name="testRepeatedFragments" duration-ms="1" started-at="2015-11-04T15:52:25Z" finished-at="2015-11-04T15:52:25Z">
+        </test-method> <!-- testEntity -->
+      </class> <!-- org.helm.notation2.parser.polymer.EntityTest -->
+      <class name="org.helm.notation2.parser.polymer.MonomerNotationUnitRNATest">
+        <test-method status="PASS" signature="testMonomerNotationUnitRNA()[pri:0, instance:org.helm.notation2.parser.polymer.MonomerNotationUnitRNATest@7b121a57]" name="testMonomerNotationUnitRNA" duration-ms="1" started-at="2015-12-04T10:28:09Z" finished-at="2015-12-04T10:28:09Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testRepeatedFragments -->
-        <test-method status="PASS" signature="testRepeatedFragmentsWithException()[pri:0, instance:parsertest.SimplePolymersSectionTest.TestInputSimplePolymerSection@97d43bf]" name="testRepeatedFragmentsWithException" duration-ms="0" started-at="2015-11-04T15:52:25Z" finished-at="2015-11-04T15:52:25Z">
-          <exception class="parsertest.ExceptionParser.SimplePolymerSectionException">
-            <message>
-              <![CDATA[Error in the simple polymers notation section:]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[parsertest.ExceptionParser.SimplePolymerSectionException: Error in the simple polymers notation section:
-	at parsertest.SimplePolymersSection.BetweenMonomerParser.doAction(BetweenMonomerParser.java:78)
-	at parsertest.StateMachineParser.doAction(StateMachineParser.java:85)
-	at parsertest.ParserHELM2.parse(ParserHELM2.java:58)
-	at parsertest.SimplePolymersSectionTest.TestInputSimplePolymerSection.testRepeatedFragmentsWithException(TestInputSimplePolymerSection.java:130)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
-	at org.testng.TestRunner.privateRun(TestRunner.java:774)
-	at org.testng.TestRunner.run(TestRunner.java:624)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1191)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)
-	at org.testng.TestNG.run(TestNG.java:1024)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:112)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:205)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:176)
-]]>
-            </full-stacktrace>
-          </exception> <!-- parsertest.ExceptionParser.SimplePolymerSectionException -->
+        </test-method> <!-- testMonomerNotationUnitRNA -->
+        <test-method status="PASS" signature="testMonomerNotationUnitRNAContents()[pri:0, instance:org.helm.notation2.parser.polymer.MonomerNotationUnitRNATest@7b121a57]" name="testMonomerNotationUnitRNAContents" duration-ms="0" started-at="2015-12-04T10:28:09Z" finished-at="2015-12-04T10:28:09Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testRepeatedFragmentsWithException -->
-        <test-method status="PASS" signature="testSimpleInput()[pri:0, instance:parsertest.SimplePolymersSectionTest.TestInputSimplePolymerSection@97d43bf]" name="testSimpleInput" duration-ms="9" started-at="2015-11-04T15:52:25Z" finished-at="2015-11-04T15:52:25Z">
+        </test-method> <!-- testMonomerNotationUnitRNAContents -->
+        <test-method status="PASS" signature="testMonomerNotationUnitRNAContentsSpecial()[pri:0, instance:org.helm.notation2.parser.polymer.MonomerNotationUnitRNATest@7b121a57]" name="testMonomerNotationUnitRNAContentsSpecial" duration-ms="0" started-at="2015-12-04T10:28:09Z" finished-at="2015-12-04T10:28:09Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testSimpleInput -->
-      </class> <!-- parsertest.SimplePolymersSectionTest.TestInputSimplePolymerSection -->
-      <class name="parsertest.InlineAnnotationsParserTest">
-        <test-method status="PASS" signature="goToBetweenInlineConnectionParser()[pri:0, instance:parsertest.InlineAnnotationsParserTest@79f7fcd0]" name="goToBetweenInlineConnectionParser" duration-ms="1" started-at="2015-11-04T15:52:24Z" finished-at="2015-11-04T15:52:24Z">
+        </test-method> <!-- testMonomerNotationUnitRNAContentsSpecial -->
+        <test-method status="PASS" signature="testMonomerNotationUnitRNAContentsSpecialFour()[pri:0, instance:org.helm.notation2.parser.polymer.MonomerNotationUnitRNATest@7b121a57]" name="testMonomerNotationUnitRNAContentsSpecialFour" duration-ms="0" started-at="2015-12-04T10:28:09Z" finished-at="2015-12-04T10:28:09Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- goToBetweenInlineConnectionParser -->
-        <test-method status="PASS" signature="goToBetweenParser()[pri:0, instance:parsertest.InlineAnnotationsParserTest@79f7fcd0]" name="goToBetweenParser" duration-ms="1" started-at="2015-11-04T15:52:24Z" finished-at="2015-11-04T15:52:24Z">
+        </test-method> <!-- testMonomerNotationUnitRNAContentsSpecialFour -->
+        <test-method status="PASS" signature="testMonomerNotationUnitRNAContentsSpecialSeven()[pri:0, instance:org.helm.notation2.parser.polymer.MonomerNotationUnitRNATest@7b121a57]" name="testMonomerNotationUnitRNAContentsSpecialSeven" duration-ms="1" started-at="2015-12-04T10:28:09Z" finished-at="2015-12-04T10:28:09Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- goToBetweenParser -->
-        <test-method status="PASS" signature="goToSimplePolymersNotationParserParser()[pri:0, instance:parsertest.InlineAnnotationsParserTest@79f7fcd0]" name="goToSimplePolymersNotationParserParser" duration-ms="1" started-at="2015-11-04T15:52:24Z" finished-at="2015-11-04T15:52:24Z">
+        </test-method> <!-- testMonomerNotationUnitRNAContentsSpecialSeven -->
+        <test-method status="PASS" signature="testMonomerNotationUnitRNAContentsSpecialFive()[pri:0, instance:org.helm.notation2.parser.polymer.MonomerNotationUnitRNATest@7b121a57]" name="testMonomerNotationUnitRNAContentsSpecialFive" duration-ms="0" started-at="2015-12-04T10:28:09Z" finished-at="2015-12-04T10:28:09Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- goToSimplePolymersNotationParserParser -->
-        <test-method status="PASS" signature="keepThisState()[pri:0, instance:parsertest.InlineAnnotationsParserTest@79f7fcd0]" name="keepThisState" duration-ms="0" started-at="2015-11-04T15:52:24Z" finished-at="2015-11-04T15:52:24Z">
+        </test-method> <!-- testMonomerNotationUnitRNAContentsSpecialFive -->
+        <test-method status="PASS" signature="testMonomerNotationUnitRNAContentsSpecialThree()[pri:0, instance:org.helm.notation2.parser.polymer.MonomerNotationUnitRNATest@7b121a57]" name="testMonomerNotationUnitRNAContentsSpecialThree" duration-ms="0" started-at="2015-12-04T10:28:09Z" finished-at="2015-12-04T10:28:09Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- keepThisState -->
-      </class> <!-- parsertest.InlineAnnotationsParserTest -->
+        </test-method> <!-- testMonomerNotationUnitRNAContentsSpecialThree -->
+        <test-method status="PASS" signature="testMonomerNotationUnitRNAContentsSpecialSix()[pri:0, instance:org.helm.notation2.parser.polymer.MonomerNotationUnitRNATest@7b121a57]" name="testMonomerNotationUnitRNAContentsSpecialSix" duration-ms="0" started-at="2015-12-04T10:28:09Z" finished-at="2015-12-04T10:28:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testMonomerNotationUnitRNAContentsSpecialSix -->
+        <test-method status="PASS" signature="testMonomerNotationUnitRNAContentsSpecialTwo()[pri:0, instance:org.helm.notation2.parser.polymer.MonomerNotationUnitRNATest@7b121a57]" name="testMonomerNotationUnitRNAContentsSpecialTwo" duration-ms="0" started-at="2015-12-04T10:28:09Z" finished-at="2015-12-04T10:28:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testMonomerNotationUnitRNAContentsSpecialTwo -->
+      </class> <!-- org.helm.notation2.parser.polymer.MonomerNotationUnitRNATest -->
+      <class name="org.helm.notation2.parser.OutputWriterTest">
+        <test-method status="PASS" signature="testHELM2Output()[pri:0, instance:org.helm.notation2.parser.OutputWriterTest@5970eb6d]" name="testHELM2Output" duration-ms="17" started-at="2015-12-04T10:28:08Z" finished-at="2015-12-04T10:28:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testHELM2Output -->
+        <test-method status="PASS" signature="testHELM2OutputExtended()[pri:0, instance:org.helm.notation2.parser.OutputWriterTest@5970eb6d]" name="testHELM2OutputExtended" duration-ms="14" started-at="2015-12-04T10:28:08Z" finished-at="2015-12-04T10:28:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testHELM2OutputExtended -->
+      </class> <!-- org.helm.notation2.parser.OutputWriterTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
