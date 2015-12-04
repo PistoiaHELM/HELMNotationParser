@@ -23,9 +23,13 @@
  */
 package parsertest;
 
-import org.testng.annotations.Test;
+import java.io.IOException;
 
-import parsertest.ExceptionParser.ExceptionState;
+import org.helm.notation2.parser.ConverterHELM1ToHELM2;
+import org.helm.notation2.parser.ParserHELM2;
+import org.helm.notation2.parser.exceptionparser.ExceptionState;
+import org.jdom.JDOMException;
+import org.testng.annotations.Test;
 
 public class ConverterHELM1ToHELM2Test {
 
@@ -37,12 +41,17 @@ public class ConverterHELM1ToHELM2Test {
   
   /**
    * @throws ExceptionState
+   * @throws org.jdom2.JDOMException
+   * @throws JDOMException
+   * @throws IOException
+   * @throws MonomerException
+   * @throws NotationException
    * 
    * 
    * 
    */
   @Test
-  public void simpleHELM1StringTest() throws ExceptionState {
+  public void simpleHELM1StringTest() throws ExceptionState, IOException, JDOMException {
 
     converter = new ConverterHELM1ToHELM2();
     test =
@@ -52,11 +61,13 @@ public class ConverterHELM1ToHELM2Test {
   }
 
   @Test
-  public void SMILESTest() throws ExceptionState {
+  public void SMILESTest() throws ExceptionState, IOException, JDOMException {
     converter = new ConverterHELM1ToHELM2();
     test =
-        converter.doConvert("PEPTIDE1{A.A.A.A.A.A.A.A.A.A.A.A.A.A.A.A.A.A.A.A.A.C.D.D.D.D.D.D.D.D.D.D.D.D.D.D.D.D.D.D.D.D.E.E.E.E.E.E.E.E.E.E.E.E.E.E.E.E.E.E.E.E.E.E.E}|PEPTIDE2{G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.C.S.S.S.S.S.S.S.S.S.P.P.P.P.P.P.P.P.P.K.K.K.K.K.K.K.K.K.K.K.K.K}|CHEM1{[[*]SCCCc1ccccc1 |$_R1;;;;;;;;;;$|]}$PEPTIDE2,CHEM1,(C,K):R3-1:R1$$$");
+        converter.doConvert("PEPTIDE1{A.A.A.A.A.A.A.A.A.A.A.A.A.A.A.A.A.A.A.A.A.C.D.D.D.D.D.D.D.D.D.D.D.D.D.D.D.D.D.D.D.D.E.E.E.E.E.E.E.E.E.E.E.E.E.E.E.E.E.E.E.E.E.E.E}|PEPTIDE2{G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.C.S.S.S.S.S.S.S.S.S.P.P.P.P.P.P.P.P.P.K.K.K.K.K.K.K.K.K.K.K.K.K}|CHEM1{[[*]SCCCc1ccccc1 |$_R1;;;;;;;;;;$|]}$PEPTIDE2,CHEM1,(C,K):R3-1:R1$$$");
     parser.parse(test);
   }
+
+
 
 }

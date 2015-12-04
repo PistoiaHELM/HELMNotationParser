@@ -21,22 +21,24 @@
  * SOFTWARE.
  *****************************************************************************
  */
-package parsertest.SimplePolymersSectionTest;
+package parsertest.simplepolymerssectiontest;
 
+import java.io.IOException;
+
+import org.helm.notation2.parser.StateMachineParser;
+import org.helm.notation2.parser.connectionsection.ConnectionsParser;
+import org.helm.notation2.parser.exceptionparser.ExceptionState;
+import org.helm.notation2.parser.exceptionparser.SimplePolymerSectionException;
+import org.helm.notation2.parser.simplepolymerssection.SimplePolymersNotationParser;
+import org.helm.notation2.parser.simplepolymerssection.SimplePolymersParser;
+import org.jdom.JDOMException;
 import org.testng.annotations.Test;
-
-import parsertest.StateMachineParser;
-import parsertest.ConnectionSection.ConnectionsParser;
-import parsertest.ExceptionParser.ExceptionState;
-import parsertest.ExceptionParser.SimplePolymerSectionException;
-import parsertest.SimplePolymersSection.SimplePolymersNotationParser;
-import parsertest.SimplePolymersSection.SimplePolymersParser;
 
 public class SimplePolymersParserTest {
 	StateMachineParser parser;
 	
 	@Test 
-  	public void keepThisStateTest() throws ExceptionState {
+  public void keepThisStateTest() throws ExceptionState, IOException, JDOMException {
 		parser = new StateMachineParser();
 		parser.doAction('P');
 		
@@ -46,7 +48,7 @@ public class SimplePolymersParserTest {
   }
   
 	@Test
-	public void goToConnectionSectionTest() throws ExceptionState {
+  public void goToConnectionSectionTest() throws ExceptionState, IOException, JDOMException {
 		parser = new StateMachineParser();
     String test = "PEPTIDE1{R.A.P}$";
     for (int i = 0; i < test.length(); i++) {
@@ -58,7 +60,7 @@ public class SimplePolymersParserTest {
 	}
   
     @Test
-	public void goToSimplePolymersNotationParserTest() throws ExceptionState {
+  public void goToSimplePolymersNotationParserTest() throws ExceptionState, IOException, JDOMException {
 		parser = new StateMachineParser();
 		String test = "PEPTIDE1{";
 		for (int i = 0; i < test.length(); i ++){
@@ -70,7 +72,8 @@ public class SimplePolymersParserTest {
 	}
     
     @Test(expectedExceptions = SimplePolymerSectionException.class)
-   	public void goToSimplePolymersNotationParserTestWithException() throws ExceptionState {
+  public void goToSimplePolymersNotationParserTestWithException()
+      throws ExceptionState, IOException, JDOMException {
    		parser = new StateMachineParser();
    		parser.doAction('{');  
    	}

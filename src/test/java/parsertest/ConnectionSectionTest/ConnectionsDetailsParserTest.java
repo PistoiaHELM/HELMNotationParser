@@ -21,22 +21,25 @@
  * SOFTWARE.
  *****************************************************************************
  */
-package parsertest.ConnectionSectionTest;
+package parsertest.connectionsectiontest;
 
+import java.io.IOException;
+
+import org.helm.notation2.parser.InlineAnnotationsParser;
+import org.helm.notation2.parser.StateMachineParser;
+import org.helm.notation2.parser.connectionsection.ConnectionsDetailsParser;
+import org.helm.notation2.parser.connectionsection.ConnectionsParser;
+import org.helm.notation2.parser.exceptionparser.ConnectionSectionException;
+import org.helm.notation2.parser.exceptionparser.ExceptionState;
+import org.helm.notation2.parser.groupingsection.GroupingParser;
+import org.jdom.JDOMException;
 import org.testng.annotations.Test;
-import parsertest.InlineAnnotationsParser;
-import parsertest.StateMachineParser;
-import parsertest.ConnectionSection.ConnectionsDetailsParser;
-import parsertest.ConnectionSection.ConnectionsParser;
-import parsertest.ExceptionParser.ConnectionSectionException;
-import parsertest.ExceptionParser.ExceptionState;
-import parsertest.GroupingSection.GroupingParser;
 
 public class ConnectionsDetailsParserTest {
 
 	StateMachineParser parser;
 	@Test 
-  	public void keepThisState() throws ExceptionState {
+  public void keepThisState() throws ExceptionState, IOException, JDOMException {
 		parser = new StateMachineParser();
 		parser.setState(new ConnectionsDetailsParser(parser));
     parser.doAction('H');
@@ -47,7 +50,7 @@ public class ConnectionsDetailsParserTest {
 	}
 	
 	@Test 
-  	public void goToGroupingParser() throws ExceptionState {
+  public void goToGroupingParser() throws ExceptionState, IOException, JDOMException {
 		parser = new StateMachineParser();
     parser.setState(new ConnectionsParser(parser));
     String test = "PEPTIDE1,PEPTIDE2,C:R3-?:?$";
@@ -61,7 +64,7 @@ public class ConnectionsDetailsParserTest {
 	}
 	
 	@Test(expectedExceptions = ConnectionSectionException.class)
-	public void goToGroupingParserWithException() throws ExceptionState {
+  public void goToGroupingParserWithException() throws ExceptionState, IOException, JDOMException {
 		parser = new StateMachineParser();
     parser.setState(new ConnectionsParser(parser));
     String test = "PEPTIDE1,PEPTIDE2,hallo$";
@@ -71,7 +74,7 @@ public class ConnectionsDetailsParserTest {
 	}
 	
 	@Test 
-  	public void goToInlineAnnotationsParser() throws ExceptionState {
+  public void goToInlineAnnotationsParser() throws ExceptionState, IOException, JDOMException {
 		parser = new StateMachineParser();
     parser.setState(new ConnectionsParser(parser));
     String test = "PEPTIDE1,PEPTIDE2,C:R3-?:?\"";
@@ -85,7 +88,7 @@ public class ConnectionsDetailsParserTest {
 	}
 	
 	@Test(expectedExceptions = ConnectionSectionException.class)
-	public void goToInlineAnnotationsParserWithException() throws ExceptionState {
+  public void goToInlineAnnotationsParserWithException() throws ExceptionState, IOException, JDOMException {
 		parser = new StateMachineParser();
     parser.setState(new ConnectionsParser(parser));
     String test = "PEPTIDE1,PEPTIDE2,hallo\"";

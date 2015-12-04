@@ -23,9 +23,14 @@
  */
 package parsertest;
 
+import java.io.IOException;
+
+import org.helm.notation2.parser.FinalState;
+import org.helm.notation2.parser.StateMachineParser;
+import org.helm.notation2.parser.exceptionparser.ExceptionState;
+import org.helm.notation2.parser.exceptionparser.FinalStateException;
+import org.jdom.JDOMException;
 import org.testng.annotations.Test;
-import parsertest.ExceptionParser.ExceptionState;
-import parsertest.ExceptionParser.FinalStateException;
 
 /**
  * FinalStateTest class to test the transition of the class FinalState
@@ -39,11 +44,14 @@ public class FinalStateTest {
    * the reading of any character in the final state should produce an exception
    * 
    * @throws ExceptionState
+   * @throws JDOMException
+   * @throws IOException
    */
   @Test(expectedExceptions = FinalStateException.class)
-  public void goToFinalStateWithException() throws ExceptionState {
+  public void goToFinalStateWithException() throws ExceptionState, IOException, JDOMException {
     parser = new StateMachineParser();
-    parser.setState(new FinalState(parser));
+//    parser.setState(new FinalState(parser));
+    parser.setState(new FinalState());
     parser.doAction('j');
   }
 

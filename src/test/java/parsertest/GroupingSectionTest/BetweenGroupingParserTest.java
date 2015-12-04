@@ -21,16 +21,19 @@
  * SOFTWARE.
  *****************************************************************************
  */
-package parsertest.GroupingSectionTest;
+package parsertest.groupingsectiontest;
 
+import java.io.IOException;
+
+import org.helm.notation2.parser.StateMachineParser;
+import org.helm.notation2.parser.annotationsection.AnnotationsParser;
+import org.helm.notation2.parser.exceptionparser.ConnectionSectionException;
+import org.helm.notation2.parser.exceptionparser.ExceptionState;
+import org.helm.notation2.parser.exceptionparser.GroupingSectionException;
+import org.helm.notation2.parser.groupingsection.BetweenGroupingParser;
+import org.helm.notation2.parser.groupingsection.GroupingParser;
+import org.jdom.JDOMException;
 import org.testng.annotations.Test;
-import parsertest.StateMachineParser;
-import parsertest.AnnotationSection.AnnotationsParser;
-import parsertest.ExceptionParser.ConnectionSectionException;
-import parsertest.ExceptionParser.ExceptionState;
-import parsertest.ExceptionParser.GroupingSectionException;
-import parsertest.GroupingSection.BetweenGroupingParser;
-import parsertest.GroupingSection.GroupingParser;
 
 public class BetweenGroupingParserTest {
 	
@@ -38,7 +41,7 @@ StateMachineParser parser;
 	
 	
 	@Test 
-  	public void goToGroupingParser() throws ExceptionState {
+  public void goToGroupingParser() throws ExceptionState, IOException, JDOMException {
 		parser = new StateMachineParser();
 		parser.setState(new BetweenGroupingParser(parser));
 		parser.doAction('|');
@@ -49,7 +52,7 @@ StateMachineParser parser;
 	}
 	
 	@Test 
-  	public void goToAnnotationsParser() throws ExceptionState {
+  public void goToAnnotationsParser() throws ExceptionState, IOException, JDOMException {
 		parser = new StateMachineParser();
 		parser.setState(new BetweenGroupingParser(parser));
 		parser.doAction('$');
@@ -61,7 +64,7 @@ StateMachineParser parser;
 	
 	
 	@Test(expectedExceptions = GroupingSectionException.class)
-	public void ReadingWithException() throws ExceptionState {
+  public void ReadingWithException() throws ExceptionState, IOException, JDOMException {
 		parser = new StateMachineParser();
 		parser.setState(new BetweenGroupingParser(parser));
 		parser.doAction('a');

@@ -21,12 +21,14 @@
  * SOFTWARE.
  *****************************************************************************
  */
-package parsertest.AnnotationSectionTest;
+package parsertest.annotationsectiontest;
 
+import java.io.IOException;
+
+import org.helm.notation2.parser.ParserHELM2;
+import org.helm.notation2.parser.exceptionparser.ExceptionState;
+import org.jdom.JDOMException;
 import org.testng.annotations.Test;
-
-import parsertest.ParserHELM2;
-import parsertest.ExceptionParser.ExceptionState;
 
 public class TestInputAnnotationSection {
 
@@ -37,7 +39,7 @@ public class TestInputAnnotationSection {
 	 * method to test the annotation
 	 */
 	@Test 
-  	public void testSimpleInput() throws ExceptionState {
+  public void testSimpleInput() throws ExceptionState, IOException, JDOMException {
 		test="PEPTIDE1{C.C.C.C.C.C}|BLOB1{Gold_Particle}\"Au10,Diameter:10nm\"$PEPTIDE1,BLOB1,C:R3-?:?$G1(PEPTIDE1:20-34+BLOB1)${�Name�:�Gold particle conjugated with peptides�,�Load�:26}$V2.0";
 		parser.parse(test);
 		

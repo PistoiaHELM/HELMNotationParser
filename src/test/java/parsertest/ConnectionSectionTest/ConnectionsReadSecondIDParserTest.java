@@ -21,22 +21,24 @@
  * SOFTWARE.
  *****************************************************************************
  */
-package parsertest.ConnectionSectionTest;
+package parsertest.connectionsectiontest;
 
+import java.io.IOException;
+
+import org.helm.notation2.parser.StateMachineParser;
+import org.helm.notation2.parser.connectionsection.ConnectionsDetailsParser;
+import org.helm.notation2.parser.connectionsection.ConnectionsParser;
+import org.helm.notation2.parser.exceptionparser.ConnectionSectionException;
+import org.helm.notation2.parser.exceptionparser.ExceptionState;
+import org.jdom.JDOMException;
 import org.testng.annotations.Test;
-
-import parsertest.StateMachineParser;
-import parsertest.ConnectionSection.ConnectionsDetailsParser;
-import parsertest.ConnectionSection.ConnectionsParser;
-import parsertest.ExceptionParser.ConnectionSectionException;
-import parsertest.ExceptionParser.ExceptionState;
 
 public class ConnectionsReadSecondIDParserTest {
 	
 	StateMachineParser parser;
 	
 	@Test
-  	public void goToConnectionsDetailsParser() throws ExceptionState {
+  public void goToConnectionsDetailsParser() throws ExceptionState, IOException, JDOMException {
 		parser = new StateMachineParser();
     parser.setState(new ConnectionsParser(parser));
     String test = "PEPTIDE1,PEPTIDE2,";
@@ -50,7 +52,7 @@ public class ConnectionsReadSecondIDParserTest {
 	}
 	
 	@Test (expectedExceptions = ConnectionSectionException.class)
-  	public void goToConnectionsDetailsParserWithException() throws ExceptionState {
+  public void goToConnectionsDetailsParserWithException() throws ExceptionState, IOException, JDOMException {
 		parser = new StateMachineParser();
 		parser.setState(new ConnectionsParser(parser));
     String test = "PEPTIDE1,P,";

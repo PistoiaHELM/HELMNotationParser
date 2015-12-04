@@ -21,22 +21,24 @@
  * SOFTWARE.
  *****************************************************************************
  */
-package parsertest.SimplePolymersSectionTest;
+package parsertest.simplepolymerssectiontest;
 
+import java.io.IOException;
+
+import org.helm.notation2.parser.StateMachineParser;
+import org.helm.notation2.parser.exceptionparser.ExceptionState;
+import org.helm.notation2.parser.exceptionparser.SimplePolymerSectionException;
+import org.helm.notation2.parser.simplepolymerssection.BetweenMonomerParser;
+import org.helm.notation2.parser.simplepolymerssection.RepeatingMonomerParser;
+import org.jdom.JDOMException;
 import org.testng.annotations.Test;
-
-import parsertest.StateMachineParser;
-import parsertest.ExceptionParser.ExceptionState;
-import parsertest.ExceptionParser.SimplePolymerSectionException;
-import parsertest.SimplePolymersSection.BetweenMonomerParser;
-import parsertest.SimplePolymersSection.RepeatingMonomerParser;
 
 
 public class RepeatingMonomerParserTest {
 	StateMachineParser parser;
 	
 	@Test 
-  	public void keepThisStateTest() throws ExceptionState {
+  public void keepThisStateTest() throws ExceptionState, IOException, JDOMException {
 		parser = new StateMachineParser();
 		parser.setState(new RepeatingMonomerParser(parser));
 		parser.doAction('P');
@@ -47,7 +49,7 @@ public class RepeatingMonomerParserTest {
   }
 	
 	 @Test
-	 public void goToBetweenParser() throws ExceptionState {
+  public void goToBetweenParser() throws ExceptionState, IOException, JDOMException {
 	    parser = new StateMachineParser();
     String test = "PEPTIDE1{A'3'";
 		for (int i = 0; i < test.length(); i ++){
@@ -59,7 +61,7 @@ public class RepeatingMonomerParserTest {
 	   }
 	 
 	    @Test(expectedExceptions = SimplePolymerSectionException.class)
-	   	public void goToBetweenParserWithException() throws ExceptionState {
+  public void goToBetweenParserWithException() throws ExceptionState, IOException, JDOMException {
 	    	parser = new StateMachineParser();
 			parser.setState(new RepeatingMonomerParser(parser));
     String test = "PEPTIDE1{A''";
@@ -70,7 +72,7 @@ public class RepeatingMonomerParserTest {
 	   	}
 	 
 	 @Test
-	 public void goToBetweenParserRange() throws ExceptionState {
+  public void goToBetweenParserRange() throws ExceptionState, IOException, JDOMException {
 	    parser = new StateMachineParser();
     String test = "PEPTIDE1{A'3-5'";
 
@@ -83,7 +85,7 @@ public class RepeatingMonomerParserTest {
 	   }
 	 
 	 @Test(expectedExceptions = SimplePolymerSectionException.class)
-	 public void goToBetweenParserRangeWithException() throws ExceptionState {
+  public void goToBetweenParserRangeWithException() throws ExceptionState, IOException, JDOMException {
 	    parser = new StateMachineParser();
     String test = "PEPTIDE1{A'3-d'";
 		for (int i = 0; i < test.length(); i ++){

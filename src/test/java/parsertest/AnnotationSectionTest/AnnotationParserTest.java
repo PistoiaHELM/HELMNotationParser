@@ -21,15 +21,18 @@
  * SOFTWARE.
  *****************************************************************************
  */
-package parsertest.AnnotationSectionTest;
+package parsertest.annotationsectiontest;
 
+import java.io.IOException;
+
+import org.helm.notation2.parser.FinalState;
+import org.helm.notation2.parser.StateMachineParser;
+import org.helm.notation2.parser.annotationsection.AnnotationsParser;
+import org.helm.notation2.parser.exceptionparser.AnnotationSectionException;
+import org.helm.notation2.parser.exceptionparser.ExceptionState;
+import org.helm.notation2.parser.exceptionparser.SimplePolymerSectionException;
+import org.jdom.JDOMException;
 import org.testng.annotations.Test;
-import parsertest.FinalState;
-import parsertest.StateMachineParser;
-import parsertest.AnnotationSection.AnnotationsParser;
-import parsertest.ExceptionParser.AnnotationSectionException;
-import parsertest.ExceptionParser.ExceptionState;
-import parsertest.ExceptionParser.SimplePolymerSectionException;
 
 
 public class AnnotationParserTest {
@@ -37,7 +40,7 @@ public class AnnotationParserTest {
 	StateMachineParser parser;
 		
 		@Test 
-	  	public void keepThisState() throws ExceptionState {
+  public void keepThisState() throws ExceptionState, IOException, JDOMException {
 			parser = new StateMachineParser();
 			parser.setState(new AnnotationsParser(parser));
 			parser.doAction('H');
@@ -48,7 +51,7 @@ public class AnnotationParserTest {
 		}
 		
 		@Test(expectedExceptions = AnnotationSectionException.class)
-	  	public void keepToFinalStateWithException() throws ExceptionState {
+  public void keepToFinalStateWithException() throws ExceptionState, IOException, JDOMException {
 			parser = new StateMachineParser();
 			parser.setState(new AnnotationsParser(parser));
 			String test = "H($";
@@ -59,7 +62,7 @@ public class AnnotationParserTest {
 		
 		
 		@Test 
-	  	public void goToFinalState() throws ExceptionState {
+  public void goToFinalState() throws ExceptionState, IOException, JDOMException {
 			parser = new StateMachineParser();
 			parser.setState(new AnnotationsParser(parser));
 			parser.doAction('$');

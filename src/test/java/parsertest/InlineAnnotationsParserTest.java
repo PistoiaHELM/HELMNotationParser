@@ -23,20 +23,24 @@
  */
 package parsertest;
 
-import org.testng.annotations.Test;
+import java.io.IOException;
 
-import parsertest.ConnectionSection.BetweenInlineConnectionParser;
-import parsertest.ConnectionSection.ConnectionsParser;
-import parsertest.ExceptionParser.ExceptionState;
-import parsertest.ExceptionParser.SimplePolymerSectionException;
-import parsertest.SimplePolymersSection.BetweenInlineMonomerParser;
-import parsertest.SimplePolymersSection.BetweenParser;
+import org.helm.notation2.parser.InlineAnnotationsParser;
+import org.helm.notation2.parser.StateMachineParser;
+import org.helm.notation2.parser.connectionsection.BetweenInlineConnectionParser;
+import org.helm.notation2.parser.connectionsection.ConnectionsParser;
+import org.helm.notation2.parser.exceptionparser.ExceptionState;
+import org.helm.notation2.parser.exceptionparser.SimplePolymerSectionException;
+import org.helm.notation2.parser.simplepolymerssection.BetweenInlineMonomerParser;
+import org.helm.notation2.parser.simplepolymerssection.BetweenParser;
+import org.jdom.JDOMException;
+import org.testng.annotations.Test;
 
 public class InlineAnnotationsParserTest {
 	StateMachineParser parser;
 	
 	@Test 
-  	public void keepThisState() throws ExceptionState {
+  public void keepThisState() throws ExceptionState, IOException, JDOMException {
 		parser = new StateMachineParser();
     parser.setState(new InlineAnnotationsParser(parser, 1));
 		parser.doAction('H');
@@ -47,7 +51,7 @@ public class InlineAnnotationsParserTest {
   }
 	
 	@Test 
-  	public void goToBetweenParser() throws ExceptionState {
+  public void goToBetweenParser() throws ExceptionState, IOException, JDOMException {
 		parser = new StateMachineParser();
     String test = "PEPTIDE1{A.P}\"\"";
     for (int i = 0; i < test.length(); i++) {
@@ -62,7 +66,7 @@ public class InlineAnnotationsParserTest {
 	
 	
 	@Test 
-  	public void goToBetweenInlineConnectionParser() throws ExceptionState {
+  public void goToBetweenInlineConnectionParser() throws ExceptionState, IOException, JDOMException {
 		parser = new StateMachineParser();
     parser.setState(new ConnectionsParser(parser));
     String test = "PEPTIDE1,PEPTIDE2,C:R3-?:?\"\"";
@@ -77,7 +81,7 @@ public class InlineAnnotationsParserTest {
 	
 
 	@Test 
-  	public void goToSimplePolymersNotationParserParser() throws ExceptionState {
+  public void goToSimplePolymersNotationParserParser() throws ExceptionState, IOException, JDOMException {
 		parser = new StateMachineParser();
     String test = "PEPTIDE1{A.P\"mutation\"";
     for (int i = 0; i < test.length(); i++) {

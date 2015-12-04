@@ -21,12 +21,14 @@
  * SOFTWARE.
  *****************************************************************************
  */
-package parsertest.GroupingSectionTest;
+package parsertest.groupingsectiontest;
 
+import java.io.IOException;
+
+import org.helm.notation2.parser.ParserHELM2;
+import org.helm.notation2.parser.exceptionparser.ExceptionState;
+import org.jdom.JDOMException;
 import org.testng.annotations.Test;
-
-import parsertest.ParserHELM2;
-import parsertest.ExceptionParser.ExceptionState;
 
 public class TestInputGroupingSection {
 
@@ -40,8 +42,9 @@ public class TestInputGroupingSection {
 	 * 
 	 */
 	@Test
-  	public void testGroupingAmbiguityOr() throws ExceptionState {
-		test="PEPTIDE1{A.A.A.A.A.A.A.A.A.A.A.A.A.A.A.A.A.A.A.A.A.C.D.D.D.D.D.D.D.D.D.D.D.D.D.D.D.D.D.D.D.D.E.E.E.E.E.E.E.E.E.E.E.E.E.E.E.E.E.E.E.E.E.E.E}|PEPTIDE2{G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.C.S.S.S.S.S.S.S.S.S.P.P.P.P.P.P.P.P.P.K.K.K.K.K.K.K.K.K.K.K.K.K}|CHEM1{[[*]SCCCc1ccccc1 |$_R1;;;;;;;;;;$|]}$G1,CHEM1,C:R3-1:R1$G1(PEPTIDE1,PEPTIDE2)$$V2.0";
+  public void testGroupingAmbiguityOr() throws ExceptionState, IOException, JDOMException {
+    test =
+        "PEPTIDE1{A.A.A.A.A.A.A.A.A.A.A.A.A.A.A.A.A.A.A.A.A.C.D.D.D.D.D.D.D.D.D.D.D.D.D.D.D.D.D.D.D.D.E.E.E.E.E.E.E.E.E.E.E.E.E.E.E.E.E.E.E.E.E.E.E}|PEPTIDE2{G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.C.S.S.S.S.S.S.S.S.S.P.P.P.P.P.P.P.P.P.K.K.K.K.K.K.K.K.K.K.K.K.K}|CHEM1{[C[C@H](N[*])C([*])=O |$;;;_R1;;_R2;$|]}$G1,CHEM1,C:R3-1:R1$G1(PEPTIDE1,PEPTIDE2)$$V2.0";
 		parser.parse(test);
 	} 
 	
@@ -50,8 +53,9 @@ public class TestInputGroupingSection {
 	 * 
 	 */
 	@Test
-  	public void testGroupingAmbiguityAnd() throws ExceptionState {
-		test="PEPTIDE1{A.A.A.A.A.A.A.A.A.A.A.A.A.A.A.A.A.A.A.A.A.C.D.D.D.D.D.D.D.D.D.D.D.D.D.D.D.D.D.D.D.D.E.E.E.E.E.E.E.E.E.E.E.E.E.E.E.E.E.E.E.E.E.E.E}|PEPTIDE2{G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.C.S.S.S.S.S.S.S.S.S.P.P.P.P.P.P.P.P.P.K.K.K.K.K.K.K.K.K.K.K.K.K}|CHEM1{[[*]SCCCc1ccccc1 |$_R1;;;;;;;;;;$|]}$G1,CHEM1,C:R3-1:R1$G1(PEPTIDE1+PEPTIDE2)$$V2.0";
+  public void testGroupingAmbiguityAnd() throws ExceptionState, IOException, JDOMException {
+    test =
+        "PEPTIDE1{A.A.A.A.A.A.A.A.A.A.A.A.A.A.A.A.A.A.A.A.A.C.D.D.D.D.D.D.D.D.D.D.D.D.D.D.D.D.D.D.D.D.E.E.E.E.E.E.E.E.E.E.E.E.E.E.E.E.E.E.E.E.E.E.E}|PEPTIDE2{G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.C.S.S.S.S.S.S.S.S.S.P.P.P.P.P.P.P.P.P.K.K.K.K.K.K.K.K.K.K.K.K.K}|CHEM1{[C[C@H](N[*])C([*])=O |$;;;_R1;;_R2;$|]}$G1,CHEM1,C:R3-1:R1$G1(PEPTIDE1+PEPTIDE2)$$V2.0";
 		parser.parse(test);
 	} 
 	
@@ -60,12 +64,15 @@ public class TestInputGroupingSection {
 	 * 
 	 */
 	@Test
-  	public void testGroupingAmbiguityAndRatio() throws ExceptionState {
-		test="PEPTIDE1{A.A.A.A.A.A.A.A.A.A.A.A.A.A.A.A.A.A.A.A.A.C.D.D.D.D.D.D.D.D.D.D.D.D.D.D.D.D.D.D.D.D.E.E.E.E.E.E.E.E.E.E.E.E.E.E.E.E.E.E.E.E.E.E.E}|PEPTIDE2{G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.C.S.S.S.S.S.S.S.S.S.P.P.P.P.P.P.P.P.P.K.K.K.K.K.K.K.K.K.K.K.K.K}|CHEM1{Dig}|CHEM2{Dig}$PEPTIDE1,CHEM1,C:R3-1:R1|PEPTIDE2,CHEM2,C:R3-1:R1$G1(PEPTIDE1+CHEM1:1.5)|G2(PEPTIDE2+CHEM2:1.5)$$V2.0";
+  public void testGroupingAmbiguityAndRatio() throws ExceptionState, IOException, JDOMException {
+    test =
+        "PEPTIDE1{A.A.A.A.A.A.A.A.A.A.A.A.A.A.A.A.A.A.A.A.A.C.D.D.D.D.D.D.D.D.D.D.D.D.D.D.D.D.D.D.D.D.E.E.E.E.E.E.E.E.E.E.E.E.E.E.E.E.E.E.E.E.E.E.E}|PEPTIDE2{G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.C.S.S.S.S.S.S.S.S.S.P.P.P.P.P.P.P.P.P.K.K.K.K.K.K.K.K.K.K.K.K.K}|CHEM1{[sDBL]}|CHEM2{sDBL}$PEPTIDE1,CHEM1,C:R3-1:R1|PEPTIDE2,CHEM2,C:R3-1:R1$G1(PEPTIDE1+CHEM1:1.5)|G2(PEPTIDE2+CHEM2:1.5)$$V2.0";
 		parser.parse(test);
-		test="PEPTIDE1{Flu}|CHEM1{?}$PEPTIDE1,CHEM1,C:R3-1:R1\"annotation\"$G1(PEPTIDE1+CHEM1:2.5)$$V2.0";
+    test =
+        "PEPTIDE1{[Hva]}|CHEM1{?}$PEPTIDE1,CHEM1,C:R3-1:R1\"annotation\"$G1(PEPTIDE1+CHEM1:2.5)$$V2.0";
 		parser.parse(test);
-		test="PEPTIDE1{Flu}|CHEM1{?}$PEPTIDE1,CHEM1,C:R3-1:R1\"annotation\"$G1(PEPTIDE1:2.5+CHEM1)$$V2.0";
+    test =
+        "PEPTIDE1{[Hva]}|CHEM1{?}$PEPTIDE1,CHEM1,C:R3-1:R1\"annotation\"$G1(PEPTIDE1:2.5+CHEM1)$$V2.0";
 		parser.parse(test);
 		
 	}
@@ -75,8 +82,9 @@ public class TestInputGroupingSection {
 	 * 
 	 */
 	@Test
-  	public void testGroupingAmbiguityAndRatioAndRange() throws ExceptionState {
-		test="PEPTIDE1{Flu}|CHEM1{?}$PEPTIDE1,CHEM1,C:R3-1:R1\"annotation\"$G1(PEPTIDE1:1.5-2.5+CHEM1)$$V2.0";
+  public void testGroupingAmbiguityAndRatioAndRange() throws ExceptionState, IOException, JDOMException {
+    test =
+        "PEPTIDE1{[Aze]}|CHEM1{?}$PEPTIDE1,CHEM1,C:R3-1:R1\"annotation\"$G1(PEPTIDE1:1.5-2.5+CHEM1)$$V2.0";
 		parser.parse(test);
 		
 	}
@@ -87,7 +95,7 @@ public class TestInputGroupingSection {
 	 * 
 	 */
 	@Test
-  	public void testGroupingUnknownRatio() throws ExceptionState {
+  public void testGroupingUnknownRatio() throws ExceptionState, IOException, JDOMException {
 		test="PEPTIDE1{C.C.C.C.C.C}|PEPTIDE2{A.C.A}|BLOB1{Gold Particle}\"Au10,Diameter:10nm\"$G1,BLOB1,C:R3-?:R1$G1(PEPTIDE1:49+PEPTIDE2:51)|G2(G1:24+BLOB1)$$V2.0";
 		parser.parse(test);
 		

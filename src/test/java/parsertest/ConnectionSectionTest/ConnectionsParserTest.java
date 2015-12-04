@@ -21,16 +21,18 @@
  * SOFTWARE.
  *****************************************************************************
  */
-package parsertest.ConnectionSectionTest;
+package parsertest.connectionsectiontest;
 
+import java.io.IOException;
+
+import org.helm.notation2.parser.StateMachineParser;
+import org.helm.notation2.parser.connectionsection.ConnectionsParser;
+import org.helm.notation2.parser.connectionsection.ConnectionsReadSecondIDParser;
+import org.helm.notation2.parser.exceptionparser.ConnectionSectionException;
+import org.helm.notation2.parser.exceptionparser.ExceptionState;
+import org.helm.notation2.parser.groupingsection.GroupingParser;
+import org.jdom.JDOMException;
 import org.testng.annotations.Test;
-
-import parsertest.StateMachineParser;
-import parsertest.ConnectionSection.ConnectionsParser;
-import parsertest.ConnectionSection.ConnectionsReadSecondIDParser;
-import parsertest.ExceptionParser.ConnectionSectionException;
-import parsertest.ExceptionParser.ExceptionState;
-import parsertest.GroupingSection.GroupingParser;
 
 
 public class ConnectionsParserTest {
@@ -38,7 +40,7 @@ public class ConnectionsParserTest {
 StateMachineParser parser;
 	
 	@Test 
-  	public void keepThisState() throws ExceptionState {
+  public void keepThisState() throws ExceptionState, IOException, JDOMException {
 		parser = new StateMachineParser();
 		parser.setState(new ConnectionsParser(parser));
 		parser.doAction('H');
@@ -49,7 +51,7 @@ StateMachineParser parser;
 	}
 	
 	@Test 
-  	public void goToGroupingParser() throws ExceptionState {
+  public void goToGroupingParser() throws ExceptionState, IOException, JDOMException {
 		parser = new StateMachineParser();
 		parser.setState(new ConnectionsParser(parser));
 		parser.doAction('$');
@@ -60,7 +62,7 @@ StateMachineParser parser;
 	}
 	
 	@Test(expectedExceptions = ConnectionSectionException.class)
-	public void goToGroupingParserWithException() throws ExceptionState {
+  public void goToGroupingParserWithException() throws ExceptionState, IOException, JDOMException {
 		parser = new StateMachineParser();
 		parser.setState(new ConnectionsParser(parser));
 		String test = "hallo$";
@@ -71,7 +73,7 @@ StateMachineParser parser;
 	
 	
 	@Test 
-  	public void goToConnectionsReadSecondIDParser() throws ExceptionState {
+  public void goToConnectionsReadSecondIDParser() throws ExceptionState, IOException, JDOMException {
 		parser = new StateMachineParser();
 		parser.setState(new ConnectionsParser(parser));
 		String test = "CHEM1,";
@@ -85,7 +87,8 @@ StateMachineParser parser;
 	}
 	
 	@Test(expectedExceptions = ConnectionSectionException.class)
-	public void goToConnectionsReadSecondIDParserWithException() throws ExceptionState {
+  public void goToConnectionsReadSecondIDParserWithException()
+      throws ExceptionState, IOException, JDOMException {
 		parser = new StateMachineParser();
 		parser.setState(new ConnectionsParser(parser));
 		String test = "PEPTID,";

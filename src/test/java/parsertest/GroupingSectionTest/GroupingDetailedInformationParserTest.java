@@ -21,23 +21,25 @@
  * SOFTWARE.
  *****************************************************************************
  */
-package parsertest.GroupingSectionTest;
+package parsertest.groupingsectiontest;
 
+import java.io.IOException;
+
+import org.helm.notation2.parser.StateMachineParser;
+import org.helm.notation2.parser.exceptionparser.ConnectionSectionException;
+import org.helm.notation2.parser.exceptionparser.ExceptionState;
+import org.helm.notation2.parser.exceptionparser.GroupingSectionException;
+import org.helm.notation2.parser.groupingsection.BetweenGroupingParser;
+import org.helm.notation2.parser.groupingsection.GroupingDetailedInformationParser;
+import org.helm.notation2.parser.groupingsection.GroupingParser;
+import org.jdom.JDOMException;
 import org.testng.annotations.Test;
-
-import parsertest.StateMachineParser;
-import parsertest.ExceptionParser.ConnectionSectionException;
-import parsertest.ExceptionParser.ExceptionState;
-import parsertest.ExceptionParser.GroupingSectionException;
-import parsertest.GroupingSection.BetweenGroupingParser;
-import parsertest.GroupingSection.GroupingDetailedInformationParser;
-import parsertest.GroupingSection.GroupingParser;
 
 public class GroupingDetailedInformationParserTest {
 	StateMachineParser parser;
 	
 	@Test 
-  	public void keepThisState() throws ExceptionState {
+  public void keepThisState() throws ExceptionState, IOException, JDOMException {
 		parser = new StateMachineParser();
 		parser.setState(new GroupingDetailedInformationParser(parser));
 		parser.doAction('H');
@@ -48,7 +50,7 @@ public class GroupingDetailedInformationParserTest {
 	}
 	
 	@Test 
-  	public void goToBetweenGroupingParser() throws ExceptionState {
+  public void goToBetweenGroupingParser() throws ExceptionState, IOException, JDOMException {
 		parser = new StateMachineParser();
     parser.setState(new GroupingParser(parser));
     String test = "G1(G1+G2)";
@@ -63,7 +65,7 @@ public class GroupingDetailedInformationParserTest {
 	
 	
 	@Test(expectedExceptions = GroupingSectionException.class)
-	public void goToBetweenGroupingParserWithException() throws ExceptionState {
+  public void goToBetweenGroupingParserWithException() throws ExceptionState, IOException, JDOMException {
 		parser = new StateMachineParser();
 		parser.setState(new GroupingDetailedInformationParser(parser));
 		String test = "h)";
