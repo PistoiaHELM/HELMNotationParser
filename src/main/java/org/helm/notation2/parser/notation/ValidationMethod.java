@@ -1,28 +1,21 @@
 /**
- * *****************************************************************************
- * Copyright C 2015, The Pistoia Alliance
+ * ***************************************************************************** Copyright C 2015, The Pistoia Alliance
  *
- * Permission is hereby granted, free of charge, to any person obtaining a copy
- * of this software and associated documentation files (the "Software"), to deal
- * in the Software without restriction, including without limitation the rights
- * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
- * copies of the Software, and to permit persons to whom the Software is
- * furnished to do so, subject to the following conditions:
+ * Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated
+ * documentation files (the "Software"), to deal in the Software without restriction, including without limitation the
+ * rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to
+ * permit persons to whom the Software is furnished to do so, subject to the following conditions:
  *
- * The above copyright notice and this permission notice shall be included in
- * all copies or substantial portions of the Software.
+ * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the
+ * Software.
  *
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
- * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
- * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
- * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
- * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
- * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
- * SOFTWARE.
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE
+ * WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+ * COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
+ * OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  *****************************************************************************
  */
 package org.helm.notation2.parser.notation;
-
 
 import java.io.IOException;
 import java.util.regex.Pattern;
@@ -41,9 +34,7 @@ import org.helm.notation2.parser.notation.polymer.MonomerNotationUnit;
 import org.helm.notation2.parser.notation.polymer.MonomerNotationUnitRNA;
 import org.helm.notation2.parser.notation.polymer.PeptideEntity;
 import org.helm.notation2.parser.notation.polymer.RNAEntity;
-import org.jdom.JDOMException;
-
-
+import org.jdom2.JDOMException;
 
 /**
  * Class containing validation methods
@@ -51,9 +42,6 @@ import org.jdom.JDOMException;
  * @author hecht
  */
 public final class ValidationMethod {
-
-
-
 
   /**
    * method to decide which of the MonomerNotation classes should be initialized
@@ -65,9 +53,10 @@ public final class ValidationMethod {
    * @throws IOException
    * @throws JDOMException
    */
-  public static MonomerNotation decideWhichMonomerNotation(String str, String type) throws NotationException, IOException, JDOMException {
+  public static MonomerNotation decideWhichMonomerNotation(String str, String type) throws NotationException,
+      IOException, JDOMException {
     MonomerNotation mon;
-      /* group ? */
+    /* group ? */
     if (str.startsWith("(") && str.endsWith(")")) {
       String str2 = str.substring(1, str.length() - 1);
 
@@ -81,17 +70,17 @@ public final class ValidationMethod {
       else if (patternOR.matcher(str).find()) {
         mon = new MonomerNotationGroupOr(str2, type);
       }
- else {
+      else {
         if (str.contains(".")) {
           mon = new MonomerNotationList(str2, type);
         }
- else {
+        else {
           /* monomer unit is just in brackets */
           if (type == "RNA") {
             mon = new MonomerNotationUnitRNA(str2, type);
           }
- else {
-        mon = new MonomerNotationUnit(str2, type);
+          else {
+            mon = new MonomerNotationUnit(str2, type);
           }
         }
 
@@ -116,8 +105,7 @@ public final class ValidationMethod {
   }
 
   /**
-   * method to decide which of the two Constructors of
-   * MonomerNotaitonGroupElement should be called
+   * method to decide which of the two Constructors of MonomerNotaitonGroupElement should be called
    * 
    * @param str Monomer
    * @param one count of Monomer
@@ -129,13 +117,13 @@ public final class ValidationMethod {
    * @throws IOException
    * @throws JDOMException
    */
-  public static MonomerNotationGroupElement decideWhichMonomerNotationInGroup(String str, String type, double one, double two, boolean interval, boolean isDefault) throws NotationException,
+  public static MonomerNotationGroupElement decideWhichMonomerNotationInGroup(String str, String type, double one,
+      double two, boolean interval, boolean isDefault) throws NotationException,
       IOException,
       JDOMException {
     MonomerNotation element;
 
-
-    element = decideWhichMonomerNotation(str,type);
+    element = decideWhichMonomerNotation(str, type);
 
     if (interval) {
       return new MonomerNotationGroupElement(element, one, two);
@@ -158,16 +146,16 @@ public final class ValidationMethod {
     if (str.matches("PEPTIDE[1-9][0-9]*")) {
       item = new PeptideEntity(str);
     }
- else if (str.matches("RNA[1-9][0-9]*")) {
+    else if (str.matches("RNA[1-9][0-9]*")) {
       item = new RNAEntity(str);
     }
- else if (str.matches("BLOB[1-9][0-9]*")) {
+    else if (str.matches("BLOB[1-9][0-9]*")) {
       item = new BlobEntity(str);
     }
- else if (str.matches("CHEM[1-9][0-9]*")) {
+    else if (str.matches("CHEM[1-9][0-9]*")) {
       item = new ChemEntity(str);
     }
- else if (str.matches("G[1-9][0-9]*")) {
+    else if (str.matches("G[1-9][0-9]*")) {
       item = new GroupEntity(str);
     }
 
@@ -178,10 +166,5 @@ public final class ValidationMethod {
     return item;
 
   }
-  
-
- 
-
-
 
 }

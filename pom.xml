@@ -107,11 +107,11 @@
 			<artifactId>jackson-databind</artifactId>
 			<version>2.6.3</version>
 		</dependency>
-		    <dependency>
-  <groupId>org.jdom</groupId>
-  <artifactId>jdom</artifactId>
-  <version>1.1</version>
-</dependency>
+    <dependency>
+      <groupId>org.jdom</groupId>
+      <artifactId>jdom2</artifactId>
+      <version>2.0.6</version>
+    </dependency>
 	</dependencies>
 	<organization>
 		<name>quattro research GmbH</name>

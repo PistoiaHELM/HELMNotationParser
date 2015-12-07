@@ -32,7 +32,7 @@ import org.helm.notation2.parser.exceptionparser.ExceptionState;
 import org.helm.notation2.parser.exceptionparser.SimplePolymerSectionException;
 import org.helm.notation2.parser.notation.HELM2Notation;
 import org.helm.notation2.parser.simplepolymerssection.SimplePolymersParser;
-import org.jdom.JDOMException;
+import org.jdom2.JDOMException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

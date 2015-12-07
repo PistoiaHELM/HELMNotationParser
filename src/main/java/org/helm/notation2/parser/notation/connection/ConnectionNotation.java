@@ -1,24 +1,18 @@
 /**
- * *****************************************************************************
- * Copyright C 2015, The Pistoia Alliance
+ * ***************************************************************************** Copyright C 2015, The Pistoia Alliance
  *
- * Permission is hereby granted, free of charge, to any person obtaining a copy
- * of this software and associated documentation files (the "Software"), to deal
- * in the Software without restriction, including without limitation the rights
- * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
- * copies of the Software, and to permit persons to whom the Software is
- * furnished to do so, subject to the following conditions:
+ * Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated
+ * documentation files (the "Software"), to deal in the Software without restriction, including without limitation the
+ * rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to
+ * permit persons to whom the Software is furnished to do so, subject to the following conditions:
  *
- * The above copyright notice and this permission notice shall be included in
- * all copies or substantial portions of the Software.
+ * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the
+ * Software.
  *
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
- * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
- * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
- * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
- * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
- * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
- * SOFTWARE.
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE
+ * WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+ * COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
+ * OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  *****************************************************************************
  */
 package org.helm.notation2.parser.notation.connection;
@@ -29,7 +23,7 @@ import org.helm.notation2.parser.exceptionparser.HELM1ConverterException;
 import org.helm.notation2.parser.exceptionparser.NotationException;
 import org.helm.notation2.parser.notation.ValidationMethod;
 import org.helm.notation2.parser.notation.polymer.HELMEntity;
-import org.jdom.JDOMException;
+import org.jdom2.JDOMException;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
@@ -55,7 +49,6 @@ public final class ConnectionNotation {
 
   private boolean isAnnotationHere = false;
 
-
   /**
    * Constructs with the given Source ID a Connection Notation
    * 
@@ -79,8 +72,7 @@ public final class ConnectionNotation {
   }
 
   /**
-   * Constructs with the two given Entities, Source ID and Target ID, and the
-   * given details about the connection
+   * Constructs with the two given Entities, Source ID and Target ID, and the given details about the connection
    * 
    * @param firstID Entity of the Source ID
    * @param secondID Entity of the Target ID
@@ -89,7 +81,8 @@ public final class ConnectionNotation {
    * @throws IOException
    * @throws NotationException
    */
-  public ConnectionNotation(HELMEntity firstID, HELMEntity secondID, String details) throws NotationException, IOException, JDOMException {
+  public ConnectionNotation(HELMEntity firstID, HELMEntity secondID, String details) throws NotationException,
+      IOException, JDOMException {
     this.sourceId = firstID;
     this.targetId = secondID;
     addDetails(details);
@@ -106,7 +99,8 @@ public final class ConnectionNotation {
    * @param rGroupTarget RGroup of the Target
    * @param annotation new annotation
    */
-  public ConnectionNotation(HELMEntity firstID, HELMEntity secondID, String sourceUnit, String targetUnit, String rGroupSource, String rGroupTarget, String annotation) {
+  public ConnectionNotation(HELMEntity firstID, HELMEntity secondID, String sourceUnit, String targetUnit,
+      String rGroupSource, String rGroupTarget, String annotation) {
     this.sourceId = firstID;
     this.targetId = secondID;
     this.sourceUnit = sourceUnit;
@@ -115,7 +109,6 @@ public final class ConnectionNotation {
     this.rGroupTarget = rGroupTarget;
     addAnnotations(annotation);
   }
-
 
   /**
    * method to set the details of the current connection
@@ -132,13 +125,11 @@ public final class ConnectionNotation {
     /* MonomerUnit */
     sourceUnit = parts[0].split(":")[0];
     targetUnit = parts[1].split(":")[0];
-    
-    
-    /*R-group*/
+
+    /* R-group */
     rGroupSource = parts[0].split(":")[1];
     rGroupTarget = parts[1].split(":")[1];
   }
-
 
   /**
    * method to set the inline annotations
@@ -149,7 +140,6 @@ public final class ConnectionNotation {
     annotation = str;
     isAnnotationHere = true;
   }
-
 
   /**
    * method to check if an annotation is there or not
@@ -169,7 +159,6 @@ public final class ConnectionNotation {
   public String getAnnotation() {
     return annotation;
   }
-
 
   /**
    * method to get the source ID of the current connection
@@ -225,7 +214,6 @@ public final class ConnectionNotation {
     return rGroupTarget;
   }
 
-
   /**
    * {@inheritDoc}
    */
@@ -233,7 +221,7 @@ public final class ConnectionNotation {
     if (isAnnotationTrue()) {
       return "SourceID: " + sourceId + "\nTargetID: " + targetId + "\nDetails: " + "\nSourceUnit: " + sourceUnit
           + " RGroup: "
-          + rGroupSource + "\nTargetUnit: " + targetUnit+ " RGroup: " + rGroupTarget + "\nAnnotation: "
+          + rGroupSource + "\nTargetUnit: " + targetUnit + " RGroup: " + rGroupTarget + "\nAnnotation: "
           + annotation;
     } else {
       return "SourceID: " + sourceId + "\nTargetID: " + targetId + "\nDetails: " + "\nSourceUnit: "

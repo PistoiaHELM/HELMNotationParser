@@ -26,7 +26,7 @@ package org.helm.notation2.parser;
 import java.io.IOException;
 
 import org.helm.notation2.parser.exceptionparser.ExceptionState;
-import org.jdom.JDOMException;
+import org.jdom2.JDOMException;
 
 /**
  * 

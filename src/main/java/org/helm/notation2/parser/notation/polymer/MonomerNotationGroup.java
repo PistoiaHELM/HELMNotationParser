@@ -30,7 +30,7 @@ import java.util.List;
 import org.helm.notation2.parser.exceptionparser.HELM1ConverterException;
 import org.helm.notation2.parser.exceptionparser.NotationException;
 import org.helm.notation2.parser.notation.ValidationMethod;
-import org.jdom.JDOMException;
+import org.jdom2.JDOMException;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
