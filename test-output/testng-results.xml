@@ -2,26 +2,26 @@
 <testng-results skipped="0" failed="0" total="154" passed="154">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="1127" started-at="2015-12-07T08:17:25Z" finished-at="2015-12-07T08:17:26Z">
+  <suite name="Default suite" duration-ms="1133" started-at="2015-12-07T08:36:50Z" finished-at="2015-12-07T08:36:51Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="1127" started-at="2015-12-07T08:17:25Z" finished-at="2015-12-07T08:17:26Z">
+    <test name="Default test" duration-ms="1133" started-at="2015-12-07T08:36:50Z" finished-at="2015-12-07T08:36:51Z">
       <class name="org.helm.notation2.parser.grouping.GroupingElementTest">
-        <test-method status="PASS" signature="testConstructor()[pri:0, instance:org.helm.notation2.parser.grouping.GroupingElementTest@25ddae12]" name="testConstructor" duration-ms="8" started-at="2015-12-07T09:17:25Z" finished-at="2015-12-07T09:17:25Z">
+        <test-method status="PASS" signature="testConstructor()[pri:0, instance:org.helm.notation2.parser.grouping.GroupingElementTest@5eed2fce]" name="testConstructor" duration-ms="9" started-at="2015-12-07T09:36:50Z" finished-at="2015-12-07T09:36:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testConstructor -->
-        <test-method status="PASS" signature="testConstructorTwo()[pri:0, instance:org.helm.notation2.parser.grouping.GroupingElementTest@25ddae12]" name="testConstructorTwo" duration-ms="0" started-at="2015-12-07T09:17:25Z" finished-at="2015-12-07T09:17:25Z">
+        <test-method status="PASS" signature="testConstructorTwo()[pri:0, instance:org.helm.notation2.parser.grouping.GroupingElementTest@5eed2fce]" name="testConstructorTwo" duration-ms="0" started-at="2015-12-07T09:36:50Z" finished-at="2015-12-07T09:36:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testConstructorTwo -->
       </class> <!-- org.helm.notation2.parser.grouping.GroupingElementTest -->
       <class name="org.helm.notation2.parser.polymer.PolymerElementsTest">
-        <test-method status="PASS" signature="testConstructorList()[pri:0, instance:org.helm.notation2.parser.polymer.PolymerElementsTest@308f3911]" name="testConstructorList" duration-ms="1" started-at="2015-12-07T09:17:25Z" finished-at="2015-12-07T09:17:25Z">
+        <test-method status="PASS" signature="testConstructorList()[pri:0, instance:org.helm.notation2.parser.polymer.PolymerElementsTest@10dd4b9d]" name="testConstructorList" duration-ms="1" started-at="2015-12-07T09:36:50Z" finished-at="2015-12-07T09:36:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testConstructorList -->
-        <test-method status="PASS" signature="testConstructorSingle()[pri:0, instance:org.helm.notation2.parser.polymer.PolymerElementsTest@308f3911]" name="testConstructorSingle" duration-ms="0" started-at="2015-12-07T09:17:25Z" finished-at="2015-12-07T09:17:25Z">
+        <test-method status="PASS" signature="testConstructorSingle()[pri:0, instance:org.helm.notation2.parser.polymer.PolymerElementsTest@10dd4b9d]" name="testConstructorSingle" duration-ms="0" started-at="2015-12-07T09:36:50Z" finished-at="2015-12-07T09:36:50Z">
           <exception class="org.helm.notation2.parser.exceptionparser.SimplePolymerSectionException">
             <message>
               <![CDATA[Only one Monomer unit is allowed for CHEM and BLOB]]>
@@ -62,59 +62,59 @@
         </test-method> <!-- testConstructorSingle -->
       </class> <!-- org.helm.notation2.parser.polymer.PolymerElementsTest -->
       <class name="org.helm.notation2.parser.GroupingNotationTest">
-        <test-method status="PASS" signature="testGroupingAndOr()[pri:0, instance:org.helm.notation2.parser.GroupingNotationTest@aeba3ff]" name="testGroupingAndOr" duration-ms="15" started-at="2015-12-07T09:17:25Z" finished-at="2015-12-07T09:17:25Z">
+        <test-method status="PASS" signature="testGroupingAndOr()[pri:0, instance:org.helm.notation2.parser.GroupingNotationTest@308f3911]" name="testGroupingAndOr" duration-ms="15" started-at="2015-12-07T09:36:50Z" finished-at="2015-12-07T09:36:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testGroupingAndOr -->
-        <test-method status="PASS" signature="testGroupingNotationMixture()[pri:0, instance:org.helm.notation2.parser.GroupingNotationTest@aeba3ff]" name="testGroupingNotationMixture" duration-ms="16" started-at="2015-12-07T09:17:25Z" finished-at="2015-12-07T09:17:26Z">
+        <test-method status="PASS" signature="testGroupingNotationMixture()[pri:0, instance:org.helm.notation2.parser.GroupingNotationTest@308f3911]" name="testGroupingNotationMixture" duration-ms="15" started-at="2015-12-07T09:36:50Z" finished-at="2015-12-07T09:36:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testGroupingNotationMixture -->
-        <test-method status="PASS" signature="testGroupingNotationMixtureRange()[pri:0, instance:org.helm.notation2.parser.GroupingNotationTest@aeba3ff]" name="testGroupingNotationMixtureRange" duration-ms="14" started-at="2015-12-07T09:17:26Z" finished-at="2015-12-07T09:17:26Z">
+        <test-method status="PASS" signature="testGroupingNotationMixtureRange()[pri:0, instance:org.helm.notation2.parser.GroupingNotationTest@308f3911]" name="testGroupingNotationMixtureRange" duration-ms="14" started-at="2015-12-07T09:36:50Z" finished-at="2015-12-07T09:36:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testGroupingNotationMixtureRange -->
-        <test-method status="PASS" signature="testGroupingNotationMixtureValue()[pri:0, instance:org.helm.notation2.parser.GroupingNotationTest@aeba3ff]" name="testGroupingNotationMixtureValue" duration-ms="13" started-at="2015-12-07T09:17:26Z" finished-at="2015-12-07T09:17:26Z">
+        <test-method status="PASS" signature="testGroupingNotationMixtureValue()[pri:0, instance:org.helm.notation2.parser.GroupingNotationTest@308f3911]" name="testGroupingNotationMixtureValue" duration-ms="13" started-at="2015-12-07T09:36:50Z" finished-at="2015-12-07T09:36:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testGroupingNotationMixtureValue -->
-        <test-method status="PASS" signature="testGroupingNotationOR()[pri:0, instance:org.helm.notation2.parser.GroupingNotationTest@aeba3ff]" name="testGroupingNotationOR" duration-ms="13" started-at="2015-12-07T09:17:26Z" finished-at="2015-12-07T09:17:26Z">
+        <test-method status="PASS" signature="testGroupingNotationOR()[pri:0, instance:org.helm.notation2.parser.GroupingNotationTest@308f3911]" name="testGroupingNotationOR" duration-ms="14" started-at="2015-12-07T09:36:50Z" finished-at="2015-12-07T09:36:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testGroupingNotationOR -->
-        <test-method status="PASS" signature="testGroupingNotationOrDefaultValue()[pri:0, instance:org.helm.notation2.parser.GroupingNotationTest@aeba3ff]" name="testGroupingNotationOrDefaultValue" duration-ms="13" started-at="2015-12-07T09:17:26Z" finished-at="2015-12-07T09:17:26Z">
+        <test-method status="PASS" signature="testGroupingNotationOrDefaultValue()[pri:0, instance:org.helm.notation2.parser.GroupingNotationTest@308f3911]" name="testGroupingNotationOrDefaultValue" duration-ms="13" started-at="2015-12-07T09:36:50Z" finished-at="2015-12-07T09:36:51Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testGroupingNotationOrDefaultValue -->
       </class> <!-- org.helm.notation2.parser.GroupingNotationTest -->
       <class name="org.helm.notation2.parser.PolymerNotationTest">
-        <test-method status="PASS" signature="testGroupRepeating()[pri:0, instance:org.helm.notation2.parser.PolymerNotationTest@2384fd7a]" name="testGroupRepeating" duration-ms="1" started-at="2015-12-07T09:17:25Z" finished-at="2015-12-07T09:17:25Z">
+        <test-method status="PASS" signature="testGroupRepeating()[pri:0, instance:org.helm.notation2.parser.PolymerNotationTest@14a61465]" name="testGroupRepeating" duration-ms="1" started-at="2015-12-07T09:36:50Z" finished-at="2015-12-07T09:36:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testGroupRepeating -->
-        <test-method status="PASS" signature="testInputCount()[pri:0, instance:org.helm.notation2.parser.PolymerNotationTest@2384fd7a]" name="testInputCount" duration-ms="1" started-at="2015-12-07T09:17:25Z" finished-at="2015-12-07T09:17:25Z">
+        <test-method status="PASS" signature="testInputCount()[pri:0, instance:org.helm.notation2.parser.PolymerNotationTest@14a61465]" name="testInputCount" duration-ms="2" started-at="2015-12-07T09:36:50Z" finished-at="2015-12-07T09:36:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testInputCount -->
-        <test-method status="PASS" signature="testInputGroupMixture()[pri:0, instance:org.helm.notation2.parser.PolymerNotationTest@2384fd7a]" name="testInputGroupMixture" duration-ms="1" started-at="2015-12-07T09:17:25Z" finished-at="2015-12-07T09:17:25Z">
+        <test-method status="PASS" signature="testInputGroupMixture()[pri:0, instance:org.helm.notation2.parser.PolymerNotationTest@14a61465]" name="testInputGroupMixture" duration-ms="1" started-at="2015-12-07T09:36:50Z" finished-at="2015-12-07T09:36:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testInputGroupMixture -->
-        <test-method status="PASS" signature="testInputGroupOr()[pri:0, instance:org.helm.notation2.parser.PolymerNotationTest@2384fd7a]" name="testInputGroupOr" duration-ms="1" started-at="2015-12-07T09:17:25Z" finished-at="2015-12-07T09:17:25Z">
+        <test-method status="PASS" signature="testInputGroupOr()[pri:0, instance:org.helm.notation2.parser.PolymerNotationTest@14a61465]" name="testInputGroupOr" duration-ms="1" started-at="2015-12-07T09:36:50Z" finished-at="2015-12-07T09:36:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testInputGroupOr -->
-        <test-method status="PASS" signature="testSimpleInput()[pri:0, instance:org.helm.notation2.parser.PolymerNotationTest@2384fd7a]" name="testSimpleInput" duration-ms="14" started-at="2015-12-07T09:17:25Z" finished-at="2015-12-07T09:17:25Z">
+        <test-method status="PASS" signature="testSimpleInput()[pri:0, instance:org.helm.notation2.parser.PolymerNotationTest@14a61465]" name="testSimpleInput" duration-ms="14" started-at="2015-12-07T09:36:50Z" finished-at="2015-12-07T09:36:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testSimpleInput -->
       </class> <!-- org.helm.notation2.parser.PolymerNotationTest -->
       <class name="parsertest.connectionsectiontest.ConnectionsReadSecondIDParserTest">
-        <test-method status="PASS" signature="goToConnectionsDetailsParser()[pri:0, instance:parsertest.connectionsectiontest.ConnectionsReadSecondIDParserTest@7d632866]" name="goToConnectionsDetailsParser" duration-ms="0" started-at="2015-12-07T09:17:25Z" finished-at="2015-12-07T09:17:25Z">
+        <test-method status="PASS" signature="goToConnectionsDetailsParser()[pri:0, instance:parsertest.connectionsectiontest.ConnectionsReadSecondIDParserTest@441bcdc8]" name="goToConnectionsDetailsParser" duration-ms="0" started-at="2015-12-07T09:36:50Z" finished-at="2015-12-07T09:36:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- goToConnectionsDetailsParser -->
-        <test-method status="PASS" signature="goToConnectionsDetailsParserWithException()[pri:0, instance:parsertest.connectionsectiontest.ConnectionsReadSecondIDParserTest@7d632866]" name="goToConnectionsDetailsParserWithException" duration-ms="0" started-at="2015-12-07T09:17:25Z" finished-at="2015-12-07T09:17:25Z">
+        <test-method status="PASS" signature="goToConnectionsDetailsParserWithException()[pri:0, instance:parsertest.connectionsectiontest.ConnectionsReadSecondIDParserTest@441bcdc8]" name="goToConnectionsDetailsParserWithException" duration-ms="0" started-at="2015-12-07T09:36:50Z" finished-at="2015-12-07T09:36:50Z">
           <exception class="org.helm.notation2.parser.exceptionparser.ConnectionSectionException">
             <message>
               <![CDATA[Target polymer ID is not correct in the connection section: P]]>
@@ -156,29 +156,29 @@
         </test-method> <!-- goToConnectionsDetailsParserWithException -->
       </class> <!-- parsertest.connectionsectiontest.ConnectionsReadSecondIDParserTest -->
       <class name="org.helm.notation2.parser.polymer.MonomerNotationGroupTest">
-        <test-method status="PASS" signature="MonomerNotationGroupTestAND()[pri:0, instance:org.helm.notation2.parser.polymer.MonomerNotationGroupTest@441bcdc8]" name="MonomerNotationGroupTestAND" duration-ms="1" started-at="2015-12-07T09:17:26Z" finished-at="2015-12-07T09:17:26Z">
+        <test-method status="PASS" signature="MonomerNotationGroupTestAND()[pri:0, instance:org.helm.notation2.parser.polymer.MonomerNotationGroupTest@3d921eac]" name="MonomerNotationGroupTestAND" duration-ms="0" started-at="2015-12-07T09:36:51Z" finished-at="2015-12-07T09:36:51Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- MonomerNotationGroupTestAND -->
-        <test-method status="PASS" signature="MonomerNotationGroupTestOr()[pri:0, instance:org.helm.notation2.parser.polymer.MonomerNotationGroupTest@441bcdc8]" name="MonomerNotationGroupTestOr" duration-ms="0" started-at="2015-12-07T09:17:26Z" finished-at="2015-12-07T09:17:26Z">
+        <test-method status="PASS" signature="MonomerNotationGroupTestOr()[pri:0, instance:org.helm.notation2.parser.polymer.MonomerNotationGroupTest@3d921eac]" name="MonomerNotationGroupTestOr" duration-ms="0" started-at="2015-12-07T09:36:51Z" finished-at="2015-12-07T09:36:51Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- MonomerNotationGroupTestOr -->
       </class> <!-- org.helm.notation2.parser.polymer.MonomerNotationGroupTest -->
       <class name="parsertest.simplepolymerssectiontest.BetweenMonomerParserTest">
-        <test-method status="PASS" signature="goToBetweenParser()[pri:0, instance:parsertest.simplepolymerssectiontest.BetweenMonomerParserTest@14a61465]" name="goToBetweenParser" duration-ms="0" started-at="2015-12-07T09:17:25Z" finished-at="2015-12-07T09:17:25Z">
+        <test-method status="PASS" signature="goToBetweenParser()[pri:0, instance:parsertest.simplepolymerssectiontest.BetweenMonomerParserTest@7776bdc9]" name="goToBetweenParser" duration-ms="1" started-at="2015-12-07T09:36:50Z" finished-at="2015-12-07T09:36:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- goToBetweenParser -->
-        <test-method status="PASS" signature="goToInlineAnnotationParser()[pri:0, instance:parsertest.simplepolymerssectiontest.BetweenMonomerParserTest@14a61465]" name="goToInlineAnnotationParser" duration-ms="0" started-at="2015-12-07T09:17:25Z" finished-at="2015-12-07T09:17:25Z">
+        <test-method status="PASS" signature="goToInlineAnnotationParser()[pri:0, instance:parsertest.simplepolymerssectiontest.BetweenMonomerParserTest@7776bdc9]" name="goToInlineAnnotationParser" duration-ms="0" started-at="2015-12-07T09:36:50Z" finished-at="2015-12-07T09:36:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- goToInlineAnnotationParser -->
-        <test-method status="PASS" signature="goToSimplePolymerNotationParser()[pri:0, instance:parsertest.simplepolymerssectiontest.BetweenMonomerParserTest@14a61465]" name="goToSimplePolymerNotationParser" duration-ms="0" started-at="2015-12-07T09:17:25Z" finished-at="2015-12-07T09:17:25Z">
+        <test-method status="PASS" signature="goToSimplePolymerNotationParser()[pri:0, instance:parsertest.simplepolymerssectiontest.BetweenMonomerParserTest@7776bdc9]" name="goToSimplePolymerNotationParser" duration-ms="0" started-at="2015-12-07T09:36:50Z" finished-at="2015-12-07T09:36:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- goToSimplePolymerNotationParser -->
-        <test-method status="PASS" signature="goToWithException()[pri:0, instance:parsertest.simplepolymerssectiontest.BetweenMonomerParserTest@14a61465]" name="goToWithException" duration-ms="0" started-at="2015-12-07T09:17:25Z" finished-at="2015-12-07T09:17:25Z">
+        <test-method status="PASS" signature="goToWithException()[pri:0, instance:parsertest.simplepolymerssectiontest.BetweenMonomerParserTest@7776bdc9]" name="goToWithException" duration-ms="0" started-at="2015-12-07T09:36:50Z" finished-at="2015-12-07T09:36:50Z">
           <exception class="org.helm.notation2.parser.exceptionparser.SimplePolymerSectionException">
             <message>
               <![CDATA[Error in the simple polymers notation section:]]>
@@ -220,7 +220,7 @@
         </test-method> <!-- goToWithException -->
       </class> <!-- parsertest.simplepolymerssectiontest.BetweenMonomerParserTest -->
       <class name="parsertest.groupingsectiontest.BetweenGroupingParserTest">
-        <test-method status="PASS" signature="ReadingWithException()[pri:0, instance:parsertest.groupingsectiontest.BetweenGroupingParserTest@10dd4b9d]" name="ReadingWithException" duration-ms="1" started-at="2015-12-07T09:17:26Z" finished-at="2015-12-07T09:17:26Z">
+        <test-method status="PASS" signature="ReadingWithException()[pri:0, instance:parsertest.groupingsectiontest.BetweenGroupingParserTest@76a22b9c]" name="ReadingWithException" duration-ms="0" started-at="2015-12-07T09:36:51Z" finished-at="2015-12-07T09:36:51Z">
           <exception class="org.helm.notation2.parser.exceptionparser.GroupingSectionException">
             <message>
               <![CDATA[Group section is not valid: a]]>
@@ -260,31 +260,27 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ReadingWithException -->
-        <test-method status="PASS" signature="goToAnnotationsParser()[pri:0, instance:parsertest.groupingsectiontest.BetweenGroupingParserTest@10dd4b9d]" name="goToAnnotationsParser" duration-ms="0" started-at="2015-12-07T09:17:26Z" finished-at="2015-12-07T09:17:26Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- goToAnnotationsParser -->
-        <test-method status="PASS" signature="goToGroupingParser()[pri:0, instance:parsertest.groupingsectiontest.BetweenGroupingParserTest@10dd4b9d]" name="goToGroupingParser" duration-ms="0" started-at="2015-12-07T09:17:26Z" finished-at="2015-12-07T09:17:26Z">
+        <test-method status="PASS" signature="goToGroupingParser()[pri:0, instance:parsertest.groupingsectiontest.BetweenGroupingParserTest@76a22b9c]" name="goToGroupingParser" duration-ms="0" started-at="2015-12-07T09:36:51Z" finished-at="2015-12-07T09:36:51Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- goToGroupingParser -->
+        <test-method status="PASS" signature="goToAnnotationsParser()[pri:0, instance:parsertest.groupingsectiontest.BetweenGroupingParserTest@76a22b9c]" name="goToAnnotationsParser" duration-ms="0" started-at="2015-12-07T09:36:51Z" finished-at="2015-12-07T09:36:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- goToAnnotationsParser -->
       </class> <!-- parsertest.groupingsectiontest.BetweenGroupingParserTest -->
       <class name="org.helm.notation2.parser.grouping.GroupingAmbiguityTest">
-        <test-method status="PASS" signature="testGrouping()[pri:0, instance:org.helm.notation2.parser.grouping.GroupingAmbiguityTest@508f66bd]" name="testGrouping" duration-ms="1" started-at="2015-12-07T09:17:25Z" finished-at="2015-12-07T09:17:25Z">
+        <test-method status="PASS" signature="testGrouping()[pri:0, instance:org.helm.notation2.parser.grouping.GroupingAmbiguityTest@346eb67f]" name="testGrouping" duration-ms="0" started-at="2015-12-07T09:36:50Z" finished-at="2015-12-07T09:36:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testGrouping -->
       </class> <!-- org.helm.notation2.parser.grouping.GroupingAmbiguityTest -->
       <class name="parsertest.simplepolymerssectiontest.SimplePolymersParserTest">
-        <test-method status="PASS" signature="goToConnectionSectionTest()[pri:0, instance:parsertest.simplepolymerssectiontest.SimplePolymersParserTest@7b3fce4d]" name="goToConnectionSectionTest" duration-ms="1" started-at="2015-12-07T09:17:25Z" finished-at="2015-12-07T09:17:25Z">
+        <test-method status="PASS" signature="goToConnectionSectionTest()[pri:0, instance:parsertest.simplepolymerssectiontest.SimplePolymersParserTest@3158a9f]" name="goToConnectionSectionTest" duration-ms="1" started-at="2015-12-07T09:36:50Z" finished-at="2015-12-07T09:36:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- goToConnectionSectionTest -->
-        <test-method status="PASS" signature="goToSimplePolymersNotationParserTest()[pri:0, instance:parsertest.simplepolymerssectiontest.SimplePolymersParserTest@7b3fce4d]" name="goToSimplePolymersNotationParserTest" duration-ms="0" started-at="2015-12-07T09:17:25Z" finished-at="2015-12-07T09:17:25Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- goToSimplePolymersNotationParserTest -->
-        <test-method status="PASS" signature="goToSimplePolymersNotationParserTestWithException()[pri:0, instance:parsertest.simplepolymerssectiontest.SimplePolymersParserTest@7b3fce4d]" name="goToSimplePolymersNotationParserTestWithException" duration-ms="1" started-at="2015-12-07T09:17:25Z" finished-at="2015-12-07T09:17:25Z">
+        <test-method status="PASS" signature="goToSimplePolymersNotationParserTestWithException()[pri:0, instance:parsertest.simplepolymerssectiontest.SimplePolymersParserTest@3158a9f]" name="goToSimplePolymersNotationParserTestWithException" duration-ms="1" started-at="2015-12-07T09:36:50Z" finished-at="2015-12-07T09:36:50Z">
           <exception class="org.helm.notation2.parser.exceptionparser.SimplePolymerSectionException">
             <message>
               <![CDATA[Polymer ID is not correct: ]]>
@@ -324,17 +320,31 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- goToSimplePolymersNotationParserTestWithException -->
-        <test-method status="PASS" signature="keepThisStateTest()[pri:0, instance:parsertest.simplepolymerssectiontest.SimplePolymersParserTest@7b3fce4d]" name="keepThisStateTest" duration-ms="0" started-at="2015-12-07T09:17:25Z" finished-at="2015-12-07T09:17:25Z">
+        <test-method status="PASS" signature="goToSimplePolymersNotationParserTest()[pri:0, instance:parsertest.simplepolymerssectiontest.SimplePolymersParserTest@3158a9f]" name="goToSimplePolymersNotationParserTest" duration-ms="0" started-at="2015-12-07T09:36:50Z" finished-at="2015-12-07T09:36:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- goToSimplePolymersNotationParserTest -->
+        <test-method status="PASS" signature="keepThisStateTest()[pri:0, instance:parsertest.simplepolymerssectiontest.SimplePolymersParserTest@3158a9f]" name="keepThisStateTest" duration-ms="0" started-at="2015-12-07T09:36:50Z" finished-at="2015-12-07T09:36:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- keepThisStateTest -->
       </class> <!-- parsertest.simplepolymerssectiontest.SimplePolymersParserTest -->
-      <class name="parsertest.connectionsectiontest.ConnectionsParserTest">
-        <test-method status="PASS" signature="goToConnectionsReadSecondIDParser()[pri:0, instance:parsertest.connectionsectiontest.ConnectionsParserTest@3396e48c]" name="goToConnectionsReadSecondIDParser" duration-ms="0" started-at="2015-12-07T09:17:25Z" finished-at="2015-12-07T09:17:25Z">
+      <class name="org.helm.notation2.parser.ConnectionNotationTest">
+        <test-method status="PASS" signature="testConnectionGrouping()[pri:0, instance:org.helm.notation2.parser.ConnectionNotationTest@5062e9b4]" name="testConnectionGrouping" duration-ms="10" started-at="2015-12-07T09:36:51Z" finished-at="2015-12-07T09:36:51Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- goToConnectionsReadSecondIDParser -->
-        <test-method status="PASS" signature="goToConnectionsReadSecondIDParserWithException()[pri:0, instance:parsertest.connectionsectiontest.ConnectionsParserTest@3396e48c]" name="goToConnectionsReadSecondIDParserWithException" duration-ms="0" started-at="2015-12-07T09:17:25Z" finished-at="2015-12-07T09:17:25Z">
+        </test-method> <!-- testConnectionGrouping -->
+        <test-method status="PASS" signature="testConnectionNotation()[pri:0, instance:org.helm.notation2.parser.ConnectionNotationTest@5062e9b4]" name="testConnectionNotation" duration-ms="10" started-at="2015-12-07T09:36:51Z" finished-at="2015-12-07T09:36:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testConnectionNotation -->
+        <test-method status="PASS" signature="testConnectionNotationTwo()[pri:0, instance:org.helm.notation2.parser.ConnectionNotationTest@5062e9b4]" name="testConnectionNotationTwo" duration-ms="10" started-at="2015-12-07T09:36:51Z" finished-at="2015-12-07T09:36:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testConnectionNotationTwo -->
+      </class> <!-- org.helm.notation2.parser.ConnectionNotationTest -->
+      <class name="parsertest.connectionsectiontest.ConnectionsParserTest">
+        <test-method status="PASS" signature="goToConnectionsReadSecondIDParserWithException()[pri:0, instance:parsertest.connectionsectiontest.ConnectionsParserTest@745bbff2]" name="goToConnectionsReadSecondIDParserWithException" duration-ms="1" started-at="2015-12-07T09:36:50Z" finished-at="2015-12-07T09:36:50Z">
           <exception class="org.helm.notation2.parser.exceptionparser.ConnectionSectionException">
             <message>
               <![CDATA[Source polymer id is not correct in the connection section: PEPTID]]>
@@ -374,11 +384,19 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- goToConnectionsReadSecondIDParserWithException -->
-        <test-method status="PASS" signature="goToGroupingParser()[pri:0, instance:parsertest.connectionsectiontest.ConnectionsParserTest@3396e48c]" name="goToGroupingParser" duration-ms="0" started-at="2015-12-07T09:17:25Z" finished-at="2015-12-07T09:17:25Z">
+        <test-method status="PASS" signature="goToConnectionsReadSecondIDParser()[pri:0, instance:parsertest.connectionsectiontest.ConnectionsParserTest@745bbff2]" name="goToConnectionsReadSecondIDParser" duration-ms="0" started-at="2015-12-07T09:36:50Z" finished-at="2015-12-07T09:36:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- goToConnectionsReadSecondIDParser -->
+        <test-method status="PASS" signature="goToGroupingParser()[pri:0, instance:parsertest.connectionsectiontest.ConnectionsParserTest@745bbff2]" name="goToGroupingParser" duration-ms="0" started-at="2015-12-07T09:36:50Z" finished-at="2015-12-07T09:36:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- goToGroupingParser -->
-        <test-method status="PASS" signature="goToGroupingParserWithException()[pri:0, instance:parsertest.connectionsectiontest.ConnectionsParserTest@3396e48c]" name="goToGroupingParserWithException" duration-ms="0" started-at="2015-12-07T09:17:25Z" finished-at="2015-12-07T09:17:25Z">
+        <test-method status="PASS" signature="keepThisState()[pri:0, instance:parsertest.connectionsectiontest.ConnectionsParserTest@745bbff2]" name="keepThisState" duration-ms="0" started-at="2015-12-07T09:36:50Z" finished-at="2015-12-07T09:36:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- keepThisState -->
+        <test-method status="PASS" signature="goToGroupingParserWithException()[pri:0, instance:parsertest.connectionsectiontest.ConnectionsParserTest@745bbff2]" name="goToGroupingParserWithException" duration-ms="0" started-at="2015-12-07T09:36:50Z" finished-at="2015-12-07T09:36:50Z">
           <exception class="org.helm.notation2.parser.exceptionparser.ConnectionSectionException">
             <message>
               <![CDATA[Missing target polymer id: ]]>
@@ -418,31 +436,13 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- goToGroupingParserWithException -->
-        <test-method status="PASS" signature="keepThisState()[pri:0, instance:parsertest.connectionsectiontest.ConnectionsParserTest@3396e48c]" name="keepThisState" duration-ms="0" started-at="2015-12-07T09:17:25Z" finished-at="2015-12-07T09:17:25Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- keepThisState -->
       </class> <!-- parsertest.connectionsectiontest.ConnectionsParserTest -->
-      <class name="org.helm.notation2.parser.ConnectionNotationTest">
-        <test-method status="PASS" signature="testConnectionGrouping()[pri:0, instance:org.helm.notation2.parser.ConnectionNotationTest@ddd51a7]" name="testConnectionGrouping" duration-ms="10" started-at="2015-12-07T09:17:26Z" finished-at="2015-12-07T09:17:26Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testConnectionGrouping -->
-        <test-method status="PASS" signature="testConnectionNotation()[pri:0, instance:org.helm.notation2.parser.ConnectionNotationTest@ddd51a7]" name="testConnectionNotation" duration-ms="9" started-at="2015-12-07T09:17:26Z" finished-at="2015-12-07T09:17:26Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testConnectionNotation -->
-        <test-method status="PASS" signature="testConnectionNotationTwo()[pri:0, instance:org.helm.notation2.parser.ConnectionNotationTest@ddd51a7]" name="testConnectionNotationTwo" duration-ms="9" started-at="2015-12-07T09:17:26Z" finished-at="2015-12-07T09:17:26Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testConnectionNotationTwo -->
-      </class> <!-- org.helm.notation2.parser.ConnectionNotationTest -->
       <class name="parsertest.connectionsectiontest.ConnectionsDetailsParserTest">
-        <test-method status="PASS" signature="goToGroupingParser()[pri:0, instance:parsertest.connectionsectiontest.ConnectionsDetailsParserTest@346eb67f]" name="goToGroupingParser" duration-ms="1" started-at="2015-12-07T09:17:25Z" finished-at="2015-12-07T09:17:25Z">
+        <test-method status="PASS" signature="goToGroupingParser()[pri:0, instance:parsertest.connectionsectiontest.ConnectionsDetailsParserTest@85f7aac]" name="goToGroupingParser" duration-ms="0" started-at="2015-12-07T09:36:50Z" finished-at="2015-12-07T09:36:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- goToGroupingParser -->
-        <test-method status="PASS" signature="goToGroupingParserWithException()[pri:0, instance:parsertest.connectionsectiontest.ConnectionsDetailsParserTest@346eb67f]" name="goToGroupingParserWithException" duration-ms="1" started-at="2015-12-07T09:17:25Z" finished-at="2015-12-07T09:17:25Z">
+        <test-method status="PASS" signature="goToGroupingParserWithException()[pri:0, instance:parsertest.connectionsectiontest.ConnectionsDetailsParserTest@85f7aac]" name="goToGroupingParserWithException" duration-ms="0" started-at="2015-12-07T09:36:50Z" finished-at="2015-12-07T09:36:50Z">
           <exception class="org.helm.notation2.parser.exceptionparser.ConnectionSectionException">
             <message>
               <![CDATA[Details about the connection are not correct: hallo]]>
@@ -482,11 +482,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- goToGroupingParserWithException -->
-        <test-method status="PASS" signature="goToInlineAnnotationsParser()[pri:0, instance:parsertest.connectionsectiontest.ConnectionsDetailsParserTest@346eb67f]" name="goToInlineAnnotationsParser" duration-ms="0" started-at="2015-12-07T09:17:25Z" finished-at="2015-12-07T09:17:25Z">
+        <test-method status="PASS" signature="goToInlineAnnotationsParser()[pri:0, instance:parsertest.connectionsectiontest.ConnectionsDetailsParserTest@85f7aac]" name="goToInlineAnnotationsParser" duration-ms="1" started-at="2015-12-07T09:36:50Z" finished-at="2015-12-07T09:36:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- goToInlineAnnotationsParser -->
-        <test-method status="PASS" signature="goToInlineAnnotationsParserWithException()[pri:0, instance:parsertest.connectionsectiontest.ConnectionsDetailsParserTest@346eb67f]" name="goToInlineAnnotationsParserWithException" duration-ms="1" started-at="2015-12-07T09:17:25Z" finished-at="2015-12-07T09:17:25Z">
+        <test-method status="PASS" signature="goToInlineAnnotationsParserWithException()[pri:0, instance:parsertest.connectionsectiontest.ConnectionsDetailsParserTest@85f7aac]" name="goToInlineAnnotationsParserWithException" duration-ms="1" started-at="2015-12-07T09:36:50Z" finished-at="2015-12-07T09:36:50Z">
           <exception class="org.helm.notation2.parser.exceptionparser.ConnectionSectionException">
             <message>
               <![CDATA[Details about the connection are not correct: hallo]]>
@@ -526,21 +526,21 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- goToInlineAnnotationsParserWithException -->
-        <test-method status="PASS" signature="keepThisState()[pri:0, instance:parsertest.connectionsectiontest.ConnectionsDetailsParserTest@346eb67f]" name="keepThisState" duration-ms="0" started-at="2015-12-07T09:17:25Z" finished-at="2015-12-07T09:17:25Z">
+        <test-method status="PASS" signature="keepThisState()[pri:0, instance:parsertest.connectionsectiontest.ConnectionsDetailsParserTest@85f7aac]" name="keepThisState" duration-ms="0" started-at="2015-12-07T09:36:50Z" finished-at="2015-12-07T09:36:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- keepThisState -->
       </class> <!-- parsertest.connectionsectiontest.ConnectionsDetailsParserTest -->
       <class name="parsertest.simplepolymerssectiontest.BetweenInlineMonomerParser">
-        <test-method status="PASS" signature="goToConnection()[pri:0, instance:parsertest.simplepolymerssectiontest.BetweenInlineMonomerParser@40696e9e]" name="goToConnection" duration-ms="1" started-at="2015-12-07T09:17:25Z" finished-at="2015-12-07T09:17:25Z">
+        <test-method status="PASS" signature="goToConnection()[pri:0, instance:parsertest.simplepolymerssectiontest.BetweenInlineMonomerParser@45b44df2]" name="goToConnection" duration-ms="0" started-at="2015-12-07T09:36:50Z" finished-at="2015-12-07T09:36:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- goToConnection -->
-        <test-method status="PASS" signature="goToSimplePolymerNotationParser()[pri:0, instance:parsertest.simplepolymerssectiontest.BetweenInlineMonomerParser@40696e9e]" name="goToSimplePolymerNotationParser" duration-ms="0" started-at="2015-12-07T09:17:25Z" finished-at="2015-12-07T09:17:25Z">
+        <test-method status="PASS" signature="goToSimplePolymerNotationParser()[pri:0, instance:parsertest.simplepolymerssectiontest.BetweenInlineMonomerParser@45b44df2]" name="goToSimplePolymerNotationParser" duration-ms="0" started-at="2015-12-07T09:36:50Z" finished-at="2015-12-07T09:36:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- goToSimplePolymerNotationParser -->
-        <test-method status="PASS" signature="goToWithException()[pri:0, instance:parsertest.simplepolymerssectiontest.BetweenInlineMonomerParser@40696e9e]" name="goToWithException" duration-ms="1" started-at="2015-12-07T09:17:25Z" finished-at="2015-12-07T09:17:25Z">
+        <test-method status="PASS" signature="goToWithException()[pri:0, instance:parsertest.simplepolymerssectiontest.BetweenInlineMonomerParser@45b44df2]" name="goToWithException" duration-ms="0" started-at="2015-12-07T09:36:50Z" finished-at="2015-12-07T09:36:50Z">
           <exception class="org.helm.notation2.parser.exceptionparser.SimplePolymerSectionException">
             <message>
               <![CDATA[Error in the simple polymers notation section:]]>
@@ -582,21 +582,17 @@
         </test-method> <!-- goToWithException -->
       </class> <!-- parsertest.simplepolymerssectiontest.BetweenInlineMonomerParser -->
       <class name="org.helm.notation2.parser.AnnotationNotationTest">
-        <test-method status="PASS" signature="testAnnotationNotation()[pri:0, instance:org.helm.notation2.parser.AnnotationNotationTest@66ddea7f]" name="testAnnotationNotation" duration-ms="3" started-at="2015-12-07T09:17:25Z" finished-at="2015-12-07T09:17:25Z">
+        <test-method status="PASS" signature="testAnnotationNotation()[pri:0, instance:org.helm.notation2.parser.AnnotationNotationTest@49dd681b]" name="testAnnotationNotation" duration-ms="4" started-at="2015-12-07T09:36:50Z" finished-at="2015-12-07T09:36:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testAnnotationNotation -->
       </class> <!-- org.helm.notation2.parser.AnnotationNotationTest -->
       <class name="parsertest.simplepolymerssectiontest.SimplePolymersNotationParserTest">
-        <test-method status="PASS" signature="goToBetweenParser()[pri:0, instance:parsertest.simplepolymerssectiontest.SimplePolymersNotationParserTest@5e7aa43b]" name="goToBetweenParser" duration-ms="0" started-at="2015-12-07T09:17:25Z" finished-at="2015-12-07T09:17:25Z">
+        <test-method status="PASS" signature="goToBetweenParser()[pri:0, instance:parsertest.simplepolymerssectiontest.SimplePolymersNotationParserTest@3fcbd2c5]" name="goToBetweenParser" duration-ms="0" started-at="2015-12-07T09:36:50Z" finished-at="2015-12-07T09:36:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- goToBetweenParser -->
-        <test-method status="PASS" signature="goToInlineAnnotaitonsParser()[pri:0, instance:parsertest.simplepolymerssectiontest.SimplePolymersNotationParserTest@5e7aa43b]" name="goToInlineAnnotaitonsParser" duration-ms="0" started-at="2015-12-07T09:17:25Z" finished-at="2015-12-07T09:17:25Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- goToInlineAnnotaitonsParser -->
-        <test-method status="PASS" signature="goToInlineAnnotaitonsParserWithException()[pri:0, instance:parsertest.simplepolymerssectiontest.SimplePolymersNotationParserTest@5e7aa43b]" name="goToInlineAnnotaitonsParserWithException" duration-ms="1" started-at="2015-12-07T09:17:25Z" finished-at="2015-12-07T09:17:25Z">
+        <test-method status="PASS" signature="goToInlineAnnotaitonsParserWithException()[pri:0, instance:parsertest.simplepolymerssectiontest.SimplePolymersNotationParserTest@3fcbd2c5]" name="goToInlineAnnotaitonsParserWithException" duration-ms="1" started-at="2015-12-07T09:36:50Z" finished-at="2015-12-07T09:36:50Z">
           <exception class="org.helm.notation2.parser.exceptionparser.SimplePolymerSectionException">
             <message>
               <![CDATA[Polymer ID is not correct: PEPTIDE]]>
@@ -636,7 +632,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- goToInlineAnnotaitonsParserWithException -->
-        <test-method status="PASS" signature="goToRepeatingMonomerParserWithException()[pri:0, instance:parsertest.simplepolymerssectiontest.SimplePolymersNotationParserTest@5e7aa43b]" name="goToRepeatingMonomerParserWithException" duration-ms="1" started-at="2015-12-07T09:17:25Z" finished-at="2015-12-07T09:17:25Z">
+        <test-method status="PASS" signature="goToInlineAnnotaitonsParser()[pri:0, instance:parsertest.simplepolymerssectiontest.SimplePolymersNotationParserTest@3fcbd2c5]" name="goToInlineAnnotaitonsParser" duration-ms="0" started-at="2015-12-07T09:36:50Z" finished-at="2015-12-07T09:36:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- goToInlineAnnotaitonsParser -->
+        <test-method status="PASS" signature="goToRepeatingMonomerParserWithException()[pri:0, instance:parsertest.simplepolymerssectiontest.SimplePolymersNotationParserTest@3fcbd2c5]" name="goToRepeatingMonomerParserWithException" duration-ms="1" started-at="2015-12-07T09:36:50Z" finished-at="2015-12-07T09:36:50Z">
           <exception class="org.helm.notation2.parser.exceptionparser.SimplePolymerSectionException">
             <message>
               <![CDATA[Monomer unit is missing]]>
@@ -676,19 +676,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- goToRepeatingMonomerParserWithException -->
-        <test-method status="PASS" signature="goToRepeatingMonomerParser()[pri:0, instance:parsertest.simplepolymerssectiontest.SimplePolymersNotationParserTest@5e7aa43b]" name="goToRepeatingMonomerParser" duration-ms="0" started-at="2015-12-07T09:17:25Z" finished-at="2015-12-07T09:17:25Z">
+        <test-method status="PASS" signature="goToRepeatingMonomerParser()[pri:0, instance:parsertest.simplepolymerssectiontest.SimplePolymersNotationParserTest@3fcbd2c5]" name="goToRepeatingMonomerParser" duration-ms="0" started-at="2015-12-07T09:36:50Z" finished-at="2015-12-07T09:36:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- goToRepeatingMonomerParser -->
-        <test-method status="PASS" signature="initalizeThisStateTest()[pri:0, instance:parsertest.simplepolymerssectiontest.SimplePolymersNotationParserTest@5e7aa43b]" name="initalizeThisStateTest" duration-ms="0" started-at="2015-12-07T09:17:25Z" finished-at="2015-12-07T09:17:25Z">
+        <test-method status="PASS" signature="initalizeThisStateTest()[pri:0, instance:parsertest.simplepolymerssectiontest.SimplePolymersNotationParserTest@3fcbd2c5]" name="initalizeThisStateTest" duration-ms="1" started-at="2015-12-07T09:36:50Z" finished-at="2015-12-07T09:36:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initalizeThisStateTest -->
-        <test-method status="PASS" signature="keepThisStateTest()[pri:0, instance:parsertest.simplepolymerssectiontest.SimplePolymersNotationParserTest@5e7aa43b]" name="keepThisStateTest" duration-ms="0" started-at="2015-12-07T09:17:25Z" finished-at="2015-12-07T09:17:25Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- keepThisStateTest -->
-        <test-method status="PASS" signature="initalizeThisStateTestWithException()[pri:0, instance:parsertest.simplepolymerssectiontest.SimplePolymersNotationParserTest@5e7aa43b]" name="initalizeThisStateTestWithException" duration-ms="0" started-at="2015-12-07T09:17:25Z" finished-at="2015-12-07T09:17:25Z">
+        <test-method status="PASS" signature="initalizeThisStateTestWithException()[pri:0, instance:parsertest.simplepolymerssectiontest.SimplePolymersNotationParserTest@3fcbd2c5]" name="initalizeThisStateTestWithException" duration-ms="0" started-at="2015-12-07T09:36:50Z" finished-at="2015-12-07T09:36:50Z">
           <exception class="org.helm.notation2.parser.exceptionparser.SimplePolymerSectionException">
             <message>
               <![CDATA[Monomer unit is missing: ]]>
@@ -728,11 +724,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initalizeThisStateTestWithException -->
-        <test-method status="PASS" signature="testSMILESFunction()[pri:0, instance:parsertest.simplepolymerssectiontest.SimplePolymersNotationParserTest@5e7aa43b]" name="testSMILESFunction" duration-ms="1" started-at="2015-12-07T09:17:25Z" finished-at="2015-12-07T09:17:25Z">
+        <test-method status="PASS" signature="testSMILESFunction()[pri:0, instance:parsertest.simplepolymerssectiontest.SimplePolymersNotationParserTest@3fcbd2c5]" name="testSMILESFunction" duration-ms="0" started-at="2015-12-07T09:36:50Z" finished-at="2015-12-07T09:36:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testSMILESFunction -->
-        <test-method status="PASS" signature="testSMILESFunctionWithException()[pri:0, instance:parsertest.simplepolymerssectiontest.SimplePolymersNotationParserTest@5e7aa43b]" name="testSMILESFunctionWithException" duration-ms="0" started-at="2015-12-07T09:17:25Z" finished-at="2015-12-07T09:17:25Z">
+        <test-method status="PASS" signature="testSMILESFunctionWithException()[pri:0, instance:parsertest.simplepolymerssectiontest.SimplePolymersNotationParserTest@3fcbd2c5]" name="testSMILESFunctionWithException" duration-ms="0" started-at="2015-12-07T09:36:50Z" finished-at="2015-12-07T09:36:50Z">
           <exception class="org.helm.notation2.parser.exceptionparser.SimplePolymerSectionException">
             <full-stacktrace>
               <![CDATA[org.helm.notation2.parser.exceptionparser.SimplePolymerSectionException: 
@@ -767,251 +763,45 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testSMILESFunctionWithException -->
+        <test-method status="PASS" signature="keepThisStateTest()[pri:0, instance:parsertest.simplepolymerssectiontest.SimplePolymersNotationParserTest@3fcbd2c5]" name="keepThisStateTest" duration-ms="0" started-at="2015-12-07T09:36:50Z" finished-at="2015-12-07T09:36:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- keepThisStateTest -->
       </class> <!-- parsertest.simplepolymerssectiontest.SimplePolymersNotationParserTest -->
-      <class name="parsertest.simplepolymerssectiontest.TestInputSimplePolymerSection">
-        <test-method status="PASS" signature="testInlineAnnoationsInBrackets()[pri:0, instance:parsertest.simplepolymerssectiontest.TestInputSimplePolymerSection@3d1bb20d]" name="testInlineAnnoationsInBrackets" duration-ms="3" started-at="2015-12-07T09:17:25Z" finished-at="2015-12-07T09:17:25Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testInlineAnnoationsInBrackets -->
-        <test-method status="PASS" signature="testInlineAnnoationsWithException()[pri:0, instance:parsertest.simplepolymerssectiontest.TestInputSimplePolymerSection@3d1bb20d]" name="testInlineAnnoationsWithException" duration-ms="1" started-at="2015-12-07T09:17:25Z" finished-at="2015-12-07T09:17:25Z">
-          <exception class="org.helm.notation2.parser.exceptionparser.SimplePolymerSectionException">
-            <message>
-              <![CDATA[Error in the simple polymers notation section]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.helm.notation2.parser.exceptionparser.SimplePolymerSectionException: Error in the simple polymers notation section
-	at org.helm.notation2.parser.simplepolymerssection.BetweenInlineMonomerParser.doAction(BetweenInlineMonomerParser.java:71)
-	at org.helm.notation2.parser.StateMachineParser.doAction(StateMachineParser.java:86)
-	at org.helm.notation2.parser.ParserHELM2.parse(ParserHELM2.java:59)
-	at parsertest.simplepolymerssectiontest.TestInputSimplePolymerSection.testInlineAnnoationsWithException(TestInputSimplePolymerSection.java:88)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
-	at org.testng.TestRunner.privateRun(TestRunner.java:774)
-	at org.testng.TestRunner.run(TestRunner.java:624)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1191)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)
-	at org.testng.TestNG.run(TestNG.java:1024)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:112)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:205)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:176)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.helm.notation2.parser.exceptionparser.SimplePolymerSectionException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testInlineAnnoationsWithException -->
-        <test-method status="PASS" signature="testInlineAnnotations()[pri:0, instance:parsertest.simplepolymerssectiontest.TestInputSimplePolymerSection@3d1bb20d]" name="testInlineAnnotations" duration-ms="13" started-at="2015-12-07T09:17:25Z" finished-at="2015-12-07T09:17:25Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testInlineAnnotations -->
-        <test-method status="PASS" signature="testInlineAnnotationsPolymer()[pri:0, instance:parsertest.simplepolymerssectiontest.TestInputSimplePolymerSection@3d1bb20d]" name="testInlineAnnotationsPolymer" duration-ms="13" started-at="2015-12-07T09:17:25Z" finished-at="2015-12-07T09:17:25Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testInlineAnnotationsPolymer -->
-        <test-method status="PASS" signature="testInlineAnnotationsPolymerUnknown()[pri:0, instance:parsertest.simplepolymerssectiontest.TestInputSimplePolymerSection@3d1bb20d]" name="testInlineAnnotationsPolymerUnknown" duration-ms="0" started-at="2015-12-07T09:17:25Z" finished-at="2015-12-07T09:17:25Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testInlineAnnotationsPolymerUnknown -->
-        <test-method status="PASS" signature="testInlineAnnotationsPolymerWithException()[pri:0, instance:parsertest.simplepolymerssectiontest.TestInputSimplePolymerSection@3d1bb20d]" name="testInlineAnnotationsPolymerWithException" duration-ms="7" started-at="2015-12-07T09:17:25Z" finished-at="2015-12-07T09:17:25Z">
-          <exception class="org.helm.notation2.parser.exceptionparser.SimplePolymerSectionException">
-            <message>
-              <![CDATA[Invalid syntax in simple polymer section: P]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.helm.notation2.parser.exceptionparser.SimplePolymerSectionException: Invalid syntax in simple polymer section: P
-	at org.helm.notation2.parser.simplepolymerssection.BetweenParser.doAction(BetweenParser.java:84)
-	at org.helm.notation2.parser.StateMachineParser.doAction(StateMachineParser.java:86)
-	at org.helm.notation2.parser.ParserHELM2.parse(ParserHELM2.java:59)
-	at parsertest.simplepolymerssectiontest.TestInputSimplePolymerSection.testInlineAnnotationsPolymerWithException(TestInputSimplePolymerSection.java:153)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
-	at org.testng.TestRunner.privateRun(TestRunner.java:774)
-	at org.testng.TestRunner.run(TestRunner.java:624)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1191)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)
-	at org.testng.TestNG.run(TestNG.java:1024)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:112)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:205)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:176)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.helm.notation2.parser.exceptionparser.SimplePolymerSectionException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testInlineAnnotationsPolymerWithException -->
-        <test-method status="PASS" signature="testLysineThereOrNot()[pri:0, instance:parsertest.simplepolymerssectiontest.TestInputSimplePolymerSection@3d1bb20d]" name="testLysineThereOrNot" duration-ms="14" started-at="2015-12-07T09:17:25Z" finished-at="2015-12-07T09:17:25Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testLysineThereOrNot -->
-        <test-method status="PASS" signature="testMonomerRepeating()[pri:0, instance:parsertest.simplepolymerssectiontest.TestInputSimplePolymerSection@3d1bb20d]" name="testMonomerRepeating" duration-ms="1" started-at="2015-12-07T09:17:25Z" finished-at="2015-12-07T09:17:25Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testMonomerRepeating -->
-        <test-method status="PASS" signature="testMonomerRepeatingRange()[pri:0, instance:parsertest.simplepolymerssectiontest.TestInputSimplePolymerSection@3d1bb20d]" name="testMonomerRepeatingRange" duration-ms="1" started-at="2015-12-07T09:17:25Z" finished-at="2015-12-07T09:17:25Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testMonomerRepeatingRange -->
-        <test-method status="PASS" signature="testMonomerRepeatingUnits()[pri:0, instance:parsertest.simplepolymerssectiontest.TestInputSimplePolymerSection@3d1bb20d]" name="testMonomerRepeatingUnits" duration-ms="3" started-at="2015-12-07T09:17:25Z" finished-at="2015-12-07T09:17:25Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testMonomerRepeatingUnits -->
-        <test-method status="PASS" signature="testMonomerRepeatingUnitsWithException()[pri:0, instance:parsertest.simplepolymerssectiontest.TestInputSimplePolymerSection@3d1bb20d]" name="testMonomerRepeatingUnitsWithException" duration-ms="1" started-at="2015-12-07T09:17:25Z" finished-at="2015-12-07T09:17:25Z">
-          <exception class="org.helm.notation2.parser.exceptionparser.SimplePolymerSectionException">
-            <message>
-              <![CDATA[Monomer unit is missing]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.helm.notation2.parser.exceptionparser.SimplePolymerSectionException: Monomer unit is missing
-	at org.helm.notation2.parser.simplepolymerssection.SimplePolymersNotationParser.doAction(SimplePolymersNotationParser.java:131)
-	at org.helm.notation2.parser.StateMachineParser.doAction(StateMachineParser.java:86)
-	at org.helm.notation2.parser.ParserHELM2.parse(ParserHELM2.java:59)
-	at parsertest.simplepolymerssectiontest.TestInputSimplePolymerSection.testMonomerRepeatingUnitsWithException(TestInputSimplePolymerSection.java:78)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
-	at org.testng.TestRunner.privateRun(TestRunner.java:774)
-	at org.testng.TestRunner.run(TestRunner.java:624)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1191)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)
-	at org.testng.TestNG.run(TestNG.java:1024)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:112)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:205)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:176)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.helm.notation2.parser.exceptionparser.SimplePolymerSectionException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testMonomerRepeatingUnitsWithException -->
-        <test-method status="PASS" signature="testNewSimplePolymerType()[pri:0, instance:parsertest.simplepolymerssectiontest.TestInputSimplePolymerSection@3d1bb20d]" name="testNewSimplePolymerType" duration-ms="4" started-at="2015-12-07T09:17:25Z" finished-at="2015-12-07T09:17:25Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testNewSimplePolymerType -->
-        <test-method status="PASS" signature="testRepeatedFragments()[pri:0, instance:parsertest.simplepolymerssectiontest.TestInputSimplePolymerSection@3d1bb20d]" name="testRepeatedFragments" duration-ms="159" started-at="2015-12-07T09:17:25Z" finished-at="2015-12-07T09:17:25Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testRepeatedFragments -->
-        <test-method status="PASS" signature="testRepeatedFragmentsWithException()[pri:0, instance:parsertest.simplepolymerssectiontest.TestInputSimplePolymerSection@3d1bb20d]" name="testRepeatedFragmentsWithException" duration-ms="1" started-at="2015-12-07T09:17:25Z" finished-at="2015-12-07T09:17:25Z">
-          <exception class="org.helm.notation2.parser.exceptionparser.SimplePolymerSectionException">
-            <message>
-              <![CDATA[Error in the simple polymers notation section:]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.helm.notation2.parser.exceptionparser.SimplePolymerSectionException: Error in the simple polymers notation section:
-	at org.helm.notation2.parser.simplepolymerssection.BetweenMonomerParser.doAction(BetweenMonomerParser.java:77)
-	at org.helm.notation2.parser.StateMachineParser.doAction(StateMachineParser.java:86)
-	at org.helm.notation2.parser.ParserHELM2.parse(ParserHELM2.java:59)
-	at parsertest.simplepolymerssectiontest.TestInputSimplePolymerSection.testRepeatedFragmentsWithException(TestInputSimplePolymerSection.java:133)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
-	at org.testng.TestRunner.privateRun(TestRunner.java:774)
-	at org.testng.TestRunner.run(TestRunner.java:624)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1191)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)
-	at org.testng.TestNG.run(TestNG.java:1024)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:112)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:205)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:176)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.helm.notation2.parser.exceptionparser.SimplePolymerSectionException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testRepeatedFragmentsWithException -->
-        <test-method status="PASS" signature="testSimpleInput()[pri:0, instance:parsertest.simplepolymerssectiontest.TestInputSimplePolymerSection@3d1bb20d]" name="testSimpleInput" duration-ms="15" started-at="2015-12-07T09:17:25Z" finished-at="2015-12-07T09:17:25Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testSimpleInput -->
-      </class> <!-- parsertest.simplepolymerssectiontest.TestInputSimplePolymerSection -->
       <class name="parsertest.connectionsectiontest.TestInputConnectionSection">
-        <test-method status="PASS" signature="testConnectionMonomer()[pri:0, instance:parsertest.connectionsectiontest.TestInputConnectionSection@6dc386df]" name="testConnectionMonomer" duration-ms="28" started-at="2015-12-07T09:17:25Z" finished-at="2015-12-07T09:17:25Z">
+        <test-method status="PASS" signature="testConnectionMonomer()[pri:0, instance:parsertest.connectionsectiontest.TestInputConnectionSection@39397f0a]" name="testConnectionMonomer" duration-ms="27" started-at="2015-12-07T09:36:50Z" finished-at="2015-12-07T09:36:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testConnectionMonomer -->
-        <test-method status="PASS" signature="testConnectionMonomerAmbiguity()[pri:0, instance:parsertest.connectionsectiontest.TestInputConnectionSection@6dc386df]" name="testConnectionMonomerAmbiguity" duration-ms="21" started-at="2015-12-07T09:17:25Z" finished-at="2015-12-07T09:17:25Z">
+        <test-method status="PASS" signature="testConnectionMonomerAmbiguity()[pri:0, instance:parsertest.connectionsectiontest.TestInputConnectionSection@39397f0a]" name="testConnectionMonomerAmbiguity" duration-ms="24" started-at="2015-12-07T09:36:50Z" finished-at="2015-12-07T09:36:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testConnectionMonomerAmbiguity -->
-        <test-method status="PASS" signature="testConnectionMonomerAmbiguityNoInformation()[pri:0, instance:parsertest.connectionsectiontest.TestInputConnectionSection@6dc386df]" name="testConnectionMonomerAmbiguityNoInformation" duration-ms="22" started-at="2015-12-07T09:17:25Z" finished-at="2015-12-07T09:17:25Z">
+        <test-method status="PASS" signature="testConnectionMonomerAmbiguityNoInformation()[pri:0, instance:parsertest.connectionsectiontest.TestInputConnectionSection@39397f0a]" name="testConnectionMonomerAmbiguityNoInformation" duration-ms="26" started-at="2015-12-07T09:36:50Z" finished-at="2015-12-07T09:36:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testConnectionMonomerAmbiguityNoInformation -->
-        <test-method status="PASS" signature="testConnectionMonomerAmbiguityPartlyInformation()[pri:0, instance:parsertest.connectionsectiontest.TestInputConnectionSection@6dc386df]" name="testConnectionMonomerAmbiguityPartlyInformation" duration-ms="20" started-at="2015-12-07T09:17:25Z" finished-at="2015-12-07T09:17:25Z">
+        <test-method status="PASS" signature="testConnectionMonomerAmbiguityPartlyInformation()[pri:0, instance:parsertest.connectionsectiontest.TestInputConnectionSection@39397f0a]" name="testConnectionMonomerAmbiguityPartlyInformation" duration-ms="20" started-at="2015-12-07T09:36:50Z" finished-at="2015-12-07T09:36:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testConnectionMonomerAmbiguityPartlyInformation -->
-        <test-method status="PASS" signature="testConnectionStatisticalBinding()[pri:0, instance:parsertest.connectionsectiontest.TestInputConnectionSection@6dc386df]" name="testConnectionStatisticalBinding" duration-ms="7" started-at="2015-12-07T09:17:25Z" finished-at="2015-12-07T09:17:25Z">
+        <test-method status="PASS" signature="testConnectionStatisticalBinding()[pri:0, instance:parsertest.connectionsectiontest.TestInputConnectionSection@39397f0a]" name="testConnectionStatisticalBinding" duration-ms="7" started-at="2015-12-07T09:36:50Z" finished-at="2015-12-07T09:36:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testConnectionStatisticalBinding -->
-        <test-method status="PASS" signature="testConnectionUnknownBinding()[pri:0, instance:parsertest.connectionsectiontest.TestInputConnectionSection@6dc386df]" name="testConnectionUnknownBinding" duration-ms="8" started-at="2015-12-07T09:17:25Z" finished-at="2015-12-07T09:17:25Z">
+        <test-method status="PASS" signature="testConnectionUnknownBinding()[pri:0, instance:parsertest.connectionsectiontest.TestInputConnectionSection@39397f0a]" name="testConnectionUnknownBinding" duration-ms="8" started-at="2015-12-07T09:36:50Z" finished-at="2015-12-07T09:36:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testConnectionUnknownBinding -->
-        <test-method status="PASS" signature="testHydrogenBondInConnectionSection()[pri:0, instance:parsertest.connectionsectiontest.TestInputConnectionSection@6dc386df]" name="testHydrogenBondInConnectionSection" duration-ms="6" started-at="2015-12-07T09:17:25Z" finished-at="2015-12-07T09:17:25Z">
+        <test-method status="PASS" signature="testHydrogenBondInConnectionSection()[pri:0, instance:parsertest.connectionsectiontest.TestInputConnectionSection@39397f0a]" name="testHydrogenBondInConnectionSection" duration-ms="7" started-at="2015-12-07T09:36:50Z" finished-at="2015-12-07T09:36:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testHydrogenBondInConnectionSection -->
-        <test-method status="PASS" signature="testInlineAnnotationsConnection()[pri:0, instance:parsertest.connectionsectiontest.TestInputConnectionSection@6dc386df]" name="testInlineAnnotationsConnection" duration-ms="17" started-at="2015-12-07T09:17:25Z" finished-at="2015-12-07T09:17:25Z">
+        <test-method status="PASS" signature="testInlineAnnotationsConnection()[pri:0, instance:parsertest.connectionsectiontest.TestInputConnectionSection@39397f0a]" name="testInlineAnnotationsConnection" duration-ms="17" started-at="2015-12-07T09:36:50Z" finished-at="2015-12-07T09:36:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testInlineAnnotationsConnection -->
-        <test-method status="PASS" signature="testInlineAnnotationsConnectionWithException()[pri:0, instance:parsertest.connectionsectiontest.TestInputConnectionSection@6dc386df]" name="testInlineAnnotationsConnectionWithException" duration-ms="17" started-at="2015-12-07T09:17:25Z" finished-at="2015-12-07T09:17:25Z">
+        <test-method status="PASS" signature="testInlineAnnotationsConnectionWithException()[pri:0, instance:parsertest.connectionsectiontest.TestInputConnectionSection@39397f0a]" name="testInlineAnnotationsConnectionWithException" duration-ms="18" started-at="2015-12-07T09:36:50Z" finished-at="2015-12-07T09:36:50Z">
           <exception class="org.helm.notation2.parser.exceptionparser.ConnectionSectionException">
             <message>
               <![CDATA[Details about the connection are not correct: C:R3-1:R1,]]>
@@ -1053,42 +843,256 @@
           </reporter-output>
         </test-method> <!-- testInlineAnnotationsConnectionWithException -->
       </class> <!-- parsertest.connectionsectiontest.TestInputConnectionSection -->
-      <class name="org.helm.notation2.parser.polymer.MonomerNotationTest">
-        <test-method status="PASS" signature="testMonomerNotationCount()[pri:0, instance:org.helm.notation2.parser.polymer.MonomerNotationTest@745bbff2]" name="testMonomerNotationCount" duration-ms="1" started-at="2015-12-07T09:17:25Z" finished-at="2015-12-07T09:17:25Z">
+      <class name="parsertest.simplepolymerssectiontest.TestInputSimplePolymerSection">
+        <test-method status="PASS" signature="testInlineAnnoationsInBrackets()[pri:0, instance:parsertest.simplepolymerssectiontest.TestInputSimplePolymerSection@ddd51a7]" name="testInlineAnnoationsInBrackets" duration-ms="2" started-at="2015-12-07T09:36:50Z" finished-at="2015-12-07T09:36:50Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testMonomerNotationCount -->
-        <test-method status="PASS" signature="testMonomerNotationAnnotation()[pri:0, instance:org.helm.notation2.parser.polymer.MonomerNotationTest@745bbff2]" name="testMonomerNotationAnnotation" duration-ms="0" started-at="2015-12-07T09:17:25Z" finished-at="2015-12-07T09:17:25Z">
+        </test-method> <!-- testInlineAnnoationsInBrackets -->
+        <test-method status="PASS" signature="testInlineAnnoationsWithException()[pri:0, instance:parsertest.simplepolymerssectiontest.TestInputSimplePolymerSection@ddd51a7]" name="testInlineAnnoationsWithException" duration-ms="1" started-at="2015-12-07T09:36:50Z" finished-at="2015-12-07T09:36:50Z">
+          <exception class="org.helm.notation2.parser.exceptionparser.SimplePolymerSectionException">
+            <message>
+              <![CDATA[Error in the simple polymers notation section]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.helm.notation2.parser.exceptionparser.SimplePolymerSectionException: Error in the simple polymers notation section
+	at org.helm.notation2.parser.simplepolymerssection.BetweenInlineMonomerParser.doAction(BetweenInlineMonomerParser.java:71)
+	at org.helm.notation2.parser.StateMachineParser.doAction(StateMachineParser.java:86)
+	at org.helm.notation2.parser.ParserHELM2.parse(ParserHELM2.java:59)
+	at parsertest.simplepolymerssectiontest.TestInputSimplePolymerSection.testInlineAnnoationsWithException(TestInputSimplePolymerSection.java:88)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:774)
+	at org.testng.TestRunner.run(TestRunner.java:624)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1191)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)
+	at org.testng.TestNG.run(TestNG.java:1024)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:112)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:205)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:176)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.helm.notation2.parser.exceptionparser.SimplePolymerSectionException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testInlineAnnoationsWithException -->
+        <test-method status="PASS" signature="testInlineAnnotations()[pri:0, instance:parsertest.simplepolymerssectiontest.TestInputSimplePolymerSection@ddd51a7]" name="testInlineAnnotations" duration-ms="8" started-at="2015-12-07T09:36:50Z" finished-at="2015-12-07T09:36:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testInlineAnnotations -->
+        <test-method status="PASS" signature="testInlineAnnotationsPolymer()[pri:0, instance:parsertest.simplepolymerssectiontest.TestInputSimplePolymerSection@ddd51a7]" name="testInlineAnnotationsPolymer" duration-ms="14" started-at="2015-12-07T09:36:50Z" finished-at="2015-12-07T09:36:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testInlineAnnotationsPolymer -->
+        <test-method status="PASS" signature="testInlineAnnotationsPolymerUnknown()[pri:0, instance:parsertest.simplepolymerssectiontest.TestInputSimplePolymerSection@ddd51a7]" name="testInlineAnnotationsPolymerUnknown" duration-ms="1" started-at="2015-12-07T09:36:50Z" finished-at="2015-12-07T09:36:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testInlineAnnotationsPolymerUnknown -->
+        <test-method status="PASS" signature="testInlineAnnotationsPolymerWithException()[pri:0, instance:parsertest.simplepolymerssectiontest.TestInputSimplePolymerSection@ddd51a7]" name="testInlineAnnotationsPolymerWithException" duration-ms="8" started-at="2015-12-07T09:36:50Z" finished-at="2015-12-07T09:36:50Z">
+          <exception class="org.helm.notation2.parser.exceptionparser.SimplePolymerSectionException">
+            <message>
+              <![CDATA[Invalid syntax in simple polymer section: P]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.helm.notation2.parser.exceptionparser.SimplePolymerSectionException: Invalid syntax in simple polymer section: P
+	at org.helm.notation2.parser.simplepolymerssection.BetweenParser.doAction(BetweenParser.java:84)
+	at org.helm.notation2.parser.StateMachineParser.doAction(StateMachineParser.java:86)
+	at org.helm.notation2.parser.ParserHELM2.parse(ParserHELM2.java:59)
+	at parsertest.simplepolymerssectiontest.TestInputSimplePolymerSection.testInlineAnnotationsPolymerWithException(TestInputSimplePolymerSection.java:153)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:774)
+	at org.testng.TestRunner.run(TestRunner.java:624)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1191)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)
+	at org.testng.TestNG.run(TestNG.java:1024)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:112)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:205)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:176)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.helm.notation2.parser.exceptionparser.SimplePolymerSectionException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testInlineAnnotationsPolymerWithException -->
+        <test-method status="PASS" signature="testLysineThereOrNot()[pri:0, instance:parsertest.simplepolymerssectiontest.TestInputSimplePolymerSection@ddd51a7]" name="testLysineThereOrNot" duration-ms="14" started-at="2015-12-07T09:36:50Z" finished-at="2015-12-07T09:36:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLysineThereOrNot -->
+        <test-method status="PASS" signature="testMonomerRepeating()[pri:0, instance:parsertest.simplepolymerssectiontest.TestInputSimplePolymerSection@ddd51a7]" name="testMonomerRepeating" duration-ms="1" started-at="2015-12-07T09:36:50Z" finished-at="2015-12-07T09:36:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testMonomerRepeating -->
+        <test-method status="PASS" signature="testMonomerRepeatingRange()[pri:0, instance:parsertest.simplepolymerssectiontest.TestInputSimplePolymerSection@ddd51a7]" name="testMonomerRepeatingRange" duration-ms="1" started-at="2015-12-07T09:36:50Z" finished-at="2015-12-07T09:36:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testMonomerRepeatingRange -->
+        <test-method status="PASS" signature="testMonomerRepeatingUnits()[pri:0, instance:parsertest.simplepolymerssectiontest.TestInputSimplePolymerSection@ddd51a7]" name="testMonomerRepeatingUnits" duration-ms="2" started-at="2015-12-07T09:36:50Z" finished-at="2015-12-07T09:36:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testMonomerRepeatingUnits -->
+        <test-method status="PASS" signature="testMonomerRepeatingUnitsWithException()[pri:0, instance:parsertest.simplepolymerssectiontest.TestInputSimplePolymerSection@ddd51a7]" name="testMonomerRepeatingUnitsWithException" duration-ms="0" started-at="2015-12-07T09:36:50Z" finished-at="2015-12-07T09:36:50Z">
+          <exception class="org.helm.notation2.parser.exceptionparser.SimplePolymerSectionException">
+            <message>
+              <![CDATA[Monomer unit is missing]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.helm.notation2.parser.exceptionparser.SimplePolymerSectionException: Monomer unit is missing
+	at org.helm.notation2.parser.simplepolymerssection.SimplePolymersNotationParser.doAction(SimplePolymersNotationParser.java:131)
+	at org.helm.notation2.parser.StateMachineParser.doAction(StateMachineParser.java:86)
+	at org.helm.notation2.parser.ParserHELM2.parse(ParserHELM2.java:59)
+	at parsertest.simplepolymerssectiontest.TestInputSimplePolymerSection.testMonomerRepeatingUnitsWithException(TestInputSimplePolymerSection.java:78)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:774)
+	at org.testng.TestRunner.run(TestRunner.java:624)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1191)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)
+	at org.testng.TestNG.run(TestNG.java:1024)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:112)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:205)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:176)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.helm.notation2.parser.exceptionparser.SimplePolymerSectionException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testMonomerRepeatingUnitsWithException -->
+        <test-method status="PASS" signature="testNewSimplePolymerType()[pri:0, instance:parsertest.simplepolymerssectiontest.TestInputSimplePolymerSection@ddd51a7]" name="testNewSimplePolymerType" duration-ms="4" started-at="2015-12-07T09:36:50Z" finished-at="2015-12-07T09:36:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testNewSimplePolymerType -->
+        <test-method status="PASS" signature="testRepeatedFragments()[pri:0, instance:parsertest.simplepolymerssectiontest.TestInputSimplePolymerSection@ddd51a7]" name="testRepeatedFragments" duration-ms="148" started-at="2015-12-07T09:36:50Z" finished-at="2015-12-07T09:36:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testRepeatedFragments -->
+        <test-method status="PASS" signature="testRepeatedFragmentsWithException()[pri:0, instance:parsertest.simplepolymerssectiontest.TestInputSimplePolymerSection@ddd51a7]" name="testRepeatedFragmentsWithException" duration-ms="1" started-at="2015-12-07T09:36:50Z" finished-at="2015-12-07T09:36:50Z">
+          <exception class="org.helm.notation2.parser.exceptionparser.SimplePolymerSectionException">
+            <message>
+              <![CDATA[Error in the simple polymers notation section:]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.helm.notation2.parser.exceptionparser.SimplePolymerSectionException: Error in the simple polymers notation section:
+	at org.helm.notation2.parser.simplepolymerssection.BetweenMonomerParser.doAction(BetweenMonomerParser.java:77)
+	at org.helm.notation2.parser.StateMachineParser.doAction(StateMachineParser.java:86)
+	at org.helm.notation2.parser.ParserHELM2.parse(ParserHELM2.java:59)
+	at parsertest.simplepolymerssectiontest.TestInputSimplePolymerSection.testRepeatedFragmentsWithException(TestInputSimplePolymerSection.java:133)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:774)
+	at org.testng.TestRunner.run(TestRunner.java:624)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1191)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)
+	at org.testng.TestNG.run(TestNG.java:1024)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:112)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:205)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:176)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.helm.notation2.parser.exceptionparser.SimplePolymerSectionException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testRepeatedFragmentsWithException -->
+        <test-method status="PASS" signature="testSimpleInput()[pri:0, instance:parsertest.simplepolymerssectiontest.TestInputSimplePolymerSection@ddd51a7]" name="testSimpleInput" duration-ms="14" started-at="2015-12-07T09:36:50Z" finished-at="2015-12-07T09:36:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSimpleInput -->
+      </class> <!-- parsertest.simplepolymerssectiontest.TestInputSimplePolymerSection -->
+      <class name="org.helm.notation2.parser.polymer.MonomerNotationTest">
+        <test-method status="PASS" signature="testMonomerNotationAnnotation()[pri:0, instance:org.helm.notation2.parser.polymer.MonomerNotationTest@aeba3ff]" name="testMonomerNotationAnnotation" duration-ms="1" started-at="2015-12-07T09:36:50Z" finished-at="2015-12-07T09:36:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testMonomerNotationAnnotation -->
-        <test-method status="PASS" signature="testMonomerNotationDefaultAnnotation()[pri:0, instance:org.helm.notation2.parser.polymer.MonomerNotationTest@745bbff2]" name="testMonomerNotationDefaultAnnotation" duration-ms="0" started-at="2015-12-07T09:17:25Z" finished-at="2015-12-07T09:17:25Z">
+        <test-method status="PASS" signature="testMonomerNotationCount()[pri:0, instance:org.helm.notation2.parser.polymer.MonomerNotationTest@aeba3ff]" name="testMonomerNotationCount" duration-ms="0" started-at="2015-12-07T09:36:50Z" finished-at="2015-12-07T09:36:50Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testMonomerNotationDefaultAnnotation -->
-        <test-method status="PASS" signature="testMonomerNotationDefaultCount()[pri:0, instance:org.helm.notation2.parser.polymer.MonomerNotationTest@745bbff2]" name="testMonomerNotationDefaultCount" duration-ms="0" started-at="2015-12-07T09:17:25Z" finished-at="2015-12-07T09:17:25Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testMonomerNotationDefaultCount -->
-        <test-method status="PASS" signature="testMonomerNotationID()[pri:0, instance:org.helm.notation2.parser.polymer.MonomerNotationTest@745bbff2]" name="testMonomerNotationID" duration-ms="0" started-at="2015-12-07T09:17:25Z" finished-at="2015-12-07T09:17:25Z">
+        </test-method> <!-- testMonomerNotationCount -->
+        <test-method status="PASS" signature="testMonomerNotationID()[pri:0, instance:org.helm.notation2.parser.polymer.MonomerNotationTest@aeba3ff]" name="testMonomerNotationID" duration-ms="1" started-at="2015-12-07T09:36:50Z" finished-at="2015-12-07T09:36:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testMonomerNotationID -->
-        <test-method status="PASS" signature="testMonomerNotationID_()[pri:0, instance:org.helm.notation2.parser.polymer.MonomerNotationTest@745bbff2]" name="testMonomerNotationID_" duration-ms="1" started-at="2015-12-07T09:17:25Z" finished-at="2015-12-07T09:17:25Z">
+        <test-method status="PASS" signature="testMonomerNotationDefaultAnnotation()[pri:0, instance:org.helm.notation2.parser.polymer.MonomerNotationTest@aeba3ff]" name="testMonomerNotationDefaultAnnotation" duration-ms="0" started-at="2015-12-07T09:36:50Z" finished-at="2015-12-07T09:36:50Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testMonomerNotationID_ -->
-        <test-method status="PASS" signature="testMonomerNotationIDValue()[pri:0, instance:org.helm.notation2.parser.polymer.MonomerNotationTest@745bbff2]" name="testMonomerNotationIDValue" duration-ms="0" started-at="2015-12-07T09:17:25Z" finished-at="2015-12-07T09:17:25Z">
+        </test-method> <!-- testMonomerNotationDefaultAnnotation -->
+        <test-method status="PASS" signature="testMonomerNotationDefaultCount()[pri:0, instance:org.helm.notation2.parser.polymer.MonomerNotationTest@aeba3ff]" name="testMonomerNotationDefaultCount" duration-ms="0" started-at="2015-12-07T09:36:50Z" finished-at="2015-12-07T09:36:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testMonomerNotationDefaultCount -->
+        <test-method status="PASS" signature="testMonomerNotationIDValue()[pri:0, instance:org.helm.notation2.parser.polymer.MonomerNotationTest@aeba3ff]" name="testMonomerNotationIDValue" duration-ms="0" started-at="2015-12-07T09:36:50Z" finished-at="2015-12-07T09:36:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testMonomerNotationIDValue -->
+        <test-method status="PASS" signature="testMonomerNotationID_()[pri:0, instance:org.helm.notation2.parser.polymer.MonomerNotationTest@aeba3ff]" name="testMonomerNotationID_" duration-ms="0" started-at="2015-12-07T09:36:50Z" finished-at="2015-12-07T09:36:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testMonomerNotationID_ -->
       </class> <!-- org.helm.notation2.parser.polymer.MonomerNotationTest -->
       <class name="parsertest.annotationsectiontest.AnnotationParserTest">
-        <test-method status="PASS" signature="goToFinalState()[pri:0, instance:parsertest.annotationsectiontest.AnnotationParserTest@7c514cef]" name="goToFinalState" duration-ms="1" started-at="2015-12-07T09:17:25Z" finished-at="2015-12-07T09:17:25Z">
+        <test-method status="PASS" signature="goToFinalState()[pri:0, instance:parsertest.annotationsectiontest.AnnotationParserTest@654692d2]" name="goToFinalState" duration-ms="1" started-at="2015-12-07T09:36:50Z" finished-at="2015-12-07T09:36:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- goToFinalState -->
-        <test-method status="PASS" signature="keepToFinalStateWithException()[pri:0, instance:parsertest.annotationsectiontest.AnnotationParserTest@7c514cef]" name="keepToFinalStateWithException" duration-ms="0" started-at="2015-12-07T09:17:25Z" finished-at="2015-12-07T09:17:25Z">
+        <test-method status="PASS" signature="keepThisState()[pri:0, instance:parsertest.annotationsectiontest.AnnotationParserTest@654692d2]" name="keepThisState" duration-ms="0" started-at="2015-12-07T09:36:50Z" finished-at="2015-12-07T09:36:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- keepThisState -->
+        <test-method status="PASS" signature="keepToFinalStateWithException()[pri:0, instance:parsertest.annotationsectiontest.AnnotationParserTest@654692d2]" name="keepToFinalStateWithException" duration-ms="1" started-at="2015-12-07T09:36:50Z" finished-at="2015-12-07T09:36:50Z">
           <exception class="org.helm.notation2.parser.exceptionparser.AnnotationSectionException">
             <message>
               <![CDATA[Annotation section is not valid: H(]]>
@@ -1128,35 +1132,31 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- keepToFinalStateWithException -->
-        <test-method status="PASS" signature="keepThisState()[pri:0, instance:parsertest.annotationsectiontest.AnnotationParserTest@7c514cef]" name="keepThisState" duration-ms="0" started-at="2015-12-07T09:17:25Z" finished-at="2015-12-07T09:17:25Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- keepThisState -->
       </class> <!-- parsertest.annotationsectiontest.AnnotationParserTest -->
       <class name="parsertest.groupingsectiontest.TestInputGroupingSection">
-        <test-method status="PASS" signature="testGroupingAmbiguityAnd()[pri:0, instance:parsertest.groupingsectiontest.TestInputGroupingSection@76a22b9c]" name="testGroupingAmbiguityAnd" duration-ms="14" started-at="2015-12-07T09:17:25Z" finished-at="2015-12-07T09:17:25Z">
+        <test-method status="PASS" signature="testGroupingAmbiguityAnd()[pri:0, instance:parsertest.groupingsectiontest.TestInputGroupingSection@508f66bd]" name="testGroupingAmbiguityAnd" duration-ms="15" started-at="2015-12-07T09:36:50Z" finished-at="2015-12-07T09:36:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testGroupingAmbiguityAnd -->
-        <test-method status="PASS" signature="testGroupingAmbiguityAndRatio()[pri:0, instance:parsertest.groupingsectiontest.TestInputGroupingSection@76a22b9c]" name="testGroupingAmbiguityAndRatio" duration-ms="19" started-at="2015-12-07T09:17:25Z" finished-at="2015-12-07T09:17:25Z">
+        <test-method status="PASS" signature="testGroupingAmbiguityAndRatio()[pri:0, instance:parsertest.groupingsectiontest.TestInputGroupingSection@508f66bd]" name="testGroupingAmbiguityAndRatio" duration-ms="18" started-at="2015-12-07T09:36:50Z" finished-at="2015-12-07T09:36:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testGroupingAmbiguityAndRatio -->
-        <test-method status="PASS" signature="testGroupingAmbiguityAndRatioAndRange()[pri:0, instance:parsertest.groupingsectiontest.TestInputGroupingSection@76a22b9c]" name="testGroupingAmbiguityAndRatioAndRange" duration-ms="2" started-at="2015-12-07T09:17:25Z" finished-at="2015-12-07T09:17:25Z">
+        <test-method status="PASS" signature="testGroupingAmbiguityAndRatioAndRange()[pri:0, instance:parsertest.groupingsectiontest.TestInputGroupingSection@508f66bd]" name="testGroupingAmbiguityAndRatioAndRange" duration-ms="1" started-at="2015-12-07T09:36:50Z" finished-at="2015-12-07T09:36:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testGroupingAmbiguityAndRatioAndRange -->
-        <test-method status="PASS" signature="testGroupingAmbiguityOr()[pri:0, instance:parsertest.groupingsectiontest.TestInputGroupingSection@76a22b9c]" name="testGroupingAmbiguityOr" duration-ms="14" started-at="2015-12-07T09:17:25Z" finished-at="2015-12-07T09:17:25Z">
+        <test-method status="PASS" signature="testGroupingAmbiguityOr()[pri:0, instance:parsertest.groupingsectiontest.TestInputGroupingSection@508f66bd]" name="testGroupingAmbiguityOr" duration-ms="15" started-at="2015-12-07T09:36:50Z" finished-at="2015-12-07T09:36:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testGroupingAmbiguityOr -->
-        <test-method status="PASS" signature="testGroupingUnknownRatio()[pri:0, instance:parsertest.groupingsectiontest.TestInputGroupingSection@76a22b9c]" name="testGroupingUnknownRatio" duration-ms="3" started-at="2015-12-07T09:17:25Z" finished-at="2015-12-07T09:17:25Z">
+        <test-method status="PASS" signature="testGroupingUnknownRatio()[pri:0, instance:parsertest.groupingsectiontest.TestInputGroupingSection@508f66bd]" name="testGroupingUnknownRatio" duration-ms="3" started-at="2015-12-07T09:36:50Z" finished-at="2015-12-07T09:36:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testGroupingUnknownRatio -->
       </class> <!-- parsertest.groupingsectiontest.TestInputGroupingSection -->
       <class name="parsertest.connectionsectiontest.BetweenInlineConnectionParserTest">
-        <test-method status="PASS" signature="Reading$WithException()[pri:0, instance:parsertest.connectionsectiontest.BetweenInlineConnectionParserTest@5062e9b4]" name="Reading$WithException" duration-ms="0" started-at="2015-12-07T09:17:26Z" finished-at="2015-12-07T09:17:26Z">
+        <test-method status="PASS" signature="Reading$WithException()[pri:0, instance:parsertest.connectionsectiontest.BetweenInlineConnectionParserTest@1a016072]" name="Reading$WithException" duration-ms="1" started-at="2015-12-07T09:36:51Z" finished-at="2015-12-07T09:36:51Z">
           <exception class="org.helm.notation2.parser.exceptionparser.ConnectionSectionException">
             <message>
               <![CDATA[Invalid character after inline annotation in connection section: h]]>
@@ -1196,63 +1196,63 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Reading$WithException -->
-        <test-method status="PASS" signature="goToConnectionsParser()[pri:0, instance:parsertest.connectionsectiontest.BetweenInlineConnectionParserTest@5062e9b4]" name="goToConnectionsParser" duration-ms="0" started-at="2015-12-07T09:17:26Z" finished-at="2015-12-07T09:17:26Z">
+        <test-method status="PASS" signature="goToConnectionsParser()[pri:0, instance:parsertest.connectionsectiontest.BetweenInlineConnectionParserTest@1a016072]" name="goToConnectionsParser" duration-ms="0" started-at="2015-12-07T09:36:51Z" finished-at="2015-12-07T09:36:51Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- goToConnectionsParser -->
-        <test-method status="PASS" signature="goToGroupingSection()[pri:0, instance:parsertest.connectionsectiontest.BetweenInlineConnectionParserTest@5062e9b4]" name="goToGroupingSection" duration-ms="0" started-at="2015-12-07T09:17:26Z" finished-at="2015-12-07T09:17:26Z">
+        <test-method status="PASS" signature="goToGroupingSection()[pri:0, instance:parsertest.connectionsectiontest.BetweenInlineConnectionParserTest@1a016072]" name="goToGroupingSection" duration-ms="0" started-at="2015-12-07T09:36:51Z" finished-at="2015-12-07T09:36:51Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- goToGroupingSection -->
       </class> <!-- parsertest.connectionsectiontest.BetweenInlineConnectionParserTest -->
       <class name="org.helm.notation2.parser.polymer.MonomerNotationUnitRNATest">
-        <test-method status="PASS" signature="testMonomerNotationUnitRNA()[pri:0, instance:org.helm.notation2.parser.polymer.MonomerNotationUnitRNATest@39397f0a]" name="testMonomerNotationUnitRNA" duration-ms="1" started-at="2015-12-07T09:17:25Z" finished-at="2015-12-07T09:17:25Z">
+        <test-method status="PASS" signature="testMonomerNotationUnitRNA()[pri:0, instance:org.helm.notation2.parser.polymer.MonomerNotationUnitRNATest@3846f00b]" name="testMonomerNotationUnitRNA" duration-ms="0" started-at="2015-12-07T09:36:50Z" finished-at="2015-12-07T09:36:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testMonomerNotationUnitRNA -->
-        <test-method status="PASS" signature="testMonomerNotationUnitRNAContents()[pri:0, instance:org.helm.notation2.parser.polymer.MonomerNotationUnitRNATest@39397f0a]" name="testMonomerNotationUnitRNAContents" duration-ms="0" started-at="2015-12-07T09:17:25Z" finished-at="2015-12-07T09:17:25Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testMonomerNotationUnitRNAContents -->
-        <test-method status="PASS" signature="testMonomerNotationUnitRNAContentsSpecialFive()[pri:0, instance:org.helm.notation2.parser.polymer.MonomerNotationUnitRNATest@39397f0a]" name="testMonomerNotationUnitRNAContentsSpecialFive" duration-ms="1" started-at="2015-12-07T09:17:25Z" finished-at="2015-12-07T09:17:25Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testMonomerNotationUnitRNAContentsSpecialFive -->
-        <test-method status="PASS" signature="testMonomerNotationUnitRNAContentsSpecial()[pri:0, instance:org.helm.notation2.parser.polymer.MonomerNotationUnitRNATest@39397f0a]" name="testMonomerNotationUnitRNAContentsSpecial" duration-ms="0" started-at="2015-12-07T09:17:25Z" finished-at="2015-12-07T09:17:25Z">
+        <test-method status="PASS" signature="testMonomerNotationUnitRNAContentsSpecial()[pri:0, instance:org.helm.notation2.parser.polymer.MonomerNotationUnitRNATest@3846f00b]" name="testMonomerNotationUnitRNAContentsSpecial" duration-ms="0" started-at="2015-12-07T09:36:50Z" finished-at="2015-12-07T09:36:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testMonomerNotationUnitRNAContentsSpecial -->
-        <test-method status="PASS" signature="testMonomerNotationUnitRNAContentsSpecialFour()[pri:0, instance:org.helm.notation2.parser.polymer.MonomerNotationUnitRNATest@39397f0a]" name="testMonomerNotationUnitRNAContentsSpecialFour" duration-ms="0" started-at="2015-12-07T09:17:25Z" finished-at="2015-12-07T09:17:25Z">
+        <test-method status="PASS" signature="testMonomerNotationUnitRNAContents()[pri:0, instance:org.helm.notation2.parser.polymer.MonomerNotationUnitRNATest@3846f00b]" name="testMonomerNotationUnitRNAContents" duration-ms="0" started-at="2015-12-07T09:36:50Z" finished-at="2015-12-07T09:36:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testMonomerNotationUnitRNAContents -->
+        <test-method status="PASS" signature="testMonomerNotationUnitRNAContentsSpecialFive()[pri:0, instance:org.helm.notation2.parser.polymer.MonomerNotationUnitRNATest@3846f00b]" name="testMonomerNotationUnitRNAContentsSpecialFive" duration-ms="0" started-at="2015-12-07T09:36:50Z" finished-at="2015-12-07T09:36:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testMonomerNotationUnitRNAContentsSpecialFive -->
+        <test-method status="PASS" signature="testMonomerNotationUnitRNAContentsSpecialFour()[pri:0, instance:org.helm.notation2.parser.polymer.MonomerNotationUnitRNATest@3846f00b]" name="testMonomerNotationUnitRNAContentsSpecialFour" duration-ms="0" started-at="2015-12-07T09:36:50Z" finished-at="2015-12-07T09:36:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testMonomerNotationUnitRNAContentsSpecialFour -->
-        <test-method status="PASS" signature="testMonomerNotationUnitRNAContentsSpecialSix()[pri:0, instance:org.helm.notation2.parser.polymer.MonomerNotationUnitRNATest@39397f0a]" name="testMonomerNotationUnitRNAContentsSpecialSix" duration-ms="1" started-at="2015-12-07T09:17:25Z" finished-at="2015-12-07T09:17:25Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testMonomerNotationUnitRNAContentsSpecialSix -->
-        <test-method status="PASS" signature="testMonomerNotationUnitRNAContentsSpecialSeven()[pri:0, instance:org.helm.notation2.parser.polymer.MonomerNotationUnitRNATest@39397f0a]" name="testMonomerNotationUnitRNAContentsSpecialSeven" duration-ms="0" started-at="2015-12-07T09:17:25Z" finished-at="2015-12-07T09:17:25Z">
+        <test-method status="PASS" signature="testMonomerNotationUnitRNAContentsSpecialSeven()[pri:0, instance:org.helm.notation2.parser.polymer.MonomerNotationUnitRNATest@3846f00b]" name="testMonomerNotationUnitRNAContentsSpecialSeven" duration-ms="1" started-at="2015-12-07T09:36:50Z" finished-at="2015-12-07T09:36:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testMonomerNotationUnitRNAContentsSpecialSeven -->
-        <test-method status="PASS" signature="testMonomerNotationUnitRNAContentsSpecialThree()[pri:0, instance:org.helm.notation2.parser.polymer.MonomerNotationUnitRNATest@39397f0a]" name="testMonomerNotationUnitRNAContentsSpecialThree" duration-ms="0" started-at="2015-12-07T09:17:25Z" finished-at="2015-12-07T09:17:25Z">
+        <test-method status="PASS" signature="testMonomerNotationUnitRNAContentsSpecialSix()[pri:0, instance:org.helm.notation2.parser.polymer.MonomerNotationUnitRNATest@3846f00b]" name="testMonomerNotationUnitRNAContentsSpecialSix" duration-ms="0" started-at="2015-12-07T09:36:50Z" finished-at="2015-12-07T09:36:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testMonomerNotationUnitRNAContentsSpecialSix -->
+        <test-method status="PASS" signature="testMonomerNotationUnitRNAContentsSpecialThree()[pri:0, instance:org.helm.notation2.parser.polymer.MonomerNotationUnitRNATest@3846f00b]" name="testMonomerNotationUnitRNAContentsSpecialThree" duration-ms="1" started-at="2015-12-07T09:36:50Z" finished-at="2015-12-07T09:36:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testMonomerNotationUnitRNAContentsSpecialThree -->
-        <test-method status="PASS" signature="testMonomerNotationUnitRNAContentsSpecialTwo()[pri:0, instance:org.helm.notation2.parser.polymer.MonomerNotationUnitRNATest@39397f0a]" name="testMonomerNotationUnitRNAContentsSpecialTwo" duration-ms="0" started-at="2015-12-07T09:17:25Z" finished-at="2015-12-07T09:17:25Z">
+        <test-method status="PASS" signature="testMonomerNotationUnitRNAContentsSpecialTwo()[pri:0, instance:org.helm.notation2.parser.polymer.MonomerNotationUnitRNATest@3846f00b]" name="testMonomerNotationUnitRNAContentsSpecialTwo" duration-ms="0" started-at="2015-12-07T09:36:50Z" finished-at="2015-12-07T09:36:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testMonomerNotationUnitRNAContentsSpecialTwo -->
       </class> <!-- org.helm.notation2.parser.polymer.MonomerNotationUnitRNATest -->
       <class name="parsertest.simplepolymerssectiontest.RepeatingMonomerParserTest">
-        <test-method status="PASS" signature="goToBetweenParserRange()[pri:0, instance:parsertest.simplepolymerssectiontest.RepeatingMonomerParserTest@45b44df2]" name="goToBetweenParserRange" duration-ms="1" started-at="2015-12-07T09:17:26Z" finished-at="2015-12-07T09:17:26Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- goToBetweenParserRange -->
-        <test-method status="PASS" signature="goToBetweenParser()[pri:0, instance:parsertest.simplepolymerssectiontest.RepeatingMonomerParserTest@45b44df2]" name="goToBetweenParser" duration-ms="0" started-at="2015-12-07T09:17:26Z" finished-at="2015-12-07T09:17:26Z">
+        <test-method status="PASS" signature="goToBetweenParser()[pri:0, instance:parsertest.simplepolymerssectiontest.RepeatingMonomerParserTest@5e7aa43b]" name="goToBetweenParser" duration-ms="1" started-at="2015-12-07T09:36:51Z" finished-at="2015-12-07T09:36:51Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- goToBetweenParser -->
-        <test-method status="PASS" signature="goToBetweenParserRangeWithException()[pri:0, instance:parsertest.simplepolymerssectiontest.RepeatingMonomerParserTest@45b44df2]" name="goToBetweenParserRangeWithException" duration-ms="0" started-at="2015-12-07T09:17:26Z" finished-at="2015-12-07T09:17:26Z">
+        <test-method status="PASS" signature="goToBetweenParserRange()[pri:0, instance:parsertest.simplepolymerssectiontest.RepeatingMonomerParserTest@5e7aa43b]" name="goToBetweenParserRange" duration-ms="0" started-at="2015-12-07T09:36:51Z" finished-at="2015-12-07T09:36:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- goToBetweenParserRange -->
+        <test-method status="PASS" signature="goToBetweenParserRangeWithException()[pri:0, instance:parsertest.simplepolymerssectiontest.RepeatingMonomerParserTest@5e7aa43b]" name="goToBetweenParserRangeWithException" duration-ms="0" started-at="2015-12-07T09:36:51Z" finished-at="2015-12-07T09:36:51Z">
           <exception class="org.helm.notation2.parser.exceptionparser.SimplePolymerSectionException">
             <message>
               <![CDATA[Information about repeating is wrong: 3-d]]>
@@ -1292,7 +1292,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- goToBetweenParserRangeWithException -->
-        <test-method status="PASS" signature="goToBetweenParserWithException()[pri:0, instance:parsertest.simplepolymerssectiontest.RepeatingMonomerParserTest@45b44df2]" name="goToBetweenParserWithException" duration-ms="0" started-at="2015-12-07T09:17:26Z" finished-at="2015-12-07T09:17:26Z">
+        <test-method status="PASS" signature="goToBetweenParserWithException()[pri:0, instance:parsertest.simplepolymerssectiontest.RepeatingMonomerParserTest@5e7aa43b]" name="goToBetweenParserWithException" duration-ms="0" started-at="2015-12-07T09:36:51Z" finished-at="2015-12-07T09:36:51Z">
           <exception class="org.helm.notation2.parser.exceptionparser.SimplePolymerSectionException">
             <message>
               <![CDATA[Information about repeating is wrong: PEPTIDE1{A]]>
@@ -1332,27 +1332,23 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- goToBetweenParserWithException -->
-        <test-method status="PASS" signature="keepThisStateTest()[pri:0, instance:parsertest.simplepolymerssectiontest.RepeatingMonomerParserTest@45b44df2]" name="keepThisStateTest" duration-ms="0" started-at="2015-12-07T09:17:26Z" finished-at="2015-12-07T09:17:26Z">
+        <test-method status="PASS" signature="keepThisStateTest()[pri:0, instance:parsertest.simplepolymerssectiontest.RepeatingMonomerParserTest@5e7aa43b]" name="keepThisStateTest" duration-ms="0" started-at="2015-12-07T09:36:51Z" finished-at="2015-12-07T09:36:51Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- keepThisStateTest -->
       </class> <!-- parsertest.simplepolymerssectiontest.RepeatingMonomerParserTest -->
       <class name="parsertest.annotationsectiontest.TestInputAnnotationSection">
-        <test-method status="PASS" signature="testSimpleInput()[pri:0, instance:parsertest.annotationsectiontest.TestInputAnnotationSection@3846f00b]" name="testSimpleInput" duration-ms="8" started-at="2015-12-07T09:17:25Z" finished-at="2015-12-07T09:17:25Z">
+        <test-method status="PASS" signature="testSimpleInput()[pri:0, instance:parsertest.annotationsectiontest.TestInputAnnotationSection@3aa92b03]" name="testSimpleInput" duration-ms="8" started-at="2015-12-07T09:36:50Z" finished-at="2015-12-07T09:36:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testSimpleInput -->
       </class> <!-- parsertest.annotationsectiontest.TestInputAnnotationSection -->
       <class name="parsertest.groupingsectiontest.GroupingDetailedInformationParserTest">
-        <test-method status="PASS" signature="goToBetweenGroupingParser()[pri:0, instance:parsertest.groupingsectiontest.GroupingDetailedInformationParserTest@3158a9f]" name="goToBetweenGroupingParser" duration-ms="0" started-at="2015-12-07T09:17:26Z" finished-at="2015-12-07T09:17:26Z">
+        <test-method status="PASS" signature="goToBetweenGroupingParser()[pri:0, instance:parsertest.groupingsectiontest.GroupingDetailedInformationParserTest@1a48563c]" name="goToBetweenGroupingParser" duration-ms="0" started-at="2015-12-07T09:36:51Z" finished-at="2015-12-07T09:36:51Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- goToBetweenGroupingParser -->
-        <test-method status="PASS" signature="keepThisState()[pri:0, instance:parsertest.groupingsectiontest.GroupingDetailedInformationParserTest@3158a9f]" name="keepThisState" duration-ms="0" started-at="2015-12-07T09:17:26Z" finished-at="2015-12-07T09:17:26Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- keepThisState -->
-        <test-method status="PASS" signature="goToBetweenGroupingParserWithException()[pri:0, instance:parsertest.groupingsectiontest.GroupingDetailedInformationParserTest@3158a9f]" name="goToBetweenGroupingParserWithException" duration-ms="0" started-at="2015-12-07T09:17:26Z" finished-at="2015-12-07T09:17:26Z">
+        <test-method status="PASS" signature="goToBetweenGroupingParserWithException()[pri:0, instance:parsertest.groupingsectiontest.GroupingDetailedInformationParserTest@1a48563c]" name="goToBetweenGroupingParserWithException" duration-ms="0" started-at="2015-12-07T09:36:51Z" finished-at="2015-12-07T09:36:51Z">
           <exception class="org.helm.notation2.parser.exceptionparser.GroupingSectionException">
             <message>
               <![CDATA[Group information is wrong: h]]>
@@ -1392,13 +1388,17 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- goToBetweenGroupingParserWithException -->
+        <test-method status="PASS" signature="keepThisState()[pri:0, instance:parsertest.groupingsectiontest.GroupingDetailedInformationParserTest@1a48563c]" name="keepThisState" duration-ms="1" started-at="2015-12-07T09:36:51Z" finished-at="2015-12-07T09:36:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- keepThisState -->
       </class> <!-- parsertest.groupingsectiontest.GroupingDetailedInformationParserTest -->
       <class name="org.helm.notation2.parser.polymer.PolymerNotationTest">
-        <test-method status="PASS" signature="testPolymerNotationAnnotation()[pri:0, instance:org.helm.notation2.parser.polymer.PolymerNotationTest@49dd681b]" name="testPolymerNotationAnnotation" duration-ms="0" started-at="2015-12-07T09:17:25Z" finished-at="2015-12-07T09:17:25Z">
+        <test-method status="PASS" signature="testPolymerNotationAnnotation()[pri:0, instance:org.helm.notation2.parser.polymer.PolymerNotationTest@40696e9e]" name="testPolymerNotationAnnotation" duration-ms="0" started-at="2015-12-07T09:36:50Z" finished-at="2015-12-07T09:36:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testPolymerNotationAnnotation -->
-        <test-method status="PASS" signature="testPolymerNotationIDBLOBWithException()[pri:0, instance:org.helm.notation2.parser.polymer.PolymerNotationTest@49dd681b]" name="testPolymerNotationIDBLOBWithException" duration-ms="0" started-at="2015-12-07T09:17:25Z" finished-at="2015-12-07T09:17:25Z">
+        <test-method status="PASS" signature="testPolymerNotationIDBLOBWithException()[pri:0, instance:org.helm.notation2.parser.polymer.PolymerNotationTest@40696e9e]" name="testPolymerNotationIDBLOBWithException" duration-ms="1" started-at="2015-12-07T09:36:50Z" finished-at="2015-12-07T09:36:50Z">
           <exception class="org.helm.notation2.parser.exceptionparser.NotationException">
             <message>
               <![CDATA[ID is wrong: BLO1]]>
@@ -1438,51 +1438,51 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testPolymerNotationIDBLOBWithException -->
-        <test-method status="PASS" signature="testPolymerNotationIDBLOB()[pri:0, instance:org.helm.notation2.parser.polymer.PolymerNotationTest@49dd681b]" name="testPolymerNotationIDBLOB" duration-ms="0" started-at="2015-12-07T09:17:25Z" finished-at="2015-12-07T09:17:25Z">
+        <test-method status="PASS" signature="testPolymerNotationIDBLOB()[pri:0, instance:org.helm.notation2.parser.polymer.PolymerNotationTest@40696e9e]" name="testPolymerNotationIDBLOB" duration-ms="0" started-at="2015-12-07T09:36:50Z" finished-at="2015-12-07T09:36:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testPolymerNotationIDBLOB -->
-        <test-method status="PASS" signature="testPolymerNotationIDRNA()[pri:0, instance:org.helm.notation2.parser.polymer.PolymerNotationTest@49dd681b]" name="testPolymerNotationIDRNA" duration-ms="0" started-at="2015-12-07T09:17:25Z" finished-at="2015-12-07T09:17:25Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testPolymerNotationIDRNA -->
-        <test-method status="PASS" signature="testPolymerNotationIDPEPTIDE()[pri:0, instance:org.helm.notation2.parser.polymer.PolymerNotationTest@49dd681b]" name="testPolymerNotationIDPEPTIDE" duration-ms="0" started-at="2015-12-07T09:17:25Z" finished-at="2015-12-07T09:17:25Z">
+        <test-method status="PASS" signature="testPolymerNotationIDPEPTIDE()[pri:0, instance:org.helm.notation2.parser.polymer.PolymerNotationTest@40696e9e]" name="testPolymerNotationIDPEPTIDE" duration-ms="0" started-at="2015-12-07T09:36:50Z" finished-at="2015-12-07T09:36:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testPolymerNotationIDPEPTIDE -->
-        <test-method status="PASS" signature="testPolymerNotationIDCHEM()[pri:0, instance:org.helm.notation2.parser.polymer.PolymerNotationTest@49dd681b]" name="testPolymerNotationIDCHEM" duration-ms="0" started-at="2015-12-07T09:17:25Z" finished-at="2015-12-07T09:17:25Z">
+        <test-method status="PASS" signature="testPolymerNotationIDCHEM()[pri:0, instance:org.helm.notation2.parser.polymer.PolymerNotationTest@40696e9e]" name="testPolymerNotationIDCHEM" duration-ms="0" started-at="2015-12-07T09:36:50Z" finished-at="2015-12-07T09:36:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testPolymerNotationIDCHEM -->
+        <test-method status="PASS" signature="testPolymerNotationIDRNA()[pri:0, instance:org.helm.notation2.parser.polymer.PolymerNotationTest@40696e9e]" name="testPolymerNotationIDRNA" duration-ms="0" started-at="2015-12-07T09:36:50Z" finished-at="2015-12-07T09:36:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPolymerNotationIDRNA -->
       </class> <!-- org.helm.notation2.parser.polymer.PolymerNotationTest -->
       <class name="parsertest.ConverterHELM1ToHELM2Test">
-        <test-method status="PASS" signature="SMILESTest()[pri:0, instance:parsertest.ConverterHELM1ToHELM2Test@7776bdc9]" name="SMILESTest" duration-ms="18" started-at="2015-12-07T09:17:25Z" finished-at="2015-12-07T09:17:25Z">
+        <test-method status="PASS" signature="SMILESTest()[pri:0, instance:parsertest.ConverterHELM1ToHELM2Test@3396e48c]" name="SMILESTest" duration-ms="16" started-at="2015-12-07T09:36:50Z" finished-at="2015-12-07T09:36:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- SMILESTest -->
-        <test-method status="PASS" signature="simpleHELM1StringTest()[pri:0, instance:parsertest.ConverterHELM1ToHELM2Test@7776bdc9]" name="simpleHELM1StringTest" duration-ms="9" started-at="2015-12-07T09:17:25Z" finished-at="2015-12-07T09:17:25Z">
+        <test-method status="PASS" signature="simpleHELM1StringTest()[pri:0, instance:parsertest.ConverterHELM1ToHELM2Test@3396e48c]" name="simpleHELM1StringTest" duration-ms="9" started-at="2015-12-07T09:36:50Z" finished-at="2015-12-07T09:36:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- simpleHELM1StringTest -->
       </class> <!-- parsertest.ConverterHELM1ToHELM2Test -->
-      <class name="org.helm.notation2.parser.polymer.MonomerNotationGroupGroupElementTest">
-        <test-method status="PASS" signature="testConstructor()[pri:0, instance:org.helm.notation2.parser.polymer.MonomerNotationGroupGroupElementTest@78f180d9]" name="testConstructor" duration-ms="1" started-at="2015-12-07T09:17:25Z" finished-at="2015-12-07T09:17:25Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testConstructor -->
-        <test-method status="PASS" signature="testConstructorRange()[pri:0, instance:org.helm.notation2.parser.polymer.MonomerNotationGroupGroupElementTest@78f180d9]" name="testConstructorRange" duration-ms="0" started-at="2015-12-07T09:17:25Z" finished-at="2015-12-07T09:17:25Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testConstructorRange -->
-      </class> <!-- org.helm.notation2.parser.polymer.MonomerNotationGroupGroupElementTest -->
       <class name="org.helm.notation2.parser.annotation.AnnotationNotationTest">
-        <test-method status="PASS" signature="testAnnotationConstructor()[pri:0, instance:org.helm.notation2.parser.annotation.AnnotationNotationTest@85f7aac]" name="testAnnotationConstructor" duration-ms="0" started-at="2015-12-07T09:17:25Z" finished-at="2015-12-07T09:17:25Z">
+        <test-method status="PASS" signature="testAnnotationConstructor()[pri:0, instance:org.helm.notation2.parser.annotation.AnnotationNotationTest@5a2c25b4]" name="testAnnotationConstructor" duration-ms="0" started-at="2015-12-07T09:36:50Z" finished-at="2015-12-07T09:36:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testAnnotationConstructor -->
       </class> <!-- org.helm.notation2.parser.annotation.AnnotationNotationTest -->
+      <class name="org.helm.notation2.parser.polymer.MonomerNotationGroupGroupElementTest">
+        <test-method status="PASS" signature="testConstructor()[pri:0, instance:org.helm.notation2.parser.polymer.MonomerNotationGroupGroupElementTest@7d632866]" name="testConstructor" duration-ms="1" started-at="2015-12-07T09:36:50Z" finished-at="2015-12-07T09:36:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testConstructor -->
+        <test-method status="PASS" signature="testConstructorRange()[pri:0, instance:org.helm.notation2.parser.polymer.MonomerNotationGroupGroupElementTest@7d632866]" name="testConstructorRange" duration-ms="0" started-at="2015-12-07T09:36:50Z" finished-at="2015-12-07T09:36:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testConstructorRange -->
+      </class> <!-- org.helm.notation2.parser.polymer.MonomerNotationGroupGroupElementTest -->
       <class name="org.helm.notation2.parser.NotationTest">
-        <test-method status="PASS" signature="testNegativeInput()[pri:0, instance:org.helm.notation2.parser.NotationTest@654692d2]" name="testNegativeInput" duration-ms="25" started-at="2015-12-07T09:17:26Z" finished-at="2015-12-07T09:17:26Z">
+        <test-method status="PASS" signature="testNegativeInput()[pri:0, instance:org.helm.notation2.parser.NotationTest@3d1bb20d]" name="testNegativeInput" duration-ms="26" started-at="2015-12-07T09:36:51Z" finished-at="2015-12-07T09:36:51Z">
           <exception class="org.helm.notation2.parser.exceptionparser.ExceptionState">
             <full-stacktrace>
               <![CDATA[org.helm.notation2.parser.exceptionparser.ExceptionState: 
@@ -1517,13 +1517,13 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testNegativeInput -->
-        <test-method status="PASS" signature="testPositiveInput()[pri:0, instance:org.helm.notation2.parser.NotationTest@654692d2]" name="testPositiveInput" duration-ms="361" started-at="2015-12-07T09:17:26Z" finished-at="2015-12-07T09:17:26Z">
+        <test-method status="PASS" signature="testPositiveInput()[pri:0, instance:org.helm.notation2.parser.NotationTest@3d1bb20d]" name="testPositiveInput" duration-ms="378" started-at="2015-12-07T09:36:51Z" finished-at="2015-12-07T09:36:51Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testPositiveInput -->
       </class> <!-- org.helm.notation2.parser.NotationTest -->
       <class name="parsertest.groupingsectiontest.GroupingParserTest">
-        <test-method status="PASS" signature="goToAnnotaitonsParserWithException()[pri:0, instance:parsertest.groupingsectiontest.GroupingParserTest@734e6c9b]" name="goToAnnotaitonsParserWithException" duration-ms="0" started-at="2015-12-07T09:17:25Z" finished-at="2015-12-07T09:17:25Z">
+        <test-method status="PASS" signature="goToAnnotaitonsParserWithException()[pri:0, instance:parsertest.groupingsectiontest.GroupingParserTest@66ddea7f]" name="goToAnnotaitonsParserWithException" duration-ms="0" started-at="2015-12-07T09:36:50Z" finished-at="2015-12-07T09:36:50Z">
           <exception class="org.helm.notation2.parser.exceptionparser.GroupingSectionException">
             <message>
               <![CDATA[Missing details about the group: hallo]]>
@@ -1563,15 +1563,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- goToAnnotaitonsParserWithException -->
-        <test-method status="PASS" signature="goToGroupingDetailedInformationParser()[pri:0, instance:parsertest.groupingsectiontest.GroupingParserTest@734e6c9b]" name="goToGroupingDetailedInformationParser" duration-ms="1" started-at="2015-12-07T09:17:25Z" finished-at="2015-12-07T09:17:25Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- goToGroupingDetailedInformationParser -->
-        <test-method status="PASS" signature="goToAnnotationsParser()[pri:0, instance:parsertest.groupingsectiontest.GroupingParserTest@734e6c9b]" name="goToAnnotationsParser" duration-ms="0" started-at="2015-12-07T09:17:25Z" finished-at="2015-12-07T09:17:25Z">
+        <test-method status="PASS" signature="goToAnnotationsParser()[pri:0, instance:parsertest.groupingsectiontest.GroupingParserTest@66ddea7f]" name="goToAnnotationsParser" duration-ms="1" started-at="2015-12-07T09:36:50Z" finished-at="2015-12-07T09:36:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- goToAnnotationsParser -->
-        <test-method status="PASS" signature="goToGroupingDetailedInformationWithException()[pri:0, instance:parsertest.groupingsectiontest.GroupingParserTest@734e6c9b]" name="goToGroupingDetailedInformationWithException" duration-ms="0" started-at="2015-12-07T09:17:25Z" finished-at="2015-12-07T09:17:25Z">
+        <test-method status="PASS" signature="goToGroupingDetailedInformationWithException()[pri:0, instance:parsertest.groupingsectiontest.GroupingParserTest@66ddea7f]" name="goToGroupingDetailedInformationWithException" duration-ms="0" started-at="2015-12-07T09:36:50Z" finished-at="2015-12-07T09:36:50Z">
           <exception class="org.helm.notation2.parser.exceptionparser.GroupingSectionException">
             <message>
               <![CDATA[Missing details about the group: hallo]]>
@@ -1611,13 +1607,17 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- goToGroupingDetailedInformationWithException -->
-        <test-method status="PASS" signature="keepThisState()[pri:0, instance:parsertest.groupingsectiontest.GroupingParserTest@734e6c9b]" name="keepThisState" duration-ms="1" started-at="2015-12-07T09:17:25Z" finished-at="2015-12-07T09:17:25Z">
+        <test-method status="PASS" signature="goToGroupingDetailedInformationParser()[pri:0, instance:parsertest.groupingsectiontest.GroupingParserTest@66ddea7f]" name="goToGroupingDetailedInformationParser" duration-ms="0" started-at="2015-12-07T09:36:50Z" finished-at="2015-12-07T09:36:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- goToGroupingDetailedInformationParser -->
+        <test-method status="PASS" signature="keepThisState()[pri:0, instance:parsertest.groupingsectiontest.GroupingParserTest@66ddea7f]" name="keepThisState" duration-ms="0" started-at="2015-12-07T09:36:50Z" finished-at="2015-12-07T09:36:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- keepThisState -->
       </class> <!-- parsertest.groupingsectiontest.GroupingParserTest -->
       <class name="parsertest.FinalStateTest">
-        <test-method status="PASS" signature="goToFinalStateWithException()[pri:0, instance:parsertest.FinalStateTest@5a2c25b4]" name="goToFinalStateWithException" duration-ms="0" started-at="2015-12-07T09:17:25Z" finished-at="2015-12-07T09:17:25Z">
+        <test-method status="PASS" signature="goToFinalStateWithException()[pri:0, instance:parsertest.FinalStateTest@21bc6f41]" name="goToFinalStateWithException" duration-ms="0" started-at="2015-12-07T09:36:50Z" finished-at="2015-12-07T09:36:50Z">
           <exception class="org.helm.notation2.parser.exceptionparser.FinalStateException">
             <message>
               <![CDATA[Additional characters after the final $]]>
@@ -1659,19 +1659,19 @@
         </test-method> <!-- goToFinalStateWithException -->
       </class> <!-- parsertest.FinalStateTest -->
       <class name="org.helm.notation2.parser.grouping.GroupingNotationTest">
-        <test-method status="PASS" signature="testConstructor()[pri:0, instance:org.helm.notation2.parser.grouping.GroupingNotationTest@3d921eac]" name="testConstructor" duration-ms="1" started-at="2015-12-07T09:17:26Z" finished-at="2015-12-07T09:17:26Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testConstructor -->
-        <test-method status="PASS" signature="testConstructorAmbiguityAND()[pri:0, instance:org.helm.notation2.parser.grouping.GroupingNotationTest@3d921eac]" name="testConstructorAmbiguityAND" duration-ms="0" started-at="2015-12-07T09:17:26Z" finished-at="2015-12-07T09:17:26Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testConstructorAmbiguityAND -->
-        <test-method status="PASS" signature="testConstructorAmbiguityOR()[pri:0, instance:org.helm.notation2.parser.grouping.GroupingNotationTest@3d921eac]" name="testConstructorAmbiguityOR" duration-ms="0" started-at="2015-12-07T09:17:26Z" finished-at="2015-12-07T09:17:26Z">
+        <test-method status="PASS" signature="testConstructorAmbiguityOR()[pri:0, instance:org.helm.notation2.parser.grouping.GroupingNotationTest@7c514cef]" name="testConstructorAmbiguityOR" duration-ms="1" started-at="2015-12-07T09:36:51Z" finished-at="2015-12-07T09:36:51Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testConstructorAmbiguityOR -->
-        <test-method status="PASS" signature="testConstructorWithException()[pri:0, instance:org.helm.notation2.parser.grouping.GroupingNotationTest@3d921eac]" name="testConstructorWithException" duration-ms="0" started-at="2015-12-07T09:17:26Z" finished-at="2015-12-07T09:17:26Z">
+        <test-method status="PASS" signature="testConstructor()[pri:0, instance:org.helm.notation2.parser.grouping.GroupingNotationTest@7c514cef]" name="testConstructor" duration-ms="0" started-at="2015-12-07T09:36:51Z" finished-at="2015-12-07T09:36:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testConstructor -->
+        <test-method status="PASS" signature="testConstructorAmbiguityAND()[pri:0, instance:org.helm.notation2.parser.grouping.GroupingNotationTest@7c514cef]" name="testConstructorAmbiguityAND" duration-ms="0" started-at="2015-12-07T09:36:51Z" finished-at="2015-12-07T09:36:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testConstructorAmbiguityAND -->
+        <test-method status="PASS" signature="testConstructorWithException()[pri:0, instance:org.helm.notation2.parser.grouping.GroupingNotationTest@7c514cef]" name="testConstructorWithException" duration-ms="0" started-at="2015-12-07T09:36:51Z" finished-at="2015-12-07T09:36:51Z">
           <exception class="org.helm.notation2.parser.exceptionparser.NotationException">
             <message>
               <![CDATA[Group Id is not correct: 1]]>
@@ -1712,7 +1712,7 @@
         </test-method> <!-- testConstructorWithException -->
       </class> <!-- org.helm.notation2.parser.grouping.GroupingNotationTest -->
       <class name="parsertest.simplepolymerssectiontest.BetweenParserTest">
-        <test-method status="PASS" signature="Reading$WithException()[pri:0, instance:parsertest.simplepolymerssectiontest.BetweenParserTest@3fcbd2c5]" name="Reading$WithException" duration-ms="1" started-at="2015-12-07T09:17:25Z" finished-at="2015-12-07T09:17:25Z">
+        <test-method status="PASS" signature="Reading$WithException()[pri:0, instance:parsertest.simplepolymerssectiontest.BetweenParserTest@6dc386df]" name="Reading$WithException" duration-ms="1" started-at="2015-12-07T09:36:50Z" finished-at="2015-12-07T09:36:50Z">
           <exception class="org.helm.notation2.parser.exceptionparser.SimplePolymerSectionException">
             <message>
               <![CDATA[Invalid syntax in simple polymer section: h]]>
@@ -1752,63 +1752,63 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Reading$WithException -->
-        <test-method status="PASS" signature="goToConnectionsParser()[pri:0, instance:parsertest.simplepolymerssectiontest.BetweenParserTest@3fcbd2c5]" name="goToConnectionsParser" duration-ms="1" started-at="2015-12-07T09:17:25Z" finished-at="2015-12-07T09:17:25Z">
+        <test-method status="PASS" signature="goToConnectionsParser()[pri:0, instance:parsertest.simplepolymerssectiontest.BetweenParserTest@6dc386df]" name="goToConnectionsParser" duration-ms="1" started-at="2015-12-07T09:36:50Z" finished-at="2015-12-07T09:36:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- goToConnectionsParser -->
-        <test-method status="PASS" signature="goToInlineAnnotationsParser()[pri:0, instance:parsertest.simplepolymerssectiontest.BetweenParserTest@3fcbd2c5]" name="goToInlineAnnotationsParser" duration-ms="0" started-at="2015-12-07T09:17:25Z" finished-at="2015-12-07T09:17:25Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- goToInlineAnnotationsParser -->
-        <test-method status="PASS" signature="goToSimplePolymersParser()[pri:0, instance:parsertest.simplepolymerssectiontest.BetweenParserTest@3fcbd2c5]" name="goToSimplePolymersParser" duration-ms="0" started-at="2015-12-07T09:17:25Z" finished-at="2015-12-07T09:17:25Z">
+        <test-method status="PASS" signature="goToSimplePolymersParser()[pri:0, instance:parsertest.simplepolymerssectiontest.BetweenParserTest@6dc386df]" name="goToSimplePolymersParser" duration-ms="1" started-at="2015-12-07T09:36:50Z" finished-at="2015-12-07T09:36:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- goToSimplePolymersParser -->
+        <test-method status="PASS" signature="goToInlineAnnotationsParser()[pri:0, instance:parsertest.simplepolymerssectiontest.BetweenParserTest@6dc386df]" name="goToInlineAnnotationsParser" duration-ms="0" started-at="2015-12-07T09:36:50Z" finished-at="2015-12-07T09:36:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- goToInlineAnnotationsParser -->
       </class> <!-- parsertest.simplepolymerssectiontest.BetweenParserTest -->
       <class name="org.helm.notation2.parser.JSONTest">
-        <test-method status="PASS" signature="testJSONTest()[pri:0, instance:org.helm.notation2.parser.JSONTest@1a016072]" name="testJSONTest" duration-ms="15" started-at="2015-12-07T09:17:26Z" finished-at="2015-12-07T09:17:26Z">
+        <test-method status="PASS" signature="testJSONTest()[pri:0, instance:org.helm.notation2.parser.JSONTest@7b3fce4d]" name="testJSONTest" duration-ms="15" started-at="2015-12-07T09:36:51Z" finished-at="2015-12-07T09:36:51Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testJSONTest -->
-        <test-method status="PASS" signature="testJSONTest2()[pri:0, instance:org.helm.notation2.parser.JSONTest@1a016072]" name="testJSONTest2" duration-ms="4" started-at="2015-12-07T09:17:26Z" finished-at="2015-12-07T09:17:26Z">
+        <test-method status="PASS" signature="testJSONTest2()[pri:0, instance:org.helm.notation2.parser.JSONTest@7b3fce4d]" name="testJSONTest2" duration-ms="5" started-at="2015-12-07T09:36:51Z" finished-at="2015-12-07T09:36:51Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testJSONTest2 -->
       </class> <!-- org.helm.notation2.parser.JSONTest -->
       <class name="parsertest.InlineAnnotationsParserTest">
-        <test-method status="PASS" signature="goToBetweenInlineConnectionParser()[pri:0, instance:parsertest.InlineAnnotationsParserTest@21bc6f41]" name="goToBetweenInlineConnectionParser" duration-ms="0" started-at="2015-12-07T09:17:25Z" finished-at="2015-12-07T09:17:25Z">
+        <test-method status="PASS" signature="goToBetweenInlineConnectionParser()[pri:0, instance:parsertest.InlineAnnotationsParserTest@734e6c9b]" name="goToBetweenInlineConnectionParser" duration-ms="1" started-at="2015-12-07T09:36:50Z" finished-at="2015-12-07T09:36:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- goToBetweenInlineConnectionParser -->
-        <test-method status="PASS" signature="goToBetweenParser()[pri:0, instance:parsertest.InlineAnnotationsParserTest@21bc6f41]" name="goToBetweenParser" duration-ms="0" started-at="2015-12-07T09:17:25Z" finished-at="2015-12-07T09:17:25Z">
+        <test-method status="PASS" signature="goToBetweenParser()[pri:0, instance:parsertest.InlineAnnotationsParserTest@734e6c9b]" name="goToBetweenParser" duration-ms="1" started-at="2015-12-07T09:36:50Z" finished-at="2015-12-07T09:36:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- goToBetweenParser -->
-        <test-method status="PASS" signature="goToSimplePolymersNotationParserParser()[pri:0, instance:parsertest.InlineAnnotationsParserTest@21bc6f41]" name="goToSimplePolymersNotationParserParser" duration-ms="0" started-at="2015-12-07T09:17:25Z" finished-at="2015-12-07T09:17:25Z">
+        <test-method status="PASS" signature="goToSimplePolymersNotationParserParser()[pri:0, instance:parsertest.InlineAnnotationsParserTest@734e6c9b]" name="goToSimplePolymersNotationParserParser" duration-ms="1" started-at="2015-12-07T09:36:50Z" finished-at="2015-12-07T09:36:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- goToSimplePolymersNotationParserParser -->
-        <test-method status="PASS" signature="keepThisState()[pri:0, instance:parsertest.InlineAnnotationsParserTest@21bc6f41]" name="keepThisState" duration-ms="0" started-at="2015-12-07T09:17:25Z" finished-at="2015-12-07T09:17:25Z">
+        <test-method status="PASS" signature="keepThisState()[pri:0, instance:parsertest.InlineAnnotationsParserTest@734e6c9b]" name="keepThisState" duration-ms="0" started-at="2015-12-07T09:36:50Z" finished-at="2015-12-07T09:36:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- keepThisState -->
       </class> <!-- parsertest.InlineAnnotationsParserTest -->
-      <class name="org.helm.notation2.parser.OutputWriterTest">
-        <test-method status="PASS" signature="testHELM2Output()[pri:0, instance:org.helm.notation2.parser.OutputWriterTest@1a48563c]" name="testHELM2Output" duration-ms="6" started-at="2015-12-07T09:17:25Z" finished-at="2015-12-07T09:17:25Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testHELM2Output -->
-        <test-method status="PASS" signature="testHELM2OutputExtended()[pri:0, instance:org.helm.notation2.parser.OutputWriterTest@1a48563c]" name="testHELM2OutputExtended" duration-ms="6" started-at="2015-12-07T09:17:25Z" finished-at="2015-12-07T09:17:25Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testHELM2OutputExtended -->
-      </class> <!-- org.helm.notation2.parser.OutputWriterTest -->
       <class name="org.helm.notation2.parser.polymer.EntityTest">
-        <test-method status="PASS" signature="testEntity()[pri:0, instance:org.helm.notation2.parser.polymer.EntityTest@701d66cd]" name="testEntity" duration-ms="1" started-at="2015-12-07T09:17:26Z" finished-at="2015-12-07T09:17:26Z">
+        <test-method status="PASS" signature="testEntity()[pri:0, instance:org.helm.notation2.parser.polymer.EntityTest@2384fd7a]" name="testEntity" duration-ms="1" started-at="2015-12-07T09:36:51Z" finished-at="2015-12-07T09:36:51Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testEntity -->
       </class> <!-- org.helm.notation2.parser.polymer.EntityTest -->
+      <class name="org.helm.notation2.parser.OutputWriterTest">
+        <test-method status="PASS" signature="testHELM2Output()[pri:0, instance:org.helm.notation2.parser.OutputWriterTest@701d66cd]" name="testHELM2Output" duration-ms="6" started-at="2015-12-07T09:36:50Z" finished-at="2015-12-07T09:36:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testHELM2Output -->
+        <test-method status="PASS" signature="testHELM2OutputExtended()[pri:0, instance:org.helm.notation2.parser.OutputWriterTest@701d66cd]" name="testHELM2OutputExtended" duration-ms="6" started-at="2015-12-07T09:36:50Z" finished-at="2015-12-07T09:36:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testHELM2OutputExtended -->
+      </class> <!-- org.helm.notation2.parser.OutputWriterTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
