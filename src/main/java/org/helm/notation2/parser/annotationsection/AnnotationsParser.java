@@ -72,7 +72,6 @@ public class AnnotationsParser implements State {
           _parser.notationContainer.addAnnotation(new AnnotationNotation(annotation));
         }
         LOG.info("Transition to FinalState:");
-// _parser.setState(new FinalState(_parser));
         _parser.setState(new FinalState());
       }
       else {
@@ -80,7 +79,18 @@ public class AnnotationsParser implements State {
         throw new AnnotationSectionException("Annotation section is not valid: " + annotation);
       }
     }
-
+ else if (cha == '|') {
+        if (checkBracketsParenthesis()) {
+          LOG.info(" new annotation is starting");
+          if (annotation != "") {
+            _parser.notationContainer.addAnnotation(new AnnotationNotation(annotation));
+          _parser.setState(new AnnotationsParser(_parser));
+          } else {
+            LOG.info("Annotation section is not valid: ");
+            throw new AnnotationSectionException("Annotation section is not valid: ");
+          }
+        }
+      }
     else {
       annotation += cha;
       if (cha == '{') {

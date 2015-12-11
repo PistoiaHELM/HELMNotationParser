@@ -139,7 +139,7 @@ public class HELMNotationParserUI extends JFrame {
     }
 
     /* read input */
-
+    System.out.println(helm_input);
     try {
       parser.parse(helm_input);
       writeOutputmessage();

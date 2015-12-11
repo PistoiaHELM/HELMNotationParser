@@ -47,7 +47,7 @@ public class HELM2Notation {
 
   private List<GroupingNotation> groupings = new ArrayList<GroupingNotation>();
   
-  private AnnotationNotation annotationSection = new AnnotationNotation();
+  private List<AnnotationNotation> annotationSection = new ArrayList<AnnotationNotation>();
 
 
 
@@ -189,7 +189,7 @@ public class HELM2Notation {
    * @param anno
    */
   public void addAnnotation(AnnotationNotation anno) {
-    annotationSection = anno;
+    annotationSection.add(anno);
   }
 
   /**
@@ -197,10 +197,14 @@ public class HELM2Notation {
    * 
    * @return annotation
    */
-  public AnnotationNotation getAnnotation() {
+  public List<AnnotationNotation> getListOfAnnotations() {
     return annotationSection;
   }
   
+  public AnnotationNotation getCurrentAnnotation() {
+    return annotationSection.get(annotationSection.size() - 1);
+  }
+
   /**
    * {@inheritDoc}
    */
@@ -214,8 +218,8 @@ public class HELM2Notation {
       output += "GroupingSection: " + groupings.toString() + "\n";
     }
 
-    if (annotationSection.getAnnotation() != null) {
-      output += annotationSection;
+    if (!(annotationSection.isEmpty())) {
+      output += "AnnotationSection: " + annotationSection.toString() + "\n";
     }
 
     return output;
@@ -316,8 +320,14 @@ public class HELM2Notation {
    * @return valid HELM2 String
    */
   private String annotationToHELM2(){
-    if ((annotationSection.getAnnotation() != "")) {
-      return annotationSection.getAnnotation();
+    if (!(annotationSection.isEmpty())) {
+      StringBuilder sb = new StringBuilder();
+      for (int i = 0; i < annotationSection.size(); i++) {
+        sb.append(annotationSection.get(i).toHELM2() + "|");
+      }
+
+      sb.setLength(sb.length() - 1);
+      return sb.toString();
     }
     return "";
   }

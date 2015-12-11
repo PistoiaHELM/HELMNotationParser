@@ -63,5 +63,11 @@ public final class AnnotationNotation {
     return "Annotation: " + annotation;
   }
 
+  /**
+   * @return
+   */
+  public String toHELM2() {
+    return annotation;
+  }
 
 }

@@ -41,35 +41,49 @@ public class AnnotationParserTest {
 		
 		@Test 
   public void keepThisState() throws ExceptionState, IOException, JDOMException {
-			parser = new StateMachineParser();
-			parser.setState(new AnnotationsParser(parser));
-			parser.doAction('H');
+    parser = new StateMachineParser();
+    parser.setState(new AnnotationsParser(parser));
+    parser.doAction('H');
 			
-			if(!(parser.getState() instanceof AnnotationsParser)){
-				throw new AnnotationSectionException("");
-			}  
-		}
+    if (!(parser.getState() instanceof AnnotationsParser)) {
+      throw new AnnotationSectionException("");
+    }
+  }
 		
+  @Test 
+  public void keepThisStateSecondAnnotation() throws ExceptionState, IOException, JDOMException {
+    parser = new StateMachineParser();
+    parser.setState(new AnnotationsParser(parser));
+    String test = "H|";
+    for (int i = 0; i < test.length(); ++i) {
+      parser.doAction(test.charAt(i));
+    }
+      
+    if (!(parser.getState() instanceof AnnotationsParser)) {
+      throw new AnnotationSectionException("");
+    }
+  }
+
 		@Test(expectedExceptions = AnnotationSectionException.class)
   public void keepToFinalStateWithException() throws ExceptionState, IOException, JDOMException {
-			parser = new StateMachineParser();
-			parser.setState(new AnnotationsParser(parser));
-			String test = "H($";
-			for(int i = 0; i<test.length(); ++i){
-				parser.doAction(test.charAt(i));
-			}
+    parser = new StateMachineParser();
+    parser.setState(new AnnotationsParser(parser));
+    String test = "H($";
+    for (int i = 0; i < test.length(); ++i) {
+      parser.doAction(test.charAt(i));
 		}
+  }
 		
 		
 		@Test 
   public void goToFinalState() throws ExceptionState, IOException, JDOMException {
-			parser = new StateMachineParser();
-			parser.setState(new AnnotationsParser(parser));
-			parser.doAction('$');
+    parser = new StateMachineParser();
+    parser.setState(new AnnotationsParser(parser));
+    parser.doAction('$');
 			
-			if(!(parser.getState() instanceof FinalState)){
-				throw new SimplePolymerSectionException("");
-			}  
-		}
+    if (!(parser.getState() instanceof FinalState)) {
+      throw new SimplePolymerSectionException("");
+    }
+  }
 
 }

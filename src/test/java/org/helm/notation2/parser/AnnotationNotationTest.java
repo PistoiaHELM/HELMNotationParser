@@ -21,6 +21,7 @@ import java.io.IOException;
 
 import org.helm.notation2.parser.exceptionparser.ExceptionState;
 import org.jdom2.JDOMException;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 /**
@@ -42,8 +43,8 @@ public class AnnotationNotationTest {
     for (int i = 0; i < test.length(); ++i) {
       parser.doAction(test.charAt(i));
     }
-
-    System.out.println(parser.notationContainer.getAnnotation());
+    Assert.assertEquals(parser.notationContainer.getListOfAnnotations().size(), 2);
+    Assert.assertEquals(parser.notationContainer.getListOfAnnotations().get(0).toHELM2(), "PEPTIDE1{Type:Peptide,Name:Gold-conjugated peptide}");
 
   }
 
