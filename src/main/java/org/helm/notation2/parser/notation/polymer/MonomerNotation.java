@@ -91,8 +91,13 @@ public abstract class MonomerNotation {
    * @param str annotation
    */
   public void setAnnotation(String str) {
-    annotation = str;
-    isAnnotationHere = true;
+    if (str != null) {
+      annotation = str;
+      isAnnotationHere = true;
+    } else {
+      annotation = null;
+      isAnnotationHere = false;
+    }
   }
 
 

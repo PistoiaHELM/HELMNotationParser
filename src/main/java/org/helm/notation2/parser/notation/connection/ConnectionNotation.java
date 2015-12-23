@@ -276,4 +276,9 @@ public final class ConnectionNotation {
 
   }
 
+  public void setAnnotation(String notation) {
+    annotation = notation;
+    isAnnotationHere = true;
+  }
+
 }

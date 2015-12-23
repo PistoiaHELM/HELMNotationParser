@@ -32,6 +32,7 @@ import org.helm.notation2.parser.notation.grouping.GroupingNotation;
 import org.helm.notation2.parser.notation.polymer.PolymerNotation;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.databind.ObjectMapper;
 
 /**
  * HELM2Notation this class contains all notation objects for HELM2
@@ -201,6 +202,7 @@ public class HELM2Notation {
     return annotationSection;
   }
   
+  @JsonIgnore
   public AnnotationNotation getCurrentAnnotation() {
     return annotationSection.get(annotationSection.size() - 1);
   }
@@ -251,9 +253,6 @@ public class HELM2Notation {
     return output;
   }
 
-  public String toHELM1(){
-    return "";
-  }
 
 
 
@@ -395,5 +394,7 @@ public class HELM2Notation {
 
     return null;
   }
+
+
 
 }

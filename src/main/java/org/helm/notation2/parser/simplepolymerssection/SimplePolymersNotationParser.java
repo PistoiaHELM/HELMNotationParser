@@ -84,7 +84,7 @@ public class SimplePolymersNotationParser implements State {
 
       if (monomer != "") {
         if (_parser.isPeptideOrRna()) {
-          logger.info("Monomer unit is read:");
+          logger.info("Monomer unit is read: " + monomer);
           logger.info("New monomer unit is starting:");
           _parser.notationContainer.getCurrentPolymer().getPolymerElements().addMonomerNotation(monomer);
           _parser.setState(new SimplePolymersNotationParser(_parser));
@@ -102,7 +102,7 @@ public class SimplePolymersNotationParser implements State {
     /* an additional annotation is given */
     else if (cha == '"' && checkBracketsParenthesis()) {
       if (monomer != "") {
-        logger.info("Monomer unit is read:");
+        logger.info("Monomer unit is read: " + monomer);
         logger.info("Annotation for monomer unit is starting:");
         _parser.notationContainer.getCurrentPolymer().getPolymerElements().addMonomerNotation(monomer);
         _parser.setState(new InlineAnnotationsParser(_parser, 11));
@@ -117,7 +117,7 @@ public class SimplePolymersNotationParser implements State {
 
       if (monomer != "") {
         if (_parser.isPeptideOrRna()) {
-          logger.info("Monomer unit is read:");
+          logger.info("Monomer unit is read: " + monomer);
           _parser.notationContainer.getCurrentPolymer().getPolymerElements().addMonomerNotation(monomer);
           _parser.setState(new RepeatingMonomerParser(_parser));
         } else {

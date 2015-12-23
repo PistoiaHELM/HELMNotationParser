@@ -94,11 +94,11 @@ public class StateMachineParser implements State {
    * @return true if the ID is valid, false otherwise
    */
   public boolean checkPolymerId(String polymer_id) {
-    LOG.debug("Validation of polymerID:");
+    LOG.debug("Validation of polymerID: " + polymer_id);
     String pattern = "PEPTIDE[1-9][0-9]*|RNA[1-9][0-9]*|CHEM[1-9][0-9]*|BLOB[1-9][0-9]*";
 
     if (polymer_id.matches(pattern)) {
-      LOG.debug("PolymerID is valid:");
+      LOG.debug("PolymerID is valid: " + polymer_id);
       return true;
     }
 
