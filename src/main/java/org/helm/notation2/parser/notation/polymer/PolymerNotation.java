@@ -87,7 +87,9 @@ public final class PolymerNotation {
   public PolymerNotation(PolymerEntity poly, PolymerElements ele, String annotation) {
     this.polymerID = poly;
     this.elements = ele;
-    setAnnotation(annotation);
+    if (annotation != null) {
+      setAnnotation(annotation);
+    }
   }
 
   /**

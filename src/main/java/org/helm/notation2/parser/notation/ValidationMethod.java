@@ -89,13 +89,10 @@ public final class ValidationMethod {
 
     else {
       if (type == "RNA") {
-        if (str.startsWith("[") && str.endsWith("]")) {
-          mon = new MonomerNotationUnit(str, type);
-        }
-
-        else {
+        // if (str.startsWith("[") && str.endsWith("]")) {
+        // mon = new MonomerNotationUnitRNA(str, type);
+        // }
           mon = new MonomerNotationUnitRNA(str, type);
-        }
       } else {
         mon = new MonomerNotationUnit(str, type);
       }
