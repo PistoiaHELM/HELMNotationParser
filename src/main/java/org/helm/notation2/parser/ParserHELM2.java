@@ -53,7 +53,7 @@ public class ParserHELM2 {
 
     parser = new StateMachineParser();
     test = test.trim();
-    if (test.substring(test.length() - 4).matches("V2\\.0")) {
+    if (test.substring(test.length() - 4).matches("V2\\.0") || test.substring(test.length() - 4).matches("v2\\.0")) {
 
       for (int i = 0; i < test.length() - 4; i++) {
         parser.doAction(test.charAt(i));
