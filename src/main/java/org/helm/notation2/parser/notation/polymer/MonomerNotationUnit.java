@@ -94,12 +94,12 @@ public class MonomerNotationUnit extends MonomerNotation {
        */
       try{
         int integer_value = Integer.parseInt(count);
-        if (integer_value < 1) {
+      if (integer_value < 1 || integer_value > 1) {
           throw new HELM1ConverterException("Count of MonomerNotationUnit was not possible to downgrade");
         }
-        for (int i = 0; i < integer_value - 1; i++) {
-          text += "." + unit;
-        }
+      // for (int i = 0; i < integer_value - 1; i++) {
+      // text += "." + unit;
+      // }
       } catch (NumberFormatException e) {
         throw new HELM1ConverterException("Count of MonomerNotationUnit was not possible to downgrade");
       }

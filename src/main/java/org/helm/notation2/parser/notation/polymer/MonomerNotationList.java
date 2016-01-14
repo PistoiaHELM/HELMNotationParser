@@ -69,27 +69,35 @@ public class MonomerNotationList extends MonomerNotation {
     return "(" + unit + ")";
   }
 
+  /**
+   * {@inheritDoc}
+   */
+  @Override
   public String toHELM() throws HELM1ConverterException {
-    /* combine the single compounts together */
-    String result = "";
-    String unit = "";
-    for (int i = 0; i < list.size(); i++) {
-      unit += list.get(i).toHELM() + ".";
-    }
-
-    unit = unit.substring(0, unit.length() - 1);
-
-    try {
-      int integer_value = Integer.parseInt(count);
-      result = unit;
-      for (int i = 0; i < integer_value - 1; i++) {
-        result = result + "." + unit;
-      }
-      return result;
-    } catch (NumberFormatException e) {
-      throw new HELM1ConverterException("Can't be downgraded to HELM1-Format");
-    }
-
+    throw new HELM1ConverterException("Can't be downgraded to HELM1-Format");
   }
+
+// public String toHELM() throws HELM1ConverterException {
+// /* combine the single compounds together */
+// String result = "";
+// String unit = "";
+// for (int i = 0; i < list.size(); i++) {
+// unit += list.get(i).toHELM() + ".";
+// }
+//
+// unit = unit.substring(0, unit.length() - 1);
+//
+// try {
+// int integer_value = Integer.parseInt(count);
+// result = unit;
+// for (int i = 0; i < integer_value - 1; i++) {
+// result = result + "." + unit;
+// }
+// return result;
+// } catch (NumberFormatException e) {
+// throw new HELM1ConverterException("Can't be downgraded to HELM1-Format");
+// }
+//
+// }
 
 }
