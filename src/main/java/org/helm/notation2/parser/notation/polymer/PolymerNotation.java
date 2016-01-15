@@ -204,7 +204,8 @@ public final class PolymerNotation {
     int lastValue = -1;
     for (MonomerNotation element : elements.getListOfElements()) {
       try {
-        multiply = Integer.parseInt(element.getCount());
+        // multiply = Integer.parseInt(element.getCount());
+        multiply = 1;
         if (multiply < 1) {
           multiply = 1;
         }
@@ -212,20 +213,20 @@ public final class PolymerNotation {
         multiply = 1;
       }
 
-      if (element instanceof MonomerNotationList) {
-        for (int z = 0; z < multiply; z++) {
-          for (MonomerNotation monomerNotationUnit : ((MonomerNotationList) element).getListofMonomerUnits()) {
-            value++;
-            lastValue++;
-            mapOfMonomers.put(value, monomerNotationUnit);
-            if (lastValue != 0) {
-              mapIntraConnection.put(lastValue + "$R2", "");
-              mapIntraConnection.put(value + "$R1", "");
-            }
-          }
-        }
-      }
- else if (element instanceof MonomerNotationUnitRNA) {
+//      if (element instanceof MonomerNotationList) {
+//        for (int z = 0; z < multiply; z++) {
+//          for (MonomerNotation monomerNotationUnit : ((MonomerNotationList) element).getListofMonomerUnits()) {
+//            value++;
+//            lastValue++;
+//            mapOfMonomers.put(value, monomerNotationUnit);
+//            if (lastValue != 0) {
+//              mapIntraConnection.put(lastValue + "$R2", "");
+//              mapIntraConnection.put(value + "$R1", "");
+//            }
+//          }
+//        }
+//      }
+      if (element instanceof MonomerNotationUnitRNA) {
         for (int z = 0; z < multiply; z++) {
           lastValue = value;
           for (MonomerNotationUnit monomerNotationUnit : ((MonomerNotationUnitRNA) element).getContents()) {
