@@ -35,12 +35,12 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * PolymerElements
- * 
+ *
  * @author hecht
  */
 public abstract class PolymerElements {
 
-  protected List<MonomerNotation> listMonomerNotations;
+  public List<MonomerNotation> listMonomerNotations;
 
   protected HELMEntity entity;
 
@@ -50,14 +50,14 @@ public abstract class PolymerElements {
 
   /**
    * method to get a list of all elements
-   * 
+   *
    * @return
    */
   public abstract List<MonomerNotation> getListOfElements();
 
   /**
    * method to add a monomer to the polymer
-   * 
+   *
    * @param str Monomer
    * @throws SimplePolymerSectionException
    * @throws JDOMException
@@ -69,7 +69,7 @@ public abstract class PolymerElements {
 
   /**
    * method to get the current monomer
-   * 
+   *
    * @return current Monomer
    */
   @JsonIgnore
@@ -77,14 +77,14 @@ public abstract class PolymerElements {
 
   /**
    * method to change the current Monomer
-   * 
+   *
    * @param not MonomerNotation
    */
   public abstract void changeMonomerNotation(MonomerNotation not);
 
   /**
    * method to generate a valid HELM2 of this object
-   * 
+   *
    * @return valid HELM2
    */
   public String toHELM2() {

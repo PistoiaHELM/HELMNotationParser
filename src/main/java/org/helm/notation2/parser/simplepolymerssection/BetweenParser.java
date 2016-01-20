@@ -32,8 +32,9 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * BetweenParser class represents an interstate between a finished simple polymer description and all possible states
- * 
+ * BetweenParser class represents an interstate between a finished simple
+ * polymer description and all possible states
+ *
  * @author hecht
  */
 public class BetweenParser implements State {
@@ -44,7 +45,7 @@ public class BetweenParser implements State {
 
   /**
    * Constructs with the state macchine parser
-   * 
+   *
    * @param pParser StateMachineParser
    */
   public BetweenParser(StateMachineParser pParser) {
@@ -62,24 +63,16 @@ public class BetweenParser implements State {
     if (cha == '\"') {
       LOG.info("Annotation for simple polymer is starting:");
       _parser.setState(new InlineAnnotationsParser(_parser, 1));
-    }
-
-    /* a new unit is starting */
-    else if (cha == '|') {
+    } /* a new unit is starting */ else if (cha == '|') {
       LOG.info("One simple polymer is finished:");
       LOG.info("New simple polymer is starting:");
       _parser.setState(new SimplePolymersParser(_parser));
-    }
-
-    /* a new section is starting */
-    else if (cha == '$') {
+    } /* a new section is starting */ else if (cha == '$') {
       LOG.info("One simple polymer is finished:");
       LOG.info("Simple polymer section is finished:");
       LOG.info("Transition to connection section:");
       _parser.setState(new ConnectionsParser(_parser));
-    }
-
-    else {
+    } else {
       LOG.error("Invalid syntax in simple polymer section: " + cha);
       throw new SimplePolymerSectionException("Invalid syntax in simple polymer section: " + cha);
     }

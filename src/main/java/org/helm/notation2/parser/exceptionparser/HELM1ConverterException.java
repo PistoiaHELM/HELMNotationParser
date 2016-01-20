@@ -23,17 +23,18 @@
  */
 package org.helm.notation2.parser.exceptionparser;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 /**
- * {@code HELM1ConverterException}
- * TODO comment me
- * 
- * @author 
+ * {@code HELM1ConverterException} TODO comment me
+ *
+ * @author
  * @version $Id$
  */
 public class HELM1ConverterException extends Exception {
+
+  /**
+   *
+   */
+  private static final long serialVersionUID = 1L;
 
   public HELM1ConverterException(String message) {
     super(message);

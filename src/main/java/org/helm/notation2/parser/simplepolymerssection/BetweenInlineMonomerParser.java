@@ -31,8 +31,9 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * BetweenInlineMonomerParser class to represent the state between a finished monomer and all possible states
- * 
+ * BetweenInlineMonomerParser class to represent the state between a finished
+ * monomer and all possible states
+ *
  * @author hecht
  */
 public class BetweenInlineMonomerParser implements State {
@@ -42,7 +43,7 @@ public class BetweenInlineMonomerParser implements State {
 
   /**
    * Constructs with the state machine parser
-   * 
+   *
    * @param pParser StateMachineParser
    */
   public BetweenInlineMonomerParser(StateMachineParser pParser) {
@@ -59,19 +60,14 @@ public class BetweenInlineMonomerParser implements State {
       LOG.info("monomer unit is finished:");
       LOG.info("new monomer unit is starting:");
       _parser.setState(new SimplePolymersNotationParser(_parser));
-    }
-    /* polymer is finished */
-    else if (cha == '}') {
+    } /* polymer is finished */ else if (cha == '}') {
       LOG.info("simple polymer is finished");
       _parser.setState(new BetweenParser(_parser));
-    }
-
-    else {
+    } else {
       LOG.error("Error in the simple polymers notation section");
       throw new SimplePolymerSectionException("Error in the simple polymers notation section");
     }
 
   }
-
 
 }

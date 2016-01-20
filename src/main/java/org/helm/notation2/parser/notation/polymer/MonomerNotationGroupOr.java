@@ -31,14 +31,14 @@ import org.jdom2.JDOMException;
 
 /**
  * MonomerNotationGroupOr class to represent an or group
- * 
+ *
  * @author hecht
  */
 public class MonomerNotationGroupOr extends MonomerNotationGroup {
 
   /**
    * Constructs with the given String an Or group
-   * 
+   *
    * @param str details about the group
    * @param type type of the current polymer
    * @throws JDOMException
@@ -111,7 +111,7 @@ public class MonomerNotationGroupOr extends MonomerNotationGroup {
     notation.setLength(notation.length() - 1);
     notation.append(")");
 
-    if (isDefault == false) {
+    if (!(isDefault)) {
       notation.append("'" + count + "'");
     }
 

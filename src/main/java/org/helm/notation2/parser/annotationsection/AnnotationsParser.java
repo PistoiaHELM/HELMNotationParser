@@ -32,8 +32,9 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * AnnotationsParser class to read all characters in the last section, annotation section
- * 
+ * AnnotationsParser class to read all characters in the last section,
+ * annotation section
+ *
  * @author hecht
  */
 public class AnnotationsParser implements State {
@@ -58,7 +59,7 @@ public class AnnotationsParser implements State {
 
   /**
    * Constructor with the state machine parser
-   * 
+   *
    * @param pParser
    */
   public AnnotationsParser(StateMachineParser pParser) {
@@ -79,25 +80,22 @@ public class AnnotationsParser implements State {
         }
         LOG.info("Transition to FinalState:");
         _parser.setState(new FinalState());
-      }
-      else {
+      } else {
         LOG.info("Annotation section is not valid: " + annotation);
         throw new AnnotationSectionException("Annotation section is not valid: " + annotation);
       }
-    }
- else if (cha == '|') {
-        if (checkBracketsParenthesis()) {
-          LOG.info(" new annotation is starting");
-          if (annotation != "") {
-            _parser.notationContainer.addAnnotation(new AnnotationNotation(annotation));
+    } else if (cha == '|') {
+      if (checkBracketsParenthesis()) {
+        LOG.info(" new annotation is starting");
+        if (annotation != "") {
+          _parser.notationContainer.addAnnotation(new AnnotationNotation(annotation));
           _parser.setState(new AnnotationsParser(_parser));
-          } else {
-            LOG.info("Annotation section is not valid: ");
-            throw new AnnotationSectionException("Annotation section is not valid: ");
-          }
+        } else {
+          LOG.info("Annotation section is not valid: ");
+          throw new AnnotationSectionException("Annotation section is not valid: ");
         }
       }
-    else {
+    } else {
       annotation += cha;
       if (cha == '{') {
         curlyBracketCounterOpen++;
@@ -123,7 +121,7 @@ public class AnnotationsParser implements State {
 
   /**
    * method to check if all open brackets are closed
-   * 
+   *
    * @return true if all open brackets are close, false otherwise
    */
   private boolean checkBracketsParenthesis() {

@@ -32,8 +32,9 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * ConnectionsReadSecondIDParser class to parse the id of the second partner of the connection
- * 
+ * ConnectionsReadSecondIDParser class to parse the id of the second partner of
+ * the connection
+ *
  * @author hecht
  */
 public class ConnectionsReadSecondIDParser implements State {
@@ -45,7 +46,7 @@ public class ConnectionsReadSecondIDParser implements State {
 
   /**
    * Constructs with the state machine parser
-   * 
+   *
    * @param pParser
    */
   public ConnectionsReadSecondIDParser(StateMachineParser pParser) {
@@ -58,7 +59,10 @@ public class ConnectionsReadSecondIDParser implements State {
   @Override
   public void doAction(char cha) throws ExceptionState {
 
-    /* third part of the connection is starting. It contains information about the connection in detail */
+    /*
+     * third part of the connection is starting. It contains information about
+     * the connection in detail
+     */
     if (cha == ',') {
       if (_parser.checkPolymeridConnection(targetpolymerid)) {
         LOG.info("Target polmyer ID is read:");
@@ -66,16 +70,12 @@ public class ConnectionsReadSecondIDParser implements State {
         _parser.notationContainer.changeConnectionNotation(new ConnectionNotation(current.getSourceId(),
             targetpolymerid));
         _parser.setState(new ConnectionsDetailsParser(_parser));
-      }
-
-      else {
+      } else {
         LOG.error("Target polymer ID is not correct in the connection section: " + targetpolymerid);
         throw new ConnectionSectionException("Target polymer ID is not correct in the connection section: "
             + targetpolymerid);
       }
-    }
-    /* Read the id of the target polymer id */
-    else {
+    } /* Read the id of the target polymer id */ else {
       targetpolymerid += cha;
     }
   }

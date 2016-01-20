@@ -33,8 +33,9 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * ConnectionsParser class to parse the ID of the first partner of the connection
- * 
+ * ConnectionsParser class to parse the ID of the first partner of the
+ * connection
+ *
  * @author hecht
  */
 public class ConnectionsParser implements State {
@@ -50,7 +51,7 @@ public class ConnectionsParser implements State {
 
   /**
    * Constructs with the state machine parser
-   * 
+   *
    * @param pParser
    */
   public ConnectionsParser(StateMachineParser pParser) {
@@ -59,7 +60,7 @@ public class ConnectionsParser implements State {
 
   /**
    * {@inheritDoc}
-   * 
+   *
    * @throws NotationException
    */
   @Override
@@ -76,9 +77,7 @@ public class ConnectionsParser implements State {
         LOG.error("Missing target polymer ID: ");
         throw new ConnectionSectionException("Missing target polymer id: ");
       }
-    }
-    /* target polymer ID is starting */
-    else if (cha == ',' && checkBracketsParenthesis()) {
+    } /* target polymer ID is starting */ else if (cha == ',' && checkBracketsParenthesis()) {
       if (_parser.checkPolymeridConnection(sourcepolymerid)) {
         LOG.info("Target polymer ID is read:");
         _parser.notationContainer.addConnection(new ConnectionNotation(sourcepolymerid));
@@ -89,9 +88,7 @@ public class ConnectionsParser implements State {
             + sourcepolymerid);
       }
 
-    }
-
-    else {
+    } else {
       sourcepolymerid += cha;
       if (cha == '(') {
         parenthesisCounterOpen += 1;
@@ -105,7 +102,7 @@ public class ConnectionsParser implements State {
 
   /**
    * method to check if all open brackets are closed
-   * 
+   *
    * @return boolean
    */
   private boolean checkBracketsParenthesis() {

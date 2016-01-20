@@ -38,7 +38,7 @@ import org.slf4j.LoggerFactory;
 
 /**
  * ConnectionsDetailsParser class to parse the details about the connection
- * 
+ *
  * @author hecht
  */
 public class ConnectionsDetailsParser implements State {
@@ -50,7 +50,7 @@ public class ConnectionsDetailsParser implements State {
 
   /**
    * Constructs with the state machine parser
-   * 
+   *
    * @param pParser
    */
   public ConnectionsDetailsParser(StateMachineParser pParser) {
@@ -65,66 +65,51 @@ public class ConnectionsDetailsParser implements State {
       NotationException, IOException, JDOMException {
     /* a new connection is starting */
     if (cha == '|') {
-      if (_parser.checkDetailsConnections(details))
-      {
+      if (_parser.checkDetailsConnections(details)) {
         LOG.info("A new connection is starting:");
         ConnectionNotation current =
             _parser.notationContainer.getCurrentConnection();
         _parser.notationContainer.changeConnectionNotation(new ConnectionNotation(
             current.getSourceId(),
             current.getTargetId(), details));
-        ;
+
         _parser.setState(new ConnectionsParser(_parser));
-      }
-      else {
+      } else {
         LOG.error("Details about the connection are not corret: " + details);
         throw new ConnectionSectionException("Details about the connection are not correct: " + details);
       }
 
-    }
-
-    /* connection section is finished */
-    else if (cha == '$') {
-      if (_parser.checkDetailsConnections(details))
-      {
+    } /* connection section is finished */ else if (cha == '$') {
+      if (_parser.checkDetailsConnections(details)) {
         LOG.info("Connection section is finished:");
         ConnectionNotation current =
             _parser.notationContainer.getCurrentConnection();
         _parser.notationContainer.changeConnectionNotation(new ConnectionNotation(
             current.getSourceId(),
             current.getTargetId(), details));
-        ;
+
         LOG.info("Transition to group section");
         _parser.setState(new GroupingParser(_parser));
 
-      }
-      else {
+      } else {
         throw new ConnectionSectionException("Details about the connection are not correct: " + details);
       }
-    }
-
-    /* start of an annotation */
-    else if (cha == '\"') {
-      if (_parser.checkDetailsConnections(details))
-      {
+    } /* start of an annotation */ else if (cha == '\"') {
+      if (_parser.checkDetailsConnections(details)) {
         LOG.info("Add annotation to connection:");
         ConnectionNotation current =
             _parser.notationContainer.getCurrentConnection();
         _parser.notationContainer.changeConnectionNotation(new ConnectionNotation(
             current.getSourceId(),
             current.getTargetId(), details));
-        ;
+
         _parser.setState(new InlineAnnotationsParser(_parser, 2));
-      }
-      else {
+      } else {
         LOG.error("Details about the connection are not corret: " + details);
         throw new ConnectionSectionException("Details about the connection are not correct: " + details);
       }
 
-    }
-
-    /* add characters to connection description */
-    else {
+    } /* add characters to connection description */ else {
       details += cha;
     }
   }

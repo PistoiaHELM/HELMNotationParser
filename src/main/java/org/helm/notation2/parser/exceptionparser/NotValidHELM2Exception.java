@@ -24,19 +24,25 @@
 package org.helm.notation2.parser.exceptionparser;
 
 /**
- * NotValidHELM2Exception class to represent the exception that a not valid HELM2 string is present
- * 
+ * NotValidHELM2Exception class to represent the exception that a not valid
+ * HELM2 string is present
+ *
  * @author hecht
  */
 public class NotValidHELM2Exception extends ExceptionState {
 
   /**
+   *
+   */
+  private static final long serialVersionUID = 1L;
+
+  /**
    * Constructs with the error message
-   * 
+   *
    * @param message
    */
-	public NotValidHELM2Exception(String message) {
-		super(message);
-	}
+  public NotValidHELM2Exception(String message) {
+    super(message);
+  }
 
 }

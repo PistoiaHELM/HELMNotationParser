@@ -31,7 +31,7 @@ import org.helm.notation2.parser.notation.polymer.GroupEntity;
 
 /**
  * GroupingNotation
- * 
+ *
  * @author hecht
  */
 public final class GroupingNotation {
@@ -42,7 +42,7 @@ public final class GroupingNotation {
 
   /**
    * Constructs with the given String
-   * 
+   *
    * @param str Group ID
    * @throws NotationException
    */
@@ -56,7 +56,7 @@ public final class GroupingNotation {
 
   /**
    * Constructs with the GroupEntity and details about the group elements
-   * 
+   *
    * @param group GroupEntity
    * @param ambi details about the group elements
    * @throws NotationException
@@ -68,7 +68,7 @@ public final class GroupingNotation {
 
   /**
    * method to get details about the group elements
-   * 
+   *
    * @return GroupingAmbiguity
    */
   public GroupingAmbiguity getAmbiguity() {
@@ -77,7 +77,7 @@ public final class GroupingNotation {
 
   /**
    * method to add ambiguity to the group
-   * 
+   *
    * @param a details about the group elements
    * @throws NotationException
    */
@@ -88,39 +88,36 @@ public final class GroupingNotation {
     /* mixture */
     if (m.find()) {
       ambiguity = new GroupingMixture(a);
-    }
-
-    /* or case */
-    else {
+    } /* or case */ else {
       ambiguity = new GroupingOr(a);
-
     }
 
   }
 
   /**
    * method to get the groupID
-   * 
+   *
    * @return groupID
    */
   public GroupEntity getGroupID() {
     return groupID;
   }
+
   /**
    * {@inheritDoc}
    */
+  @Override
   public String toString() {
     return "GroupID: " + groupID + " " + ambiguity.toString();
   }
 
   /**
    * method to get a valid HELM2 notation of the group
-   * 
+   *
    * @return valid HELM2 notation
    */
-  public String toHELM2(){
+  public String toHELM2() {
     return groupID + "(" + ambiguity.toHELM2() + ")";
   }
-
 
 }

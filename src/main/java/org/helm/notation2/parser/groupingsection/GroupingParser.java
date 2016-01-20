@@ -34,19 +34,19 @@ import org.slf4j.LoggerFactory;
 
 /**
  * GroupingParser class to parse the group id
- * 
+ *
  * @author hecht
  */
 public class GroupingParser implements State {
   private StateMachineParser _parser;
 
-  private String group_id = "";
+  private String groupId = "";
 
   private static final Logger LOG = LoggerFactory.getLogger(GroupingParser.class);
 
   /**
    * Constructs with the state machine parser
-   * 
+   *
    * @param pParser
    */
   public GroupingParser(StateMachineParser pParser) {
@@ -55,39 +55,35 @@ public class GroupingParser implements State {
 
   /**
    * {@inheritDoc}
-   * 
+   *
    * @throws NotationException
    */
   @Override
   public void doAction(char cha) throws GroupingSectionException, NotationException {
-    /* group section is finished: section was empty: annotation section starts */
+    /*
+     * group section is finished: section was empty: annotation section starts
+     */
     if (cha == '$') {
       /* no details */
-      if (group_id == "" && _parser.notationContainer.getListOfGroupings().size() == 0) {
+      if (groupId == "" && _parser.notationContainer.getListOfGroupings().size() == 0) {
         LOG.info("Group section is empty:");
         LOG.info("Transition to annotation section:");
         _parser.setState(new AnnotationsParser(_parser));
       } else {
-        throw new GroupingSectionException("Missing details about the group: " + group_id);
+        throw new GroupingSectionException("Missing details about the group: " + groupId);
       }
 
-    }
-
-    /* detailed information about the group is starting */
-    else if (cha == '(') {
-      if (_parser.checkGroupId(group_id)) {
+    } /* detailed information about the group is starting */ else if (cha == '(') {
+      if (_parser.checkGroupId(groupId)) {
         LOG.info("Group ID is read:");
-        _parser.notationContainer.addGrouping(new GroupingNotation(group_id));
+        _parser.notationContainer.addGrouping(new GroupingNotation(groupId));
         _parser.setState(new GroupingDetailedInformationParser(_parser));
       } else {
-        LOG.error("Invalid group ID: " + group_id);
-        throw new GroupingSectionException("Invalid group Id: " + group_id);
+        LOG.error("Invalid group ID: " + groupId);
+        throw new GroupingSectionException("Invalid group Id: " + groupId);
       }
-    }
-
-    /* add characters to the group id */
-    else {
-      group_id += cha;
+    } /* add characters to the group id */ else {
+      groupId += cha;
     }
 
   }

@@ -28,16 +28,16 @@ import java.util.List;
 
 /**
  * GroupingAmbiguity represents a single group in the grouping section
- * 
+ *
  * @author hecht
  */
 public abstract class GroupingAmbiguity {
 
-  List<GroupingElement> elements = new ArrayList<GroupingElement>();
+  protected List<GroupingElement> elements = new ArrayList<GroupingElement>();
 
   /**
    * method to add a element to the group
-   * 
+   *
    * @param e new element of the group
    */
   public void addElement(GroupingElement e) {
@@ -46,7 +46,7 @@ public abstract class GroupingAmbiguity {
 
   /**
    * method to get all elements of this group
-   * 
+   *
    * @return list of all elements in the group
    */
   public List<GroupingElement> getListOfElements() {
@@ -56,13 +56,14 @@ public abstract class GroupingAmbiguity {
   /**
    * {@inheritDoc}
    */
+  @Override
   public String toString() {
     return elements.toString();
   }
 
   /**
    * method to get a valid HELM2 notation of the group
-   * 
+   *
    * @return valid HELM2
    */
   public abstract String toHELM2();

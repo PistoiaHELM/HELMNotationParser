@@ -31,8 +31,9 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * BetweenGroupingParser class to represent the interstate between a finished group and all possible states
- * 
+ * BetweenGroupingParser class to represent the interstate between a finished
+ * group and all possible states
+ *
  * @author hecht
  */
 public class BetweenGroupingParser implements State {
@@ -42,7 +43,7 @@ public class BetweenGroupingParser implements State {
 
   /**
    * Constructs with the state machine parser
-   * 
+   *
    * @param pParser
    */
   public BetweenGroupingParser(StateMachineParser pParser) {
@@ -58,18 +59,12 @@ public class BetweenGroupingParser implements State {
     if (cha == '|') {
       LOG.info("A new group is starting;");
       _parser.setState(new GroupingParser(_parser));
-    }
-
-    /* group section is finished: start of the annotation section */
-    else if (cha == '$') {
+    } /* group section is finished: start of the annotation section */ else if (cha == '$') {
       LOG.info("Group section is finished:");
       LOG.info("Transition to annotation section:");
       _parser.setState(new AnnotationsParser(_parser));
 
-    }
-
-    /* add characters to the grouping section */
-    else {
+    } /* add characters to the grouping section */ else {
       LOG.error("Group section is not valid: " + cha);
       throw new GroupingSectionException("Group section is not valid: " + cha);
     }

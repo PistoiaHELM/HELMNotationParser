@@ -31,7 +31,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * MonomerNotationGroupElement
- * 
+ *
  * @author hecht
  */
 public class MonomerNotationGroupElement {
@@ -47,20 +47,21 @@ public class MonomerNotationGroupElement {
 
   /**
    * Constructs with the MonomerNotation and the ratio
-   * 
+   *
    * @param not MonomerNotation
    * @param one value of the MonomerNotation
    */
-  public MonomerNotationGroupElement(MonomerNotation not, double one, boolean isDefault) {
+  public MonomerNotationGroupElement(MonomerNotation not, double one, boolean defaultValue) {
     this.monomer = not;
     this.numberOne = one;
-    this.isDefault = isDefault;
+    this.isDefault = defaultValue;
 
   }
 
   /**
-   * Constructs with the MonomerNotation and a given interval according to two numbers
-   * 
+   * Constructs with the MonomerNotation and a given interval according to two
+   * numbers
+   *
    * @param not MonomerNotation
    * @param one value of the MonomerNotation
    * @param two value of the MonomerNotation
@@ -76,7 +77,7 @@ public class MonomerNotationGroupElement {
 
   /**
    * method the get the monomer
-   * 
+   *
    * @return MonomerNotation
    */
   public MonomerNotation getMonomerNotation() {
@@ -84,8 +85,9 @@ public class MonomerNotationGroupElement {
   }
 
   /**
-   * method to get the ratio or the interval of this group, in the case of an interval it returns a list of two values
-   * 
+   * method to get the ratio or the interval of this group, in the case of an
+   * interval it returns a list of two values
+   *
    * @return List of the values
    */
   public List<Double> getValue() {
@@ -99,7 +101,7 @@ public class MonomerNotationGroupElement {
 
   /**
    * method to check if the interval is there or not
-   * 
+   *
    * @return true if the interval is there, false otherwise
    */
   @JsonIgnore
@@ -112,6 +114,7 @@ public class MonomerNotationGroupElement {
   /**
    * {@inheritDoc}
    */
+  @Override
   public String toString() {
     if (isInterval) {
       return "ElementID: " + monomer.toString() + "\nIntervall: " + numberOne + "-" + numberTwo;
@@ -122,7 +125,7 @@ public class MonomerNotationGroupElement {
 
   /**
    * method to check if the value is a default one
-   * 
+   *
    * @return true if the value is default, false otherwise
    */
   @JsonIgnore
@@ -133,7 +136,7 @@ public class MonomerNotationGroupElement {
 
   /**
    * method to generate a valid HELM2 notation for this object
-   * 
+   *
    * @return valid HELM2 notation
    */
   public String toHELM2() {

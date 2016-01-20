@@ -32,51 +32,46 @@ import org.helm.notation2.parser.notation.grouping.GroupingNotation;
 import org.helm.notation2.parser.notation.polymer.PolymerNotation;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.databind.ObjectMapper;
 
 /**
  * HELM2Notation this class contains all notation objects for HELM2
- * 
+ *
  * @author
- * 
+ *
  */
 public class HELM2Notation {
 
   private List<PolymerNotation> polymers = new ArrayList<PolymerNotation>();
-  
+
   private List<ConnectionNotation> connections = new ArrayList<ConnectionNotation>();
 
   private List<GroupingNotation> groupings = new ArrayList<GroupingNotation>();
-  
+
   private List<AnnotationNotation> annotationSection = new ArrayList<AnnotationNotation>();
-
-
-
-
 
   /**
    * method to add the notation of a simple polymer type
-   * 
+   *
    * @param pol new polymer notation
    */
   @JsonIgnore
-  public void addPolymer(PolymerNotation pol){
+  public void addPolymer(PolymerNotation pol) {
     polymers.add(pol);
   }
-  
+
   /**
    * method to get the current simple polymer type
-   * 
+   *
    * @return current polymer notation
    */
   @JsonIgnore
-  public PolymerNotation getCurrentPolymer(){
-    return polymers.get(polymers.size()-1);
+  public PolymerNotation getCurrentPolymer() {
+    return polymers.get(polymers.size() - 1);
   }
-  
+
   /**
    * method to get all simple polymer types
-   * 
+   *
    * @return all simple polymer types in a List
    */
   public List<PolymerNotation> getListOfPolymers() {
@@ -97,7 +92,7 @@ public class HELM2Notation {
 
   /**
    * method to change the last polymer notation
-   * 
+   *
    * @param not New PolymerNotation
    */
   public void changeLastPolymerNotation(PolymerNotation not) {
@@ -106,18 +101,17 @@ public class HELM2Notation {
 
   /**
    * method to add a connection
-   * 
+   *
    * @param con new connection notation
    */
   public void addConnection(ConnectionNotation con) {
 
     connections.add(con);
   }
- 
 
   /**
    * method to get the current connection
-   * 
+   *
    * @return the current connection notation
    */
   @JsonIgnore
@@ -127,7 +121,7 @@ public class HELM2Notation {
 
   /**
    * method to change the last connection notation
-   * 
+   *
    * @param not new connection notation
    */
   public void changeConnectionNotation(ConnectionNotation not) {
@@ -136,7 +130,7 @@ public class HELM2Notation {
 
   /**
    * method to get a list of all connections
-   * 
+   *
    * @return all connection notations in a list
    */
   public List<ConnectionNotation> getListOfConnections() {
@@ -145,7 +139,7 @@ public class HELM2Notation {
 
   /**
    * method to add a grouping notation
-   * 
+   *
    * @param not new grouping notation
    */
   public void addGrouping(GroupingNotation not) {
@@ -154,7 +148,7 @@ public class HELM2Notation {
 
   /**
    * method to get the current grouping notation
-   * 
+   *
    * @return GroupingNotation
    */
   @JsonIgnore
@@ -165,10 +159,9 @@ public class HELM2Notation {
     return groupings.get(groupings.size() - 1);
   }
 
-
   /**
    * method to get all grouping notations
-   * 
+   *
    * @return all grouping notations in a list
    */
   public List<GroupingNotation> getListOfGroupings() {
@@ -177,7 +170,7 @@ public class HELM2Notation {
 
   /**
    * method to change the current grouping notation
-   * 
+   *
    * @param not new grouping notation
    */
   public void changeLastGroupingNotation(GroupingNotation not) {
@@ -186,7 +179,7 @@ public class HELM2Notation {
 
   /**
    * method to set the annotation
-   * 
+   *
    * @param anno
    */
   public void addAnnotation(AnnotationNotation anno) {
@@ -195,13 +188,13 @@ public class HELM2Notation {
 
   /**
    * method to get the annotation
-   * 
+   *
    * @return annotation
    */
   public List<AnnotationNotation> getListOfAnnotations() {
     return annotationSection;
   }
-  
+
   @JsonIgnore
   public AnnotationNotation getCurrentAnnotation() {
     return annotationSection.get(annotationSection.size() - 1);
@@ -210,6 +203,7 @@ public class HELM2Notation {
   /**
    * {@inheritDoc}
    */
+  @Override
   public String toString() {
     String output = "PolymerSection: " + polymers.toString() + "\n";
     if (!(connections.isEmpty())) {
@@ -227,10 +221,9 @@ public class HELM2Notation {
     return output;
   }
 
-
   /**
    * method to generate for all sections a HELM2 string
-   * 
+   *
    * @return HELM2
    */
   public String toHELM2() {
@@ -253,15 +246,12 @@ public class HELM2Notation {
     return output;
   }
 
-
-
-
   /**
    * method to generate a valid HELM2 string for the first section
-   * 
+   *
    * @return valid HELM2 string
    */
-  private String polymerToHELM2(){
+  private String polymerToHELM2() {
     StringBuilder notation = new StringBuilder();
     for (int i = 0; i < polymers.size(); i++) {
       if (polymers.get(i).isAnnotationTrue()) {
@@ -276,10 +266,9 @@ public class HELM2Notation {
     return notation.toString();
   }
 
-
   /**
    * method to generate a valid HELM2 string for the second section
-   * 
+   *
    * @return valid HELM2 String
    */
   private String connectionToHELM2() {
@@ -297,7 +286,7 @@ public class HELM2Notation {
 
   /**
    * method to generate a valid HELM2 string for the third section
-   * 
+   *
    * @return valid HELM2 String
    */
   private String groupingToHELM2() {
@@ -315,10 +304,10 @@ public class HELM2Notation {
 
   /**
    * method to generate a valid HELM2 string for the fourth section
-   * 
+   *
    * @return valid HELM2 String
    */
-  private String annotationToHELM2(){
+  private String annotationToHELM2() {
     if (!(annotationSection.isEmpty())) {
       StringBuilder sb = new StringBuilder();
       for (int i = 0; i < annotationSection.size(); i++) {
@@ -333,7 +322,7 @@ public class HELM2Notation {
 
   /**
    * method to get the ID's from all polymers and groups
-   * 
+   *
    * @return
    */
   @JsonIgnore
@@ -342,7 +331,7 @@ public class HELM2Notation {
     for (PolymerNotation polymer : polymers) {
       listOfIDs.add(polymer.getPolymerID().getID());
     }
-    
+
     for (GroupingNotation grouping : groupings) {
       listOfIDs.add(grouping.getGroupID().getID());
     }
@@ -351,7 +340,7 @@ public class HELM2Notation {
 
   /**
    * method to get the ID's from all polymers
-   * 
+   *
    * @return
    */
   @JsonIgnore
@@ -365,7 +354,7 @@ public class HELM2Notation {
 
   /**
    * method to get the ID's from all polymers
-   * 
+   *
    * @return
    */
   @JsonIgnore
@@ -380,7 +369,7 @@ public class HELM2Notation {
 
   /**
    * method to get a specific polymer
-   * 
+   *
    * @param id
    * @return
    */
@@ -394,7 +383,5 @@ public class HELM2Notation {
 
     return null;
   }
-
-
 
 }

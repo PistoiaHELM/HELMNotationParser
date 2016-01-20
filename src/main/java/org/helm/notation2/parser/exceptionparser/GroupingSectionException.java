@@ -24,19 +24,25 @@
 package org.helm.notation2.parser.exceptionparser;
 
 /**
- * GroupingSectionException class to represent an exception of a state in the grouping section
- * 
+ * GroupingSectionException class to represent an exception of a state in the
+ * grouping section
+ *
  * @author hecht
  */
 public class GroupingSectionException extends ExceptionState {
 
   /**
+   *
+   */
+  private static final long serialVersionUID = 1L;
+
+  /**
    * Constructs with the error message
-   * 
+   *
    * @param message
    */
-	public GroupingSectionException(String message) {
-		super(message);
-	}
+  public GroupingSectionException(String message) {
+    super(message);
+  }
 
 }

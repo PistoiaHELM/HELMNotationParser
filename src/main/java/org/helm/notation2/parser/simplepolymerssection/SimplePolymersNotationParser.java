@@ -36,7 +36,7 @@ import org.slf4j.LoggerFactory;
 
 /**
  * SimplePolymersNotationParser class to parse the notation of an simple polymer
- * 
+ *
  * @author hecht
  */
 public class SimplePolymersNotationParser implements State {
@@ -52,11 +52,11 @@ public class SimplePolymersNotationParser implements State {
 
   private int parenthesisCounterClose = 0;
 
-  private static final Logger logger = LoggerFactory.getLogger(SimplePolymersNotationParser.class);
+  private static final Logger LOG = LoggerFactory.getLogger(SimplePolymersNotationParser.class);
 
   /**
    * Constructs with the state machine
-   * 
+   *
    * @param pParser StateMachineParser
    */
   public SimplePolymersNotationParser(StateMachineParser pParser) {
@@ -66,7 +66,7 @@ public class SimplePolymersNotationParser implements State {
 
   /**
    * {@inheritDoc}
-   * 
+   *
    * @throws JDOMException
    * @throws IOException
    * @throws NotationException
@@ -77,97 +77,75 @@ public class SimplePolymersNotationParser implements State {
     if (cha == '}' && checkBracketsParenthesis()) {
       // initialize object - normal monomer type
       if (!(monomer.equals(""))) {
-        logger.info("Monomer unit is read:");
+        LOG.info("Monomer unit is read:");
         _parser.notationContainer.getCurrentPolymer().getPolymerElements().addMonomerNotation(monomer);
         _parser.setState(new BetweenParser(_parser));
       } else {
         throw new SimplePolymerSectionException("Monomer unit is missing: ");
       }
-    }
-
-    /* a new monomer unit is starting. This is only valid for peptide and rna not for chem and blob */
-    else if (cha == '.' && checkBracketsParenthesis()) {
-
+    } else if (cha == '.' && checkBracketsParenthesis()) {
+      /*
+       * a new monomer unit is starting. This is only valid for peptide and rna
+       * not for chem and blob
+       */
       if (monomer != "") {
         if (_parser.isPeptideOrRna()) {
-          logger.info("Monomer unit is read: " + monomer);
-          logger.info("New monomer unit is starting:");
+          LOG.info("Monomer unit is read: " + monomer);
+          LOG.info("New monomer unit is starting:");
           _parser.notationContainer.getCurrentPolymer().getPolymerElements().addMonomerNotation(monomer);
           _parser.setState(new SimplePolymersNotationParser(_parser));
         } else {
-          logger.error("Only one monomer unit is allowed: " + monomer);
+          LOG.error("Only one monomer unit is allowed: " + monomer);
           throw new SimplePolymerSectionException("Only one monomer unit is allowed: " + monomer);
         }
       } else {
-        logger.error("Monomer unit is missing: " + monomer);
+        LOG.error("Monomer unit is missing: " + monomer);
         throw new SimplePolymerSectionException("Monomer unit is missing: " + monomer);
       }
 
-    }
-
-    /* an additional annotation is given */
-    else if (cha == '"' && checkBracketsParenthesis()) {
+    } /* an additional annotation is given */ else if (cha == '"' && checkBracketsParenthesis()) {
       if (monomer != "") {
-        logger.info("Monomer unit is read: " + monomer);
-        logger.info("Annotation for monomer unit is starting:");
+        LOG.info("Monomer unit is read: " + monomer);
+        LOG.info("Annotation for monomer unit is starting:");
         _parser.notationContainer.getCurrentPolymer().getPolymerElements().addMonomerNotation(monomer);
         _parser.setState(new InlineAnnotationsParser(_parser, 11));
       } else {
-        logger.error("Monomer unit is missing:");
+        LOG.error("Monomer unit is missing:");
         throw new SimplePolymerSectionException("Monomer unit is missing:");
       }
-    }
-
-    /* the monomer unit is being repeated. This is only valid for peptide and rna not for chem and blob */
-    else if (cha == '\'' && checkBracketsParenthesis()) {
-
+    } else if (cha == '\'' && checkBracketsParenthesis()) {
+      /*
+       * the monomer unit is being repeated. This is only valid for peptide and
+       * rna not for chem and blob
+       */
       if (monomer != "") {
         if (_parser.isPeptideOrRna()) {
-          logger.info("Monomer unit is read: " + monomer);
+          LOG.info("Monomer unit is read: " + monomer);
           _parser.notationContainer.getCurrentPolymer().getPolymerElements().addMonomerNotation(monomer);
           _parser.setState(new RepeatingMonomerParser(_parser));
         } else {
-          logger.error("Monomer unit shall be not repeated: ");
+          LOG.error("Monomer unit shall be not repeated: ");
           throw new SimplePolymerSectionException("Monomer unit shall be not repeated: ");
         }
-      }
-
-      else {
-        logger.error("Monomer unit is missing");
+      } else {
+        LOG.error("Monomer unit is missing");
         throw new SimplePolymerSectionException("Monomer unit is missing");
       }
 
-    }
-
-    /* an invalid $ */
-    // else if (cha == '$' && checkBracketsParenthesis()) {
-    // throw new SimplePolymerSectionException("Monomer unit is missing:");
-    // }
-
-    /* check all brackets */
-    else if (cha == '[' || cha == ']' || cha == '(' || cha == ')') {
+    } /* check all brackets */ else if (cha == '[' || cha == ']' || cha == '(' || cha == ')') {
       monomer += cha;
       if (cha == '[') {
         bracketCounterOpen += 1;
-      }
-
-      else if (cha == ']') {
+      } else if (cha == ']') {
         bracketCounterClose += 1;
-      }
-
-      else if (cha == '(') {
+      } else if (cha == '(') {
         parenthesisCounterOpen += 1;
 
-      }
-
-      else {
+      } else {
         parenthesisCounterClose += 1;
 
       }
-    }
-
-    /* add characters */
-    else {
+    } /* add characters */ else {
       monomer += cha;
     }
 
@@ -175,7 +153,7 @@ public class SimplePolymersNotationParser implements State {
 
   /**
    * method to check if all open brackets are closed
-   * 
+   *
    * @return true if all open brackets are close, false otherwise
    */
   private boolean checkBracketsParenthesis() {

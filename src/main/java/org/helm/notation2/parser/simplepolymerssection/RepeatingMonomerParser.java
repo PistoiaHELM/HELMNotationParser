@@ -31,7 +31,7 @@ import org.slf4j.LoggerFactory;
 
 /**
  * RepeatingMonomerParser class to parse the repeating information
- * 
+ *
  * @author hecht
  */
 public class RepeatingMonomerParser implements State {
@@ -44,7 +44,7 @@ public class RepeatingMonomerParser implements State {
 
   /**
    * Constructs with the state machine parser
-   * 
+   *
    * @param pParser StateMachineParser
    */
   public RepeatingMonomerParser(StateMachineParser pParser) {
@@ -74,9 +74,7 @@ public class RepeatingMonomerParser implements State {
             _parser.setState(new BetweenMonomerParser(_parser));
           }
 
-        }
-
-        else {
+        } else {
           LOG.info("Monomer unit is repeated:");
           _parser.notationContainer.getCurrentPolymer().getPolymerElements().getCurrentMonomerNotation().setCount(repeating);
           _parser.setState(new BetweenMonomerParser(_parser));
@@ -86,10 +84,7 @@ public class RepeatingMonomerParser implements State {
         LOG.error("Information about repeating is wrong: " + repeating);
         throw new SimplePolymerSectionException("Information about repeating is wrong: " + repeating);
       }
-    }
-
-    /* add characters to repeating information */
-    else {
+    } /* add characters to repeating information */ else {
       repeating += cha;
     }
   }

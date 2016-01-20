@@ -34,7 +34,7 @@ import org.slf4j.LoggerFactory;
 
 /**
  * SimplePolymersParser class to parse the simple polymer id
- * 
+ *
  * @author hecht
  */
 public class SimplePolymersParser implements State {
@@ -47,7 +47,7 @@ public class SimplePolymersParser implements State {
 
   /**
    * Constructs with a state machine
-   * 
+   *
    * @param pParser StateMachineParser
    */
   public SimplePolymersParser(StateMachineParser pParser) {
@@ -56,7 +56,7 @@ public class SimplePolymersParser implements State {
 
   /**
    * {@inheritDoc}
-   * 
+   *
    * @throws NotationException
    * @throws SimplePolymerSectionException
    */
@@ -71,37 +71,26 @@ public class SimplePolymersParser implements State {
           LOG.info("Simple polymer section is finished:");
           LOG.info("Transition to connection section:");
           _parser.setState(new ConnectionsParser(_parser));
-        }
-        else{
+        } else {
           LOG.error("Simple polymer ID has to be defined:");
-          throw new SimplePolymerSectionException("A simple polymer has to be defined"); 
+          throw new SimplePolymerSectionException("A simple polymer has to be defined");
         }
-      }
-
-      else {
+      } else {
         LOG.error("Incorrect input in the simple polymer section:");
         throw new SimplePolymerSectionException("Incorrect input in the simple polymer section:");
       }
 
-    }
-
-    /* simple polymer notation is starting */
-    else if (cha == '{') {
+    } /* simple polymer notation is starting */ else if (cha == '{') {
       if ((_parser.checkPolymerId(polymerId)) && polymerId != "") {
         LOG.info("Simple polymer ID is read:");
         _parser.notationContainer.addPolymer(new PolymerNotation(polymerId));
         _parser.addPolymer(polymerId);
         _parser.setState(new SimplePolymersNotationParser(_parser));
-      }
-
-      else {
+      } else {
         LOG.error("Polymer ID is not correct: " + polymerId);
         throw new SimplePolymerSectionException("Polymer ID is not correct: " + polymerId);
       }
-    }
-
-    /* add characters to polymer id */
-    else {
+    } /* add characters to polymer id */ else {
       polymerId += cha;
     }
 

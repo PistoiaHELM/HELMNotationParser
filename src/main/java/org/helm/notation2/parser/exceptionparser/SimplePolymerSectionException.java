@@ -24,20 +24,27 @@
 package org.helm.notation2.parser.exceptionparser;
 
 /**
- * SimplePolymerSectionException class to represent an exception in a state of the simple polymer section
- * 
+ * SimplePolymerSectionException class to represent an exception in a state of
+ * the simple polymer section
+ *
  * @author hecht
  */
-public class SimplePolymerSectionException extends ExceptionState{
+
+public class SimplePolymerSectionException extends ExceptionState {
+
+  /**
+   *
+   */
+  private static final long serialVersionUID = 1L;
 
   /**
    * Constructs with the error message
-   * 
+   *
    * @param message
    */
-	public SimplePolymerSectionException(String message) {
-		super(message);
+  public SimplePolymerSectionException(String message) {
+    super(message);
 
-	}
+  }
 
 }

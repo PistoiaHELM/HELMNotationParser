@@ -29,17 +29,17 @@ import org.helm.notation2.parser.exceptionparser.NotationException;
 
 /**
  * GroupingAnd
- * 
+ *
  * @author hecht
  */
 public class GroupingMixture extends GroupingAmbiguity {
 
   private GroupingElement element;
 
-
   /**
-   * Constructs with the given String representing a list of grouping elements Mixture with ratio or interval
-   * 
+   * Constructs with the given String representing a list of grouping elements
+   * Mixture with ratio or interval
+   *
    * @param str whole group
    * @throws NotationException
    */
@@ -55,13 +55,12 @@ public class GroupingMixture extends GroupingAmbiguity {
       boolean isDefault = true;
       if (item.length > 1) {
         /* an interval can be there or not */
-        if(item[1].split("-").length >1){
+        if (item[1].split("-").length > 1) {
           interval = true;
           ratio = Double.parseDouble(item[1].split("-")[0]);
           ratio2 = Double.parseDouble(item[1].split("-")[1]);
           isDefault = false;
-        }
-        else{
+        } else {
           /* unknown ratio */
           if (item[1].contains("?")) {
             ratio = -1;
@@ -71,13 +70,13 @@ public class GroupingMixture extends GroupingAmbiguity {
           }
         }
       }
-      
+
       if (!(interval)) {
         element = new GroupingElement(item[0], ratio, isDefault);
       } else {
         element = new GroupingElement(item[0], ratio, ratio2);
       }
-      
+
       addElement(element);
 
     }
@@ -87,26 +86,26 @@ public class GroupingMixture extends GroupingAmbiguity {
   /**
    * {@inheritDoc}
    */
-  public String toHELM2(){
+  @Override
+  public String toHELM2() {
     DecimalFormat d = new DecimalFormat("#.##");
-  StringBuilder notation = new StringBuilder();
+    StringBuilder notation = new StringBuilder();
     for (GroupingElement groupingElement : elements) {
       if (!(groupingElement.isDefaultValue())) {
         String value = d.format(groupingElement.getValue().get(0)).replace(',', '.');
         if (groupingElement.getValue().size() > 1) {
           value += "-" + d.format(groupingElement.getValue().get(1)).replace(',', '.');
-      }
+        }
         notation.append(groupingElement.getID() + ":" + value + "+");
       } else {
         notation.append(groupingElement.getID() + "+");
       }
 
-  }
+    }
 
     notation.setLength(notation.length() - 1);
 
     return notation.toString();
   }
 
- 
 }

@@ -32,7 +32,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * MonomerNotationUnitRNA class to represent nucleotides
- * 
+ *
  * @author hecht
  */
 public class MonomerNotationUnitRNA extends MonomerNotationUnit {
@@ -50,10 +50,9 @@ public class MonomerNotationUnitRNA extends MonomerNotationUnit {
     setRNAContents(str);
   }
 
-
   /**
    * method to set for each nucleotide the sugar, the base and the phosphat
-   * 
+   *
    * @param str
    * @throws NotationException
    * @throws IOException
@@ -67,37 +66,28 @@ public class MonomerNotationUnitRNA extends MonomerNotationUnit {
       for (int i = 0; i < list.length; i++) {
         contents.add(new MonomerNotationUnit(list[i], type));
       }
-    }
-    /* nucleotide contains no base, but a modified sugar or phosphat */
-    else if (str.contains("[")) {
+    } /* nucleotide contains no base, but a modified sugar or phosphat */ else if (str.contains("[")) {
       if (str.startsWith("[")) {
         str = str.replace("]", "]$");
-      }
-      else{
+      } else {
         str = str.replace("[", "$[");
       }
       list = str.split("\\$");
       for (int i = 0; i < list.length; i++) {
         contents.add(new MonomerNotationUnit(list[i], type));
       }
-    }
-
-    /* nucleotide contains only standard sugar and/or phosphat */
-    else {
+    } /* nucleotide contains only standard sugar and/or phosphat */ else {
       for (int i = 0; i < str.length(); i++) {
         contents.add(new MonomerNotationUnit(Character.toString(str.charAt(i)),
             type));
       }
     }
 
-
-
-
   }
 
   /**
    * method to get the contents of this nucleotide
-   * 
+   *
    * @return
    */
   @JsonIgnore

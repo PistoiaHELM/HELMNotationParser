@@ -36,7 +36,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * PolymerNotation class to represent a polymer with its content
- * 
+ *
  * @author hecht
  */
 public final class PolymerNotation {
@@ -57,7 +57,7 @@ public final class PolymerNotation {
 
   /**
    * Constructs with the given String
-   * 
+   *
    * @param str polymer ID
    * @throws NotationException
    */
@@ -68,7 +68,7 @@ public final class PolymerNotation {
 
   /**
    * Constructs with a given PolymerEnttiy, PolymerElements
-   * 
+   *
    * @param poly PolymerEntity
    * @param ele PolymerElements
    */
@@ -79,21 +79,22 @@ public final class PolymerNotation {
 
   /**
    * Constructs with a given PolymerEnttiy, PolymerElements and an annotation
-   * 
+   *
    * @param poly PolymerEntity
    * @param ele PolymerElements
-   * @param annotation new annotation
+   * @param anno new annotation
    */
-  public PolymerNotation(PolymerEntity poly, PolymerElements ele, String annotation) {
+  public PolymerNotation(PolymerEntity poly, PolymerElements ele, String anno) {
     this.polymerID = poly;
     this.elements = ele;
-    if (annotation != null) {
-      setAnnotation(annotation);
+    if (anno != null) {
+      setAnnotation(anno);
     }
   }
 
   /**
-   * method to generate the right PolymerElements, in the case of Chem and Blob only one Monomer is allowed
+   * method to generate the right PolymerElements, in the case of Chem and Blob
+   * only one Monomer is allowed
    */
   private void decideWhichPolymerElements() {
     if (polymerID instanceof RNAEntity || polymerID instanceof PeptideEntity) {
@@ -103,10 +104,10 @@ public final class PolymerNotation {
     }
 
   }
-  
+
   /**
    * method to add/set the annotation
-   * 
+   *
    * @param str new annotation
    */
   private void setAnnotation(String str) {
@@ -116,7 +117,7 @@ public final class PolymerNotation {
 
   /**
    * method to get the polymer entity
-   * 
+   *
    * @return polymer ID
    */
   public PolymerEntity getPolymerID() {
@@ -125,7 +126,7 @@ public final class PolymerNotation {
 
   /**
    * method to get the PolymerElements
-   * 
+   *
    * @return PolymerElements
    */
   public PolymerElements getPolymerElements() {
@@ -134,17 +135,16 @@ public final class PolymerNotation {
 
   /**
    * method to get the annotation of the simple polymer
-   * 
+   *
    * @return annotation
    */
   public String getAnnotation() {
     return this.annotation;
   }
 
-
   /**
    * method to check if an annotation is there
-   * 
+   *
    * @return true if the annotation is there, false otherwise
    */
   @JsonIgnore
@@ -155,6 +155,7 @@ public final class PolymerNotation {
   /**
    * {@inheritDoc}
    */
+  @Override
   public String toString() {
     if (isAnnotationTrue()) {
       return "PolymerID: " + polymerID + "\nElements: " + elements.toString() + "Annotation: " + annotation;
@@ -164,11 +165,9 @@ public final class PolymerNotation {
 
   }
 
-
-
   /**
    * method to generate a valid HELM2 notation for this object
-   * 
+   *
    * @return valid HELM2 notation
    */
   public String toHELM2() {
@@ -177,12 +176,12 @@ public final class PolymerNotation {
 
   /**
    * method to generate a valid HELM notation for this object
-   * 
+   *
    * @return
    * @throws HELM1ConverterException
    */
   public String toHELM() throws HELM1ConverterException {
-    if(polymerID instanceof BlobEntity){
+    if (polymerID instanceof BlobEntity) {
       throw new HELM1ConverterException("Can't be downgraded to HELM1-Format");
     }
     return this.elements.toHELM();
@@ -213,19 +212,20 @@ public final class PolymerNotation {
         multiply = 1;
       }
 
-//      if (element instanceof MonomerNotationList) {
-//        for (int z = 0; z < multiply; z++) {
-//          for (MonomerNotation monomerNotationUnit : ((MonomerNotationList) element).getListofMonomerUnits()) {
-//            value++;
-//            lastValue++;
-//            mapOfMonomers.put(value, monomerNotationUnit);
-//            if (lastValue != 0) {
-//              mapIntraConnection.put(lastValue + "$R2", "");
-//              mapIntraConnection.put(value + "$R1", "");
-//            }
-//          }
-//        }
-//      }
+// if (element instanceof MonomerNotationList) {
+// for (int z = 0; z < multiply; z++) {
+// for (MonomerNotation monomerNotationUnit : ((MonomerNotationList)
+// element).getListofMonomerUnits()) {
+// value++;
+// lastValue++;
+// mapOfMonomers.put(value, monomerNotationUnit);
+// if (lastValue != 0) {
+// mapIntraConnection.put(lastValue + "$R2", "");
+// mapIntraConnection.put(value + "$R1", "");
+// }
+// }
+// }
+// }
       if (element instanceof MonomerNotationUnitRNA) {
         for (int z = 0; z < multiply; z++) {
           lastValue = value;
@@ -233,7 +233,6 @@ public final class PolymerNotation {
             value++;
             mapOfMonomers.put(value, monomerNotationUnit);
           }
-
 
           /* Intra nucleotide Connections will be not scanned */
           if (value >= 4) {
@@ -243,9 +242,7 @@ public final class PolymerNotation {
           }
         }
 
-      }
-      
-      else{
+      } else {
         for (int z = 0; z < multiply; z++) {
           value++;
           lastValue++;
@@ -257,7 +254,7 @@ public final class PolymerNotation {
         }
 
       }
-  }
+    }
   }
 
   @JsonIgnore
@@ -271,8 +268,7 @@ public final class PolymerNotation {
     for (MonomerNotation monomerNotation : elements.getListOfElements()) {
       if (monomerNotation instanceof MonomerNotationUnit) {
         listMonomerNotation.add(monomerNotation);
-      }
- else {
+      } else {
         if (monomerNotation instanceof MonomerNotationGroup) {
           for (MonomerNotationGroupElement groupElement : ((MonomerNotationGroup) monomerNotation).getListOfElements()) {
             listMonomerNotation.add(groupElement.getMonomerNotation());
@@ -282,9 +278,8 @@ public final class PolymerNotation {
           listMonomerNotation.addAll(((MonomerNotationList) monomerNotation).getListofMonomerUnits());
         }
       }
-      }
-    return listMonomerNotation;
     }
-
+    return listMonomerNotation;
+  }
 
 }

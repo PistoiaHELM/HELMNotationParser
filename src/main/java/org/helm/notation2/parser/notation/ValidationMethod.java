@@ -44,14 +44,21 @@ import org.jdom2.JDOMException;
 
 /**
  * Class containing validation methods
- * 
+ *
  * @author hecht
  */
 public final class ValidationMethod {
 
   /**
+   * Default constructor.
+   */
+  private ValidationMethod() {
+
+  }
+
+  /**
    * method to decide which of the MonomerNotation classes should be initialized
-   * 
+   *
    * @param str
    * @param type
    * @return
@@ -71,34 +78,27 @@ public final class ValidationMethod {
       /* Mixture of elements */
       if (patternAND.matcher(str).find()) {
         mon = new MonomerNotationGroupMixture(str2, type);
-      }
-      /* or - groups */
-      else if (patternOR.matcher(str).find()) {
+      } /* or - groups */ else if (patternOR.matcher(str).find()) {
         mon = new MonomerNotationGroupOr(str2, type);
-      }
-      else {
+      } else {
         if (str.contains(".")) {
           mon = new MonomerNotationList(str2, type);
-        }
-        else {
+        } else {
           /* monomer unit is just in brackets */
           if (type == "RNA") {
             mon = new MonomerNotationUnitRNA(str2, type);
-          }
-          else {
+          } else {
             mon = new MonomerNotationUnit(str2, type);
           }
         }
 
       }
-    }
-
-    else {
+    } else {
       if (type == "RNA") {
         // if (str.startsWith("[") && str.endsWith("]")) {
         // mon = new MonomerNotationUnitRNA(str, type);
         // }
-          mon = new MonomerNotationUnitRNA(str, type);
+        mon = new MonomerNotationUnitRNA(str, type);
       } else {
         mon = new MonomerNotationUnit(str, type);
       }
@@ -108,8 +108,9 @@ public final class ValidationMethod {
   }
 
   /**
-   * method to decide which of the two Constructors of MonomerNotaitonGroupElement should be called
-   * 
+   * method to decide which of the two Constructors of
+   * MonomerNotaitonGroupElement should be called
+   *
    * @param str Monomer
    * @param one count of Monomer
    * @param two count of Monomer
@@ -122,8 +123,8 @@ public final class ValidationMethod {
    */
   public static MonomerNotationGroupElement decideWhichMonomerNotationInGroup(String str, String type, double one,
       double two, boolean interval, boolean isDefault) throws NotationException,
-      IOException,
-      JDOMException {
+          IOException,
+          JDOMException {
     MonomerNotation element;
 
     element = decideWhichMonomerNotation(str, type);
@@ -137,7 +138,7 @@ public final class ValidationMethod {
 
   /**
    * method to decide which of the Entities classes should be initialized
-   * 
+   *
    * @param str polymer ID
    * @return Entity
    * @throws NotationException
@@ -148,21 +149,15 @@ public final class ValidationMethod {
 
     if (str.matches("PEPTIDE[1-9][0-9]*")) {
       item = new PeptideEntity(str);
-    }
-    else if (str.matches("RNA[1-9][0-9]*")) {
+    } else if (str.matches("RNA[1-9][0-9]*")) {
       item = new RNAEntity(str);
-    }
-    else if (str.matches("BLOB[1-9][0-9]*")) {
+    } else if (str.matches("BLOB[1-9][0-9]*")) {
       item = new BlobEntity(str);
-    }
-    else if (str.matches("CHEM[1-9][0-9]*")) {
+    } else if (str.matches("CHEM[1-9][0-9]*")) {
       item = new ChemEntity(str);
-    }
-    else if (str.matches("G[1-9][0-9]*")) {
+    } else if (str.matches("G[1-9][0-9]*")) {
       item = new GroupEntity(str);
-    }
-
-    else {
+    } else {
       throw new NotationException("ID is wrong: " + str);
     }
 

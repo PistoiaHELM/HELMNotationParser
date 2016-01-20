@@ -31,14 +31,14 @@ import org.jdom2.JDOMException;
 
 /**
  * MonomerNotationGroupMixture class to represent a mixture group
- * 
+ *
  * @author hecht
  */
 public class MonomerNotationGroupMixture extends MonomerNotationGroup {
 
   /**
    * Constructs with the given String a mixture group
-   * 
+   *
    * @param str details about the mixture group
    * @param type Type of the current polymer type
    * @throws JDOMException
@@ -63,8 +63,7 @@ public class MonomerNotationGroupMixture extends MonomerNotationGroup {
           ratio = Float.parseFloat(item[1].split("-")[0]);
           ratio2 = Float.parseFloat(item[1].split("-")[1]);
           isDefault = false;
-        }
-        else {
+        } else {
           /* unknown ratio */
           if (item[1].contains("?")) {
             ratio = -1;
@@ -110,7 +109,7 @@ public class MonomerNotationGroupMixture extends MonomerNotationGroup {
     notation.setLength(notation.length() - 1);
     notation.append(")");
 
-    if (isDefault == false) {
+    if (!(isDefault)) {
       notation.append("'" + count + "'");
     }
 

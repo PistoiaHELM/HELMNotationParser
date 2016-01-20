@@ -23,20 +23,19 @@
  */
 package org.helm.notation2.parser.notation.polymer;
 
-
 /**
  * Entity
- * 
+ *
  * @author
  */
 public abstract class HELMEntity {
-  protected String id;
+  private String id;
 
   protected String type;
 
   /**
    * Constructs an Entity
-   * 
+   *
    * @param str entity name
    */
   public HELMEntity(String str) {
@@ -46,13 +45,14 @@ public abstract class HELMEntity {
   /**
    * {@inheritDoc}
    */
+  @Override
   public String toString() {
     return id;
   }
 
   /**
    * method to get the ID of the Entity
-   * 
+   *
    * @return ID
    */
   public String getID() {
@@ -61,10 +61,10 @@ public abstract class HELMEntity {
 
   /**
    * method to get the Type of the Entity
-   * 
+   *
    * @return type
    */
-  public String getType(){
+  public String getType() {
     return type;
   }
 }

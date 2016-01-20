@@ -23,7 +23,6 @@
  */
 package org.helm.notation2.parser;
 
-
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -39,15 +38,20 @@ import org.slf4j.LoggerFactory;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 /**
- * StateMachineParser class to represent the state machine to parse the HELM2 string
- * 
+ * StateMachineParser class to represent the state machine to parse the HELM2
+ * string
+ *
  * @author hecht
  */
 public class StateMachineParser implements State {
 
   private State state;
 
-  private List<String> polymerElements = new ArrayList<String>();// saves all simple polymer in a list
+  private List<String> polymerElements = new ArrayList<String>(); // saves all
+                                                                  // simple
+                                                                  // polymer in
+                                                                  // a
+                                                                  // list
 
   public HELM2Notation notationContainer = new HELM2Notation();
 
@@ -62,7 +66,7 @@ public class StateMachineParser implements State {
 
   /**
    * method to set the current state
-   * 
+   *
    * @param state
    */
   public void setState(State state) {
@@ -71,7 +75,7 @@ public class StateMachineParser implements State {
 
   /**
    * method to get the current state
-   * 
+   *
    * @return state
    */
   public State getState() {
@@ -88,49 +92,52 @@ public class StateMachineParser implements State {
   }
 
   /**
-   * method to validate the polymer id in the simple polymer section the id can be peptide, rna, chem or blob
-   * 
-   * @param polymer_id ID of a polymer
+   * method to validate the polymer id in the simple polymer section the id can
+   * be peptide, rna, chem or blob
+   *
+   * @param polymerId ID of a polymer
    * @return true if the ID is valid, false otherwise
    */
-  public boolean checkPolymerId(String polymer_id) {
-    LOG.debug("Validation of polymerID: " + polymer_id);
+  public boolean checkPolymerId(String polymerId) {
+    LOG.debug("Validation of polymerID: " + polymerId);
     String pattern = "PEPTIDE[1-9][0-9]*|RNA[1-9][0-9]*|CHEM[1-9][0-9]*|BLOB[1-9][0-9]*";
 
-    if (polymer_id.matches(pattern)) {
-      LOG.debug("PolymerID is valid: " + polymer_id);
+    if (polymerId.matches(pattern)) {
+      LOG.debug("PolymerID is valid: " + polymerId);
       return true;
     }
 
-    LOG.debug("PolymerID is not valid: " + polymer_id);
+    LOG.debug("PolymerID is not valid: " + polymerId);
     return false;
   }
 
   /**
-   * method to validate the polymer id in the connection section the id can be peptide, rna, chem or blob the ratio +
-   * range was also included, the ambiguity is also proven
-   * 
-   * @param polymer_id ID of a polymer
+   * method to validate the polymer id in the connection section the id can be
+   * peptide, rna, chem or blob the ratio + range was also included, the
+   * ambiguity is also proven
+   *
+   * @param polymerId ID of a polymer
    * @return true if the ID is valid, false otherwise
    */
-  public boolean checkPolymeridConnection(String polymer_id) {
+  public boolean checkPolymeridConnection(String polymerId) {
     LOG.debug("Validation of polymerID in the connection section:");
     String ratio = "(:[1-9][0-9]*(\\.[0-9]+)?)?";
     String id = "(PEPTIDE[1-9][0-9]*|RNA[1-9][0-9]*|CHEM[1-9][0-9]*|BLOB[1-9][0-9]*|G[1-9][0-9]*)";
     String pattern = "(\\(" + id + ratio + "(," + id + ratio + ")+\\)" + ratio + "|" + id + ratio + ")";
 
-    if (polymer_id.matches(pattern)) {
+    if (polymerId.matches(pattern)) {
       LOG.debug("PolymerID in the connection section is valid:");
       return true;
     }
 
-    LOG.debug("PolymerID in the connection section is not valid: " + polymer_id);
+    LOG.debug("PolymerID in the connection section is not valid: " + polymerId);
     return false;
   }
 
   /**
-   * method to validate the details about the connections; hydrogen bonds are here included
-   * 
+   * method to validate the details about the connections; hydrogen bonds are
+   * here included
+   *
    * @param d connection details
    * @return true if the connection details are valid, false otherwise
    */
@@ -153,7 +160,7 @@ public class StateMachineParser implements State {
 
   /**
    * method to validate the group id
-   * 
+   *
    * @param d ID of a group
    * @return true if the connection details are valid, false otherwise
    */
@@ -168,9 +175,10 @@ public class StateMachineParser implements State {
   }
 
   /**
-   * method to validate the details about the group information; this part can be separated after + to get the id for
-   * each single group element : to get the ratio for each single group element
-   * 
+   * method to validate the details about the group information; this part can
+   * be separated after + to get the id for each single group element : to get
+   * the ratio for each single group element
+   *
    * @param d group information
    * @return true if the group information is valid, false otherwise
    */
@@ -189,8 +197,9 @@ public class StateMachineParser implements State {
   }
 
   /**
-   * method to validate the repeating section it can be a single number or a range
-   * 
+   * method to validate the repeating section it can be a single number or a
+   * range
+   *
    * @param str repeating information
    * @return true if the information is valid, false otherwise
    */
@@ -204,7 +213,7 @@ public class StateMachineParser implements State {
 
   /**
    * method to add the polymer id to the list
-   * 
+   *
    * @param str polymerID
    */
   public void addPolymer(String str) {
@@ -213,7 +222,7 @@ public class StateMachineParser implements State {
 
   /**
    * method to check if the list containing all polymer elements is empty
-   * 
+   *
    * @return true of no polymer id is found, false otherwise
    */
   public boolean isEmpty() {
@@ -225,8 +234,9 @@ public class StateMachineParser implements State {
 
   /**
    * method to check if the last added polymer element is a peptide or a rna
-   * 
-   * @return true, if the last added polymer is a peptide or a rna, false otherwise
+   *
+   * @return true, if the last added polymer is a peptide or a rna, false
+   *         otherwise
    * @throws SimplePolymerSectionException
    */
   public boolean isPeptideOrRna() throws SimplePolymerSectionException {
@@ -242,19 +252,18 @@ public class StateMachineParser implements State {
 
   /**
    * method to generate a JSON-Object from the NotationContainer
-   * 
+   *
    * @return NotationContainer in JSON-Format
    */
   protected String toJSON() {
     ObjectMapper mapper = new ObjectMapper();
 
-    try{
+    try {
       String jsonINString = mapper.writeValueAsString(notationContainer);
       jsonINString = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(notationContainer);
 
       return jsonINString;
-    }
- catch (Exception e) {
+    } catch (Exception e) {
       e.printStackTrace();
     }
     return null;

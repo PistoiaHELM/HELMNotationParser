@@ -28,19 +28,16 @@ import java.io.IOException;
 import org.helm.notation2.parser.exceptionparser.HELM1ConverterException;
 import org.helm.notation2.parser.exceptionparser.NotationException;
 
-
-
-
 /**
  * MonomerNotationUnit
- * 
+ *
  * @author hecht
  */
 public class MonomerNotationUnit extends MonomerNotation {
 
   /**
    * Constructs with the given String
-   * 
+   *
    * @param str Monomer
    * @throws JDOMException
    * @throws IOException
@@ -49,8 +46,6 @@ public class MonomerNotationUnit extends MonomerNotation {
   public MonomerNotationUnit(String str, String type) throws IOException, NotationException {
     super(str, type);
   }
-
-
 
   /**
    * {@inheritDoc}
@@ -72,13 +67,13 @@ public class MonomerNotationUnit extends MonomerNotation {
     return text;
   }
 
+  @Override
   public String toHELM() throws HELM1ConverterException {
 
     String text = unit;
 
     /* check for appropriate units */
-
-    if (isDefault == false) {
+    if (!(isDefault)) {
       if (unit.length() > 1) {
         text = "(" + unit + ")";
       }
@@ -88,27 +83,25 @@ public class MonomerNotationUnit extends MonomerNotation {
       throw new HELM1ConverterException("not possible to downgrade to HELM1 Format");
     }
 
-      /*
-       * convert the count in an appropriate way: throw an exception if it is
-       * not an explicit integer value
-       */
-      try{
-        int integer_value = Integer.parseInt(count);
-      if (integer_value < 1 || integer_value > 1) {
-          throw new HELM1ConverterException("Count of MonomerNotationUnit was not possible to downgrade");
-        }
+    /*
+     * convert the count in an appropriate way: throw an exception if it is not
+     * an explicit integer value
+     */
+    try {
+      int integerValue = Integer.parseInt(count);
+      if (integerValue < 1 || integerValue > 1) {
+        throw new HELM1ConverterException("Count of MonomerNotationUnit was not possible to downgrade");
+      }
       // for (int i = 0; i < integer_value - 1; i++) {
       // text += "." + unit;
       // }
-      } catch (NumberFormatException e) {
-        throw new HELM1ConverterException("Count of MonomerNotationUnit was not possible to downgrade");
-      }
-
+    } catch (NumberFormatException e) {
+      throw new HELM1ConverterException("Count of MonomerNotationUnit was not possible to downgrade");
+    }
 
     /* no annotation here!!! -> forget simple the annotation */
 
     return text;
   }
-
 
 }

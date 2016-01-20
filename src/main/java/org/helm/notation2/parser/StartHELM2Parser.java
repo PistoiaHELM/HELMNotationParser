@@ -40,17 +40,24 @@ import org.slf4j.LoggerFactory;
 /**
  * code StartHELM2Parser main class to run a single HELM2Parser from the command
  * line
- * 
+ *
  * @author hecht
  */
-public class StartHELM2Parser {
+public final class StartHELM2Parser {
 
   /** The Logger for this class */
   private static final Logger LOG = LoggerFactory.getLogger(StartHELM2Parser.class);
 
   /**
+   * Default constructor
+   */
+  private StartHELM2Parser() {
+
+  }
+
+  /**
    * main method to run a single HELM2Parser from the command line
-   * 
+   *
    * @param args
    * @throws ParseException
    * @throws ExceptionState
@@ -111,9 +118,7 @@ public class StartHELM2Parser {
       } finally {
         br.close();
       }
-    }
-
-    catch (NullPointerException e) {
+    } catch (NullPointerException e) {
       System.out.println("Please call the program with the following arguments: "
           + "\n"
           + "-inputHELM  <"

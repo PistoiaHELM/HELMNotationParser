@@ -36,17 +36,16 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * MonomerNotationGroup
- * 
+ *
  * @author hecht
  */
 public abstract class MonomerNotationGroup extends MonomerNotation {
 
-  protected List<MonomerNotationGroupElement> elements = new ArrayList<MonomerNotationGroupElement>();
-
+  public List<MonomerNotationGroupElement> elements = new ArrayList<MonomerNotationGroupElement>();
 
   /**
    * Constructs with the given string
-   * 
+   *
    * @param str Monomer
    */
   public MonomerNotationGroup(String str, String type) {
@@ -55,7 +54,7 @@ public abstract class MonomerNotationGroup extends MonomerNotation {
 
   /**
    * method to add a single element to the group
-   * 
+   *
    * @param str Monomer
    * @param type type of current polymer
    * @param one value of the monomer
@@ -70,11 +69,9 @@ public abstract class MonomerNotationGroup extends MonomerNotation {
 
   }
 
-
-
   /**
    * method to get the current group element
-   * 
+   *
    * @return MonomerNotationGroupElement
    */
   @JsonIgnore
@@ -84,7 +81,7 @@ public abstract class MonomerNotationGroup extends MonomerNotation {
 
   /**
    * method to get a list of all group elements
-   * 
+   *
    * @return List of all group elements
    */
   public List<MonomerNotationGroupElement> getListOfElements() {
@@ -94,18 +91,18 @@ public abstract class MonomerNotationGroup extends MonomerNotation {
   /**
    * {@inheritDoc}
    */
+  @Override
   public String toString() {
     if (isAnnotationTrue()) {
-    return "Grouping section:\n " + elements.toString() + "\nCount: " + count + "\nAnnotation: " + annotation;
+      return "Grouping section:\n " + elements.toString() + "\nCount: " + count + "\nAnnotation: " + annotation;
     } else {
       return "Grouping section:\n " + elements.toString() + "\nCount: " + count;
     }
   }
 
+  @Override
   public String toHELM() throws HELM1ConverterException {
     throw new HELM1ConverterException("Can't be downcasted to HELM1-Format due to a group element");
   }
-
-
 
 }

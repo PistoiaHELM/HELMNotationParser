@@ -23,15 +23,14 @@
  */
 package org.helm.notation2.parser.notation.polymer;
 
-
 import org.helm.notation2.parser.exceptionparser.HELM1ConverterException;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * MonomerNotation
- * 
- * 
+ *
+ *
  * @author shecht
  */
 public abstract class MonomerNotation {
@@ -49,15 +48,15 @@ public abstract class MonomerNotation {
 
   protected String type;
 
-
   /**
    * Constructs with the given string
-   * 
+   *
    * @param str Monomer
    * @param type Type of polymer
    */
   public MonomerNotation(String str, String type) {
     this.unit = str;
+    this.type = type;
     if (str.equals("?")) {
       setCount("0..n");
       isDefault = true;
@@ -71,13 +70,11 @@ public abstract class MonomerNotation {
       isDefault = true;
     }
 
-    this.type = type;
   }
-
 
   /**
    * method to get the ID of the Monomer
-   * 
+   *
    * @return ID
    */
 
@@ -87,7 +84,7 @@ public abstract class MonomerNotation {
 
   /**
    * method to add annotation to this monomer
-   * 
+   *
    * @param str annotation
    */
   public void setAnnotation(String str) {
@@ -100,10 +97,9 @@ public abstract class MonomerNotation {
     }
   }
 
-
   /**
    * method to change the default count of one to the user-defined
-   * 
+   *
    * @param str user-defined count
    */
   public void setCount(String str) {
@@ -111,13 +107,13 @@ public abstract class MonomerNotation {
     if (str.equals("1")) {
       isDefault = true;
     }
-   
+
     count = str;
   }
 
   /**
    * method to get the count of the monomer
-   * 
+   *
    * @return count
    */
   public String getCount() {
@@ -126,7 +122,7 @@ public abstract class MonomerNotation {
 
   /**
    * method to get the annotation for this monomer
-   * 
+   *
    * @return annotation
    */
   public String getAnnotation() {
@@ -135,7 +131,7 @@ public abstract class MonomerNotation {
 
   /**
    * method to check if a annotation is there or not
-   * 
+   *
    * @return true, if the annotation is there, false otherwise
    */
   @JsonIgnore
@@ -146,6 +142,7 @@ public abstract class MonomerNotation {
   /**
    * {@inheritDoc}
    */
+  @Override
   public String toString() {
     if (isAnnotationTrue()) {
       return "Monomer unit: " + unit + "\nCount: " + count + "\nAnnotation: " + annotation;
@@ -154,32 +151,28 @@ public abstract class MonomerNotation {
     }
   }
 
-
   /**
    * method to generate a valid HELM2
-   * 
+   *
    * @return valid HELM2
    */
   public abstract String toHELM2();
 
-
   /**
    * method to get the Type of Polymer
-   * 
+   *
    * @return
    */
   public String getType() {
     return this.type;
   }
 
-
   /**
    * method to generate a valid HELM
-   * 
+   *
    * @return
    * @throws HELM1ConverterException
    */
   public abstract String toHELM() throws HELM1ConverterException;
-
 
 }

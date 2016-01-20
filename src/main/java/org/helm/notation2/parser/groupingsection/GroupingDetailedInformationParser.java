@@ -32,8 +32,9 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * GroupingDetailedInformationParser class to parse detailed information about the group
- * 
+ * GroupingDetailedInformationParser class to parse detailed information about
+ * the group
+ *
  * @author hecht
  */
 public class GroupingDetailedInformationParser implements State {
@@ -45,7 +46,7 @@ public class GroupingDetailedInformationParser implements State {
 
   /**
    * Constructs with the state machine parser
-   * 
+   *
    * @param pParser
    */
   public GroupingDetailedInformationParser(StateMachineParser pParser) {
@@ -54,12 +55,15 @@ public class GroupingDetailedInformationParser implements State {
 
   /**
    * {@inheritDoc}
-   * 
+   *
    * @throws NotationException
    */
   @Override
   public void doAction(char cha) throws GroupingSectionException, NotationException {
-    /* detailed information about the group is finished: annotation section starts */
+    /*
+     * detailed information about the group is finished: annotation section
+     * starts
+     */
     if (cha == ')') {
       if (_parser.checkDetailsGroup(details)) {
         LOG.info("Group description is finished:");
@@ -71,10 +75,7 @@ public class GroupingDetailedInformationParser implements State {
         LOG.error("Group information is wrong: " + details);
         throw new GroupingSectionException("Group information is wrong: " + details);
       }
-    }
-
-    /* add characters to the details */
-    else {
+    } /* add characters to the details */ else {
       details += cha;
     }
 
