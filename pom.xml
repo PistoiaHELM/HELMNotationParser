@@ -4,7 +4,7 @@
 	<groupId>com.quattroresearch</groupId>
 	<artifactId>helm2parser</artifactId>
 	<packaging>jar</packaging>
-	<version>0.1.0-SNAPSHOT</version>
+	<version>1.0.0-SNAPSHOT</version>
   <name>Helm2Parser</name>
 	<url>https://github.com/PistoiaHELM/HELMNotationToolkit</url>
 	<build>
