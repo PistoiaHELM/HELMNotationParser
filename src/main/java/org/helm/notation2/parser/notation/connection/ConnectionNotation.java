@@ -35,7 +35,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * ConnectionNotation class to save each connection
- * 
+ *
  * @author hecht
  */
 public final class ConnectionNotation {
@@ -57,7 +57,7 @@ public final class ConnectionNotation {
 
   /**
    * Constructs with the given Source ID a Connection Notation
-   * 
+   *
    * @param str source ID of the connection
    * @throws NotationException
    */
@@ -67,7 +67,7 @@ public final class ConnectionNotation {
 
   /**
    * Constructs with the given Source Entity and the given target ID
-   * 
+   *
    * @param firstID Entity of the Source ID
    * @param secondID Target ID
    * @throws NotationException
@@ -78,8 +78,9 @@ public final class ConnectionNotation {
   }
 
   /**
-   * Constructs with the two given Entities, Source ID and Target ID, and the given details about the connection
-   * 
+   * Constructs with the two given Entities, Source ID and Target ID, and the
+   * given details about the connection
+   *
    * @param firstID Entity of the Source ID
    * @param secondID Entity of the Target ID
    * @param details connection details
@@ -96,7 +97,7 @@ public final class ConnectionNotation {
 
   /**
    * Constructs a Connection Notation with an annotation
-   * 
+   *
    * @param firstID Entity of the Source ID
    * @param secondID Entity of the Target ID
    * @param sourceUnit MonomerNotation of the Source
@@ -118,7 +119,7 @@ public final class ConnectionNotation {
 
   /**
    * method to set the details of the current connection
-   * 
+   *
    * @param method to add connection details
    * @throws JDOMException
    * @throws IOException
@@ -139,7 +140,7 @@ public final class ConnectionNotation {
 
   /**
    * method to set the inline annotations
-   * 
+   *
    * @param str new annotation
    */
   private void addAnnotations(String str) {
@@ -149,7 +150,7 @@ public final class ConnectionNotation {
 
   /**
    * method to check if an annotation is there or not
-   * 
+   *
    * @return true if an annotation is there, false otherwise
    */
   @JsonIgnore
@@ -159,7 +160,7 @@ public final class ConnectionNotation {
 
   /**
    * method to get the annotation of the current connection
-   * 
+   *
    * @return Annotation
    */
   public String getAnnotation() {
@@ -168,7 +169,7 @@ public final class ConnectionNotation {
 
   /**
    * method to get the source ID of the current connection
-   * 
+   *
    * @return Source ID
    */
   public HELMEntity getSourceId() {
@@ -177,7 +178,7 @@ public final class ConnectionNotation {
 
   /**
    * method to get the target ID of the current connection
-   * 
+   *
    * @return
    */
   public HELMEntity getTargetId() {
@@ -186,7 +187,7 @@ public final class ConnectionNotation {
 
   /**
    * method to get the Source Unit of the current connection
-   * 
+   *
    * @return source unit
    */
   public String getSourceUnit() {
@@ -195,7 +196,7 @@ public final class ConnectionNotation {
 
   /**
    * method to get the Target Unit of the current connection
-   * 
+   *
    * @return target unit
    */
   public String getTargetUnit() {
@@ -204,7 +205,7 @@ public final class ConnectionNotation {
 
   /**
    * method to get the r Group of the source in the current connection
-   * 
+   *
    * @return rGroupSource
    */
   public String getrGroupSource() {
@@ -213,7 +214,7 @@ public final class ConnectionNotation {
 
   /**
    * method to get the r Group of the target in the current connection
-   * 
+   *
    * @return rGroupTarget
    */
   public String getrGroupTarget() {
@@ -223,6 +224,7 @@ public final class ConnectionNotation {
   /**
    * {@inheritDoc}
    */
+  @Override
   public String toString() {
     if (isAnnotationTrue()) {
       return "SourceID: " + sourceId + "\nTargetID: " + targetId + "\nDetails: " + "\nSourceUnit: " + sourceUnit
@@ -240,7 +242,7 @@ public final class ConnectionNotation {
 
   /**
    * method to get a valid HELM2 of the connection notation
-   * 
+   *
    * @return valid HELM2
    */
   public String toHELM2() {
@@ -257,10 +259,10 @@ public final class ConnectionNotation {
     String connectiondetails = sourceUnit + ":"
         + rGroupSource + "-" + targetUnit + ":" + rGroupTarget;
     String text = sourceId.getID() + "," + targetId.getID() + "," + connectiondetails;
-    if (!(connectiondetails.matches("\\d:R\\d-\\d:R\\d") || connectiondetails.matches("\\d:pair-\\d:pair"))) {
+    if (!(connectiondetails.matches("\\d+:R\\d+-\\d+:R\\d+") || connectiondetails.matches("\\d+:pair-\\d+:pair"))) {
       throw new HELM1ConverterException("Can't be downgraded to the HELM1-format");
     }
-    if (connectiondetails.matches("\\d:pair-\\d:pair")) {
+    if (connectiondetails.matches("\\d+:pair-\\d+:pair")) {
       text = "";
     }
     return text;
@@ -270,11 +272,11 @@ public final class ConnectionNotation {
     String connectiondetails = targetUnit + ":"
         + rGroupTarget + "-" + sourceUnit + ":" + rGroupSource;
     String text = targetId.getID() + "," + sourceId.getID() + "," + connectiondetails;
-    if (!(connectiondetails.matches("\\d:R\\d-\\d:R\\d") || connectiondetails.matches("\\d:pair-\\d:pair"))) {
+    if (!(connectiondetails.matches("\\d+:R\\d-\\d+:R\\d") || connectiondetails.matches("\\d+:pair-\\d+:pair"))) {
       throw new HELM1ConverterException("Can't be downgraded to the HELM1-format");
     }
 
-    if (connectiondetails.matches("\\d:pair-\\d:pair")) {
+    if (connectiondetails.matches("\\d+:pair-\\d+:pair")) {
       text = "";
     }
 

@@ -84,6 +84,10 @@ public class MonomerNotationGroupElement {
     return this.monomer;
   }
 
+  public void setMonomerNotation(MonomerNotation mon) {
+    this.monomer = mon;
+  }
+
   /**
    * method to get the ratio or the interval of this group, in the case of an
    * interval it returns a list of two values
