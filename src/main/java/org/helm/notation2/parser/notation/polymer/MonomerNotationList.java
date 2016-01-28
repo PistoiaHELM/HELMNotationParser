@@ -27,20 +27,33 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.helm.notation2.parser.InlineAnnotationsParser;
 import org.helm.notation2.parser.exceptionparser.HELM1ConverterException;
 import org.helm.notation2.parser.exceptionparser.NotationException;
+import org.helm.notation2.parser.exceptionparser.SimplePolymerSectionException;
 import org.helm.notation2.parser.notation.ValidationMethod;
+import org.helm.notation2.parser.simplepolymerssection.BetweenParser;
+import org.helm.notation2.parser.simplepolymerssection.RepeatingMonomerParser;
+import org.helm.notation2.parser.simplepolymerssection.SimplePolymersNotationParser;
 import org.jdom2.JDOMException;
 
 /**
  * MonomerNotationList
- * 
- * 
+ *
+ *
  * @author hecht
  */
 public class MonomerNotationList extends MonomerNotation {
 
   private List<MonomerNotation> list = new ArrayList<MonomerNotation>();
+
+  private int bracketCounterOpen = 0;
+
+  private int bracketCounterClose = 0;
+
+  private int parenthesisCounterOpen = 0;
+
+  private int parenthesisCounterClose = 0;
 
   /**
    * @param str
@@ -60,11 +73,18 @@ public class MonomerNotationList extends MonomerNotation {
 
   private void setMonomerNotationUnitList(String str, String type)
       throws NotationException, IOException, JDOMException {
-    String[] items = str.split("\\.");
-    for (String item : items) {
-      list.add(ValidationMethod.decideWhichMonomerNotation(item, type));
+    /* Parsing Step is missing ! */
+    List<String[]> items = parseMonomer(str);
+    for (String[] item : items) {
+      MonomerNotation current = ValidationMethod.decideWhichMonomerNotation(item[0], type);
+      if (item[1] != "") {
+        current.setCount(item[1]);
+      }
+      if (item[2] != "") {
+        current.setAnnotation(item[2]);
+      }
+      list.add(current);
     }
-
   }
 
   /**
@@ -83,6 +103,91 @@ public class MonomerNotationList extends MonomerNotation {
     throw new HELM1ConverterException("Can't be downgraded to HELM1-Format");
   }
 
+  private List<String[]> parseMonomer(String str) {
+    boolean isCount = false;
+    boolean isAnnotation = false;
+    StringBuilder sb = new StringBuilder();
+    String monomer = "";
+    String count = "";
+    String annotation = "";
+    List<String[]> listElements = new ArrayList<String[]>();
+    String[] array = new String[3];
+    for (char cha : str.toCharArray()) {
+      /* a new Monomer is starting */
+      if (cha == '.' && checkBracketsParenthesis()) {
+        if (!(isCount) && !(isAnnotation)) {
+          listElements.add(new String[] {monomer, count, annotation});
+          monomer = "";
+          count = "";
+          annotation = "";
+
+        }
+
+      } /* an additional annotation is given */ else if (cha == '"' && checkBracketsParenthesis()) {
+        if (isAnnotation) {
+          isAnnotation = false;
+        } else {
+          isAnnotation = true;
+        }
+
+      } else if (cha == '\'' && checkBracketsParenthesis()) {
+        if (isCount) {
+          isCount = false;
+        } else {
+          isCount = true;
+        }
+
+      } /* check all brackets */ else if (cha == '[' || cha == ']' || cha == '(' || cha == ')') {
+        if (!(isCount) && !(isAnnotation)) {
+          monomer += cha;
+        } else if (isCount) {
+          count += cha;
+        } else if (isAnnotation) {
+          annotation += cha;
+        }
+        if (cha == '[') {
+          bracketCounterOpen += 1;
+        } else if (cha == ']') {
+          bracketCounterClose += 1;
+        } else if (cha == '(') {
+          parenthesisCounterOpen += 1;
+
+        } else {
+          parenthesisCounterClose += 1;
+
+        }
+      } /* add characters */ else {
+
+        if (!(isCount) && !(isAnnotation)) {
+          monomer += cha;
+        } else if (isCount) {
+          count += cha;
+        } else if (isAnnotation) {
+          annotation += cha;
+        }
+
+      }
+    }
+    array[0] = monomer;
+    array[1] = count;
+    array[2] = annotation;
+
+    listElements.add(new String[] {monomer, count, annotation});
+    return listElements;
+
+  }
+
+  /**
+   * method to check if all open brackets are closed
+   *
+   * @return true if all open brackets are close, false otherwise
+   */
+  private boolean checkBracketsParenthesis() {
+    if (bracketCounterOpen == bracketCounterClose && parenthesisCounterOpen == parenthesisCounterClose) {
+      return true;
+    }
+    return false;
+  }
 // public String toHELM() throws HELM1ConverterException {
 // /* combine the single compounds together */
 // String result = "";
