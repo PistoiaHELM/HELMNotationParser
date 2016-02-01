@@ -34,7 +34,7 @@ public class MonomerNotationUnitRNATest {
 
   /**
    * method to test the constructor of the MonomerNotationUnitRNA class
-   * 
+   *
    * @throws IOException
    * @throws NotationException
    */
@@ -47,7 +47,7 @@ public class MonomerNotationUnitRNATest {
 
   /**
    * method to test the constructor of the MonomerNotationUnitRNA class
-   * 
+   *
    * @throws IOException
    * @throws NotationException
    */
@@ -58,11 +58,12 @@ public class MonomerNotationUnitRNATest {
     Assert.assertEquals(unit.getContents().get(0).getID(), "R");
     Assert.assertEquals(unit.getContents().get(1).getID(), "A");
     Assert.assertEquals(unit.getContents().get(2).getID(), "P");
+    Assert.assertEquals(unit.getContents().size(), 3);
   }
 
   /**
    * method to test the constructor of the MonomerNotationUnitRNA class
-   * 
+   *
    * @throws IOException
    * @throws NotationException
    */
@@ -76,7 +77,7 @@ public class MonomerNotationUnitRNATest {
 
   /**
    * method to test the constructor of the MonomerNotationUnitRNA class
-   * 
+   *
    * @throws IOException
    * @throws NotationException
    */
@@ -84,13 +85,15 @@ public class MonomerNotationUnitRNATest {
   public void testMonomerNotationUnitRNAContentsSpecialTwo() throws IOException, NotationException {
     String test = "[dR]P";
     MonomerNotationUnitRNA unit = new MonomerNotationUnitRNA(test, "RNA");
+    System.out.println(unit.getContents().get(0).getID());
     Assert.assertEquals(unit.getContents().get(0).getID(), "[dR]");
+    System.out.println(unit.getContents().get(0).getID());
     Assert.assertEquals(unit.getContents().get(1).getID(), "P");
   }
 
   /**
    * method to test the constructor of the MonomerNotationUnitRNA class
-   * 
+   *
    * @throws IOException
    * @throws NotationException
    */
@@ -104,8 +107,8 @@ public class MonomerNotationUnitRNATest {
 
   /**
    * method to test the constructor of the MonomerNotationUnitRNA class
-   * 
-   * 
+   *
+   *
    * @throws IOException
    * @throws NotationException
    */
@@ -120,7 +123,7 @@ public class MonomerNotationUnitRNATest {
 
   /**
    * method to test the constructor of the MonomerNotationUnitRNA class
-   * 
+   *
    * @throws IOException
    * @throws NotationException
    */
@@ -135,7 +138,7 @@ public class MonomerNotationUnitRNATest {
 
   /**
    * method to test the constructor of the MonomerNotationUnitRNA class
-   * 
+   *
    * @throws IOException
    * @throws NotationException
    */
@@ -148,7 +151,7 @@ public class MonomerNotationUnitRNATest {
 
   /**
    * method to test the constructor of the MonomerNotationUnitRNA class
-   * 
+   *
    * @throws IOException
    * @throws NotationException
    */

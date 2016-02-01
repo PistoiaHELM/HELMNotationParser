@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="630" started-at="2015-12-09T11:18:47Z" finished-at="2015-12-09T11:18:48Z">
+  <suite name="Default suite" duration-ms="15" started-at="2016-02-01T12:22:55Z" finished-at="2016-02-01T12:22:55Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="630" started-at="2015-12-09T11:18:47Z" finished-at="2015-12-09T11:18:48Z">
-      <class name="org.helm.notation2.parser.NotationTest">
-        <test-method status="PASS" signature="testPositiveInput()[pri:0, instance:org.helm.notation2.parser.NotationTest@186b480a]" name="testPositiveInput" duration-ms="618" started-at="2015-12-09T12:18:47Z" finished-at="2015-12-09T12:18:48Z">
+    <test name="Default test" duration-ms="15" started-at="2016-02-01T12:22:55Z" finished-at="2016-02-01T12:22:55Z">
+      <class name="org.helm.notation2.parser.polymer.MonomerNotationUnitRNATest">
+        <test-method status="PASS" signature="testMonomerNotationUnitRNAContents()[pri:0, instance:org.helm.notation2.parser.polymer.MonomerNotationUnitRNATest@15e6356d]" name="testMonomerNotationUnitRNAContents" duration-ms="0" started-at="2016-02-01T13:22:55Z" finished-at="2016-02-01T13:22:55Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testPositiveInput -->
-      </class> <!-- org.helm.notation2.parser.NotationTest -->
+        </test-method> <!-- testMonomerNotationUnitRNAContents -->
+      </class> <!-- org.helm.notation2.parser.polymer.MonomerNotationUnitRNATest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
