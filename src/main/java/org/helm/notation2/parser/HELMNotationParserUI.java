@@ -130,7 +130,6 @@ public class HELMNotationParserUI extends JFrame {
     }
 
     /* read input */
-    System.out.println(helmInput);
     try {
       parser.parse(helmInput);
       writeOutputmessage();
