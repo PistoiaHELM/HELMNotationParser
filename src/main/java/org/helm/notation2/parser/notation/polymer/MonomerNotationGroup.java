@@ -33,14 +33,12 @@ import org.helm.notation2.parser.notation.ValidationMethod;
 import org.jdom2.JDOMException;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonTypeInfo;
 
 /**
  * MonomerNotationGroup
  *
  * @author hecht
  */
-@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.PROPERTY, property = "type")
 public abstract class MonomerNotationGroup extends MonomerNotation {
 
   public List<MonomerNotationGroupElement> elements = new ArrayList<MonomerNotationGroupElement>();
