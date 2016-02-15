@@ -39,7 +39,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
  * @author hecht
  */
 public abstract class PolymerElements {
-
+  @JsonIgnore
   public List<MonomerNotation> listMonomerNotations;
 
   protected HELMEntity entity;

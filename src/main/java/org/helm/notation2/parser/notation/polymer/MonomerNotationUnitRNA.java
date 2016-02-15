@@ -103,7 +103,6 @@ public class MonomerNotationUnitRNA extends MonomerNotationUnit {
    *
    * @return
    */
-  @JsonIgnore
   public List<MonomerNotationUnit> getContents() {
     return this.contents;
   }

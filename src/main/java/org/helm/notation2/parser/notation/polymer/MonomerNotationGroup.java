@@ -39,8 +39,9 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
  *
  * @author hecht
  */
-public abstract class MonomerNotationGroup extends MonomerNotation {
 
+public abstract class MonomerNotationGroup extends MonomerNotation {
+  @JsonIgnore
   public List<MonomerNotationGroupElement> elements = new ArrayList<MonomerNotationGroupElement>();
 
   /**

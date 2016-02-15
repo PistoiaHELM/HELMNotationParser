@@ -26,6 +26,7 @@ package org.helm.notation2.parser.notation.polymer;
 import org.helm.notation2.parser.exceptionparser.HELM1ConverterException;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonTypeInfo;
 
 /**
  * MonomerNotation
@@ -33,6 +34,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
  *
  * @author shecht
  */
+@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.PROPERTY, property = "class")
 public abstract class MonomerNotation {
   protected String unit;
 

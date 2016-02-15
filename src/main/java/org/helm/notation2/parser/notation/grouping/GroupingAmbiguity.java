@@ -26,11 +26,14 @@ package org.helm.notation2.parser.notation.grouping;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonTypeInfo;
+
 /**
  * GroupingAmbiguity represents a single group in the grouping section
  *
  * @author hecht
  */
+@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.PROPERTY, property = "class")
 public abstract class GroupingAmbiguity {
 
   protected List<GroupingElement> elements = new ArrayList<GroupingElement>();
