@@ -34,7 +34,7 @@ import com.fasterxml.jackson.annotation.JsonTypeInfo;
  *
  * @author shecht
  */
-@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.PROPERTY, property = "class")
+@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.PROPERTY, property = "classType")
 public abstract class MonomerNotation {
   protected String unit;
 
