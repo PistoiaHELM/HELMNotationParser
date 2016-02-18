@@ -23,17 +23,23 @@
  */
 package org.helm.notation2.parser.notation.polymer;
 
+import com.fasterxml.jackson.annotation.JsonTypeInfo;
 
 /**
  * ChemEntity
- * 
+ *
  * @author hecht
  */
+@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.PROPERTY, property = "classType")
 public class ChemEntity extends PolymerEntity {
+
+  public ChemEntity() {
+
+  }
 
   /**
    * Constructs with the given string
-   * 
+   *
    * @param str Chem ID
    */
   public ChemEntity(String str) {

@@ -91,7 +91,7 @@ public class MonomerNotationGroupMixture extends MonomerNotationGroup {
     DecimalFormat d = new DecimalFormat("#.##");
     notation.append("(");
     for (int i = 0; i < elements.size(); i++) {
-      String text = elements.get(i).getMonomerNotation().getID();
+      String text = elements.get(i).getMonomerNotation().getUnit();
       if (!(elements.get(i).isDefaultValue())) {
         String value = d.format(elements.get(i).getValue().get(0)).replace(',', '.');
         if (elements.get(i).isInterval()) {

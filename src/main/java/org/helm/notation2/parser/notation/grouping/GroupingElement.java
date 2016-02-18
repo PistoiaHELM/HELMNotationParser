@@ -45,11 +45,15 @@ public final class GroupingElement {
 
   private double numberTwo;
 
-  @JsonIgnore
+  // @JsonIgnore
   private boolean isInterval = false;
 
-  @JsonIgnore
+  // @JsonIgnore
   private boolean isDefault = true;
+
+  public GroupingElement() {
+
+  }
 
   /**
    * Constructs with the given string and the ratio
@@ -109,9 +113,12 @@ public final class GroupingElement {
    *
    * @return true if the value is default, false otherwise
    */
-  @JsonIgnore
   public boolean isDefaultValue() {
     return isDefault;
+  }
+
+  public boolean isInterval() {
+    return this.isInterval;
   }
 
   /**

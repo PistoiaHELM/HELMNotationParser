@@ -84,7 +84,7 @@ public class PolymerNotationTest {
     PolymerNotation current = new PolymerNotation(pre.getPolymerID(), pre.getPolymerElements(),
         "Annotation");
     Assert.assertEquals(current.getAnnotation(), "Annotation");
-    Assert.assertTrue(current.isAnnotationTrue());
+    Assert.assertTrue(current.isAnnotationHere());
 
   }
 

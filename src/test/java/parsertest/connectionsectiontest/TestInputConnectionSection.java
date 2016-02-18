@@ -58,8 +58,8 @@ public class TestInputConnectionSection {
         "RNA1{R(A)P.R(G)P.R(U)P.R(C)P.P(C)}|RNA2{R(U)P.R(G)P.R(G)P.R(G)P.R(G)P.R(A)P.R(G)}$RNA1,RNA2,20:pair-8:pair|RNA1,RNA2,17:pair-11:pair|RNA1,RNA2,8:pair-20:pair|RNA1,RNA2,14:pair-14:pair|RNA1,RNA2,11:pair-17:pair$$RNA1{StrandType:ss}|RNA2{StrandType:as}$V2.0";
     parser.parse(test);
 
-    Assert.assertTrue(parser.getHELM2Notation().getListOfConnections().get(0).getSourceId().getID().equals("RNA1"));
-    Assert.assertTrue(parser.getHELM2Notation().getListOfConnections().get(0).getTargetId().getID().equals("RNA2"));
+    Assert.assertTrue(parser.getHELM2Notation().getListOfConnections().get(0).getSourceId().getId().equals("RNA1"));
+    Assert.assertTrue(parser.getHELM2Notation().getListOfConnections().get(0).getTargetId().getId().equals("RNA2"));
     Assert.assertTrue(parser.getHELM2Notation().getListOfConnections().get(0).getSourceUnit().equals("20"));
     Assert.assertTrue(parser.getHELM2Notation().getListOfConnections().get(0).getTargetUnit().equals("8"));
     Assert.assertTrue(parser.getHELM2Notation().getListOfConnections().get(0).getrGroupSource().equals("pair"));

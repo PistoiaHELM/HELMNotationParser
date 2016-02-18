@@ -33,11 +33,16 @@ import org.helm.notation2.parser.notation.ValidationMethod;
 import org.jdom2.JDOMException;
 
 /**
- * PolymerSingleElements class to represent a polymerelements for this class only one monomer is allowed
- * 
+ * PolymerSingleElements class to represent a polymerelements for this class
+ * only one monomer is allowed
+ *
  * @author hecht
  */
 public class PolymerSingleElements extends PolymerElements {
+
+  public PolymerSingleElements() {
+
+  }
 
   /**
    * Constructor
@@ -57,7 +62,7 @@ public class PolymerSingleElements extends PolymerElements {
 
   /**
    * {@inheritDoc}
-   * 
+   *
    * @throws SimplePolymerSectionException
    * @throws IOException
    * @throws NotationException
@@ -93,6 +98,7 @@ public class PolymerSingleElements extends PolymerElements {
   /**
    * {@inheritDoc}
    */
+  @Override
   public String toString() {
     return this.listMonomerNotations.get(0).toString();
   }

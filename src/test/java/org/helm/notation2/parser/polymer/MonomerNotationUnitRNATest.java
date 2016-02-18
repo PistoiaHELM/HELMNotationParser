@@ -42,7 +42,7 @@ public class MonomerNotationUnitRNATest {
   public void testMonomerNotationUnitRNA() throws IOException, NotationException {
     String test = "R(A)P";
     MonomerNotationUnitRNA unit = new MonomerNotationUnitRNA(test, "RNA");
-    Assert.assertEquals(unit.getID(), test);
+    Assert.assertEquals(unit.getUnit(), test);
   }
 
   /**
@@ -55,9 +55,9 @@ public class MonomerNotationUnitRNATest {
   public void testMonomerNotationUnitRNAContents() throws IOException, NotationException {
     String test = "R(A)P";
     MonomerNotationUnitRNA unit = new MonomerNotationUnitRNA(test, "RNA");
-    Assert.assertEquals(unit.getContents().get(0).getID(), "R");
-    Assert.assertEquals(unit.getContents().get(1).getID(), "A");
-    Assert.assertEquals(unit.getContents().get(2).getID(), "P");
+    Assert.assertEquals(unit.getContents().get(0).getUnit(), "R");
+    Assert.assertEquals(unit.getContents().get(1).getUnit(), "A");
+    Assert.assertEquals(unit.getContents().get(2).getUnit(), "P");
     Assert.assertEquals(unit.getContents().size(), 3);
   }
 
@@ -71,8 +71,8 @@ public class MonomerNotationUnitRNATest {
   public void testMonomerNotationUnitRNAContentsSpecial() throws IOException, NotationException {
     String test = "RP";
     MonomerNotationUnitRNA unit = new MonomerNotationUnitRNA(test, "RNA");
-    Assert.assertEquals(unit.getContents().get(0).getID(), "R");
-    Assert.assertEquals(unit.getContents().get(1).getID(), "P");
+    Assert.assertEquals(unit.getContents().get(0).getUnit(), "R");
+    Assert.assertEquals(unit.getContents().get(1).getUnit(), "P");
   }
 
   /**
@@ -85,10 +85,10 @@ public class MonomerNotationUnitRNATest {
   public void testMonomerNotationUnitRNAContentsSpecialTwo() throws IOException, NotationException {
     String test = "[dR]P";
     MonomerNotationUnitRNA unit = new MonomerNotationUnitRNA(test, "RNA");
-    System.out.println(unit.getContents().get(0).getID());
-    Assert.assertEquals(unit.getContents().get(0).getID(), "[dR]");
-    System.out.println(unit.getContents().get(0).getID());
-    Assert.assertEquals(unit.getContents().get(1).getID(), "P");
+    System.out.println(unit.getContents().get(0).getUnit());
+    Assert.assertEquals(unit.getContents().get(0).getUnit(), "[dR]");
+    System.out.println(unit.getContents().get(0).getUnit());
+    Assert.assertEquals(unit.getContents().get(1).getUnit(), "P");
   }
 
   /**
@@ -101,8 +101,8 @@ public class MonomerNotationUnitRNATest {
   public void testMonomerNotationUnitRNAContentsSpecialThree() throws IOException, NotationException {
     String test = "RP";
     MonomerNotationUnitRNA unit = new MonomerNotationUnitRNA(test, "RNA");
-    Assert.assertEquals(unit.getContents().get(0).getID(), "R");
-    Assert.assertEquals(unit.getContents().get(1).getID(), "P");
+    Assert.assertEquals(unit.getContents().get(0).getUnit(), "R");
+    Assert.assertEquals(unit.getContents().get(1).getUnit(), "P");
   }
 
   /**
@@ -116,9 +116,9 @@ public class MonomerNotationUnitRNATest {
   public void testMonomerNotationUnitRNAContentsSpecialFour() throws IOException, NotationException {
     String test = "R([dabA])P";
     MonomerNotationUnitRNA unit = new MonomerNotationUnitRNA(test, "RNA");
-    Assert.assertEquals(unit.getContents().get(0).getID(), "R");
-    Assert.assertEquals(unit.getContents().get(1).getID(), "[dabA]");
-    Assert.assertEquals(unit.getContents().get(2).getID(), "P");
+    Assert.assertEquals(unit.getContents().get(0).getUnit(), "R");
+    Assert.assertEquals(unit.getContents().get(1).getUnit(), "[dabA]");
+    Assert.assertEquals(unit.getContents().get(2).getUnit(), "P");
   }
 
   /**
@@ -131,9 +131,9 @@ public class MonomerNotationUnitRNATest {
   public void testMonomerNotationUnitRNAContentsSpecialFive() throws IOException, NotationException {
     String test = "R([dabA])P";
     MonomerNotationUnitRNA unit = new MonomerNotationUnitRNA(test, "RNA");
-    Assert.assertEquals(unit.getContents().get(0).getID(), "R");
-    Assert.assertEquals(unit.getContents().get(1).getID(), "[dabA]");
-    Assert.assertEquals(unit.getContents().get(2).getID(), "P");
+    Assert.assertEquals(unit.getContents().get(0).getUnit(), "R");
+    Assert.assertEquals(unit.getContents().get(1).getUnit(), "[dabA]");
+    Assert.assertEquals(unit.getContents().get(2).getUnit(), "P");
   }
 
   /**
@@ -146,7 +146,7 @@ public class MonomerNotationUnitRNATest {
   public void testMonomerNotationUnitRNAContentsSpecialSix() throws IOException, NotationException {
     String test = "[sP]";
     MonomerNotationUnitRNA unit = new MonomerNotationUnitRNA(test, "RNA");
-    Assert.assertEquals(unit.getContents().get(0).getID(), "[sP]");
+    Assert.assertEquals(unit.getContents().get(0).getUnit(), "[sP]");
   }
 
   /**
@@ -159,6 +159,6 @@ public class MonomerNotationUnitRNATest {
   public void testMonomerNotationUnitRNAContentsSpecialSeven() throws IOException, NotationException {
     String test = "R[sP]";
     MonomerNotationUnitRNA unit = new MonomerNotationUnitRNA(test, "RNA");
-    Assert.assertEquals(unit.getContents().get(0).getID(), "R");
+    Assert.assertEquals(unit.getContents().get(0).getUnit(), "R");
   }
 }

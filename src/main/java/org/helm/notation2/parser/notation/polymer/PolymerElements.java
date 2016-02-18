@@ -32,20 +32,31 @@ import org.helm.notation2.parser.exceptionparser.SimplePolymerSectionException;
 import org.jdom2.JDOMException;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonTypeInfo;
 
 /**
  * PolymerElements
  *
  * @author hecht
  */
+@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.PROPERTY, property = "classType")
 public abstract class PolymerElements {
+
   @JsonIgnore
-  public List<MonomerNotation> listMonomerNotations;
+  public List<MonomerNotation> listMonomerNotations = null;
 
   protected HELMEntity entity;
 
+  public PolymerElements() {
+
+  }
+
   public PolymerElements(HELMEntity entity) {
     this.entity = entity;
+  }
+
+  public void setListOfElements(List<MonomerNotation> monomers) {
+    this.listMonomerNotations = monomers;
   }
 
   /**
@@ -54,6 +65,10 @@ public abstract class PolymerElements {
    * @return
    */
   public abstract List<MonomerNotation> getListOfElements();
+
+  public HELMEntity getEntity() {
+    return this.entity;
+  }
 
   /**
    * method to add a monomer to the polymer

@@ -55,6 +55,10 @@ public final class ConnectionNotation {
 
   private boolean isAnnotationHere = false;
 
+  public ConnectionNotation() {
+
+  }
+
   /**
    * Constructs with the given Source ID a Connection Notation
    *
@@ -247,10 +251,10 @@ public final class ConnectionNotation {
    */
   public String toHELM2() {
     if (isAnnotationTrue()) {
-      return sourceId.getID() + "," + targetId.getID() + "," + sourceUnit + ":"
+      return sourceId.getId() + "," + targetId.getId() + "," + sourceUnit + ":"
           + rGroupSource + "-" + targetUnit + ":" + rGroupTarget + "\"" + annotation + "\"";
     } else {
-      return sourceId.getID() + "," + targetId.getID() + "," + sourceUnit + ":"
+      return sourceId.getId() + "," + targetId.getId() + "," + sourceUnit + ":"
           + rGroupSource + "-" + targetUnit + ":" + rGroupTarget;
     }
   }
@@ -258,7 +262,7 @@ public final class ConnectionNotation {
   public String toHELM() throws HELM1ConverterException {
     String connectiondetails = sourceUnit + ":"
         + rGroupSource + "-" + targetUnit + ":" + rGroupTarget;
-    String text = sourceId.getID() + "," + targetId.getID() + "," + connectiondetails;
+    String text = sourceId.getId() + "," + targetId.getId() + "," + connectiondetails;
     if (!(connectiondetails.matches("\\d+:R\\d+-\\d+:R\\d+") || connectiondetails.matches("\\d+:pair-\\d+:pair"))) {
       throw new HELM1ConverterException("Can't be downgraded to the HELM1-format");
     }
@@ -271,7 +275,7 @@ public final class ConnectionNotation {
   public String toReverseHELM() throws HELM1ConverterException {
     String connectiondetails = targetUnit + ":"
         + rGroupTarget + "-" + sourceUnit + ":" + rGroupSource;
-    String text = targetId.getID() + "," + sourceId.getID() + "," + connectiondetails;
+    String text = targetId.getId() + "," + sourceId.getId() + "," + connectiondetails;
     if (!(connectiondetails.matches("\\d+:R\\d-\\d+:R\\d") || connectiondetails.matches("\\d+:pair-\\d+:pair"))) {
       throw new HELM1ConverterException("Can't be downgraded to the HELM1-format");
     }
@@ -286,7 +290,9 @@ public final class ConnectionNotation {
 
   public void setAnnotation(String notation) {
     annotation = notation;
-    isAnnotationHere = true;
+    if (notation != null) {
+      isAnnotationHere = true;
+    }
   }
 
 }

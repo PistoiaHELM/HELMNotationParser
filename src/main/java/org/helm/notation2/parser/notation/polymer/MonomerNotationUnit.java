@@ -35,6 +35,10 @@ import org.helm.notation2.parser.exceptionparser.NotationException;
  */
 public class MonomerNotationUnit extends MonomerNotation {
 
+  public MonomerNotationUnit() {
+
+  }
+
   /**
    * Constructs with the given String
    *

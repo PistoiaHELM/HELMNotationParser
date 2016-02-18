@@ -23,23 +23,28 @@
  */
 package org.helm.notation2.parser.notation.polymer;
 
+import com.fasterxml.jackson.annotation.JsonTypeInfo;
 
 /**
  * BlobEntity
- * 
+ *
  * @author hecht
  */
+@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.PROPERTY, property = "classType")
 public final class BlobEntity extends PolymerEntity {
+
+  public BlobEntity() {
+
+  }
 
   /**
    * Constructs with the given String
-   * 
+   *
    * @param str Blob ID
    */
   public BlobEntity(String str) {
     super(str);
     type = "BLOB";
   }
-
 
 }

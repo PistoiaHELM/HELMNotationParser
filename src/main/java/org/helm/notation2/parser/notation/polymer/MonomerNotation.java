@@ -42,13 +42,15 @@ public abstract class MonomerNotation {
 
   protected String count = String.valueOf(1);
 
-  @JsonIgnore
   protected boolean isDefault = true;
 
-  @JsonIgnore
   protected boolean isAnnotationHere = false;
 
   protected String type;
+
+  public MonomerNotation() {
+
+  }
 
   /**
    * Constructs with the given string
@@ -80,7 +82,7 @@ public abstract class MonomerNotation {
    * @return ID
    */
 
-  public String getID() {
+  public String getUnit() {
     return unit;
   }
 

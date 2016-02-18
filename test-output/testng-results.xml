@@ -1,17 +1,86 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="0" failed="1" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="15" started-at="2016-02-01T12:22:55Z" finished-at="2016-02-01T12:22:55Z">
+  <suite name="Default suite" duration-ms="248" started-at="2016-02-18T13:53:38Z" finished-at="2016-02-18T13:53:38Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="15" started-at="2016-02-01T12:22:55Z" finished-at="2016-02-01T12:22:55Z">
-      <class name="org.helm.notation2.parser.polymer.MonomerNotationUnitRNATest">
-        <test-method status="PASS" signature="testMonomerNotationUnitRNAContents()[pri:0, instance:org.helm.notation2.parser.polymer.MonomerNotationUnitRNATest@15e6356d]" name="testMonomerNotationUnitRNAContents" duration-ms="0" started-at="2016-02-01T13:22:55Z" finished-at="2016-02-01T13:22:55Z">
+    <test name="Default test" duration-ms="248" started-at="2016-02-18T13:53:38Z" finished-at="2016-02-18T13:53:38Z">
+      <class name="org.helm.notation2.parser.GenerateObjectFromJSONTest">
+        <test-method status="FAIL" signature="test()[pri:0, instance:org.helm.notation2.parser.GenerateObjectFromJSONTest@104324d9]" name="test" duration-ms="236" started-at="2016-02-18T14:53:38Z" finished-at="2016-02-18T14:53:38Z">
+          <exception class="com.fasterxml.jackson.databind.JsonMappingException">
+            <message>
+              <![CDATA[(was java.lang.UnsupportedOperationException) (through reference chain: org.helm.notation2.parser.notation.HELM2Notation["listOfGroupings"]->java.util.ArrayList[0]->org.helm.notation2.parser.notation.grouping.GroupingNotation["ambiguity"]->org.helm.notation2.parser.notation.grouping.GroupingMixture["listOfElements"]->java.util.ArrayList[0]->org.helm.notation2.parser.notation.grouping.GroupingElement["value"]->java.util.ArrayList[1])]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[com.fasterxml.jackson.databind.JsonMappingException: (was java.lang.UnsupportedOperationException) (through reference chain: org.helm.notation2.parser.notation.HELM2Notation["listOfGroupings"]->java.util.ArrayList[0]->org.helm.notation2.parser.notation.grouping.GroupingNotation["ambiguity"]->org.helm.notation2.parser.notation.grouping.GroupingMixture["listOfElements"]->java.util.ArrayList[0]->org.helm.notation2.parser.notation.grouping.GroupingElement["value"]->java.util.ArrayList[1])
+	at com.fasterxml.jackson.databind.JsonMappingException.wrapWithPath(JsonMappingException.java:210)
+	at com.fasterxml.jackson.databind.JsonMappingException.wrapWithPath(JsonMappingException.java:189)
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer.deserialize(CollectionDeserializer.java:266)
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer.deserialize(CollectionDeserializer.java:25)
+	at com.fasterxml.jackson.databind.deser.impl.SetterlessProperty.deserializeAndSet(SetterlessProperty.java:122)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.vanillaDeserialize(BeanDeserializer.java:258)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:125)
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer.deserialize(CollectionDeserializer.java:245)
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer.deserialize(CollectionDeserializer.java:25)
+	at com.fasterxml.jackson.databind.deser.impl.SetterlessProperty.deserializeAndSet(SetterlessProperty.java:122)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.vanillaDeserialize(BeanDeserializer.java:258)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer._deserializeOther(BeanDeserializer.java:161)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:136)
+	at com.fasterxml.jackson.databind.jsontype.impl.AsPropertyTypeDeserializer._deserializeTypedForId(AsPropertyTypeDeserializer.java:122)
+	at com.fasterxml.jackson.databind.jsontype.impl.AsPropertyTypeDeserializer.deserializeTypedFromObject(AsPropertyTypeDeserializer.java:93)
+	at com.fasterxml.jackson.databind.deser.AbstractDeserializer.deserializeWithType(AbstractDeserializer.java:131)
+	at com.fasterxml.jackson.databind.deser.SettableBeanProperty.deserialize(SettableBeanProperty.java:518)
+	at com.fasterxml.jackson.databind.deser.impl.MethodProperty.deserializeAndSet(MethodProperty.java:95)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.vanillaDeserialize(BeanDeserializer.java:258)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:125)
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer.deserialize(CollectionDeserializer.java:245)
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer.deserialize(CollectionDeserializer.java:217)
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer.deserialize(CollectionDeserializer.java:25)
+	at com.fasterxml.jackson.databind.deser.SettableBeanProperty.deserialize(SettableBeanProperty.java:520)
+	at com.fasterxml.jackson.databind.deser.impl.FieldProperty.deserializeAndSet(FieldProperty.java:101)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.vanillaDeserialize(BeanDeserializer.java:258)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:125)
+	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:3736)
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:2726)
+	at org.helm.notation2.parser.GenerateObjectFromJSON.generateFromJSON(GenerateObjectFromJSON.java:57)
+	at org.helm.notation2.parser.GenerateObjectFromJSONTest.test(GenerateObjectFromJSONTest.java:65)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:774)
+	at org.testng.TestRunner.run(TestRunner.java:624)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1191)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)
+	at org.testng.TestNG.run(TestNG.java:1024)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:112)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:205)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:176)
+Caused by: java.lang.UnsupportedOperationException
+	at java.util.AbstractList.add(Unknown Source)
+	at java.util.AbstractList.add(Unknown Source)
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer.deserialize(CollectionDeserializer.java:252)
+	... 52 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- com.fasterxml.jackson.databind.JsonMappingException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testMonomerNotationUnitRNAContents -->
-      </class> <!-- org.helm.notation2.parser.polymer.MonomerNotationUnitRNATest -->
+        </test-method> <!-- test -->
+      </class> <!-- org.helm.notation2.parser.GenerateObjectFromJSONTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

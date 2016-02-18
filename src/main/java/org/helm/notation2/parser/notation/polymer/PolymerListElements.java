@@ -35,11 +35,14 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * PolymerListElements class to represent a list of polymer elements
- * 
+ *
  * @author hecht
  */
 public class PolymerListElements extends PolymerElements {
 
+  public PolymerListElements() {
+
+  }
 
   /**
    * Constructor
@@ -60,7 +63,7 @@ public class PolymerListElements extends PolymerElements {
 
   /**
    * {@inheritDoc}
-   * 
+   *
    * @throws JDOMException
    * @throws IOException
    * @throws NotationException
@@ -69,7 +72,6 @@ public class PolymerListElements extends PolymerElements {
   public void addMonomerNotation(String str) throws NotationException, IOException, JDOMException {
     this.listMonomerNotations.add(ValidationMethod.decideWhichMonomerNotation(str, this.entity.getType()));
   }
-
 
   /**
    * {@inheritDoc}
@@ -91,6 +93,7 @@ public class PolymerListElements extends PolymerElements {
   /**
    * {@inheritDoc}
    */
+  @Override
   public String toString() {
     return this.listMonomerNotations.toString();
   }

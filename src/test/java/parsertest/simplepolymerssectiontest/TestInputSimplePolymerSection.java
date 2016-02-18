@@ -54,8 +54,8 @@ public class TestInputSimplePolymerSection {
      * Test for the right Notation checks if the polymertype is correct
      */
 
-    Assert.assertTrue(parser.getHELM2Notation().getListOfPolymers().get(0).getPolymerID().getID().equals("PEPTIDE1"));
-    Assert.assertTrue(parser.getHELM2Notation().getListOfPolymers().get(1).getPolymerID().getID().equals("PEPTIDE2"));
+    Assert.assertTrue(parser.getHELM2Notation().getListOfPolymers().get(0).getPolymerID().getId().equals("PEPTIDE1"));
+    Assert.assertTrue(parser.getHELM2Notation().getListOfPolymers().get(1).getPolymerID().getId().equals("PEPTIDE2"));
   }
 		
 	/*
@@ -174,14 +174,14 @@ public class TestInputSimplePolymerSection {
 		test="PEPTIDE1{A.A.A.A.A.A.A.A.A.A.A.A.A.A.A.A.A.A.A.A.C.D.D.D.D.D.D.D.D.D.D.D.D.D.D.D.D.D.D.D.D.E.E.E.E.E.E.E.E.E.E.E.E.E.E.E.E.E.E.E.E.E.E.E.(_,K)}|PEPTIDE2{G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.C.S.S.S.S.S.S.S.S.S.P.P.P.P.P.P.P.P.P.K.K.K.K.K.K.K.K.K.K.K.K.K}$$$$V2.0";
 		parser.parse(test);
     Assert.assertTrue(parser.getHELM2Notation().getListOfPolymers().get(0).getPolymerElements().getListOfElements().get(parser.getHELM2Notation().getListOfPolymers().get(0).getPolymerElements().getListOfElements().size()
-        - 1).getID().equals("_,K"));
+        - 1).getUnit().equals("_,K"));
 
     MonomerNotationGroup current =
         (MonomerNotationGroup) parser.getHELM2Notation().getListOfPolymers().get(0).getPolymerElements().getListOfElements().get(parser.getHELM2Notation().getListOfPolymers().get(0).getPolymerElements().getListOfElements().size()
             - 1);
     Assert.assertTrue(current.getListOfElements().size() == 2);
-    Assert.assertTrue(current.getListOfElements().get(0).getMonomerNotation().getID().equals("_"));
-    Assert.assertTrue(current.getListOfElements().get(1).getMonomerNotation().getID().equals("K"));
+    Assert.assertTrue(current.getListOfElements().get(0).getMonomerNotation().getUnit().equals("_"));
+    Assert.assertTrue(current.getListOfElements().get(1).getMonomerNotation().getUnit().equals("K"));
     Assert.assertTrue(current instanceof MonomerNotationGroupOr);
 
 	} 
@@ -217,7 +217,7 @@ public class TestInputSimplePolymerSection {
   public void testNewSimplePolymerType() throws ExceptionState, IOException, JDOMException {
 		test="BLOB1{Antibody}\"HER2\"$$$$V2.0";
 		parser.parse(test);
-    Assert.assertTrue(parser.getHELM2Notation().getListOfPolymers().get(0).getPolymerID().getID().equals("BLOB1"));
+    Assert.assertTrue(parser.getHELM2Notation().getListOfPolymers().get(0).getPolymerID().getId().equals("BLOB1"));
 		
 		
 		test="BLOB1{Gold Particle}\"Gold 2.5nm\"$$$$V2.0"; 

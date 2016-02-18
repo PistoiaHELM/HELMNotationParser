@@ -47,7 +47,7 @@ public class MonomerNotationTest {
   public void testMonomerNotationID() throws IOException, NotationException {
     String test = "A";
     MonomerNotationUnit unit = new MonomerNotationUnit(test, "PEPTIDE");
-    Assert.assertEquals(unit.getID(), test);
+    Assert.assertEquals(unit.getUnit(), test);
   }
 
   /**

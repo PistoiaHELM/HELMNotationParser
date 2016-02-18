@@ -23,15 +23,23 @@
  */
 package org.helm.notation2.parser.notation.polymer;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonTypeInfo;
+
 /**
  * Entity
  *
  * @author
  */
+@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.PROPERTY, property = "classType")
 public abstract class HELMEntity {
   private String id;
 
   protected String type;
+
+  public HELMEntity() {
+
+  }
 
   /**
    * Constructs an Entity
@@ -55,7 +63,7 @@ public abstract class HELMEntity {
    *
    * @return ID
    */
-  public String getID() {
+  public String getId() {
     return id;
   }
 

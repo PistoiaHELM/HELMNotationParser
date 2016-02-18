@@ -144,7 +144,7 @@ public class MonomerNotationGroupElement {
    * @return valid HELM2 notation
    */
   public String toHELM2() {
-    return monomer.getID();
+    return monomer.getUnit();
   }
 
 }

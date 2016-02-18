@@ -23,23 +23,25 @@
  */
 package org.helm.notation2.parser.notation.polymer;
 
-
 /**
  * RNAEntity class to represent an RNA-Entity
- * 
+ *
  * @author hecht
  */
 public final class RNAEntity extends PolymerEntity {
 
+  public RNAEntity() {
+
+  }
+
   /**
    * Constructs with the given String
-   * 
+   *
    * @param str RNA ID
    */
   public RNAEntity(String str) {
     super(str);
     this.type = "RNA";
   }
-
 
 }

@@ -45,15 +45,20 @@ public final class PolymerNotation {
 
   private String annotation;
 
-  private boolean isAnnotationHere = false;
+  @JsonIgnore
+  private boolean annotationHere = false;
 
-  private PolymerElements elements;
+  private PolymerElements polymerElements = null;
 
   @JsonIgnore
   private Map<Integer, MonomerNotation> mapOfMonomers = new HashMap<Integer, MonomerNotation>();
 
   @JsonIgnore
   private Map<String, String> mapIntraConnection = new HashMap<String, String>();;
+
+  public PolymerNotation() {
+
+  }
 
   /**
    * Constructs with the given String
@@ -63,7 +68,7 @@ public final class PolymerNotation {
    */
   public PolymerNotation(String str) throws NotationException {
     polymerID = (PolymerEntity) ValidationMethod.decideWhichEntity(str);
-    decideWhichPolymerElements();
+    setPolymerElements();
   }
 
   /**
@@ -74,7 +79,7 @@ public final class PolymerNotation {
    */
   public PolymerNotation(PolymerEntity poly, PolymerElements ele) throws NotationException {
     this.polymerID = poly;
-    this.elements = ele;
+    this.polymerElements = ele;
   }
 
   /**
@@ -86,7 +91,7 @@ public final class PolymerNotation {
    */
   public PolymerNotation(PolymerEntity poly, PolymerElements ele, String anno) {
     this.polymerID = poly;
-    this.elements = ele;
+    this.polymerElements = ele;
     if (anno != null) {
       setAnnotation(anno);
     }
@@ -96,11 +101,11 @@ public final class PolymerNotation {
    * method to generate the right PolymerElements, in the case of Chem and Blob
    * only one Monomer is allowed
    */
-  private void decideWhichPolymerElements() {
+  private void setPolymerElements() {
     if (polymerID instanceof RNAEntity || polymerID instanceof PeptideEntity) {
-      this.elements = new PolymerListElements(polymerID);
+      this.polymerElements = new PolymerListElements(polymerID);
     } else {
-      this.elements = new PolymerSingleElements(polymerID);
+      this.polymerElements = new PolymerSingleElements(polymerID);
     }
 
   }
@@ -112,7 +117,9 @@ public final class PolymerNotation {
    */
   private void setAnnotation(String str) {
     this.annotation = str;
-    this.isAnnotationHere = true;
+    if (str != null) {
+      this.annotationHere = true;
+    }
   }
 
   /**
@@ -130,7 +137,7 @@ public final class PolymerNotation {
    * @return PolymerElements
    */
   public PolymerElements getPolymerElements() {
-    return this.elements;
+    return this.polymerElements;
   }
 
   /**
@@ -147,9 +154,8 @@ public final class PolymerNotation {
    *
    * @return true if the annotation is there, false otherwise
    */
-  @JsonIgnore
-  public boolean isAnnotationTrue() {
-    return this.isAnnotationHere;
+  public boolean isAnnotationHere() {
+    return this.annotationHere;
   }
 
   /**
@@ -157,10 +163,10 @@ public final class PolymerNotation {
    */
   @Override
   public String toString() {
-    if (isAnnotationTrue()) {
-      return "PolymerID: " + polymerID + "\nElements: " + elements.toString() + "Annotation: " + annotation;
+    if (isAnnotationHere()) {
+      return "PolymerID: " + polymerID + "\nElements: " + polymerElements.toString() + "Annotation: " + annotation;
     } else {
-      return "PolymerID: " + polymerID + "\nElements: " + elements.toString();
+      return "PolymerID: " + polymerID + "\nElements: " + polymerElements.toString();
     }
 
   }
@@ -171,7 +177,7 @@ public final class PolymerNotation {
    * @return valid HELM2 notation
    */
   public String toHELM2() {
-    return this.elements.toHELM2();
+    return this.polymerElements.toHELM2();
   }
 
   /**
@@ -184,7 +190,7 @@ public final class PolymerNotation {
     if (polymerID instanceof BlobEntity) {
       throw new HELM1ConverterException("Can't be downgraded to HELM1-Format");
     }
-    return this.elements.toHELM();
+    return this.polymerElements.toHELM();
   }
 
   @JsonIgnore
@@ -201,7 +207,7 @@ public final class PolymerNotation {
     int multiply = 1;
     int value = 0;
     int lastValue = -1;
-    for (MonomerNotation element : elements.getListOfElements()) {
+    for (MonomerNotation element : polymerElements.getListOfElements()) {
       try {
         // multiply = Integer.parseInt(element.getCount());
         multiply = 1;
@@ -265,7 +271,7 @@ public final class PolymerNotation {
   @JsonIgnore
   public List<MonomerNotation> getListMonomers() {
     List<MonomerNotation> listMonomerNotation = new ArrayList<MonomerNotation>();
-    for (MonomerNotation monomerNotation : elements.getListOfElements()) {
+    for (MonomerNotation monomerNotation : polymerElements.getListOfElements()) {
       if (monomerNotation instanceof MonomerNotationUnit) {
         listMonomerNotation.add(monomerNotation);
       } else {

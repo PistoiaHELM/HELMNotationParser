@@ -23,24 +23,28 @@
  */
 package org.helm.notation2.parser.notation.polymer;
 
+import com.fasterxml.jackson.annotation.JsonTypeInfo;
 
 /**
  * GroupEnttiy
- * 
+ *
  * @author hecht
  */
+@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.PROPERTY, property = "classType")
 public class GroupEntity extends HELMEntity {
+
+  public GroupEntity() {
+
+  }
 
   /**
    * Constructs with the given string
-   * 
+   *
    * @param str GroupID
    */
   public GroupEntity(String str) {
     super(str);
     this.type = "G";
   }
-
-
 
 }

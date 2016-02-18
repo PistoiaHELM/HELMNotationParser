@@ -29,6 +29,8 @@ import java.util.regex.Pattern;
 import org.helm.notation2.parser.exceptionparser.NotationException;
 import org.helm.notation2.parser.notation.polymer.GroupEntity;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 /**
  * GroupingNotation
  *
@@ -39,6 +41,10 @@ public final class GroupingNotation {
   private GroupEntity groupID;
 
   private GroupingAmbiguity ambiguity;
+
+  public GroupingNotation() {
+
+  }
 
   /**
    * Constructs with the given String
@@ -63,7 +69,7 @@ public final class GroupingNotation {
    */
   public GroupingNotation(GroupEntity group, String ambi) throws NotationException {
     this.groupID = group;
-    setAmbiguity(ambi);
+    defineAmbiguity(ambi);
   }
 
   /**
@@ -81,17 +87,21 @@ public final class GroupingNotation {
    * @param a details about the group elements
    * @throws NotationException
    */
-  private void setAmbiguity(String a) throws NotationException {
+  private void defineAmbiguity(String a) throws NotationException {
     Pattern patternAND = Pattern.compile("\\+");
     Matcher m = patternAND.matcher(a);
 
     /* mixture */
     if (m.find()) {
-      ambiguity = new GroupingMixture(a);
+      setAmbiguity(new GroupingMixture(a));
     } /* or case */ else {
-      ambiguity = new GroupingOr(a);
+      setAmbiguity(new GroupingOr(a));
     }
 
+  }
+
+  private void setAmbiguity(GroupingAmbiguity a) {
+    ambiguity = a;
   }
 
   /**

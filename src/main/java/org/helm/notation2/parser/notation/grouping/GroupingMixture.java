@@ -36,6 +36,10 @@ public class GroupingMixture extends GroupingAmbiguity {
 
   private GroupingElement element;
 
+  public GroupingMixture() {
+
+  }
+
   /**
    * Constructs with the given String representing a list of grouping elements
    * Mixture with ratio or interval

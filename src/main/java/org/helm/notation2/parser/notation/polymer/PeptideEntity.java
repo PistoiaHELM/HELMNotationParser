@@ -23,25 +23,26 @@
  */
 package org.helm.notation2.parser.notation.polymer;
 
-
+import com.fasterxml.jackson.annotation.JsonTypeInfo;
 
 /**
  * @code PeptideEntity
- * 
+ *
  * @author hecht
  */
 public final class PeptideEntity extends PolymerEntity {
 
+  public PeptideEntity() {
+  }
+
   /**
    * Constructs with the given string
-   * 
+   *
    * @param str Peptide Entity
    */
   public PeptideEntity(String str) {
     super(str);
     this.type = "PEPTIDE";
   }
-
-
 
 }

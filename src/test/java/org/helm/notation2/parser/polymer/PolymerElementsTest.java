@@ -44,7 +44,7 @@ public class PolymerElementsTest {
     item.addMonomerNotation("U");
     item.addMonomerNotation("A");
     Assert.assertTrue(item.getListOfElements().size() == 2);
-    Assert.assertEquals(item.getCurrentMonomerNotation().getID(), "A");
+    Assert.assertEquals(item.getCurrentMonomerNotation().getUnit(), "A");
     item.changeMonomerNotation(not);
     Assert.assertEquals(item.getCurrentMonomerNotation(), not);
   }

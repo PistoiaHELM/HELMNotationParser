@@ -38,7 +38,7 @@ public class MonomerNotationGroupTest {
   public void MonomerNotationGroupTestOr() throws NotationException, IOException, JDOMException {
     MonomerNotationGroupOr group = new MonomerNotationGroupOr("K,R", "PEPTIDE");
     Assert.assertTrue(group.getListOfElements().size() == 2);
-    Assert.assertEquals(group.getListOfElements().get(0).getMonomerNotation().getID(), "K");
+    Assert.assertEquals(group.getListOfElements().get(0).getMonomerNotation().getUnit(), "K");
     Assert.assertEquals(group.getListOfElements().get(0).getValue().get(0), 1.0);
   }
 
@@ -47,7 +47,7 @@ public class MonomerNotationGroupTest {
     MonomerNotationGroupMixture group = new MonomerNotationGroupMixture("K+R",
         "PEPTIDE");
     Assert.assertTrue(group.getListOfElements().size() == 2);
-    Assert.assertEquals(group.getListOfElements().get(0).getMonomerNotation().getID(), "K");
+    Assert.assertEquals(group.getListOfElements().get(0).getMonomerNotation().getUnit(), "K");
     Assert.assertEquals(group.getListOfElements().get(0).getValue().get(0), 1.0);
   }
 }

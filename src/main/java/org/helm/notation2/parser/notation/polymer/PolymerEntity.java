@@ -23,22 +23,28 @@
  */
 package org.helm.notation2.parser.notation.polymer;
 
+import com.fasterxml.jackson.annotation.JsonTypeInfo;
 
 /**
- * PolymerEntity class to represent all different polymer entities: RNA, Peptide, Chem and BLOB
- * 
+ * PolymerEntity class to represent all different polymer entities: RNA,
+ * Peptide, Chem and BLOB
+ *
  * @author hecht
  */
+
 public abstract class PolymerEntity extends HELMEntity {
+
+  public PolymerEntity() {
+
+  }
 
   /**
    * Constructs with the given String
-   * 
+   *
    * @param str PolymerEntity
    */
   public PolymerEntity(String str) {
     super(str);
   }
-
 
 }

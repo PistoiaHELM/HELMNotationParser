@@ -41,7 +41,7 @@ public class EntityTest {
   public void testEntity() {
     String test = "RNA1";
     RNAEntity e = new RNAEntity(test);
-    Assert.assertEquals(e.getID(), test);
+    Assert.assertEquals(e.getId(), test);
     Assert.assertEquals(e.toString(), test);
   }
 }
