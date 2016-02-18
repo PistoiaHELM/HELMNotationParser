@@ -49,7 +49,7 @@ public class GenerateObjectFromJSONTest {
   /** The Logger for this class */
   private static final Logger LOG = LoggerFactory.getLogger(GenerateObjectFromJSONTest.class);
 
-  @Test
+  // @Test
   public void test() throws JsonParseException, JsonMappingException, IOException, ExceptionState, JDOMException {
 
     StateMachineParser parser = new StateMachineParser();
