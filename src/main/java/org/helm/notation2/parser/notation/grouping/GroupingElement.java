@@ -23,7 +23,7 @@
  */
 package org.helm.notation2.parser.notation.grouping;
 
-import java.util.Arrays;
+import java.util.ArrayList;
 import java.util.List;
 
 import org.helm.notation2.parser.exceptionparser.NotationException;
@@ -41,14 +41,12 @@ public final class GroupingElement {
 
   private HELMEntity id;
 
-  private double numberOne;
+  private List<Double> value = new ArrayList<Double>();
 
-  private double numberTwo;
-
-  // @JsonIgnore
+  @JsonIgnore
   private boolean isInterval = false;
 
-  // @JsonIgnore
+  @JsonIgnore
   private boolean isDefault = true;
 
   public GroupingElement() {
@@ -65,7 +63,7 @@ public final class GroupingElement {
    */
   public GroupingElement(String str, double number, boolean def) throws NotationException {
     this.id = ValidationMethod.decideWhichEntity(str);
-    this.numberOne = number;
+    value.add(number);
     this.isDefault = def;
   }
 
@@ -79,8 +77,8 @@ public final class GroupingElement {
    */
   public GroupingElement(String str, double number1, double number2) throws NotationException {
     this.id = ValidationMethod.decideWhichEntity(str);
-    this.numberOne = number1;
-    this.numberTwo = number2;
+    value.add(number1);
+    value.add(number2);
     this.isDefault = false;
     this.isInterval = true;
   }
@@ -101,11 +99,7 @@ public final class GroupingElement {
    * @return List of values
    */
   public List<Double> getValue() {
-    if (isInterval) {
-      return Arrays.asList(numberOne, numberTwo);
-    } else {
-      return Arrays.asList(numberOne);
-    }
+    return value;
   }
 
   /**
@@ -127,10 +121,10 @@ public final class GroupingElement {
   @Override
   public String toString() {
     if (isInterval) {
-      return "ElementID: " + id + "\nInterval: " + numberOne + "-" + numberTwo;
+      return "ElementID: " + id + "\nInterval: " + value.get(0) + "-" + value.get(1);
     }
 
-    return "ElementID: " + id + "\nValue: " + numberOne;
+    return "ElementID: " + id + "\nValue: " + value.get(0);
   }
 
 }

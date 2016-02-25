@@ -12,7 +12,10 @@ import java.util.List;
 import org.helm.notation2.parser.exceptionparser.ExceptionState;
 import org.helm.notation2.parser.notation.HELM2Notation;
 import org.helm.notation2.parser.notation.connection.ConnectionNotation;
+import org.helm.notation2.parser.notation.grouping.GroupingAmbiguity;
+import org.helm.notation2.parser.notation.grouping.GroupingElement;
 import org.helm.notation2.parser.notation.grouping.GroupingMixture;
+import org.helm.notation2.parser.notation.grouping.GroupingNotation;
 import org.helm.notation2.parser.notation.polymer.BlobEntity;
 import org.helm.notation2.parser.notation.polymer.MonomerNotation;
 import org.helm.notation2.parser.notation.polymer.MonomerNotationGroup;
@@ -49,7 +52,7 @@ public class GenerateObjectFromJSONTest {
   /** The Logger for this class */
   private static final Logger LOG = LoggerFactory.getLogger(GenerateObjectFromJSONTest.class);
 
-  // @Test
+  @Test
   public void test() throws JsonParseException, JsonMappingException, IOException, ExceptionState, JDOMException {
 
     StateMachineParser parser = new StateMachineParser();
@@ -62,7 +65,8 @@ public class GenerateObjectFromJSONTest {
     }
     System.out.println(parser.toJSON());
 
-    HELM2Notation helm2notation = GenerateObjectFromJSON.generateFromJSON(parser.toJSON());
+    HELM2Notation helm2notation =
+        GenerateObjectFromJSON.generateFromJSON(parser.toJSON());
 
     Assert.assertEquals(test + "V2.0", helm2notation.toHELM2());
 
@@ -87,6 +91,20 @@ public class GenerateObjectFromJSONTest {
         "{\"polymerID\" : {\"classType\" : \"PeptideEntity\",\"id\" : \"PEPTIDE2\",\"type\" : \"PEPTIDE\" },\"annotation\" : null,\"annotationHere\" : false,\"polymerElements\" : {\"classType\" : \"PolymerListElements\",\"entity\" : {\"classType\" : \"PeptideEntity\",\"id\" : \"PEPTIDE2\",\"type\" : \"PEPTIDE\"}, \"listOfElements\" : [ {\"classType\" : \"MonomerNotationUnit\",\"unit\" : \"A\",\"annotation\" : null,\"count\" : \"1\",\"type\" : \"PEPTIDE\" }, {\"classType\" : \"MonomerNotationUnit\",\"unit\" : \"C\",\"annotation\" : null,\"count\" : \"1\",\"type\" : \"PEPTIDE\" }, {\"classType\" : \"MonomerNotationUnit\",\"unit\" : \"A\",\"annotation\" : null,\"count\" : \"1\",\"type\" : \"PEPTIDE\"}, {\"classType\" : \"MonomerNotationUnit\",\"unit\" : \"A\",\"annotation\" : null,\"count\" : \"1\", \"type\" : \"PEPTIDE\" }, {\"classType\" : \"MonomerNotationUnit\", \"unit\" : \"A\",\"annotation\" : null,\"count\" : \"1\",\"type\" : \"PEPTIDE\"}, {\"classType\" : \"MonomerNotationUnit\",\"unit\" : \"A\",\"annotation\" : null,\"count\" : \"1\",\"type\" : \"PEPTIDE\"} ] } }";
     PolymerNotation p = mapper.readValue(polymer, PolymerNotation.class);
     System.out.println(p.toHELM2());
+
+    String grouping =
+        "{\"groupID\" : {\"classType\" : \"GroupEntity\",\"id\" : \"G1\",\"type\" : \"G\"},\"ambiguity\" : {\"classType\" : \"GroupingMixture\",\"elements\" : [ {\"id\" : {\"classType\" : \"PeptideEntity\",\"id\" : \"PEPTIDE1\",\"type\" : \"PEPTIDE\"}, \"value\" : [ 1.0 ],\"defaultValue\" : true,\"interval\" : false}, {\"id\" : { \"classType\" : \"PeptideEntity\",\"id\" : \"PEPTIDE2\",\"type\" : \"PEPTIDE\"}, \"value\" : [ 1.0 ], \"defaultValue\" : true,} ]}} ";
+    // GroupingNotation g = mapper.readValue(grouping, GroupingNotation.class);
+    // System.out.println(g.toHELM2());
+
+    String ambiguity =
+        "{\"classType\" : \"GroupingMixture\",\"listOfElements\" : [ {\"id\" : {\"classType\" : \"PeptideEntity\",\"id\" : \"PEPTIDE1\",\"type\" : \"PEPTIDE\"}, \"value\" : [ 1.0 ]}, {\"id\" : { \"classType\" : \"PeptideEntity\",\"id\" : \"PEPTIDE2\",\"type\" : \"PEPTIDE\"}, \"value\" : [ 1.0 ]} ]} ";
+    GroupingAmbiguity l = mapper.readValue(ambiguity, GroupingAmbiguity.class);
+    System.out.println(l.toHELM2());
+    String groupingelement = "{\"id\": {\"classType\" : \"PeptideEntity\",\"id\" : \"PEPTIDE1\",\"type\" : \"PEPTIDE\"}}} ";
+
+    GroupingElement el = mapper.readValue(groupingelement, GroupingElement.class);
+
   }
 
 }
