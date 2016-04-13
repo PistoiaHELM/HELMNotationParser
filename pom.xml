@@ -112,10 +112,6 @@
       <version>2.0.6</version>
     </dependency>
 	</dependencies>
-	<organization>
-		<name>quattro research GmbH</name>
-		<url>http://www.quattro-research.com</url>
-	</organization>
 	
 	    <reporting>
       <plugins>
