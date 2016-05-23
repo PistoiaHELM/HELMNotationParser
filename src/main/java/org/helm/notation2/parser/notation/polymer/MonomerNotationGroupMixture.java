@@ -25,6 +25,8 @@ package org.helm.notation2.parser.notation.polymer;
 
 import java.io.IOException;
 import java.text.DecimalFormat;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import org.helm.notation2.parser.exceptionparser.NotationException;
 import org.jdom2.JDOMException;
@@ -46,12 +48,24 @@ public class MonomerNotationGroupMixture extends MonomerNotationGroup {
    * @throws NotationException
    */
   public MonomerNotationGroupMixture(String str, String type) throws NotationException, IOException, JDOMException {
-    super(str, type);
+
+	  super(str, type);
     /* Mixture elements are separated by + */
     String[] parts = str.split("\\+");
     for (int i = 0; i < parts.length; ++i) {
       /* Ratio can be defined -> default is 1 */
-      String[] item = parts[i].split(":");
+      //String[] item = parts[i].split("((:)\\?)|((:)\\d.)");
+      String[] item;
+      Pattern pattern = Pattern.compile("(:)\\d+(?!\\])|(:)\\?");
+      Matcher matcher = pattern.matcher(parts[i]);
+      if(matcher.find()){
+    	  item = new String[2];
+    	  item[0] = parts[i].substring(0, matcher.start());
+    	  item[1] = parts[i].substring(matcher.start()+1);
+      }else{
+    	  item = new String[1];
+    	  item[0] = parts[i];
+    	  }
       double ratio = 1;
       double ratio2 = 1;
       boolean interval = false;
