@@ -223,7 +223,7 @@ public class TestInputSimplePolymerSection {
 		test="BLOB1{Gold Particle}\"Gold 2.5nm\"$$$$V2.0"; 
 		parser.parse(test);
 		
-		test="PEPTIDE1{A.G.C}|CHEM1{?}\"Payload\"|BLOB1{Antibody}\"Her2\"$BLOB1,CHEM1,?:?-1:?|G1,PEPTIDE1,?:?-K:R3$G1(BLOB1+CHEM1:4.5)$$V2.0";
+		test="PEPTIDE1{A.G.C}|CHEM1{*}\"Payload\"|BLOB1{Antibody}\"Her2\"$BLOB1,CHEM1,?:?-1:?|G1,PEPTIDE1,?:?-K:R3$G1(BLOB1+CHEM1:4.5)$$V2.0";
 		parser.parse(test);
 	} 
 	
