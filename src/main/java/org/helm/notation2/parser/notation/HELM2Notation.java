@@ -251,7 +251,7 @@ public class HELM2Notation {
    *
    * @return valid HELM2 string
    */
-  private String polymerToHELM2() {
+  public String polymerToHELM2() {
     StringBuilder notation = new StringBuilder();
     for (int i = 0; i < listOfPolymers.size(); i++) {
       if (listOfPolymers.get(i).isAnnotationHere()) {
@@ -271,7 +271,7 @@ public class HELM2Notation {
    *
    * @return valid HELM2 String
    */
-  private String connectionToHELM2() {
+  public String connectionToHELM2() {
     if (listOfConnections.size() == 0) {
       return "";
     }
@@ -289,7 +289,7 @@ public class HELM2Notation {
    *
    * @return valid HELM2 String
    */
-  private String groupingToHELM2() {
+  public String groupingToHELM2() {
     if (listOfGroupings.size() == 0) {
       return "";
     }
@@ -307,7 +307,7 @@ public class HELM2Notation {
    *
    * @return valid HELM2 String
    */
-  private String annotationToHELM2() {
+  public String annotationToHELM2() {
     if (!(annotationSection.isEmpty())) {
       StringBuilder sb = new StringBuilder();
       for (int i = 0; i < annotationSection.size(); i++) {
