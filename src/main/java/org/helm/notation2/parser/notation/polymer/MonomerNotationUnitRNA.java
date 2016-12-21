@@ -74,6 +74,11 @@ public class MonomerNotationUnitRNA extends MonomerNotationUnit {
     // if (str.contains("(")) {
     List<String> items = extractContents(str);
     for (String item : items) {
+    	if(item.length()> 1){
+    		if(!(item.startsWith("[") && item.endsWith("]"))){
+    			throw new NotationException("Monomers have to be in brackets "+ item);
+    		}
+    	}
       contents.add(new MonomerNotationUnit(item, type));
 
     }
@@ -107,7 +112,7 @@ public class MonomerNotationUnitRNA extends MonomerNotationUnit {
     return this.contents;
   }
 
-  private List<String> extractContents(String notation) {
+  private List<String> extractContents(String notation) throws NotationException {
     List<String> items = new ArrayList<String>();
     StringBuilder sb = new StringBuilder();
     for (char cha : notation.toCharArray()) {
@@ -161,6 +166,12 @@ public class MonomerNotationUnitRNA extends MonomerNotationUnit {
 
     if (items.size() != contentsInformation.size()) {
       contentsInformation.add("P");
+    }
+    
+
+    
+    if(items.size()> 3){
+    	throw new NotationException("RNA Unit is wrong " + notation);
     }
     return items;
 

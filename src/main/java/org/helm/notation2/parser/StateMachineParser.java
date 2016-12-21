@@ -26,6 +26,8 @@ package org.helm.notation2.parser;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import org.helm.notation2.parser.exceptionparser.ExceptionState;
 import org.helm.notation2.parser.exceptionparser.SimplePolymerSectionException;
@@ -102,7 +104,9 @@ public class StateMachineParser implements State {
     LOG.debug("Validation of polymerID: " + polymerId);
     String pattern = "PEPTIDE[1-9][0-9]*|RNA[1-9][0-9]*|CHEM[1-9][0-9]*|BLOB[1-9][0-9]*";
 
-    if (polymerId.matches(pattern)) {
+    Pattern p = Pattern.compile(pattern, Pattern.CASE_INSENSITIVE);
+    Matcher m = p.matcher(polymerId);
+    if (m.matches()) {
       LOG.debug("PolymerID is valid: " + polymerId);
       return true;
     }
@@ -124,8 +128,9 @@ public class StateMachineParser implements State {
     String ratio = "(:[1-9][0-9]*(\\.[0-9]+)?)?";
     String id = "(PEPTIDE[1-9][0-9]*|RNA[1-9][0-9]*|CHEM[1-9][0-9]*|BLOB[1-9][0-9]*|G[1-9][0-9]*)";
     String pattern = "(\\(" + id + ratio + "(," + id + ratio + ")+\\)" + ratio + "|" + id + ratio + ")";
-
-    if (polymerId.matches(pattern)) {
+    Pattern p = Pattern.compile(pattern,Pattern.CASE_INSENSITIVE);
+    Matcher m  = p.matcher(polymerId);
+    if (m.matches()) {
       LOG.debug("PolymerID in the connection section is valid:");
       return true;
     }
@@ -150,7 +155,11 @@ public class StateMachineParser implements State {
     String patternConnection = element + "-" + element;
     String hydrogenBondPartner = partOne + ":pair";
     String hydrogenBondPattern = hydrogenBondPartner + "-" + hydrogenBondPartner;
-    if (d.matches(patternConnection) || d.matches(hydrogenBondPattern)) {
+    Pattern pConnection = Pattern.compile(patternConnection , Pattern.CASE_INSENSITIVE);
+    Matcher mConnection = pConnection.matcher(d);
+    Pattern pHydrogen = Pattern.compile(hydrogenBondPattern, Pattern.CASE_INSENSITIVE);
+    Matcher mHydrogen = pHydrogen.matcher(d);
+    if (mConnection.matches() || mHydrogen.matches()) {
       LOG.debug("Connection's details are valid:");
       return true;
     }
@@ -165,8 +174,10 @@ public class StateMachineParser implements State {
    * @return true if the connection details are valid, false otherwise
    */
   public boolean checkGroupId(String d) {
+	  Pattern p = Pattern.compile("G[1-9][0-9]*", Pattern.CASE_INSENSITIVE);
+	  Matcher m = p.matcher(d);
     LOG.debug("Validation of groupID:");
-    if (d.matches("G[1-9][0-9]*")) {
+    if (m.matches()) {
       LOG.debug("GroupID is valid:");
       return true;
     }
@@ -188,7 +199,10 @@ public class StateMachineParser implements State {
     String number = "[1-9][0-9]*(\\.[0-9]+)?";
     String ratio = number + "(-" + number + ")?";
     String pattern = id + "(:" + ratio + ")?((\\+|,)" + id + "(:" + ratio + ")?)+";
-    if (d.matches(pattern)) {
+    
+    Pattern p = Pattern.compile(pattern, Pattern.CASE_INSENSITIVE);
+    Matcher m = p.matcher(d);
+    if (m.matches()) {
       LOG.debug("Group's details are valid:");
       return true;
     }
@@ -217,7 +231,7 @@ public class StateMachineParser implements State {
    * @param str polymerID
    */
   public void addPolymer(String str) {
-    polymerElements.add(str);
+    polymerElements.add(str.toUpperCase());
   }
 
   /**

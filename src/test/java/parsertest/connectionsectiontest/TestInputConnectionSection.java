@@ -44,7 +44,7 @@ public class TestInputConnectionSection {
 	 */
 	@Test 
   public void testInlineAnnotationsConnection() throws ExceptionState, IOException, JDOMException {
-		test="PEPTIDE1{A.A.A.A.A.A.A.A.A.A.A.A.A.A.A.A.A.A.A.A.A.C.D.D.D.D.D.D.D.D.D.D.D.D.D.D.D.D.D.D.D.D.E.E.E.E.E.E.E.E.E.E.E.E.E.E.E.E.E.E.E.E.E.E.E}|PEPTIDE2{G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.C.S.S.S.S.S.S.S.S.S.P.P.P.P.P.P.P.P.P.K.K.K.K.K.K.K.K.K.K.K.K.K}|CHEM1{[[*]SCCCc1ccccc1 |$_R1;;;;;;;;;;$|]}$PEPTIDE1,CHEM1,C:R3-1:R1\"Specific Conjugation\"$$$V2.0";
+		test="PEPTIDE1{A.A.A.A.A.A.A.A.A.A.A.A.A.A.A.A.A.A.A.A.A.C.D.D.D.D.D.D.D.D.D.D.D.D.D.D.D.D.D.D.D.D.E.E.E.E.E.E.E.E.E.E.E.E.E.E.E.E.E.E.E.E.E.E.E}|PEPTIDE2{G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.C.S.S.S.S.S.S.S.S.S.P.P.P.P.P.P.P.P.P.K.K.K.K.K.K.K.K.K.K.K.K.K}|CHEM1{[[*]SCCCc1ccccc1 |$_R1;;;;;;;;;;$|]}$PEPTIDE1,CHEM1,c:r3-1:r1\"Specific Conjugation\"$$$V2.0";
 		parser.parse(test);
     Assert.assertEquals(parser.getHELM2Notation().getListOfConnections().get(0).getAnnotation(), "Specific Conjugation");
 	} 
@@ -55,7 +55,7 @@ public class TestInputConnectionSection {
   @Test
   public void testHydrogenBondInConnectionSection() throws ExceptionState, IOException, JDOMException {
     test =
-        "RNA1{R(A)P.R(G)P.R(U)P.R(C)P.P(C)}|RNA2{R(U)P.R(G)P.R(G)P.R(G)P.R(G)P.R(A)P.R(G)}$RNA1,RNA2,20:pair-8:pair|RNA1,RNA2,17:pair-11:pair|RNA1,RNA2,8:pair-20:pair|RNA1,RNA2,14:pair-14:pair|RNA1,RNA2,11:pair-17:pair$$RNA1{StrandType:ss}|RNA2{StrandType:as}$V2.0";
+        "RNA1{R(A)P.R(G)P.R(U)P.R(C)P.P(C)}|RNA2{R(U)P.R(G)P.R(G)P.R(G)P.R(G)P.R(A)P.R(G)}$RNA1,RNA2,20:PAIR-8:pair|RNA1,RNA2,17:pair-11:pair|RNA1,RNA2,8:pair-20:pair|RNA1,RNA2,14:pair-14:pair|RNA1,RNA2,11:pair-17:pair$$RNA1{StrandType:ss}|RNA2{StrandType:as}$V2.0";
     parser.parse(test);
 
     Assert.assertTrue(parser.getHELM2Notation().getListOfConnections().get(0).getSourceId().getId().equals("RNA1"));
@@ -85,7 +85,7 @@ public class TestInputConnectionSection {
 	@Test
   public void testConnectionMonomer() throws ExceptionState, IOException, JDOMException {
     test =
-        "PEPTIDE1{A.A.A.A.A.A.C.A.A.A.A.A.A.A.A.A.A.A.A.A.A.C.D.D.D.D.D.D.D.D.D.D.D.D.D.D.D.D.D.D.D.D.E.E.E.E.E.E.E.E.E.E.E.E.E.E.E.E.E.E.E.E.E.E.E}|PEPTIDE2{G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.C.S.S.S.S.S.S.S.S.S.P.P.P.P.P.P.P.P.P.K.K.K.K.K.K.K.K.K.K.K.K.K}|CHEM1{[C[C@H](N[*])C([*])=O |$;;;_R1;;_R2;$|]}$PEPTIDE1,CHEM1,C:R3-1:R1$$$V2.0";
+        "PEPTIDE1{A.A.A.A.A.A.C.A.A.A.A.A.A.A.A.A.A.A.A.A.A.C.D.D.D.D.D.D.D.D.D.D.D.D.D.D.D.D.D.D.D.D.E.E.E.E.E.E.E.E.E.E.E.E.E.E.E.E.E.E.E.E.E.E.E}|PEPTIDE2{G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.C.S.S.S.S.S.S.S.S.S.P.P.P.P.P.P.P.P.P.K.K.K.K.K.K.K.K.K.K.K.K.K}|CHEM1{[C[C@H](N[*])C([*])=O |$;;;_R1;;_R2;$|]}$PEPTIDE1,CHEM1,c:r3-1:r1$$$V2.0";
 		parser.parse(test);
     Assert.assertEquals(parser.getHELM2Notation().getListOfConnections().get(0).getSourceUnit(), "C");
 	} 
@@ -97,7 +97,7 @@ public class TestInputConnectionSection {
 	@Test
   public void testConnectionMonomerAmbiguity() throws ExceptionState, IOException, JDOMException {
     test =
-        "PEPTIDE1{A.A.A.A.A.A.A.A.A.A.A.A.A.A.A.A.A.A.A.A.A.C.D.D.D.D.D.D.D.D.D.D.D.D.D.D.D.D.D.D.D.D.E.E.E.E.E.E.E.E.E.E.E.E.E.E.E.E.E.E.E.E.E.E.E}|PEPTIDE2{G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.C.S.S.S.S.S.S.S.S.S.P.P.P.P.P.P.P.P.P.K.K.K.K.K.K.K.K.K.K.K.K.K}|CHEM1{C[C@H](N[*])C([*])=O |$;;;_R1;;_R2;$|}$PEPTIDE2,CHEM1,(C,K):R3-1:R1$$$V2.0";
+        "PEPTIDE1{A.A.A.A.A.A.A.A.A.A.A.A.A.A.A.A.A.A.A.A.A.C.D.D.D.D.D.D.D.D.D.D.D.D.D.D.D.D.D.D.D.D.E.E.E.E.E.E.E.E.E.E.E.E.E.E.E.E.E.E.E.E.E.E.E}|PEPTIDE2{G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.G.C.S.S.S.S.S.S.S.S.S.P.P.P.P.P.P.P.P.P.K.K.K.K.K.K.K.K.K.K.K.K.K}|CHEM1{[C[C@H](N[*])C([*])=O |$;;;_R1;;_R2;$|]}$PEPTIDE2,CHEM1,(C,K):R3-1:R1$$$V2.0";
     parser.parse(test);
     Assert.assertEquals(parser.getHELM2Notation().getListOfConnections().get(0).getSourceUnit(), "(C,K)");
 	} 

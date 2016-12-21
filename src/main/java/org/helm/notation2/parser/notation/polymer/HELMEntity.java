@@ -47,7 +47,7 @@ public abstract class HELMEntity {
    * @param str entity name
    */
   public HELMEntity(String str) {
-    id = str;
+    id = str.toUpperCase();
   }
 
   /**

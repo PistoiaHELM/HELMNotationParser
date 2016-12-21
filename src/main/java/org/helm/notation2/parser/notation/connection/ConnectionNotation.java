@@ -24,6 +24,8 @@
 package org.helm.notation2.parser.notation.connection;
 
 import java.io.IOException;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import org.helm.notation2.parser.exceptionparser.HELM1ConverterException;
 import org.helm.notation2.parser.exceptionparser.NotationException;
@@ -134,13 +136,32 @@ public final class ConnectionNotation {
     String[] parts = str.split("-");
 
     /* MonomerUnit */
-    sourceUnit = parts[0].split(":")[0];
-    targetUnit = parts[1].split(":")[0];
+    sourceUnit = parts[0].split(":")[0].toUpperCase();
+    targetUnit = parts[1].split(":")[0].toUpperCase();
 
     /* R-group */
+    
     rGroupSource = parts[0].split(":")[1];
     rGroupTarget = parts[1].split(":")[1];
+    
+    Pattern r = Pattern.compile("R\\d", Pattern.CASE_INSENSITIVE);
+    Pattern pair = Pattern.compile("pair", Pattern.CASE_INSENSITIVE);
+    
+    Matcher mR = r.matcher(rGroupSource);
+    Matcher mPair = pair.matcher(rGroupTarget);
+    if(mR.matches()){
+    	rGroupSource = rGroupSource.toUpperCase();
+    }else{
+    	rGroupSource = rGroupSource.toLowerCase();
+    }
+    
+    if(mPair.matches()){
+    	rGroupTarget = rGroupTarget.toLowerCase();
+    }else{
+    	rGroupTarget = rGroupTarget.toUpperCase();
+    }
   }
+  
 
   /**
    * method to set the inline annotations

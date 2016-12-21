@@ -53,8 +53,10 @@ public final class GroupingNotation {
    * @throws NotationException
    */
   public GroupingNotation(String str) throws NotationException {
-    if (str.matches("G[1-9][0-9]*")) {
-      this.groupID = new GroupEntity(str);
+	  Pattern p = Pattern.compile("G[1-9][0-9]*", Pattern.CASE_INSENSITIVE);
+	  Matcher m = p.matcher(str);
+    if (m.matches()) {
+      this.groupID = new GroupEntity(str.toUpperCase());
     } else {
       throw new NotationException("Group Id is not correct: " + str);
     }

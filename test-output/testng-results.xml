@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="87" started-at="2016-05-19T13:19:44Z" finished-at="2016-05-19T13:19:44Z">
+  <suite name="Default suite" duration-ms="40" started-at="2016-12-21T12:24:48Z" finished-at="2016-12-21T12:24:48Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="87" started-at="2016-05-19T13:19:44Z" finished-at="2016-05-19T13:19:44Z">
-      <class name="org.helm.notation2.parser.OutputWriterTest">
-        <test-method status="PASS" signature="testHELM2OutputExtended()[pri:0, instance:org.helm.notation2.parser.OutputWriterTest@473f704e]" name="testHELM2OutputExtended" duration-ms="78" started-at="2016-05-19T15:19:44Z" finished-at="2016-05-19T15:19:44Z">
+    <test name="Default test" duration-ms="40" started-at="2016-12-21T12:24:48Z" finished-at="2016-12-21T12:24:48Z">
+      <class name="parsertest.ConverterHELM1ToHELM2Test">
+        <test-method status="PASS" signature="simpleHELM1StringTest()[pri:0, instance:parsertest.ConverterHELM1ToHELM2Test@7803e4a4]" name="simpleHELM1StringTest" duration-ms="29" started-at="2016-12-21T13:24:48Z" finished-at="2016-12-21T13:24:48Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testHELM2OutputExtended -->
-      </class> <!-- org.helm.notation2.parser.OutputWriterTest -->
+        </test-method> <!-- simpleHELM1StringTest -->
+      </class> <!-- parsertest.ConverterHELM1ToHELM2Test -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

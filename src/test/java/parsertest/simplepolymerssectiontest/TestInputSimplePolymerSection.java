@@ -29,6 +29,7 @@ import java.io.IOException;
 
 import org.helm.notation2.parser.ParserHELM2;
 import org.helm.notation2.parser.exceptionparser.ExceptionState;
+import org.helm.notation2.parser.exceptionparser.NotationException;
 import org.helm.notation2.parser.exceptionparser.SimplePolymerSectionException;
 import org.helm.notation2.parser.notation.polymer.MonomerNotationGroup;
 import org.helm.notation2.parser.notation.polymer.MonomerNotationGroupOr;
@@ -105,7 +106,7 @@ public class TestInputSimplePolymerSection {
    * method to test the inclusion of the inline annotations this is not allowed yet due to the fact that the monomer
    * unit is not finished
    */
-  @Test
+  @Test(expectedExceptions = NotationException.class)
   public void testInlineAnnoationsInBrackets() throws ExceptionState, IOException, JDOMException {
 		test="RNA1{R(A)P.R(G)P.R(U\"mutation\")P.R(G)P.R(G)P.R(A)P.R(C)P.P(C)}$$$$V2.0";
 		parser.parse(test);
@@ -117,7 +118,7 @@ public class TestInputSimplePolymerSection {
 	@Test
   public void testRepeatedFragments() throws ExceptionState, IOException, JDOMException {
     test =
-        "RNA1{R(A)P.(R(G)P.R(U)P.R(G)P)'15'.R(G)P.R(A)P.R(C)P.P(C)}|PEPTIDE1{(A.T)'5'.K}$$$$V2.0";
+        "RNA1{R(A)P.(R(G)P.R(U)P.R(G)P)'15'.R(G)P.R(A)P.R(A)[sP].P(C)}|PEPTIDE1{(A.T)'5'.K}$$$$V2.0";
 		parser.parse(test);
     Assert.assertTrue(parser.getHELM2Notation().getListOfPolymers().get(0).getPolymerElements().getListOfElements().get(1).getCount().equals("15"));
     Assert.assertTrue(parser.getHELM2Notation().getListOfPolymers().get(0).getPolymerElements().getListOfElements().get(0).getCount().equals("1"));
