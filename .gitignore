@@ -1,5 +1,2 @@
 target/
-*.class
-.settings/org.eclipse.jdt.core.prefs
-
 helm2parser.log
