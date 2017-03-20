@@ -125,8 +125,9 @@ public class HELMNotationParserUI extends JFrame {
     String helmInput = input.getText();
     if (!(helmInput.contains("V2.0"))) {
       /* Translate into HELM2-format */
+    	      helmInput = converter.doConvert(helmInput);
+    	
 
-      helmInput = converter.doConvert(helmInput);
     }
 
     /* read input */
@@ -134,7 +135,7 @@ public class HELMNotationParserUI extends JFrame {
       parser.parse(helmInput);
       writeOutputmessage();
     } catch (ExceptionState | IOException | JDOMException e) {
-      output.setText(e.getMessage());
+      output.setText("Invalid HELM-String (" + e.getMessage() + ")");
     }
 
   }

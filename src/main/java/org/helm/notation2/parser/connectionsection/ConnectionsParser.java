@@ -74,8 +74,8 @@ public class ConnectionsParser implements State {
         _parser.setState(new GroupingParser(_parser));
 
       } else {
-        LOG.error("Missing target polymer ID: ");
-        throw new ConnectionSectionException("Missing target polymer id: ");
+        LOG.error("Missing target polymer ID in connection section:");
+        throw new ConnectionSectionException("Missing target polymer id in connection section. Source of connection is " + sourcepolymerid);
       }
     } /* target polymer ID is starting */ else if (cha == ',' && checkBracketsParenthesis()) {
       if (_parser.checkPolymeridConnection(sourcepolymerid)) {

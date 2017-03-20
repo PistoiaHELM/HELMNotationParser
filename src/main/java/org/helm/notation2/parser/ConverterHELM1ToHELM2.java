@@ -48,6 +48,15 @@ public class ConverterHELM1ToHELM2 {
    */
   public String doConvert(String str) {
 
+	//check for just missing V2.0
+	  
+	  ParserHELM2 parser = new ParserHELM2();
+	  try{
+	  parser.parse(str + "V2.0");
+	  return str + "V2.0";
+	  }
+	  catch(Exception e){
+		
     /* Use String Builder */
     /* simple add character -> split works then */
     String helm1 = str + "f";
@@ -105,7 +114,7 @@ public class ConverterHELM1ToHELM2 {
     /* Add version number to indicate HELM2 notation */
     helm2.append("$V2.0");
     return helm2.toString();
-
+	  }
  
   }
 }
