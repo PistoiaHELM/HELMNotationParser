@@ -26,7 +26,7 @@ package org.helm.notation2.parser.exceptionparser;
 /**
  * {@code HELM1ConverterException} TODO comment me
  *
- * @author
+ * @author hecht
  * @version $Id$
  */
 public class HELM1ConverterException extends Exception {

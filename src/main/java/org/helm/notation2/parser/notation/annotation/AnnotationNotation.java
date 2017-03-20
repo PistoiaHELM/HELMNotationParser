@@ -50,7 +50,7 @@ public final class AnnotationNotation {
   /**
    * method to get the annotation
    * 
-   * @return String
+   * @return annotation
    */
   public String getAnnotation() {
     return annotation;
@@ -64,7 +64,7 @@ public final class AnnotationNotation {
   }
 
   /**
-   * @return
+   * @return object in helm2 format
    */
   public String toHELM2() {
     return annotation;

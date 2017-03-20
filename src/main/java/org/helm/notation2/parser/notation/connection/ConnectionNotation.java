@@ -65,7 +65,7 @@ public final class ConnectionNotation {
    * Constructs with the given Source ID a Connection Notation
    *
    * @param str source ID of the connection
-   * @throws NotationException
+   * @throws NotationException if notation is not valid
    */
   public ConnectionNotation(String str) throws NotationException {
     this.sourceId = ValidationMethod.decideWhichEntity(str);
@@ -76,7 +76,7 @@ public final class ConnectionNotation {
    *
    * @param firstID Entity of the Source ID
    * @param secondID Target ID
-   * @throws NotationException
+   * @throws NotationException if notation is not valid
    */
   public ConnectionNotation(HELMEntity firstID, String secondID) throws NotationException {
     this.sourceId = firstID;
@@ -90,12 +90,9 @@ public final class ConnectionNotation {
    * @param firstID Entity of the Source ID
    * @param secondID Entity of the Target ID
    * @param details connection details
-   * @throws JDOMException
-   * @throws IOException
-   * @throws NotationException
+   * @throws NotationException if notation is not valid
    */
-  public ConnectionNotation(HELMEntity firstID, HELMEntity secondID, String details) throws NotationException,
-      IOException, JDOMException {
+  public ConnectionNotation(HELMEntity firstID, HELMEntity secondID, String details) throws NotationException {
     this.sourceId = firstID;
     this.targetId = secondID;
     addDetails(details);
@@ -126,13 +123,10 @@ public final class ConnectionNotation {
   /**
    * method to set the details of the current connection
    *
-   * @param method to add connection details
-   * @throws JDOMException
-   * @throws IOException
+   * @param method to add connection detail
    * @throws NotationException
    */
-  private void addDetails(String str) throws NotationException, IOException,
-      JDOMException {
+  private void addDetails(String str) throws NotationException{
     String[] parts = str.split("-");
 
     /* MonomerUnit */

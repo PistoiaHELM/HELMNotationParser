@@ -39,10 +39,9 @@ public interface State {
    * given character
    * 
    * @param cha
-   * @throws ExceptionState
-   * @throws IOException
-   * @throws JDOMException
+   * 			current character
+   * @throws ExceptionState Error in the current state
+   * 				
    */
-  void doAction(char cha) throws ExceptionState,
-      IOException, JDOMException;
+  void doAction(char cha) throws ExceptionState;
 }

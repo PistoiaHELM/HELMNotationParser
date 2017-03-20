@@ -44,7 +44,7 @@ public class BetweenGroupingParser implements State {
   /**
    * Constructs with the state machine parser
    *
-   * @param pParser
+   * @param pParser current parser
    */
   public BetweenGroupingParser(StateMachineParser pParser) {
     _parser = pParser;

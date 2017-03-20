@@ -48,14 +48,10 @@ public class ParserHELM2 {
    * method to parse the given HELM2 string in the case of an invalid HELM2 notation exception is thrown
    * 
    * @param test HELM2 Notation
-   * @throws ExceptionState
-   * @throws JDOMException
-   * @throws IOException
-   * @throws org.jdom2.JDOMException
+   * @throws ExceptionState if error occurs in state
    * 
    */
-  public void parse(String test) throws ExceptionState,
-      IOException, JDOMException {
+  public void parse(String test) throws ExceptionState {
 
     parser = new StateMachineParser();
     test = test.trim();

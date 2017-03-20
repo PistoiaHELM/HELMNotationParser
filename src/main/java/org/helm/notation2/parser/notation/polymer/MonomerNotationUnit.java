@@ -43,11 +43,9 @@ public class MonomerNotationUnit extends MonomerNotation {
    * Constructs with the given String
    *
    * @param str Monomer
-   * @throws JDOMException
-   * @throws IOException
-   * @throws NotationException
+   * @throws NotationException if notation is not valid
    */
-  public MonomerNotationUnit(String str, String type) throws IOException, NotationException {
+  public MonomerNotationUnit(String str, String type) throws  NotationException {
     super(str, type);
   }
 

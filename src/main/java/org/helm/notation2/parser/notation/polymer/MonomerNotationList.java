@@ -56,13 +56,11 @@ public class MonomerNotationList extends MonomerNotation {
   private int parenthesisCounterClose = 0;
 
   /**
-   * @param str
-   * @param type
-   * @throws JDOMException
-   * @throws IOException
-   * @throws NotationException
+   * @param str notation
+   * @param type polymer type
+   * @throws NotationException if notation is not valid
    */
-  public MonomerNotationList(String str, String type) throws NotationException, IOException, JDOMException {
+  public MonomerNotationList(String str, String type) throws NotationException {
     super(str, type);
     setMonomerNotationUnitList(str, type);
   }
@@ -72,7 +70,7 @@ public class MonomerNotationList extends MonomerNotation {
   }
 
   private void setMonomerNotationUnitList(String str, String type)
-      throws NotationException, IOException, JDOMException {
+      throws NotationException {
     /* Parsing Step is missing ! */
     List<String[]> items = parseMonomer(str);
     for (String[] item : items) {

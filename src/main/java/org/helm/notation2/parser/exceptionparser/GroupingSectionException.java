@@ -39,7 +39,7 @@ public class GroupingSectionException extends ExceptionState {
   /**
    * Constructs with the error message
    *
-   * @param message
+   * @param message error message
    */
   public GroupingSectionException(String message) {
     super(message);

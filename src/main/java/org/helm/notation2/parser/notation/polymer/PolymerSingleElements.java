@@ -46,6 +46,7 @@ public class PolymerSingleElements extends PolymerElements {
 
   /**
    * Constructor
+   * @param entity HELMEntity
    */
   public PolymerSingleElements(HELMEntity entity) {
     super(entity);
@@ -63,14 +64,11 @@ public class PolymerSingleElements extends PolymerElements {
   /**
    * {@inheritDoc}
    *
-   * @throws SimplePolymerSectionException
-   * @throws IOException
-   * @throws NotationException
-   * @throws JDOMException
+   * @throws SimplePolymerSectionException if simple polymer section is not valid
+   * @throws NotationException if not notation is not valid
    */
   @Override
-  public void addMonomerNotation(String str) throws SimplePolymerSectionException, NotationException, IOException,
-      JDOMException {
+  public void addMonomerNotation(String str) throws SimplePolymerSectionException, NotationException {
     if (this.listMonomerNotations.size() < 1) {
       this.listMonomerNotations.add(ValidationMethod.decideWhichMonomerNotation(str, entity.getType()));
     } else {

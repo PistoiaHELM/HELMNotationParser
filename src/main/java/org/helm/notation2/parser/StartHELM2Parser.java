@@ -58,8 +58,8 @@ public final class StartHELM2Parser {
   /**
    * main method to run a single HELM2Parser from the command line
    *
-   * @param args
-   * @throws ParseException
+   * @param args console parameters
+   * @throws ParseException 
    * @throws ExceptionState
    * @throws IOException
    * @throws JDOMException

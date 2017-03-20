@@ -66,13 +66,11 @@ public class SimplePolymersNotationParser implements State {
 
   /**
    * {@inheritDoc}
-   *
-   * @throws JDOMException
-   * @throws IOException
-   * @throws NotationException
+   * @throws SimplePolymerSectionException is simple polymer section is not valid
+   * @throws NotationException if notation is not valid
    */
   @Override
-  public void doAction(char cha) throws SimplePolymerSectionException, NotationException, IOException, JDOMException {
+  public void doAction(char cha) throws SimplePolymerSectionException, NotationException{
     /* simple polymer notation is finished; can also be empty */
     if (cha == '}' && checkBracketsParenthesis()) {
       // initialize object - normal monomer type

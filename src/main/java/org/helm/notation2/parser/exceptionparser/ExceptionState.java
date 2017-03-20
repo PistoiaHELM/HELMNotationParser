@@ -33,7 +33,7 @@ public class ExceptionState extends Exception {
   /**
    * Constructs with the error message
    * 
-   * @param message
+   * @param message error message
    */
   public ExceptionState(String message) {
     super(message);

@@ -64,12 +64,10 @@ public class PolymerListElements extends PolymerElements {
   /**
    * {@inheritDoc}
    *
-   * @throws JDOMException
-   * @throws IOException
-   * @throws NotationException
+   * @throws NotationException if notation is not valid
    */
   @Override
-  public void addMonomerNotation(String str) throws NotationException, IOException, JDOMException {
+  public void addMonomerNotation(String str) throws NotationException {
     this.listMonomerNotations.add(ValidationMethod.decideWhichMonomerNotation(str, this.entity.getType()));
   }
 

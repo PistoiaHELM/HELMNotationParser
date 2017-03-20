@@ -42,90 +42,91 @@ import com.fasterxml.jackson.annotation.JsonTypeInfo;
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.PROPERTY, property = "classType")
 public abstract class PolymerElements {
 
-  @JsonIgnore
-  public List<MonomerNotation> listMonomerNotations = null;
+	@JsonIgnore
+	public List<MonomerNotation> listMonomerNotations = null;
 
-  protected HELMEntity entity;
+	protected HELMEntity entity;
 
-  public PolymerElements() {
+	public PolymerElements() {
 
-  }
+	}
 
-  public PolymerElements(HELMEntity entity) {
-    this.entity = entity;
-  }
+	public PolymerElements(HELMEntity entity) {
+		this.entity = entity;
+	}
 
-  public void setListOfElements(List<MonomerNotation> monomers) {
-    this.listMonomerNotations = monomers;
-  }
+	public void setListOfElements(List<MonomerNotation> monomers) {
+		this.listMonomerNotations = monomers;
+	}
 
-  /**
-   * method to get a list of all elements
-   *
-   * @return
-   */
-  public abstract List<MonomerNotation> getListOfElements();
+	/**
+	 * method to get a list of all elements
+	 *
+	 * @return List{@link MonomerNotation} list of all monomer notations
+	 */
+	public abstract List<MonomerNotation> getListOfElements();
 
-  public HELMEntity getEntity() {
-    return this.entity;
-  }
+	public HELMEntity getEntity() {
+		return this.entity;
+	}
 
-  /**
-   * method to add a monomer to the polymer
-   *
-   * @param str Monomer
-   * @throws SimplePolymerSectionException
-   * @throws JDOMException
-   * @throws IOException
-   * @throws NotationException
-   */
-  public abstract void addMonomerNotation(String str) throws SimplePolymerSectionException, NotationException,
-      IOException, JDOMException;
+	/**
+	 * method to add a monomer to the polymer
+	 *
+	 * @param str
+	 *            Monomer
+	 * @throws SimplePolymerSectionException Simple Polymer Section is not valid
+	 * @throws NotationException if HELM notation is not valid
+	 */
+	public abstract void addMonomerNotation(String str)
+			throws SimplePolymerSectionException, NotationException;
 
-  /**
-   * method to get the current monomer
-   *
-   * @return current Monomer
-   */
-  @JsonIgnore
-  public abstract MonomerNotation getCurrentMonomerNotation();
+	/**
+	 * method to get the current monomer
+	 *
+	 * @return current Monomer
+	 */
+	@JsonIgnore
+	public abstract MonomerNotation getCurrentMonomerNotation();
 
-  /**
-   * method to change the current Monomer
-   *
-   * @param not MonomerNotation
-   */
-  public abstract void changeMonomerNotation(MonomerNotation not);
+	/**
+	 * method to change the current Monomer
+	 *
+	 * @param not
+	 *            MonomerNotation
+	 */
+	public abstract void changeMonomerNotation(MonomerNotation not);
 
-  /**
-   * method to generate a valid HELM2 of this object
-   *
-   * @return valid HELM2
-   */
-  public String toHELM2() {
-    StringBuilder notation = new StringBuilder();
-    for (int i = 0; i < listMonomerNotations.size(); i++) {
-      notation.append(listMonomerNotations.get(i).toHELM2() + ".");
+	/**
+	 * method to generate a valid HELM2 of this object
+	 *
+	 * @return valid HELM2
+	 */
+	public String toHELM2() {
+		StringBuilder notation = new StringBuilder();
+		for (int i = 0; i < listMonomerNotations.size(); i++) {
+			notation.append(listMonomerNotations.get(i).toHELM2() + ".");
 
-    }
+		}
 
-    notation.setLength(notation.length() - 1);
-    return notation.toString();
-  }
+		notation.setLength(notation.length() - 1);
+		return notation.toString();
+	}
 
-  /**
-   * @return
-   * @throws HELM1ConverterException
-   */
-  public String toHELM() throws HELM1ConverterException {
-    StringBuilder notation = new StringBuilder();
-    for (int i = 0; i < listMonomerNotations.size(); i++) {
-      notation.append(listMonomerNotations.get(i).toHELM() + ".");
+	/**
+	 * @return PolymerElments in HELM format
+	 * @throws HELM1ConverterException
+	 * 
+	 */
+	public String toHELM() throws HELM1ConverterException {
+		StringBuilder notation = new StringBuilder();
+		for (int i = 0; i < listMonomerNotations.size(); i++) {
+			notation.append(listMonomerNotations.get(i).toHELM() + ".");
 
-    }
+		}
 
-    notation.setLength(notation.length() - 1);
-    return notation.toString();
-  }
+		notation.setLength(notation.length() - 1);
+		return notation.toString();
+	}
 
 }

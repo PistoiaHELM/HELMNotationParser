@@ -39,7 +39,7 @@ public class NotValidHELM2Exception extends ExceptionState {
   /**
    * Constructs with the error message
    *
-   * @param message
+   * @param message error message
    */
   public NotValidHELM2Exception(String message) {
     super(message);

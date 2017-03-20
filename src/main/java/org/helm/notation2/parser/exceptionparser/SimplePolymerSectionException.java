@@ -40,7 +40,7 @@ public class SimplePolymerSectionException extends ExceptionState {
   /**
    * Constructs with the error message
    *
-   * @param message
+   * @param message error message
    */
   public SimplePolymerSectionException(String message) {
     super(message);

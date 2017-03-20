@@ -33,7 +33,7 @@ public class AnnotationSectionException extends ExceptionState {
   /**
    * Constructs with the error message
    * 
-   * @param message
+   * @param message error message
    */
   public AnnotationSectionException(String message) {
     super(message);

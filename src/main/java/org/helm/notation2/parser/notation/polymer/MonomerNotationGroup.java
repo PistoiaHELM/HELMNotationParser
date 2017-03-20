@@ -63,9 +63,9 @@ public abstract class MonomerNotationGroup extends MonomerNotation {
    * @param interval is the value on interval
    * @throws JDOMException
    * @throws IOException
-   * @throws NotationException
+   * @throws NotationException if notation is not valid
    */
-  public void addElement(String str, String type, double one, double two, boolean interval, boolean isDefault) throws NotationException, IOException, JDOMException {
+  public void addElement(String str, String type, double one, double two, boolean interval, boolean isDefault) throws NotationException{
     this.elements.add(ValidationMethod.decideWhichMonomerNotationInGroup(str, type, one, two, interval, isDefault));
 
   }

@@ -134,7 +134,7 @@ public class HELMNotationParserUI extends JFrame {
     try {
       parser.parse(helmInput);
       writeOutputmessage();
-    } catch (ExceptionState | IOException | JDOMException e) {
+    } catch (ExceptionState e) {
       output.setText("Invalid HELM-String (" + e.getMessage() + ")");
     }
 

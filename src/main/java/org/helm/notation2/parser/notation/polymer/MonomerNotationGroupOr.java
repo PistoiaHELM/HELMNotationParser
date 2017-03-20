@@ -41,11 +41,9 @@ public class MonomerNotationGroupOr extends MonomerNotationGroup {
    *
    * @param str details about the group
    * @param type type of the current polymer
-   * @throws JDOMException
-   * @throws IOException
-   * @throws NotationException
+   * @throws NotationException if notation is not valid
    */
-  public MonomerNotationGroupOr(String str, String type) throws NotationException, IOException, JDOMException {
+  public MonomerNotationGroupOr(String str, String type) throws NotationException {
     super(str, type);
     /* Or elements are separated by , */
     String[] parts = str.split(",");

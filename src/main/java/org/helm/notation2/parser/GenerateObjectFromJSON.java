@@ -36,7 +36,7 @@ import com.fasterxml.jackson.databind.util.JSONPObject;
 /**
  * {@code GenerateObjectFromJSON} TODO comment me
  *
- * @author
+ * @author hecht
  * @version $Id$
  */
 public class GenerateObjectFromJSON {

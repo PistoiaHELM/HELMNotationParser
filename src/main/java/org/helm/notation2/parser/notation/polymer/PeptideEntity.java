@@ -26,7 +26,7 @@ package org.helm.notation2.parser.notation.polymer;
 import com.fasterxml.jackson.annotation.JsonTypeInfo;
 
 /**
- * @code PeptideEntity
+ *  PeptideEntity
  *
  * @author hecht
  */

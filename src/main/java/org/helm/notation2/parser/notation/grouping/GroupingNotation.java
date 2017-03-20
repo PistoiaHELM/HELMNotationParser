@@ -50,7 +50,7 @@ public final class GroupingNotation {
    * Constructs with the given String
    *
    * @param str Group ID
-   * @throws NotationException
+   * @throws NotationException if notation is not valid
    */
   public GroupingNotation(String str) throws NotationException {
 	  Pattern p = Pattern.compile("G[1-9][0-9]*", Pattern.CASE_INSENSITIVE);
@@ -67,7 +67,7 @@ public final class GroupingNotation {
    *
    * @param group GroupEntity
    * @param ambi details about the group elements
-   * @throws NotationException
+   * @throws NotationException if notation is not valid
    */
   public GroupingNotation(GroupEntity group, String ambi) throws NotationException {
     this.groupID = group;
@@ -87,7 +87,7 @@ public final class GroupingNotation {
    * method to add ambiguity to the group
    *
    * @param a details about the group elements
-   * @throws NotationException
+   * @throws NotationException if notation is not valid
    */
   private void defineAmbiguity(String a) throws NotationException {
     Pattern patternAND = Pattern.compile("\\+");

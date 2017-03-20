@@ -50,12 +50,11 @@ public class MonomerNotationUnitRNA extends MonomerNotationUnit {
   private List<String> contentsInformation = new ArrayList<String>();
 
   /**
-   * @param str
-   * @param type
-   * @throws IOException
-   * @throws NotationException
+   * @param str monomer notation
+   * @param type of the monomer notation
+   * @throws NotationException if notation is not valid
    */
-  public MonomerNotationUnitRNA(String str, String type) throws IOException, NotationException {
+  public MonomerNotationUnitRNA(String str, String type) throws NotationException {
     super(str, type);
     setRNAContents(str);
   }
@@ -63,11 +62,10 @@ public class MonomerNotationUnitRNA extends MonomerNotationUnit {
   /**
    * method to set for each nucleotide the sugar, the base and the phosphat
    *
-   * @param str
+   * @param str monomer notation
    * @throws NotationException
-   * @throws IOException
    */
-  private void setRNAContents(String str) throws NotationException, IOException {
+  private void setRNAContents(String str) throws NotationException {
     /* Nucleotide with all contents */
     String[] list;
 
@@ -106,7 +104,7 @@ public class MonomerNotationUnitRNA extends MonomerNotationUnit {
   /**
    * method to get the contents of this nucleotide
    *
-   * @return
+   * @return List of MonomerNotationUnits
    */
   public List<MonomerNotationUnit> getContents() {
     return this.contents;
@@ -192,7 +190,7 @@ public class MonomerNotationUnitRNA extends MonomerNotationUnit {
   /**
    * method to get the contents of this nucleotide
    *
-   * @return
+   * @return List of all 
    */
   @JsonIgnore
   public List<String> getInformation() {

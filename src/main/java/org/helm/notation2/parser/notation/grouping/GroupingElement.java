@@ -59,7 +59,7 @@ public final class GroupingElement {
    * @param str polymer ID
    * @param number value of the polymer ID
    * @param def is the value a default one
-   * @throws NotationException
+   * @throws NotationException if notation is not valid
    */
   public GroupingElement(String str, double number, boolean def) throws NotationException {
     this.id = ValidationMethod.decideWhichEntity(str);
@@ -73,7 +73,7 @@ public final class GroupingElement {
    * @param str polymer ID
    * @param number1 value of the polymer ID
    * @param number2 value of the polymer ID
-   * @throws NotationException
+   * @throws NotationException if notation is not valid
    */
   public GroupingElement(String str, double number1, double number2) throws NotationException {
     this.id = ValidationMethod.decideWhichEntity(str);

@@ -88,7 +88,7 @@ public class StateMachineParser implements State {
    * {@inheritDoc}
    */
   @Override
-  public void doAction(char car) throws ExceptionState, IOException, JDOMException {
+  public void doAction(char car) throws ExceptionState{
     this.state.doAction(car);
 
   }

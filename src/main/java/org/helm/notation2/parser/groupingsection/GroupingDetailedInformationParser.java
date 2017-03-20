@@ -47,7 +47,7 @@ public class GroupingDetailedInformationParser implements State {
   /**
    * Constructs with the state machine parser
    *
-   * @param pParser
+   * @param pParser current parser
    */
   public GroupingDetailedInformationParser(StateMachineParser pParser) {
     _parser = pParser;
@@ -56,7 +56,7 @@ public class GroupingDetailedInformationParser implements State {
   /**
    * {@inheritDoc}
    *
-   * @throws NotationException
+   * @throws NotationException if notation is not valid
    */
   @Override
   public void doAction(char cha) throws GroupingSectionException, NotationException {

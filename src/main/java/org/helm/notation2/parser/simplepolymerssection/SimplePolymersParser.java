@@ -57,8 +57,8 @@ public class SimplePolymersParser implements State {
   /**
    * {@inheritDoc}
    *
-   * @throws NotationException
-   * @throws SimplePolymerSectionException
+   * @throws NotationException if notation is not valid
+   * @throws SimplePolymerSectionException if simple polymer section is not valid
    */
   @Override
   public void doAction(char cha) throws SimplePolymerSectionException, NotationException {

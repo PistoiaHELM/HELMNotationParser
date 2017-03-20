@@ -43,7 +43,7 @@ public class GroupingOr extends GroupingAmbiguity {
    * element
    * 
    * @param str list of grouping elements
-   * @throws NotationException
+   * @throws NotationException if notation is not valid
    */
   public GroupingOr(String str) throws NotationException {
     /* Or elements are separated by , */

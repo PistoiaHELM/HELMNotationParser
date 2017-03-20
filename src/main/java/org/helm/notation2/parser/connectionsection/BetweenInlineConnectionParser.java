@@ -45,7 +45,7 @@ public class BetweenInlineConnectionParser implements State {
   /**
    * Constructs with the state machine parser
    *
-   * @param pParser
+   * @param pParser current parser
    */
   public BetweenInlineConnectionParser(StateMachineParser pParser) {
     _parser = pParser;

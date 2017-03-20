@@ -33,7 +33,7 @@ public class FinalStateException extends ExceptionState {
   /**
    * Constructs with the error message
    * 
-   * @param message
+   * @param message error message 
    */
   public FinalStateException(String message) {
     super(message);

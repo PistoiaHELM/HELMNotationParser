@@ -36,7 +36,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 /**
  * HELM2Notation this class contains all notation objects for HELM2
  *
- * @author
+ * @author hecht
  *
  */
 public class HELM2Notation {
@@ -80,6 +80,8 @@ public class HELM2Notation {
 
   /**
    * method to get the simple polymer type
+   * @param string 
+   * @return
    */
   public PolymerNotation getSimplePolymer(String string) {
     for (PolymerNotation polymer : listOfPolymers) {
@@ -368,10 +370,10 @@ public class HELM2Notation {
   }
 
   /**
-   * method to get a specific polymer
-   *
-   * @param id
-   * @return
+   * method to get a specific polymer by its id
+   * 
+   * @param id polymer id
+   * @return polymer
    */
   @JsonIgnore
   public PolymerNotation getPolymerNotation(String id) {

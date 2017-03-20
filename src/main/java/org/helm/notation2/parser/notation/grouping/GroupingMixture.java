@@ -45,7 +45,7 @@ public class GroupingMixture extends GroupingAmbiguity {
    * Mixture with ratio or interval
    *
    * @param str whole group
-   * @throws NotationException
+   * @throws NotationException if notation is not valid
    */
   public GroupingMixture(String str) throws NotationException {
     /* Mixture elements are separated by + */

@@ -33,7 +33,7 @@ public class ConnectionSectionException extends ExceptionState {
   /**
    * Constructs with the error message
    * 
-   * @param message
+   * @param message error message
    */
   public ConnectionSectionException(String message) {
     super(message);

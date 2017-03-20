@@ -47,7 +47,7 @@ public class MonomerNotationGroupMixture extends MonomerNotationGroup {
    * @throws IOException
    * @throws NotationException
    */
-  public MonomerNotationGroupMixture(String str, String type) throws NotationException, IOException, JDOMException {
+  public MonomerNotationGroupMixture(String str, String type) throws NotationException {
 
 	  super(str, type);
     /* Mixture elements are separated by + */

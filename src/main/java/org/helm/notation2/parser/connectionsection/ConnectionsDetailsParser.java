@@ -51,7 +51,7 @@ public class ConnectionsDetailsParser implements State {
   /**
    * Constructs with the state machine parser
    *
-   * @param pParser
+   * @param pParser current parser
    */
   public ConnectionsDetailsParser(StateMachineParser pParser) {
     _parser = pParser;
@@ -62,7 +62,7 @@ public class ConnectionsDetailsParser implements State {
    */
   @Override
   public void doAction(char cha) throws ConnectionSectionException,
-      NotationException, IOException, JDOMException {
+      NotationException{
     /* a new connection is starting */
     if (cha == '|') {
       if (_parser.checkDetailsConnections(details)) {

@@ -52,7 +52,7 @@ public class ConnectionsParser implements State {
   /**
    * Constructs with the state machine parser
    *
-   * @param pParser
+   * @param pParser current parser
    */
   public ConnectionsParser(StateMachineParser pParser) {
     _parser = pParser;
@@ -61,7 +61,7 @@ public class ConnectionsParser implements State {
   /**
    * {@inheritDoc}
    *
-   * @throws NotationException
+   * @throws NotationException if connection is not valid
    */
   @Override
   public void doAction(char cha) throws ConnectionSectionException, NotationException {

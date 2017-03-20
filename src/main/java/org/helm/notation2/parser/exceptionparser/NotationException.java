@@ -32,7 +32,7 @@ package org.helm.notation2.parser.exceptionparser;
 public class NotationException extends ExceptionState {
 
   /**
-   * @param message
+   * @param message error message
    */
   public NotationException(String message) {
     super(message);

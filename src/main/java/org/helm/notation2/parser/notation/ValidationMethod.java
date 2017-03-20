@@ -60,15 +60,15 @@ public final class ValidationMethod {
 	 * method to decide which of the MonomerNotation classes should be
 	 * initialized
 	 *
-	 * @param str
-	 * @param type
-	 * @return
-	 * @throws NotationException
+	 * @param str notation
+	 * @param type polymer type
+	 * @return MonomerNotation if monomer is not valid
+	 * @throws NotationException if notation is not valid
 	 * @throws IOException
 	 * @throws JDOMException
 	 */
 	public static MonomerNotation decideWhichMonomerNotation(String str, String type)
-			throws NotationException, IOException, JDOMException {
+			throws NotationException {
 		MonomerNotation mon;
 		/* group ? */
 		if (str.startsWith("(") && str.endsWith(")")) {
@@ -136,12 +136,10 @@ public final class ValidationMethod {
 	 * @param isDefault
 	 *            Is the count of the monomer default = 1
 	 * @return MonomerNotationGroupElement
-	 * @throws NotationException
-	 * @throws IOException
-	 * @throws JDOMException
+	 * @throws NotationException if notation is not valid
 	 */
 	public static MonomerNotationGroupElement decideWhichMonomerNotationInGroup(String str, String type, double one,
-			double two, boolean interval, boolean isDefault) throws NotationException, IOException, JDOMException {
+			double two, boolean interval, boolean isDefault) throws NotationException{
 		MonomerNotation element;
 
 		element = decideWhichMonomerNotation(str, type);

@@ -64,7 +64,7 @@ public final class PolymerNotation {
    * Constructs with the given String
    *
    * @param str polymer ID
-   * @throws NotationException
+   * @throws NotationException if notation is not valid
    */
   public PolymerNotation(String str) throws NotationException {
     polymerID = (PolymerEntity) ValidationMethod.decideWhichEntity(str);
@@ -76,6 +76,7 @@ public final class PolymerNotation {
    *
    * @param poly PolymerEntity
    * @param ele PolymerElements
+   * @throws NotationException if notation is not valid
    */
   public PolymerNotation(PolymerEntity poly, PolymerElements ele) throws NotationException {
     this.polymerID = poly;

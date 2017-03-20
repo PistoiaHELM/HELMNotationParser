@@ -60,7 +60,7 @@ public class AnnotationsParser implements State {
   /**
    * Constructor with the state machine parser
    *
-   * @param pParser
+   * @param pParser current StateMachineParser
    */
   public AnnotationsParser(StateMachineParser pParser) {
     _parser = pParser;

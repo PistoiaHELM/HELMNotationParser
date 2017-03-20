@@ -47,7 +47,7 @@ public class ConnectionsReadSecondIDParser implements State {
   /**
    * Constructs with the state machine parser
    *
-   * @param pParser
+   * @param pParser current parser
    */
   public ConnectionsReadSecondIDParser(StateMachineParser pParser) {
     _parser = pParser;
