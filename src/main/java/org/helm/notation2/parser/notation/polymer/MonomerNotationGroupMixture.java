@@ -43,9 +43,7 @@ public class MonomerNotationGroupMixture extends MonomerNotationGroup {
    *
    * @param str details about the mixture group
    * @param type Type of the current polymer type
-   * @throws JDOMException
-   * @throws IOException
-   * @throws NotationException
+   * @throws NotationException if group notation is not valid
    */
   public MonomerNotationGroupMixture(String str, String type) throws NotationException {
 

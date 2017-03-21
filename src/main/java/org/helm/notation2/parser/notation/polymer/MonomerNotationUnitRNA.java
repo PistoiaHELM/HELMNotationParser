@@ -63,7 +63,7 @@ public class MonomerNotationUnitRNA extends MonomerNotationUnit {
    * method to set for each nucleotide the sugar, the base and the phosphat
    *
    * @param str monomer notation
-   * @throws NotationException
+   * @throws NotationException if  single monomers are not in brackets
    */
   private void setRNAContents(String str) throws NotationException {
     /* Nucleotide with all contents */

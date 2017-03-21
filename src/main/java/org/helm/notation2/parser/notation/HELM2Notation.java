@@ -80,8 +80,8 @@ public class HELM2Notation {
 
   /**
    * method to get the simple polymer type
-   * @param string 
-   * @return
+   * @param string id of polymer
+   * @return PolymerNotation with the given id 
    */
   public PolymerNotation getSimplePolymer(String string) {
     for (PolymerNotation polymer : listOfPolymers) {
@@ -182,7 +182,7 @@ public class HELM2Notation {
   /**
    * method to set the annotation
    *
-   * @param anno
+   * @param anno new annotation
    */
   public void addAnnotation(AnnotationNotation anno) {
     annotationSection.add(anno);
@@ -325,7 +325,7 @@ public class HELM2Notation {
   /**
    * method to get the ID's from all polymers and groups
    *
-   * @return
+   * @return List of all ids from all polymers and groups
    */
   @JsonIgnore
   public List<String> getPolymerAndGroupingIDs() {
@@ -343,7 +343,7 @@ public class HELM2Notation {
   /**
    * method to get the ID's from all polymers
    *
-   * @return
+   * @return list of all polymers ids
    */
   @JsonIgnore
   public List<String> getPolymerIDs() {
@@ -357,7 +357,7 @@ public class HELM2Notation {
   /**
    * method to get the ID's from all polymers
    *
-   * @return
+   * @return all ids from all polymers
    */
   @JsonIgnore
   public List<String> getGroupIDs() {

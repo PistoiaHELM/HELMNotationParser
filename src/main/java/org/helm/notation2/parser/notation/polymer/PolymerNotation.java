@@ -184,8 +184,8 @@ public final class PolymerNotation {
   /**
    * method to generate a valid HELM notation for this object
    *
-   * @return
-   * @throws HELM1ConverterException
+   * @return HELM notation in string format
+   * @throws HELM1ConverterException if object can not downgraded to HELM1-Format
    */
   public String toHELM() throws HELM1ConverterException {
     if (polymerID instanceof BlobEntity) {

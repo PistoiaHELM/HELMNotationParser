@@ -198,7 +198,7 @@ public final class ConnectionNotation {
   /**
    * method to get the target ID of the current connection
    *
-   * @return
+   * @return the target HELMEntity of the current connection
    */
   public HELMEntity getTargetId() {
     return targetId;

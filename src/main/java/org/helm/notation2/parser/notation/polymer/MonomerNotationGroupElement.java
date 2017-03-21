@@ -50,6 +50,7 @@ public class MonomerNotationGroupElement {
    *
    * @param not MonomerNotation
    * @param one value of the MonomerNotation
+   * @param defaultValue if the value is a default value 
    */
   public MonomerNotationGroupElement(MonomerNotation not, double one, boolean defaultValue) {
     this.monomer = not;

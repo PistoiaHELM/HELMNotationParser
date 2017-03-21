@@ -115,7 +115,7 @@ public abstract class PolymerElements {
 
 	/**
 	 * @return PolymerElments in HELM format
-	 * @throws HELM1ConverterException
+	 * @throws HELM1ConverterException if one single object can not be downgraded to HELM1-Format
 	 * 
 	 */
 	public String toHELM() throws HELM1ConverterException {

@@ -24,6 +24,7 @@
 package org.helm.notation2.parser;
 
 import java.io.BufferedReader;
+import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 
@@ -59,13 +60,12 @@ public final class StartHELM2Parser {
    * main method to run a single HELM2Parser from the command line
    *
    * @param args console parameters
-   * @throws ParseException 
-   * @throws ExceptionState
-   * @throws IOException
-   * @throws JDOMException
+   * @throws ParseException if parsing the command lines produces an error
+   * @throws ExceptionState an exception in a state during parsing occurs, helm notation is not valid
+   * @throws IOException if file can not be read
    */
   public static void main(String[] args) throws ParseException,
-      ExceptionState, IOException, JDOMException {
+      ExceptionState, IOException {
     /* options for the program */
     Options options = new Options();
     /* add helm string */

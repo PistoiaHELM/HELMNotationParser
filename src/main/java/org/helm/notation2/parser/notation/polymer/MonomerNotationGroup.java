@@ -47,7 +47,8 @@ public abstract class MonomerNotationGroup extends MonomerNotation {
   /**
    * Constructs with the given string
    *
-   * @param str Monomer
+   * @param str Monomer in string format
+   * @param type polymer type of monomer
    */
   public MonomerNotationGroup(String str, String type) {
     super(str, type);
@@ -61,8 +62,7 @@ public abstract class MonomerNotationGroup extends MonomerNotation {
    * @param one value of the monomer
    * @param two value of the monomer
    * @param interval is the value on interval
-   * @throws JDOMException
-   * @throws IOException
+   * @param isDefault if the value is the default one
    * @throws NotationException if notation is not valid
    */
   public void addElement(String str, String type, double one, double two, boolean interval, boolean isDefault) throws NotationException{

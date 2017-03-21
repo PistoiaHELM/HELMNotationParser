@@ -165,7 +165,7 @@ public abstract class MonomerNotation {
   /**
    * method to get the Type of Polymer
    *
-   * @return
+   * @return type of polymer
    */
   public String getType() {
     return this.type;
@@ -174,8 +174,8 @@ public abstract class MonomerNotation {
   /**
    * method to generate a valid HELM
    *
-   * @return
-   * @throws HELM1ConverterException
+   * @return object in string format
+   * @throws HELM1ConverterException if the object can not be downgraded to HELM1-Format
    */
   public abstract String toHELM() throws HELM1ConverterException;
 

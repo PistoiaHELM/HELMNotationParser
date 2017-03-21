@@ -46,6 +46,7 @@ public class PolymerListElements extends PolymerElements {
 
   /**
    * Constructor
+   * @param entity HELMEntity
    */
   public PolymerListElements(HELMEntity entity) {
     super(entity);

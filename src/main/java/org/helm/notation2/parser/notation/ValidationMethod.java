@@ -64,8 +64,6 @@ public final class ValidationMethod {
 	 * @param type polymer type
 	 * @return MonomerNotation if monomer is not valid
 	 * @throws NotationException if notation is not valid
-	 * @throws IOException
-	 * @throws JDOMException
 	 */
 	public static MonomerNotation decideWhichMonomerNotation(String str, String type)
 			throws NotationException {
@@ -123,10 +121,12 @@ public final class ValidationMethod {
 
 	/**
 	 * method to decide which of the two Constructors of
-	 * MonomerNotaitonGroupElement should be called
+	 * MonomerNotationGroupElement should be called
 	 *
 	 * @param str
 	 *            Monomer
+	 * @param type
+	 *            polymer type of monomer          
 	 * @param one
 	 *            count of Monomer
 	 * @param two
@@ -157,7 +157,7 @@ public final class ValidationMethod {
 	 * @param str
 	 *            polymer ID
 	 * @return Entity
-	 * @throws NotationException
+	 * @throws NotationException if the HELMEntity is not known, ID is not in the right format
 	 */
 	public static HELMEntity decideWhichEntity(String str) throws NotationException {
 

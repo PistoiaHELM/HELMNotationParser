@@ -43,6 +43,7 @@ public class MonomerNotationUnit extends MonomerNotation {
    * Constructs with the given String
    *
    * @param str Monomer
+   * @param type polymer type, e.g. RNA, Peptide or CHEM
    * @throws NotationException if notation is not valid
    */
   public MonomerNotationUnit(String str, String type) throws  NotationException {

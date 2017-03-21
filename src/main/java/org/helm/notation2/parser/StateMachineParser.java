@@ -69,7 +69,7 @@ public class StateMachineParser implements State {
   /**
    * method to set the current state
    *
-   * @param state
+   * @param state current state
    */
   public void setState(State state) {
     this.state = state;
@@ -251,7 +251,7 @@ public class StateMachineParser implements State {
    *
    * @return true, if the last added polymer is a peptide or a rna, false
    *         otherwise
-   * @throws SimplePolymerSectionException
+   * @throws SimplePolymerSectionException if list of polymers is null
    */
   public boolean isPeptideOrRna() throws SimplePolymerSectionException {
     if (polymerElements.size() >= 1) {
