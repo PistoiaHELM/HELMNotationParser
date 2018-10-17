@@ -4,7 +4,7 @@
 
 	<groupId>org.pistoiaalliance.helm</groupId>
 	<artifactId>helm2-helmnotationparser</artifactId>
-	<version>1.2.1</version>
+	<version>1.2.2</version>
 	<packaging>jar</packaging>
 
 
@@ -37,6 +37,10 @@
 		<developerConnection>scm:git:ssh://github.com/PistoiaHELM/HELMNotationParser.git</developerConnection>
 		<url>http://github.com/PistoiaHELM/HELMNotationParser/tree/master</url>
 	</scm>
+
+	<properties>
+		<jackson.version>2.9.7</jackson.version>
+	</properties>
 
 	<distributionManagement>
 		<snapshotRepository>
@@ -160,12 +164,12 @@
 		<dependency>
 			<groupId>com.fasterxml.jackson.core</groupId>
 			<artifactId>jackson-core</artifactId>
-			<version>2.6.3</version>
+			<version>${jackson.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>com.fasterxml.jackson.core</groupId>
 			<artifactId>jackson-databind</artifactId>
-			<version>2.6.3</version>
+			<version>${jackson.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.jdom</groupId>
